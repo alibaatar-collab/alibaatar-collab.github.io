@@ -4,78 +4,168 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>NJ GROUP</title>
-
 <style>
-
-body{
-    margin:0;
-    background:#0f172a;
-    font-family:Arial;
-    color:white;
+*{box-sizing:border-box}
+body{margin:0;font-family:Arial,Helvetica,sans-serif;background:#07111f;color:#fff}
+header{position:fixed;top:0;width:100%;z-index:10;background:rgba(7,17,31,.86);backdrop-filter:blur(12px);border-bottom:1px solid rgba(255,255,255,.08)}
+nav{max-width:1200px;margin:auto;padding:18px 24px;display:flex;justify-content:space-between;align-items:center}
+.logo{font-size:24px;font-weight:800;color:#22c55e}
+nav a{color:#cbd5e1;text-decoration:none;margin-left:24px;font-size:14px}
+.hero{min-height:100vh;display:flex;align-items:center;padding:120px 24px 70px;background:radial-gradient(circle at top right,#14532d 0,#07111f 42%)}
+.hero-inner{max-width:1200px;margin:auto;display:grid;grid-template-columns:1.2fr .8fr;gap:40px;align-items:center}
+.badge{display:inline-block;padding:8px 14px;border:1px solid rgba(34,197,94,.5);border-radius:999px;color:#86efac;margin-bottom:22px}
+h1{font-size:64px;line-height:1.05;margin:0 0 24px}
+h1 span{color:#22c55e}
+.hero p{font-size:19px;line-height:1.8;color:#cbd5e1;max-width:680px}
+.buttons{margin-top:34px}
+.btn{display:inline-block;padding:15px 28px;border-radius:12px;text-decoration:none;margin-right:14px;font-weight:700}
+.btn-main{background:#22c55e;color:#052e16}
+.btn-line{border:1px solid rgba(255,255,255,.25);color:#fff}
+.card{background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.12);border-radius:26px;padding:28px;box-shadow:0 30px 80px rgba(0,0,0,.35)}
+.card h3{color:#22c55e;margin-top:0}
+.stats{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-top:22px}
+.stat{background:rgba(0,0,0,.24);border-radius:16px;padding:18px;text-align:center}
+.stat strong{display:block;font-size:28px;color:#22c55e}
+section{max-width:1200px;margin:auto;padding:90px 24px}
+.section-title{font-size:42px;margin-bottom:12px}
+.section-sub{color:#94a3b8;line-height:1.7;max-width:760px}
+.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;margin-top:38px}
+.service{background:#0f172a;border:1px solid rgba(255,255,255,.1);border-radius:22px;padding:26px;transition:.3s}
+.service:hover{transform:translateY(-6px);border-color:#22c55e}
+.service .icon{font-size:36px;margin-bottom:16px}
+.service h3{margin:0 0 12px;color:#fff}
+.service p{color:#94a3b8;line-height:1.7}
+.about{display:grid;grid-template-columns:1fr 1fr;gap:32px;align-items:center}
+.about-box{background:linear-gradient(135deg,#052e16,#0f172a);border-radius:28px;padding:36px;border:1px solid rgba(34,197,94,.25)}
+.contact{background:#052e16;border-radius:30px;padding:44px;text-align:center}
+.contact h2{font-size:38px;margin:0 0 16px}
+footer{text-align:center;color:#64748b;padding:34px;border-top:1px solid rgba(255,255,255,.08)}
+@media(max-width:850px){
+.hero-inner,.about,.grid{grid-template-columns:1fr}
+h1{font-size:42px}
+nav a{display:none}
+.stats{grid-template-columns:1fr}
 }
-
-.hero{
-    height:100vh;
-    display:flex;
-    flex-direction:column;
-    justify-content:center;
-    align-items:center;
-    text-align:center;
-}
-
-h1{
-    font-size:72px;
-    color:#22c55e;
-    margin:0;
-}
-
-h2{
-    font-size:28px;
-    font-weight:300;
-    margin-top:20px;
-}
-
-p{
-    width:700px;
-    max-width:90%;
-    color:#cbd5e1;
-    line-height:1.8;
-}
-
-.btn{
-    margin-top:30px;
-    padding:15px 40px;
-    background:#22c55e;
-    border:none;
-    border-radius:12px;
-    color:white;
-    font-size:18px;
-    cursor:pointer;
-}
-
 </style>
-
 </head>
 
 <body>
 
-<div class="hero">
-
-    <h1>NJ GROUP</h1>
-
-    <h2>
-        Recycling · Machinery · Building Materials · AI
-    </h2>
-
-    <p>
-        Global Industrial Solutions From Türkiye To Europe
-    </p>
-
-    <button class="btn">
-        ENTER
-    </button>
-
+<header>
+<nav>
+<div class="logo">NJ GROUP</div>
+<div>
+<a href="#business">Business</a>
+<a href="#about">About</a>
+<a href="#contact">Contact</a>
 </div>
+</nav>
+</header>
+
+<div class="hero">
+<div class="hero-inner">
+<div>
+<div class="badge">Türkiye · Europe · China Supply Chain</div>
+<h1>Global Industrial Solutions For A <span>Circular Future</span></h1>
+<p>
+NJ GROUP connects Türkiye, China and Europe through recycling technology,
+industrial machinery, building materials, digital marketing and exhibition services.
+</p>
+<div class="buttons">
+<a class="btn btn-main" href="#business">Explore Business</a>
+<a class="btn btn-line" href="#contact">Contact Us</a>
+</div>
+</div>
+
+<div class="card">
+<h3>Core Direction</h3>
+<p>Recycled rubber, smart technology, hardware, machinery, digital commerce and international trade services.</p>
+<div class="stats">
+<div class="stat"><strong>6</strong>Business Units</div>
+<div class="stat"><strong>3</strong>Markets</div>
+<div class="stat"><strong>1</strong>Platform</div>
+</div>
+</div>
+</div>
+</div>
+
+<section id="business">
+<h2 class="section-title">Six Business Units</h2>
+<p class="section-sub">
+NJ GROUP is building a multi-sector trade and technology platform based in Türkiye with connections to European markets.
+</p>
+
+<div class="grid">
+<div class="service">
+<div class="icon">♻️</div>
+<h3>EKO DÖNÜŞÜM</h3>
+<p>Waste tire recycling, rubber powder, reclaimed rubber and circular material applications.</p>
+</div>
+
+<div class="service">
+<div class="icon">🤖</div>
+<h3>AKILLI TEKNOLOJİ</h3>
+<p>Smart robots, AI tools, intelligent products and automation solutions.</p>
+</div>
+
+<div class="service">
+<div class="icon">🛠️</div>
+<h3>YAPI & HIRDAVAT</h3>
+<p>Hardware, electrical materials, construction materials, tools and decorative panels.</p>
+</div>
+
+<div class="service">
+<div class="icon">🏭</div>
+<h3>ENDÜSTRİYEL MAKİNE</h3>
+<p>Industrial machinery, food machinery, automotive parts, forklifts and production equipment.</p>
+</div>
+
+<div class="service">
+<div class="icon">📱</div>
+<h3>DİJİTAL PAZARLAMA</h3>
+<p>E-commerce, influencer marketing, livestream selling, independent websites and digital channels.</p>
+</div>
+
+<div class="service">
+<div class="icon">🌍</div>
+<h3>FUAR & ORGANİZASYON</h3>
+<p>Exhibition services, booth setup, business translation, local reception and trade events.</p>
+</div>
+</div>
+</section>
+
+<section id="about">
+<div class="about">
+<div>
+<h2 class="section-title">About NJ GROUP</h2>
+<p class="section-sub">
+NJ GROUP YEŞİL ÇEVRİM TEKNOLOJİ SANAYİ VE DIŞ TİCARET LİMİTED ŞİRKETİ focuses on import, export, distribution,
+representation and project development across Türkiye and Europe.
+</p>
+</div>
+<div class="about-box">
+<h3>Strategic Position</h3>
+<p>
+Türkiye operation + China supply chain + European market development.
+</p>
+<p>
+Our goal is to become a practical bridge between manufacturers, distributors and industrial buyers.
+</p>
+</div>
+</div>
+</section>
+
+<section id="contact">
+<div class="contact">
+<h2>Contact NJ GROUP</h2>
+<p>For cooperation, product sourcing, distribution or project discussion.</p>
+<a class="btn btn-main" href="mailto:loveniubin@vip.qq.com">Send Email</a>
+</div>
+</section>
+
+<footer>
+© 2026 NJ GROUP. All Rights Reserved.
+</footer>
 
 </body>
 </html>
