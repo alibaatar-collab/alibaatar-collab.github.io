@@ -3,48 +3,242 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>NJ GROUP</title>
+<title>NJ GROUP | Industrial Trade Platform</title>
+
 <style>
 *{box-sizing:border-box}
-body{margin:0;font-family:Arial,Helvetica,sans-serif;background:#07111f;color:#fff}
-header{position:fixed;top:0;width:100%;z-index:10;background:rgba(7,17,31,.86);backdrop-filter:blur(12px);border-bottom:1px solid rgba(255,255,255,.08)}
-nav{max-width:1200px;margin:auto;padding:18px 24px;display:flex;justify-content:space-between;align-items:center}
-.logo{font-size:24px;font-weight:800;color:#22c55e}
-nav a{color:#cbd5e1;text-decoration:none;margin-left:24px;font-size:14px}
-.hero{min-height:100vh;display:flex;align-items:center;padding:120px 24px 70px;background:radial-gradient(circle at top right,#14532d 0,#07111f 42%)}
-.hero-inner{max-width:1200px;margin:auto;display:grid;grid-template-columns:1.2fr .8fr;gap:40px;align-items:center}
-.badge{display:inline-block;padding:8px 14px;border:1px solid rgba(34,197,94,.5);border-radius:999px;color:#86efac;margin-bottom:22px}
-h1{font-size:64px;line-height:1.05;margin:0 0 24px}
+html{scroll-behavior:smooth}
+body{
+  margin:0;
+  font-family:Arial,Helvetica,sans-serif;
+  background:#07111f;
+  color:white;
+}
+header{
+  position:fixed;
+  top:0;
+  width:100%;
+  z-index:100;
+  background:rgba(7,17,31,.88);
+  backdrop-filter:blur(14px);
+  border-bottom:1px solid rgba(255,255,255,.08);
+}
+nav{
+  max-width:1200px;
+  margin:auto;
+  padding:18px 24px;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+}
+.logo{
+  font-size:24px;
+  font-weight:900;
+  color:#22c55e;
+}
+nav a{
+  color:#cbd5e1;
+  text-decoration:none;
+  margin-left:24px;
+  font-size:14px;
+}
+nav a:hover{color:#22c55e}
+
+.hero{
+  min-height:100vh;
+  padding:140px 24px 80px;
+  display:flex;
+  align-items:center;
+  background:
+    linear-gradient(rgba(7,17,31,.78),rgba(7,17,31,.92)),
+    url("https://images.unsplash.com/photo-1581094794329-c8112a89af12?auto=format&fit=crop&w=1600&q=80");
+  background-size:cover;
+  background-position:center;
+}
+.hero-inner{
+  max-width:1200px;
+  margin:auto;
+  display:grid;
+  grid-template-columns:1.2fr .8fr;
+  gap:40px;
+  align-items:center;
+}
+.badge{
+  display:inline-block;
+  padding:9px 16px;
+  border:1px solid rgba(34,197,94,.55);
+  color:#86efac;
+  border-radius:999px;
+  margin-bottom:24px;
+}
+h1{
+  font-size:66px;
+  line-height:1.05;
+  margin:0 0 24px;
+}
 h1 span{color:#22c55e}
-.hero p{font-size:19px;line-height:1.8;color:#cbd5e1;max-width:680px}
-.buttons{margin-top:34px}
-.btn{display:inline-block;padding:15px 28px;border-radius:12px;text-decoration:none;margin-right:14px;font-weight:700}
+.hero p{
+  font-size:19px;
+  line-height:1.8;
+  color:#dbeafe;
+  max-width:720px;
+}
+.btn{
+  display:inline-block;
+  padding:15px 28px;
+  border-radius:12px;
+  text-decoration:none;
+  font-weight:800;
+  margin:10px 10px 0 0;
+}
 .btn-main{background:#22c55e;color:#052e16}
-.btn-line{border:1px solid rgba(255,255,255,.25);color:#fff}
-.card{background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.12);border-radius:26px;padding:28px;box-shadow:0 30px 80px rgba(0,0,0,.35)}
-.card h3{color:#22c55e;margin-top:0}
-.stats{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-top:22px}
-.stat{background:rgba(0,0,0,.24);border-radius:16px;padding:18px;text-align:center}
-.stat strong{display:block;font-size:28px;color:#22c55e}
-section{max-width:1200px;margin:auto;padding:90px 24px}
-.section-title{font-size:42px;margin-bottom:12px}
-.section-sub{color:#94a3b8;line-height:1.7;max-width:760px}
-.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;margin-top:38px}
-.service{background:#0f172a;border:1px solid rgba(255,255,255,.1);border-radius:22px;padding:26px;transition:.3s}
-.service:hover{transform:translateY(-6px);border-color:#22c55e}
-.service .icon{font-size:36px;margin-bottom:16px}
-.service h3{margin:0 0 12px;color:#fff}
-.service p{color:#94a3b8;line-height:1.7}
-.about{display:grid;grid-template-columns:1fr 1fr;gap:32px;align-items:center}
-.about-box{background:linear-gradient(135deg,#052e16,#0f172a);border-radius:28px;padding:36px;border:1px solid rgba(34,197,94,.25)}
-.contact{background:#052e16;border-radius:30px;padding:44px;text-align:center}
-.contact h2{font-size:38px;margin:0 0 16px}
-footer{text-align:center;color:#64748b;padding:34px;border-top:1px solid rgba(255,255,255,.08)}
-@media(max-width:850px){
-.hero-inner,.about,.grid{grid-template-columns:1fr}
-h1{font-size:42px}
-nav a{display:none}
-.stats{grid-template-columns:1fr}
+.btn-line{border:1px solid rgba(255,255,255,.35);color:white}
+
+.panel{
+  background:rgba(15,23,42,.78);
+  border:1px solid rgba(255,255,255,.14);
+  border-radius:28px;
+  padding:30px;
+  box-shadow:0 30px 80px rgba(0,0,0,.4);
+}
+.panel h3{color:#22c55e;margin-top:0}
+.stats{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:14px;
+  margin-top:24px;
+}
+.stat{
+  background:rgba(0,0,0,.26);
+  border-radius:18px;
+  padding:18px;
+  text-align:center;
+}
+.stat strong{
+  display:block;
+  font-size:30px;
+  color:#22c55e;
+}
+
+section{
+  max-width:1200px;
+  margin:auto;
+  padding:90px 24px;
+}
+.section-title{
+  font-size:44px;
+  margin:0 0 14px;
+}
+.section-sub{
+  color:#94a3b8;
+  max-width:780px;
+  line-height:1.8;
+}
+
+.grid{
+  margin-top:40px;
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:24px;
+}
+.service{
+  min-height:280px;
+  border-radius:26px;
+  overflow:hidden;
+  background:#0f172a;
+  border:1px solid rgba(255,255,255,.1);
+  transition:.3s;
+}
+.service:hover{
+  transform:translateY(-7px);
+  border-color:#22c55e;
+}
+.service-img{
+  height:135px;
+  background-size:cover;
+  background-position:center;
+}
+.service-content{
+  padding:24px;
+}
+.service h3{
+  margin:0 0 12px;
+  color:white;
+}
+.service p{
+  color:#94a3b8;
+  line-height:1.7;
+}
+
+.img1{background-image:url("https://images.unsplash.com/photo-1581092580497-e0d23cbdf1dc?auto=format&fit=crop&w=900&q=80")}
+.img2{background-image:url("https://images.unsplash.com/photo-1485827404703-89b55fcc595e?auto=format&fit=crop&w=900&q=80")}
+.img3{background-image:url("https://images.unsplash.com/photo-1504307651254-35680f356dfd?auto=format&fit=crop&w=900&q=80")}
+.img4{background-image:url("https://images.unsplash.com/photo-1517048676732-d65bc937f952?auto=format&fit=crop&w=900&q=80")}
+.img5{background-image:url("https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=900&q=80")}
+.img6{background-image:url("https://images.unsplash.com/photo-1505373877841-8d25f7d46678?auto=format&fit=crop&w=900&q=80")}
+
+.about{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:34px;
+  align-items:center;
+}
+.about-card{
+  background:linear-gradient(135deg,#052e16,#0f172a);
+  border:1px solid rgba(34,197,94,.25);
+  border-radius:30px;
+  padding:38px;
+}
+.about-card p{
+  color:#cbd5e1;
+  line-height:1.8;
+}
+
+.contact-box{
+  background:
+    linear-gradient(rgba(5,46,22,.88),rgba(7,17,31,.92)),
+    url("https://images.unsplash.com/photo-1521791136064-7986c2920216?auto=format&fit=crop&w=1400&q=80");
+  background-size:cover;
+  background-position:center;
+  border-radius:34px;
+  padding:56px 30px;
+  text-align:center;
+}
+.contact-box h2{
+  font-size:42px;
+  margin:0 0 14px;
+}
+.contact-box p{color:#d1fae5}
+
+.whatsapp{
+  position:fixed;
+  right:22px;
+  bottom:22px;
+  background:#22c55e;
+  color:#052e16;
+  width:58px;
+  height:58px;
+  border-radius:50%;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  font-size:28px;
+  text-decoration:none;
+  z-index:200;
+  box-shadow:0 14px 40px rgba(34,197,94,.35);
+}
+footer{
+  text-align:center;
+  color:#64748b;
+  padding:34px;
+  border-top:1px solid rgba(255,255,255,.08);
+}
+
+@media(max-width:900px){
+  .hero-inner,.grid,.about{grid-template-columns:1fr}
+  h1{font-size:42px}
+  nav a{display:none}
+  .stats{grid-template-columns:1fr}
 }
 </style>
 </head>
@@ -53,118 +247,136 @@ nav a{display:none}
 
 <header>
 <nav>
-<div class="logo">NJ GROUP</div>
-<div>
-<a href="#business">Business</a>
-<a href="#about">About</a>
-<a href="#contact">Contact</a>
-</div>
+  <div class="logo">NJ GROUP</div>
+  <div>
+    <a href="#business">Business</a>
+    <a href="#about">About</a>
+    <a href="#contact">Contact</a>
+  </div>
 </nav>
 </header>
 
 <div class="hero">
-<div class="hero-inner">
-<div>
-<div class="badge">Türkiye · Europe · China Supply Chain</div>
-<h1>Global Industrial Solutions For A <span>Circular Future</span></h1>
-<p>
-NJ GROUP connects Türkiye, China and Europe through recycling technology,
-industrial machinery, building materials, digital marketing and exhibition services.
-</p>
-<div class="buttons">
-<a class="btn btn-main" href="#business">Explore Business</a>
-<a class="btn btn-line" href="#contact">Contact Us</a>
-</div>
-</div>
+  <div class="hero-inner">
+    <div>
+      <div class="badge">Türkiye · Europe · China Supply Chain</div>
+      <h1>Industrial Trade Platform For A <span>Circular Future</span></h1>
+      <p>
+        NJ GROUP connects Türkiye, China and Europe through recycling materials,
+        smart technology, industrial machinery, building materials, digital commerce
+        and international exhibition services.
+      </p>
+      <a class="btn btn-main" href="#business">Explore Business</a>
+      <a class="btn btn-line" href="#contact">Contact Us</a>
+    </div>
 
-<div class="card">
-<h3>Core Direction</h3>
-<p>Recycled rubber, smart technology, hardware, machinery, digital commerce and international trade services.</p>
-<div class="stats">
-<div class="stat"><strong>6</strong>Business Units</div>
-<div class="stat"><strong>3</strong>Markets</div>
-<div class="stat"><strong>1</strong>Platform</div>
-</div>
-</div>
-</div>
+    <div class="panel">
+      <h3>Strategic Structure</h3>
+      <p>Türkiye operation + China supply chain + European market development.</p>
+      <div class="stats">
+        <div class="stat"><strong>6</strong>Units</div>
+        <div class="stat"><strong>3</strong>Markets</div>
+        <div class="stat"><strong>1</strong>Platform</div>
+      </div>
+    </div>
+  </div>
 </div>
 
 <section id="business">
-<h2 class="section-title">Six Business Units</h2>
-<p class="section-sub">
-NJ GROUP is building a multi-sector trade and technology platform based in Türkiye with connections to European markets.
-</p>
+  <h2 class="section-title">Six Business Units</h2>
+  <p class="section-sub">
+    NJ GROUP is building a practical industrial trade platform based in Türkiye,
+    serving distributors, manufacturers, project owners and European buyers.
+  </p>
 
-<div class="grid">
-<div class="service">
-<div class="icon">♻️</div>
-<h3>EKO DÖNÜŞÜM</h3>
-<p>Waste tire recycling, rubber powder, reclaimed rubber and circular material applications.</p>
-</div>
+  <div class="grid">
+    <div class="service">
+      <div class="service-img img1"></div>
+      <div class="service-content">
+        <h3>EKO DÖNÜŞÜM</h3>
+        <p>Waste tire recycling, rubber powder, reclaimed rubber and circular material applications.</p>
+      </div>
+    </div>
 
-<div class="service">
-<div class="icon">🤖</div>
-<h3>AKILLI TEKNOLOJİ</h3>
-<p>Smart robots, AI tools, intelligent products and automation solutions.</p>
-</div>
+    <div class="service">
+      <div class="service-img img2"></div>
+      <div class="service-content">
+        <h3>AKILLI TEKNOLOJİ</h3>
+        <p>Smart robots, AI products, intelligent tools and automation solutions.</p>
+      </div>
+    </div>
 
-<div class="service">
-<div class="icon">🛠️</div>
-<h3>YAPI & HIRDAVAT</h3>
-<p>Hardware, electrical materials, construction materials, tools and decorative panels.</p>
-</div>
+    <div class="service">
+      <div class="service-img img3"></div>
+      <div class="service-content">
+        <h3>YAPI & HIRDAVAT</h3>
+        <p>Hardware, electrical materials, construction materials, tools and decorative panels.</p>
+      </div>
+    </div>
 
-<div class="service">
-<div class="icon">🏭</div>
-<h3>ENDÜSTRİYEL MAKİNE</h3>
-<p>Industrial machinery, food machinery, automotive parts, forklifts and production equipment.</p>
-</div>
+    <div class="service">
+      <div class="service-img img4"></div>
+      <div class="service-content">
+        <h3>ENDÜSTRİYEL MAKİNE</h3>
+        <p>Industrial machinery, food machinery, automotive parts, forklifts and production equipment.</p>
+      </div>
+    </div>
 
-<div class="service">
-<div class="icon">📱</div>
-<h3>DİJİTAL PAZARLAMA</h3>
-<p>E-commerce, influencer marketing, livestream selling, independent websites and digital channels.</p>
-</div>
+    <div class="service">
+      <div class="service-img img5"></div>
+      <div class="service-content">
+        <h3>DİJİTAL PAZARLAMA</h3>
+        <p>E-commerce, livestream selling, influencer marketing, independent websites and digital sales.</p>
+      </div>
+    </div>
 
-<div class="service">
-<div class="icon">🌍</div>
-<h3>FUAR & ORGANİZASYON</h3>
-<p>Exhibition services, booth setup, business translation, local reception and trade events.</p>
-</div>
-</div>
+    <div class="service">
+      <div class="service-img img6"></div>
+      <div class="service-content">
+        <h3>FUAR & ORGANİZASYON</h3>
+        <p>Exhibition services, booth setup, business translation, local reception and trade events.</p>
+      </div>
+    </div>
+  </div>
 </section>
 
 <section id="about">
-<div class="about">
-<div>
-<h2 class="section-title">About NJ GROUP</h2>
-<p class="section-sub">
-NJ GROUP YEŞİL ÇEVRİM TEKNOLOJİ SANAYİ VE DIŞ TİCARET LİMİTED ŞİRKETİ focuses on import, export, distribution,
-representation and project development across Türkiye and Europe.
-</p>
-</div>
-<div class="about-box">
-<h3>Strategic Position</h3>
-<p>
-Türkiye operation + China supply chain + European market development.
-</p>
-<p>
-Our goal is to become a practical bridge between manufacturers, distributors and industrial buyers.
-</p>
-</div>
-</div>
+  <div class="about">
+    <div>
+      <h2 class="section-title">About NJ GROUP</h2>
+      <p class="section-sub">
+        NJ GROUP YEŞİL ÇEVRİM TEKNOLOJİ SANAYİ VE DIŞ TİCARET LİMİTED ŞİRKETİ
+        focuses on import, export, distribution, representation, technical consulting
+        and project development across Türkiye and Europe.
+      </p>
+    </div>
+
+    <div class="about-card">
+      <h3>Our Position</h3>
+      <p>
+        We are building a cross-border industrial bridge between manufacturers,
+        distributors and buyers.
+      </p>
+      <p>
+        Our core advantage is combining China’s supply chain, Türkiye’s trade location
+        and Europe’s industrial demand.
+      </p>
+    </div>
+  </div>
 </section>
 
 <section id="contact">
-<div class="contact">
-<h2>Contact NJ GROUP</h2>
-<p>For cooperation, product sourcing, distribution or project discussion.</p>
-<a class="btn btn-main" href="mailto:loveniubin@vip.qq.com">Send Email</a>
-</div>
+  <div class="contact-box">
+    <h2>Contact NJ GROUP</h2>
+    <p>For cooperation, sourcing, distribution or project discussion.</p>
+    <a class="btn btn-main" href="mailto:loveniubin@vip.qq.com">Send Email</a>
+  </div>
 </section>
 
+<a class="whatsapp" href="https://wa.me/905000000000" target="_blank">☎</a>
+
 <footer>
-© 2026 NJ GROUP. All Rights Reserved.
+  © 2026 NJ GROUP. All Rights Reserved.
 </footer>
 
 </body>
