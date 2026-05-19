@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 760">
+  <defs>
+    <linearGradient id="bg" x1="0" x2="1" y1="0" y2="1"><stop stop-color="#07111f"/><stop offset=".55" stop-color="#152c45"/><stop offset="1" stop-color="#0f172a"/></linearGradient>
+    <radialGradient id="glow" cx=".23" cy=".2" r=".9"><stop stop-color="#e0b15c" stop-opacity=".3"/><stop offset=".5" stop-color="#5ccfeb" stop-opacity=".1"/><stop offset="1" stop-opacity="0"/></radialGradient>
+  </defs>
+  <rect width="1200" height="760" fill="url(#bg)"/>
+  <rect width="1200" height="760" fill="url(#glow)"/>
+  <g opacity=".2" stroke="#b7f7ee"><path d="M120 532h960M170 245h860M250 152v382M950 152v382"/></g>
+  <g transform="translate(270 140)">
+    <rect x="0" y="120" width="660" height="300" rx="22" fill="#d7dde7"/>
+    <rect x="38" y="160" width="210" height="210" rx="14" fill="#173453"/>
+    <rect x="278" y="160" width="344" height="86" rx="14" fill="#c8913b"/>
+    <rect x="278" y="276" width="144" height="94" rx="14" fill="#71813a"/>
+    <rect x="454" y="276" width="168" height="94" rx="14" fill="#102a44"/>
+    <path d="M110 75h438l62 45H50z" fill="#e0b15c"/>
+    <circle cx="135" cy="428" r="34" fill="#07111f"/><circle cx="525" cy="428" r="34" fill="#07111f"/>
+  </g>
+  <rect x="72" y="610" width="500" height="12" rx="6" fill="#f8e7bd" opacity=".78"/>
+  <rect x="76" y="654" width="560" height="8" rx="4" fill="#cbd5e1" opacity=".54"/>
+</svg>

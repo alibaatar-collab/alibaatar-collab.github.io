@@ -88,6 +88,60 @@
       color: var(--gold-light);
     }
 
+    .language-select {
+      min-height: 36px;
+      padding: 0 34px 0 12px;
+      border: 1px solid rgba(224, 177, 92, 0.28);
+      border-radius: 8px;
+      background: rgba(8, 18, 32, 0.86);
+      color: #f8e7bd;
+      font-weight: 800;
+      outline: none;
+    }
+
+    .nav-item {
+      position: relative;
+      display: flex;
+      align-items: center;
+    }
+
+    .submenu {
+      position: absolute;
+      top: calc(100% + 16px);
+      left: 50%;
+      width: 260px;
+      padding: 10px;
+      border: 1px solid rgba(224, 177, 92, 0.24);
+      border-radius: 8px;
+      background: rgba(8, 18, 32, 0.96);
+      box-shadow: 0 24px 60px rgba(0, 0, 0, 0.38);
+      opacity: 0;
+      pointer-events: none;
+      transform: translate(-50%, -8px);
+      transition: opacity 0.2s ease, transform 0.2s ease;
+      backdrop-filter: blur(16px);
+    }
+
+    .submenu a {
+      display: block;
+      padding: 11px 12px;
+      border-radius: 6px;
+      color: #dbeafe;
+      font-size: 13px;
+    }
+
+    .submenu a:hover {
+      background: rgba(224, 177, 92, 0.12);
+      color: #f8e7bd;
+    }
+
+    .nav-item:hover .submenu,
+    .nav-item:focus-within .submenu {
+      opacity: 1;
+      pointer-events: auto;
+      transform: translate(-50%, 0);
+    }
+
     .hero {
       min-height: 96vh;
       padding: 140px 24px 72px;
@@ -105,8 +159,8 @@
       max-width: 1200px;
       margin: auto;
       display: grid;
-      grid-template-columns: 1.2fr 0.8fr;
-      gap: 40px;
+      grid-template-columns: 1fr;
+      gap: 28px;
       align-items: center;
     }
 
@@ -122,8 +176,8 @@
 
     h1 {
       margin: 0 0 24px;
-      max-width: 820px;
-      font-size: 64px;
+      max-width: 980px;
+      font-size: 68px;
       line-height: 1.05;
       letter-spacing: 0;
     }
@@ -133,7 +187,7 @@
     }
 
     .hero p {
-      max-width: 720px;
+      max-width: 840px;
       color: #dbeafe;
       font-size: 19px;
       line-height: 1.8;
@@ -289,11 +343,504 @@
         url("https://images.unsplash.com/photo-1505373877841-8d25f7d46678?auto=format&fit=crop&w=900&q=80");
     }
 
+    .service-actions {
+      margin-top: 18px;
+    }
+
+    .text-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      color: #f8e7bd;
+      font-size: 13px;
+      font-weight: 800;
+      text-decoration: none;
+    }
+
+    .text-link::after {
+      content: "→";
+      color: var(--gold-light);
+    }
+
+    .business-details {
+      max-width: 1280px;
+      padding-top: 20px;
+    }
+
+    .detail-section {
+      margin-top: 36px;
+      padding: 34px;
+      border: 1px solid rgba(183, 247, 238, 0.13);
+      border-radius: 8px;
+      background:
+        radial-gradient(circle at 16% 0%, rgba(224, 177, 92, 0.14), transparent 28%),
+        radial-gradient(circle at 84% 12%, rgba(92, 207, 235, 0.12), transparent 26%),
+        rgba(255, 255, 255, 0.04);
+      box-shadow: 0 24px 70px rgba(0, 0, 0, 0.2);
+      scroll-margin-top: 100px;
+    }
+
+    .detail-head {
+      display: grid;
+      grid-template-columns: 0.85fr 1.15fr;
+      gap: 30px;
+      align-items: stretch;
+    }
+
+    .detail-media {
+      min-height: 360px;
+      overflow: hidden;
+      border: 1px solid rgba(255, 255, 255, 0.12);
+      border-radius: 8px;
+      background-image:
+        linear-gradient(160deg, rgba(5, 8, 22, 0.08), rgba(5, 8, 22, 0.74)),
+        var(--detail-image);
+      background-position: center;
+      background-size: cover;
+      position: relative;
+    }
+
+    .detail-media::after {
+      content: "";
+      position: absolute;
+      inset: auto 18px 18px 18px;
+      height: 72px;
+      border: 1px solid rgba(224, 177, 92, 0.2);
+      border-radius: 8px;
+      background:
+        linear-gradient(90deg, rgba(224, 177, 92, 0.16), rgba(183, 247, 238, 0.08)),
+        rgba(5, 8, 22, 0.72);
+      backdrop-filter: blur(14px);
+    }
+
+    .detail-media span {
+      position: absolute;
+      left: 38px;
+      right: 38px;
+      bottom: 42px;
+      z-index: 1;
+      color: #ffffff;
+      font-weight: 900;
+      letter-spacing: 0;
+    }
+
+    .detail-copy {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+
+    .detail-kicker {
+      margin: 0 0 12px;
+      color: var(--gold-light);
+      font-size: 13px;
+      font-weight: 900;
+      text-transform: uppercase;
+    }
+
+    .detail-copy h3 {
+      margin: 0 0 16px;
+      font-size: 36px;
+      line-height: 1.15;
+    }
+
+    .detail-copy p {
+      margin: 0;
+      color: #b8c7d8;
+      font-size: 17px;
+      line-height: 1.8;
+    }
+
+    .detail-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-top: 22px;
+    }
+
+    .detail-tags span {
+      padding: 8px 11px;
+      border: 1px solid rgba(224, 177, 92, 0.22);
+      border-radius: 999px;
+      color: #f7dfae;
+      font-size: 12px;
+      background: rgba(224, 177, 92, 0.08);
+    }
+
+    .subgrid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 16px;
+      margin-top: 28px;
+    }
+
+    .sub-card {
+      min-height: 230px;
+      padding: 20px;
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      border-radius: 8px;
+      background:
+        linear-gradient(160deg, rgba(255, 255, 255, 0.075), rgba(255, 255, 255, 0.025)),
+        rgba(15, 23, 42, 0.66);
+    }
+
+    .sub-card strong {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 38px;
+      height: 38px;
+      margin-bottom: 16px;
+      border-radius: 8px;
+      background: rgba(224, 177, 92, 0.15);
+      color: var(--gold-light);
+      font-size: 18px;
+    }
+
+    .sub-card h4 {
+      margin: 0 0 10px;
+      color: #ffffff;
+      font-size: 18px;
+    }
+
+    .sub-card p {
+      margin: 0;
+      color: #aebccd;
+      line-height: 1.7;
+    }
+
+
+
+    .business-slider {
+      max-width: none;
+      padding: 96px 0 90px;
+      overflow: hidden;
+    }
+
+    .business-slider .section-title,
+    .business-slider .section-sub {
+      max-width: 1240px;
+      margin-left: auto;
+      margin-right: auto;
+      padding-left: 24px;
+      padding-right: 24px;
+    }
+
+    .slider-shell {
+      position: relative;
+      margin-top: 38px;
+    }
+
+    .slider-track {
+      display: grid;
+      grid-auto-flow: column;
+      grid-auto-columns: minmax(760px, 78vw);
+      gap: 24px;
+      overflow-x: auto;
+      overscroll-behavior-x: contain;
+      scroll-snap-type: x mandatory;
+      scroll-padding-left: calc((100vw - min(1240px, calc(100vw - 48px))) / 2);
+      padding: 0 max(24px, calc((100vw - 1240px) / 2)) 28px;
+      scrollbar-width: thin;
+      scrollbar-color: rgba(224, 177, 92, 0.7) rgba(255, 255, 255, 0.08);
+    }
+
+    .slide-card {
+      min-height: 690px;
+      position: relative;
+      overflow: hidden;
+      display: block;
+      border: 1px solid rgba(183, 247, 238, 0.16);
+      border-radius: 8px;
+      background: #07111f;
+      scroll-snap-align: center;
+      box-shadow: 0 26px 90px rgba(0, 0, 0, 0.26);
+    }
+
+    .slide-card::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background:
+        linear-gradient(180deg, rgba(5, 8, 22, 0.04) 40%, rgba(5, 8, 22, 0.78) 100%),
+        radial-gradient(circle at 18% 18%, rgba(224, 177, 92, 0.12), transparent 26%);
+      pointer-events: none;
+      z-index: 1;
+    }
+
+    .slide-media {
+      position: absolute;
+      inset: 0;
+      min-height: 100%;
+      background-image: var(--slide-image);
+      background-position: center;
+      background-size: contain;
+      background-repeat: no-repeat;
+      background-color: #07111f;
+    }
+
+    .slide-copy {
+      position: absolute;
+      left: 26px;
+      right: 26px;
+      bottom: 26px;
+      z-index: 2;
+      max-width: 560px;
+      padding: 22px;
+      border: 1px solid rgba(224, 177, 92, 0.22);
+      border-radius: 8px;
+      background: rgba(5, 8, 22, 0.78);
+      backdrop-filter: blur(16px);
+    }
+
+    .slide-index {
+      color: var(--gold-light);
+      font-size: 12px;
+      font-weight: 900;
+      letter-spacing: 0;
+    }
+
+    .slide-copy h3 {
+      margin: 10px 0 10px;
+      font-size: 30px;
+      line-height: 1.1;
+    }
+
+    .slide-copy p {
+      max-width: 500px;
+      color: #dbeafe;
+      font-size: 15px;
+      line-height: 1.65;
+    }
+
+    .slide-points {
+      display: none;
+    }
+
+    .slide-copy .btn {
+      min-height: 42px;
+      padding: 0 18px;
+      font-size: 13px;
+    }
+
+    .slider-hint {
+      max-width: 1240px;
+      margin: 18px auto 0;
+      padding: 0 24px;
+      color: #89a2b8;
+      font-size: 13px;
+    }
+
+
+
+    .strengths-panel {
+      position: relative;
+      margin-top: 42px;
+      display: grid;
+      grid-template-columns: 0.9fr 1.1fr;
+      gap: 22px;
+      align-items: stretch;
+    }
+
+    .strength-core {
+      min-height: 470px;
+      padding: 38px;
+      border: 1px solid rgba(224, 177, 92, 0.24);
+      border-radius: 8px;
+      background:
+        radial-gradient(circle at 22% 12%, rgba(224, 177, 92, 0.22), transparent 30%),
+        linear-gradient(145deg, rgba(15, 23, 42, 0.94), rgba(23, 52, 83, 0.72));
+      box-shadow: 0 26px 90px rgba(0, 0, 0, 0.24);
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+
+    .strength-core h3 {
+      margin: 16px 0 14px;
+      font-size: 38px;
+      line-height: 1.12;
+    }
+
+    .strength-core p {
+      color: #cbd5e1;
+      font-size: 17px;
+      line-height: 1.8;
+    }
+
+    .core-map {
+      margin-top: 26px;
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 10px;
+    }
+
+    .core-map span {
+      padding: 14px 10px;
+      border: 1px solid rgba(183, 247, 238, 0.16);
+      border-radius: 8px;
+      background: rgba(255, 255, 255, 0.055);
+      color: #f8e7bd;
+      text-align: center;
+      font-size: 13px;
+      font-weight: 800;
+    }
+
+    .strength-list {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 16px;
+    }
+
+    .strength-item {
+      min-height: 210px;
+      padding: 22px;
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      border-radius: 8px;
+      background:
+        linear-gradient(150deg, rgba(255, 255, 255, 0.075), rgba(255, 255, 255, 0.025)),
+        rgba(15, 23, 42, 0.66);
+      transition: transform 0.22s ease, border-color 0.22s ease;
+    }
+
+    .strength-item:hover {
+      border-color: rgba(224, 177, 92, 0.52);
+      transform: translateY(-4px);
+    }
+
+    .strength-item strong {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 42px;
+      height: 42px;
+      margin-bottom: 16px;
+      border-radius: 8px;
+      background: rgba(224, 177, 92, 0.15);
+      color: var(--gold-light);
+      font-size: 15px;
+    }
+
+    .strength-item h3 {
+      margin: 0 0 10px;
+      color: #ffffff;
+      font-size: 20px;
+    }
+
+    .strength-item p {
+      margin: 0;
+      color: #aebccd;
+      line-height: 1.7;
+    }
+
     .about {
       display: grid;
       grid-template-columns: 1fr 1fr;
       gap: 34px;
       align-items: center;
+    }
+
+
+
+    .company-showcase {
+      margin-bottom: 48px;
+      display: grid;
+      grid-template-columns: 0.95fr 1.05fr;
+      gap: 24px;
+      align-items: stretch;
+    }
+
+    .company-visual {
+      min-height: 500px;
+      position: relative;
+      overflow: hidden;
+      border: 1px solid rgba(183, 247, 238, 0.16);
+      border-radius: 8px;
+      background:
+        linear-gradient(160deg, rgba(5, 8, 22, 0.2), rgba(5, 8, 22, 0.82)),
+        url("assets/endustriyel-makine.jpg");
+      background-size: cover;
+      background-position: center;
+      box-shadow: 0 26px 90px rgba(0, 0, 0, 0.24);
+    }
+
+    .company-visual::after {
+      content: "";
+      position: absolute;
+      inset: 26px;
+      border: 1px solid rgba(224, 177, 92, 0.24);
+      border-radius: 8px;
+      background:
+        linear-gradient(135deg, rgba(224, 177, 92, 0.12), transparent 34%),
+        linear-gradient(180deg, transparent 38%, rgba(5, 8, 22, 0.72));
+    }
+
+    .company-mark {
+      position: absolute;
+      left: 50px;
+      bottom: 50px;
+      z-index: 1;
+      display: grid;
+      gap: 10px;
+    }
+
+    .company-mark span:first-child {
+      color: #f8e7bd;
+      font-size: 15px;
+      font-weight: 900;
+    }
+
+    .company-mark span:last-child {
+      max-width: 360px;
+      color: #dbeafe;
+      line-height: 1.6;
+    }
+
+    .company-profile {
+      padding: 38px;
+      border: 1px solid rgba(224, 177, 92, 0.22);
+      border-radius: 8px;
+      background:
+        radial-gradient(circle at 100% 0%, rgba(92, 207, 235, 0.16), transparent 30%),
+        linear-gradient(145deg, rgba(15, 23, 42, 0.94), rgba(23, 52, 83, 0.66));
+    }
+
+    .company-profile h3 {
+      margin: 10px 0 18px;
+      color: #ffffff;
+      font-size: 36px;
+      line-height: 1.15;
+    }
+
+    .company-profile p {
+      color: #cbd5e1;
+      line-height: 1.8;
+    }
+
+    .company-cards {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 12px;
+      margin-top: 26px;
+    }
+
+    .company-cards div {
+      padding: 18px;
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      border-radius: 8px;
+      background: rgba(255, 255, 255, 0.055);
+    }
+
+    .company-cards strong {
+      display: block;
+      margin-bottom: 8px;
+      color: var(--gold-light);
+    }
+
+    .company-cards span {
+      color: #aebccd;
+      font-size: 13px;
+      line-height: 1.55;
     }
 
     .company-note {
@@ -711,7 +1258,14 @@
 
       .hero-inner,
       .grid,
-      .about {
+      .about,
+      .detail-head,
+      .subgrid,
+      .slide-card,
+      .strengths-panel,
+      .strength-list,
+      .company-showcase,
+      .company-cards {
         grid-template-columns: 1fr;
       }
 
@@ -723,16 +1277,51 @@
         display: none;
       }
 
+      .language-select {
+        margin-left: auto;
+      }
+
+      .detail-section {
+        padding: 22px;
+      }
+
+      .business-slider {
+        padding-top: 70px;
+      }
+
+      .slider-track {
+        grid-auto-columns: minmax(300px, 88vw);
+      }
+
+      .slide-card {
+        min-height: 580px;
+      }
+
+      .slide-copy {
+        left: 18px;
+        right: 18px;
+        bottom: 18px;
+        padding: 18px;
+      }
+
+      .slide-copy h3 {
+        font-size: 25px;
+      }
+
+      .slide-media {
+        min-height: 100%;
+      }
+
+      .detail-copy h3 {
+        font-size: 30px;
+      }
+
       .stats {
         position: relative;
         left: auto;
         right: auto;
         bottom: auto;
         grid-template-columns: 1fr;
-      }
-
-      .panel {
-        min-height: 420px;
       }
     }
   </style>
@@ -754,11 +1343,28 @@
         <span>NJ GROUP</span>
       </div>
       <div class="nav-links">
-        <a href="#business">Faaliyetler</a>
+        <div class="nav-item">
+          <a href="#business">Faaliyetler</a>
+          <div class="submenu" aria-label="Faaliyet alt menüsü">
+            <a href="eko-donusum.html">Eko Dönüşüm</a>
+            <a href="akilli-teknoloji.html">Akıllı Teknoloji</a>
+            <a href="yapi-hirdavat.html">Yapı & Hırdavat</a>
+            <a href="endustriyel-makine.html">Endüstriyel Makine</a>
+            <a href="dijital-pazarlama.html">Dijital Pazarlama</a>
+            <a href="fuar-organizasyon.html">Fuar & Organizasyon</a>
+          </div>
+        </div>
         <a href="#products">Güçlerimiz</a>
         <a href="#about">Hakkımızda</a>
         <a href="#contact">İletişim</a>
       </div>
+      <select class="language-select" id="languageSelect" aria-label="Language">
+        <option value="tr">TR</option>
+        <option value="en">EN</option>
+        <option value="zh">中文</option>
+        <option value="fr">FR</option>
+        <option value="de">DE</option>
+      </select>
     </nav>
   </header>
 
@@ -776,160 +1382,142 @@
           <a class="btn btn-main" href="#business">Faaliyet Alanları</a>
           <a class="btn btn-line" href="#contact">İletişime Geç</a>
         </div>
-
-        <div class="panel">
-          <div class="tech-visual" aria-hidden="true">
-            <span class="tech-line one"></span>
-            <span class="tech-line two"></span>
-            <span class="tech-line three"></span>
-            <span class="tech-ring"></span>
-            <span class="tech-ring"></span>
-            <span class="tech-ring"></span>
-            <span class="tech-core">
-              <svg viewBox="0 0 160 160" aria-hidden="true">
-                <rect width="160" height="160" rx="24" fill="#111827"/>
-                <path d="M31 91c5-42 36-72 78-75" fill="none" stroke="#173453" stroke-width="12" stroke-linecap="round"/>
-                <path d="M118 41v55c0 20-13 32-34 32H73v-15h12c12 0 18-6 18-17V41z" fill="#c8913b"/>
-                <path d="M54 112V49h18l35 43v30H91L70 95v17z" fill="#173453"/>
-                <path d="M127 54c17 31 8 69-22 89" fill="none" stroke="#c8913b" stroke-width="9" stroke-linecap="round"/>
-                <path d="M28 101c29 5 49 20 59 45-29-4-50-19-59-45z" fill="#71813a"/>
-                <path d="M38 110c17 9 31 20 42 32" fill="none" stroke="#e5e7eb" stroke-width="3" stroke-linecap="round" opacity=".72"/>
-              </svg>
-            </span>
-          </div>
-          <h3>Stratejik Yapı</h3>
-          <p>Çin tedarik zinciri + Türkiye yerel operasyonu + Avrupa pazar bağlantıları.</p>
-          <div class="stats">
-            <div class="stat"><strong>6</strong>Alan</div>
-            <div class="stat"><strong>3</strong>Pazar</div>
-            <div class="stat"><strong>1</strong>Platform</div>
-          </div>
-        </div>
       </div>
     </section>
 
-    <section id="business">
+    <section id="business" class="business-slider">
       <h2 class="section-title">6 Ana Faaliyet Alanımız</h2>
       <p class="section-sub">
-        Pazar girişi, kanal geliştirme, dijital pazarlama, showroom yönetimi,
-        ticari organizasyonlar ve yerel operasyon hizmetlerini bir araya getiren
-        bölgesel bir sanayi iş birliği platformu oluşturuyoruz.
+        Altı ana iş kolumuzu büyük ekran yatay kaydırma deneyimiyle inceleyin. Her kart kısa bir iş özeti verir; detay sayfasında alt hizmetler görsel ve açıklamalarla anlatılır.
       </p>
 
-      <div class="grid">
-        <article class="service">
-          <div class="service-img img1"></div>
-          <div class="service-content">
-            <h3>EKO DÖNÜŞÜM</h3>
-            <p>Çevre dostu malzemeler, geri dönüşüm ürünleri, sürdürülebilir çözümler ve döngüsel ekonomi projeleri üzerine çalışıyoruz.</p>
-          </div>
-        </article>
+      <div class="slider-shell">
+        <div class="slider-track" aria-label="NJ GROUP faaliyet alanları">
+          <article class="slide-card">
+            <div class="slide-copy">
+              <span class="slide-index">01 / EKO DÖNÜŞÜM</span>
+              <h3>EKO DÖNÜŞÜM</h3>
+              <p>Atık lastik, geri dönüşüm kauçuk, zemin uygulamaları ve döngüsel ekonomi ürünleri için sürdürülebilir tedarik ve uygulama çözümleri.</p>
+              <ul class="slide-points"><li>Atık lastik toplama</li><li>Parçalama & öğütme</li><li>Geri dönüşüm kauçuk</li><li>Uygulama ürünleri</li></ul>
+              <a class="btn btn-main" href="eko-donusum.html">Detay Sayfasına Gir</a>
+            </div>
+            <div class="slide-media" style="--slide-image:url('assets/eko-donusum.jpg')"></div>
+          </article>
 
-        <article class="service">
-          <div class="service-img img2"></div>
-          <div class="service-content">
-            <h3>AKILLI TEKNOLOJİ</h3>
-            <p>Robot teknolojileri, AI cihazları, otomasyon sistemleri ve akıllı ekipman çözümleri sunuyoruz.</p>
-          </div>
-        </article>
+          <article class="slide-card">
+            <div class="slide-copy">
+              <span class="slide-index">02 / AKILLI TEKNOLOJİ</span>
+              <h3>AKILLI TEKNOLOJİ</h3>
+              <p>Robot teknolojileri, yapay zeka cihazları, otomasyon sistemleri ve veri tabanlı akıllı ekipman çözümleri.</p>
+              <ul class="slide-points"><li>Endüstriyel otomasyon</li><li>Lojistik robotları</li><li>AI & veri</li><li>Hizmet robotları</li></ul>
+              <a class="btn btn-main" href="akilli-teknoloji.html">Detay Sayfasına Gir</a>
+            </div>
+            <div class="slide-media" style="--slide-image:url('assets/akilli-teknoloji.jpg')"></div>
+          </article>
 
-        <article class="service">
-          <div class="service-img img3"></div>
-          <div class="service-content">
-            <h3>YAPI & HIRDAVAT</h3>
-            <p>Yapı malzemeleri, dekorasyon ürünleri, elektrik malzemeleri, mekanik sistemler ve mühendislik destek ürünleri alanında faaliyet gösteriyoruz.</p>
-          </div>
-        </article>
+          <article class="slide-card">
+            <div class="slide-copy">
+              <span class="slide-index">03 / YAPI & HIRDAVAT</span>
+              <h3>YAPI & HIRDAVAT</h3>
+              <p>Yapı malzemeleri, hırdavat, elektrik, tesisat, yalıtım, dekorasyon ve şantiye ürünlerinde geniş tedarik ağı.</p>
+              <ul class="slide-points"><li>Hırdavat</li><li>Elektrik</li><li>Tesisat</li><li>Yalıtım</li></ul>
+              <a class="btn btn-main" href="yapi-hirdavat.html">Detay Sayfasına Gir</a>
+            </div>
+            <div class="slide-media" style="--slide-image:url('assets/yapi-hirdavat.jpg')"></div>
+          </article>
 
-        <article class="service">
-          <div class="service-img img4"></div>
-          <div class="service-content">
-            <h3>ENDÜSTRİYEL MAKİNE</h3>
-            <p>Gıda makineleri, madencilik ekipmanları, üretim hatları ve çeşitli endüstriyel makine çözümleri sunuyoruz.</p>
-          </div>
-        </article>
+          <article class="slide-card">
+            <div class="slide-copy">
+              <span class="slide-index">04 / ENDÜSTRİYEL MAKİNE</span>
+              <h3>ENDÜSTRİYEL MAKİNE</h3>
+              <p>Üretim hatları, gıda makineleri, madencilik ekipmanları, taşıma sistemleri, motor ve teknik servis çözümleri.</p>
+              <ul class="slide-points"><li>Üretim hatları</li><li>Gıda makineleri</li><li>Madencilik</li><li>Teknik destek</li></ul>
+              <a class="btn btn-main" href="endustriyel-makine.html">Detay Sayfasına Gir</a>
+            </div>
+            <div class="slide-media" style="--slide-image:url('assets/endustriyel-makine.jpg')"></div>
+          </article>
 
-        <article class="service">
-          <div class="service-img img5"></div>
-          <div class="service-content">
-            <h3>DİJİTAL PAZARLAMA</h3>
-            <p>TikTok, sosyal medya, canlı yayın satış sistemleri, bağımsız web sitesi yönetimi ve AI destekli dijital pazarlama çözümleri geliştiriyoruz.</p>
-          </div>
-        </article>
+          <article class="slide-card">
+            <div class="slide-copy">
+              <span class="slide-index">05 / DİJİTAL PAZARLAMA</span>
+              <h3>DİJİTAL PAZARLAMA</h3>
+              <p>Markalar için e-ticaret, pazaryeri, canlı yayın satış, sosyal medya, SEO, reklam ve performans raporlama altyapısı.</p>
+              <ul class="slide-points"><li>E-ticaret</li><li>Canlı yayın</li><li>Reklam</li><li>Raporlama</li></ul>
+              <a class="btn btn-main" href="dijital-pazarlama.html">Detay Sayfasına Gir</a>
+            </div>
+            <div class="slide-media" style="--slide-image:url('assets/dijital-pazarlama.jpg')"></div>
+          </article>
 
-        <article class="service">
-          <div class="service-img img6"></div>
-          <div class="service-content">
-            <h3>FUAR & ORGANİZASYON</h3>
-            <p>Fuar stand kiralama, stant kurulumu, tercümanlık, ticari organizasyonlar ve B2B eşleştirme hizmetleri sunuyoruz.</p>
-          </div>
-        </article>
+          <article class="slide-card">
+            <div class="slide-copy">
+              <span class="slide-index">06 / FUAR & ORGANİZASYON</span>
+              <h3>FUAR & ORGANİZASYON</h3>
+              <p>Fuar katılımı, stand tasarım ve kurulum, B2B görüşme organizasyonu, tercümanlık, karşılama ve transfer hizmetleri.</p>
+              <ul class="slide-points"><li>Fuar hizmetleri</li><li>Stand kurulum</li><li>B2B eşleştirme</li><li>Tercüme</li></ul>
+              <a class="btn btn-main" href="fuar-organizasyon.html">Detay Sayfasına Gir</a>
+            </div>
+            <div class="slide-media" style="--slide-image:url('assets/fuar-organizasyon.jpg')"></div>
+          </article>
+        </div>
       </div>
+      <p class="slider-hint">Sağa sola kaydırarak 6 ana faaliyet alanını gezebilirsiniz.</p>
     </section>
 
     <section id="products">
       <h2 class="section-title">Temel Güçlerimiz</h2>
       <p class="section-sub">
-        NJ GROUP, Çin üretimini Türkiye operasyonları ve Avrupa pazarı ile birleştiren
-        bölgesel bir ticari ekosistem oluşturmaktadır.
+        NJ GROUP, Çin üretimini Türkiye operasyonları ve Avrupa pazarı ile birleştiren bölgesel bir ticari ekosistem oluşturmaktadır.
       </p>
 
-      <div class="grid">
-        <article class="service">
-          <div class="service-content">
-            <h3>Yerel Operasyon Gücü</h3>
-            <p>Türkiye pazarında yerel ofis, showroom ve operasyon ağı ile faaliyet gösteriyoruz.</p>
+      <div class="strengths-panel">
+        <div class="strength-core">
+          <div>
+            <p class="detail-kicker">NJ GROUP PLATFORM</p>
+            <h3>Çin - Türkiye - Avrupa arasında yerelleştirilmiş operasyon gücü</h3>
+            <p>
+              Tedarik, pazar girişi, dijital satış, showroom, fuar ve satış sonrası destek süreçlerini tek platform altında birleştiriyoruz.
+            </p>
           </div>
-        </article>
+          <div class="core-map">
+            <span>China Supply</span>
+            <span>Türkiye Ops</span>
+            <span>Europe Market</span>
+          </div>
+        </div>
 
-        <article class="service">
-          <div class="service-content">
-            <h3>Çin Tedarik Zinciri Gücü</h3>
-            <p>Çin'deki güçlü üretim kaynaklarını kullanarak rekabetçi ve kaliteli çözümler sunuyoruz.</p>
-          </div>
-        </article>
-
-        <article class="service">
-          <div class="service-content">
-            <h3>Dijital Pazarlama</h3>
-            <p>TikTok, sosyal medya, bağımsız e-ticaret siteleri ve AI destekli içerik sistemleri ile dijital satış altyapısı kuruyoruz.</p>
-          </div>
-        </article>
-
-        <article class="service">
-          <div class="service-content">
-            <h3>Showroom ve Ticari Ağ</h3>
-            <p>İSTOÇ merkezli showroom ve ticari ağ yapımızla ürün tanıtımı, müşteri görüşmeleri ve kanal geliştirme hizmetleri sunuyoruz.</p>
-          </div>
-        </article>
-
-        <article class="service">
-          <div class="service-content">
-            <h3>Avrupa Pazar Bağlantıları</h3>
-            <p>Türkiye'nin stratejik konumu sayesinde Avrupa pazarına yönelik iş geliştirme bağlantıları kuruyoruz.</p>
-          </div>
-        </article>
-
-        <article class="service">
-          <div class="service-content">
-            <h3>Satış Sonrası Destek</h3>
-            <p>Yerel operasyon ve satış sonrası destek sistemleri ile uzun vadeli ticari değer üretmeyi hedefliyoruz.</p>
-          </div>
-        </article>
+        <div class="strength-list">
+          <article class="strength-item"><strong>01</strong><h3>Yerel Operasyon Gücü</h3><p>Türkiye pazarında yerel ofis, showroom ve operasyon ağı ile faaliyet gösteriyoruz.</p></article>
+          <article class="strength-item"><strong>02</strong><h3>Çin Tedarik Zinciri Gücü</h3><p>Çin'deki güçlü üretim kaynaklarını kullanarak rekabetçi ve kaliteli çözümler sunuyoruz.</p></article>
+          <article class="strength-item"><strong>03</strong><h3>Dijital Pazarlama</h3><p>TikTok, sosyal medya, bağımsız e-ticaret siteleri ve AI destekli içerik sistemleri ile dijital satış altyapısı kuruyoruz.</p></article>
+          <article class="strength-item"><strong>04</strong><h3>Showroom ve Ticari Ağ</h3><p>İSTOÇ merkezli showroom ve ticari ağ yapımızla ürün tanıtımı, müşteri görüşmeleri ve kanal geliştirme hizmetleri sunuyoruz.</p></article>
+          <article class="strength-item"><strong>05</strong><h3>Avrupa Pazar Bağlantıları</h3><p>Türkiye'nin stratejik konumu sayesinde Avrupa pazarına yönelik iş geliştirme bağlantıları kuruyoruz.</p></article>
+          <article class="strength-item"><strong>06</strong><h3>Satış Sonrası Destek</h3><p>Yerel operasyon ve satış sonrası destek sistemleri ile uzun vadeli ticari değer üretmeyi hedefliyoruz.</p></article>
+        </div>
       </div>
     </section>
 
     <section id="about">
-      <div class="company-note">
-        <h3>NJ GROUP YEŞİL DÖNÜŞÜM TEKNOLOJİ</h3>
-        <p>
-          NJ GROUP YEŞİL DÖNÜŞÜM TEKNOLOJİ SANAYİ VE DIŞ TİCARET LİMİTED ŞİRKETİ'nin
-          merkezi İstanbul'daki İSTOÇ ticaret bölgesinde bulunmaktadır.
-          Türkiye'nin stratejik konumu ve ticari avantajları sayesinde Çin tedarik
-          zinciri entegrasyonu, Türkiye yerel kanal ağı, Avrupa pazar bağlantıları,
-          dijital pazarlama sistemleri ve showroom hizmetleri sunuyoruz.
-        </p>
-        <p>Biz sadece bir dış ticaret şirketi değiliz.</p>
+      <div class="company-showcase">
+        <div class="company-visual">
+          <div class="company-mark">
+            <span>EURASIA INDUSTRIAL PLATFORM</span>
+            <span>China supply chain, Türkiye local operation and European market connection.</span>
+          </div>
+        </div>
+
+        <div class="company-profile">
+          <p class="detail-kicker">NJ GROUP COMPANY PROFILE</p>
+          <h3>NJ GROUP YEŞİL DÖNÜŞÜM TEKNOLOJİ</h3>
+          <p>
+            NJ GROUP YEŞİL DÖNÜŞÜM TEKNOLOJİ SANAYİ VE DIŞ TİCARET LİMİTED ŞİRKETİ'nin merkezi İstanbul'daki İSTOÇ ticaret bölgesinde bulunmaktadır. Türkiye'nin stratejik konumu ve ticari avantajları sayesinde Çin tedarik zinciri entegrasyonu, Türkiye yerel kanal ağı, Avrupa pazar bağlantıları, dijital pazarlama sistemleri ve showroom hizmetleri sunuyoruz.
+          </p>
+          <p>Biz sadece bir dış ticaret şirketi değiliz.</p>
+          <div class="company-cards">
+            <div><strong>İSTOÇ</strong><span>İstanbul merkezli yerel ticari operasyon</span></div>
+            <div><strong>3 Pazar</strong><span>Çin, Türkiye ve Avrupa arasında köprü</span></div>
+            <div><strong>6 Alan</strong><span>Sanayi, teknoloji, dijital ve organizasyon çözümleri</span></div>
+          </div>
+        </div>
       </div>
 
       <div class="about">
@@ -971,5 +1559,6 @@
   <footer>
     © 2026 NJ GROUP. All Rights Reserved. · <a href="https://njgrup.com/">njgrup.com</a>
   </footer>
+  <script src="assets/i18n.js"></script>
 </body>
 </html>

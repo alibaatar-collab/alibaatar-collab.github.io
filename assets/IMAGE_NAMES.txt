@@ -7,4 +7,13 @@ Save the six business images in this folder with these exact names:
 5. dijital-pazarlama.jpg
 6. fuar-organizasyon.jpg
 
-The website already uses these filenames in index.html.
+The website now includes generated SVG visuals for all six sections:
+
+1. eko-donusum.svg
+2. akilli-teknoloji.svg
+3. yapi-hirdavat.svg
+4. endustriyel-makine.svg
+5. dijital-pazarlama.svg
+6. fuar-organizasyon.svg
+
+The SVG files are used first. If you later want to replace them with photo-style images, keep the JPG filenames above.
