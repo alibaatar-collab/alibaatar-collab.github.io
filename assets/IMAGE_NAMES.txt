@@ -1,0 +1,10 @@
+Save the six business images in this folder with these exact names:
+
+1. eko-donusum.jpg
+2. akilli-teknoloji.jpg
+3. yapi-hirdavat.jpg
+4. endustriyel-makine.jpg
+5. dijital-pazarlama.jpg
+6. fuar-organizasyon.jpg
+
+The website already uses these filenames in index.html.

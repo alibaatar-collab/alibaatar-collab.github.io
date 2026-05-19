@@ -1,0 +1,18 @@
+﻿NJ GROUP GitHub Upload Package
+
+Upload these files to the root of this repository:
+https://github.com/alibaatar-collab/alibaatar-collab.github.io
+
+Files:
+- index.html
+- CNAME
+- assets/nj-logo-mark.svg
+- assets/IMAGE_NAMES.txt
+
+Later, add the six business images into assets with these exact names:
+- eko-donusum.jpg
+- akilli-teknoloji.jpg
+- yapi-hirdavat.jpg
+- endustriyel-makine.jpg
+- dijital-pazarlama.jpg
+- fuar-organizasyon.jpg
