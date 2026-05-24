@@ -196,15 +196,25 @@ select {
   grid-template-columns: auto minmax(0, 1fr) auto;
   align-items: center;
   gap: 14px;
-  max-width: 920px;
   min-height: 54px;
-  margin: 0 0 24px;
+  margin: 0;
   padding: 10px 14px;
   border: 1px solid rgba(184, 121, 54, 0.44);
   border-radius: var(--radius);
   background: linear-gradient(90deg, rgba(184, 121, 54, 0.28), rgba(255, 255, 255, 0.08));
   box-shadow: 0 14px 42px rgba(0, 0, 0, 0.16);
   backdrop-filter: blur(16px);
+}
+
+.expo-strip-below {
+  margin: 0;
+  border-width: 1px 0;
+  border-left: 0;
+  border-right: 0;
+  border-radius: 0;
+  padding: 16px clamp(18px, 4vw, 58px);
+  color: var(--white);
+  background: linear-gradient(90deg, rgba(17, 24, 33, 0.98), rgba(36, 74, 99, 0.94));
 }
 
 .top-expo-strip span {
