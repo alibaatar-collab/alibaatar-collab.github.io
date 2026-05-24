@@ -544,15 +544,15 @@ const services = [
 ];
 
 const serviceImages = [
-  "https://images.unsplash.com/photo-1494412651409-8963ce7935a7?auto=format&fit=crop&w=900&q=80",
-  "https://images.unsplash.com/photo-1524230572899-a752b3835840?auto=format&fit=crop&w=900&q=80",
-  "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=900&q=80",
-  "https://images.unsplash.com/photo-1532996122724-e3c354a0b15b?auto=format&fit=crop&w=900&q=80",
-  "https://images.unsplash.com/photo-1516192518150-0d8fee5425e3?auto=format&fit=crop&w=900&q=80",
-  "https://images.unsplash.com/photo-1503387762-592deb58ef4e?auto=format&fit=crop&w=900&q=80",
-  "https://images.unsplash.com/photo-1557838923-2985c318be48?auto=format&fit=crop&w=900&q=80",
-  "https://images.unsplash.com/photo-1540575467063-178a50c2df87?auto=format&fit=crop&w=900&q=80",
-  "https://images.unsplash.com/photo-1581091870622-2f4f9f5b03f4?auto=format&fit=crop&w=900&q=80",
+  "/assets/endustriyel-makine.jpg",
+  "/assets/fuar-organizasyon.jpg",
+  "/assets/akilli-teknoloji.jpg",
+  "/assets/eko-donusum.jpg",
+  "/assets/endustriyel-makine.jpg",
+  "/assets/yapi-hirdavat.jpg",
+  "/assets/dijital-pazarlama.jpg",
+  "/assets/fuar-organizasyon.jpg",
+  "/assets/eko-donusum.jpg",
 ];
 
 const marketDetails = {
@@ -583,7 +583,7 @@ const exhibitionNews = [
     fair: "KOMATEK 2026",
     sourceName: "CECE / KOMATEK",
     source: "https://www.cece.eu/news/cece-heads-to-komatek-2026-in-istanbul-turkiye/",
-    image: "https://www.cece.eu/cms/multimedia/00017092hp2qjc0k/komatek%20new%2026.jpg",
+    image: "/assets/endustriyel-makine.jpg",
     officialPoint:
       "CECE highlights KOMATEK as a major international meeting point for construction equipment, machinery, technology and business opportunities.",
     zhOfficialPoint:
@@ -601,7 +601,7 @@ const exhibitionNews = [
     fair: "WIN EURASIA 2026",
     sourceName: "Istanbul Expo Center / WIN EURASIA",
     source: "https://ifm.com.tr/en/fairs/win-eurasia-2026",
-    image: "https://ifm.com.tr/media/banner/ifm2b.jpg",
+    image: "/assets/akilli-teknoloji.jpg",
     officialPoint:
       "The fair brings automation, logistics, welding, electrical, electronics, energy, metalworking, hydraulic and pneumatic industries under one roof.",
     zhOfficialPoint:
@@ -619,7 +619,7 @@ const exhibitionNews = [
     fair: "CF Istanbul 2026",
     sourceName: "CF Istanbul",
     source: "https://www.cfistanbul.com/english",
-    image: "https://www.cfistanbul.com/data/files/2024/cf_stanbul_maj-lowreskopya.jpg",
+    image: "/assets/yapi-hirdavat.jpg",
     officialPoint:
       "CF Istanbul presents construction materials, HVAC-R, bathroom and kitchen, plumbing, doors, windows and smart building systems.",
     zhOfficialPoint:
@@ -637,7 +637,7 @@ const exhibitionNews = [
     fair: "MAKTEK Eurasia 2026",
     sourceName: "MAKTEK Eurasia",
     source: "https://www.maktekfuari.com/en/press/blog/maktek-eurasia-a-production-bridge-from-europe-to-the-world",
-    image: "https://www.maktekfuari.com/maktekavrasya/img/about/01.jpg",
+    image: "/assets/endustriyel-makine.jpg",
     officialPoint:
       "MAKTEK Eurasia is positioned as a major platform for machine tools, production technologies and industrial decision-makers.",
     zhOfficialPoint:
@@ -655,7 +655,7 @@ const exhibitionNews = [
     fair: "Expo 3D Istanbul 2026",
     sourceName: "Expo 3D Istanbul",
     source: "https://expo3d.istanbul/en/",
-    image: "https://images.unsplash.com/photo-1631376271946-977cf5328524?auto=format&fit=crop&w=900&q=80",
+    image: "/assets/akilli-teknoloji.jpg",
     officialPoint:
       "The official fair page presents Expo 3D Istanbul as a meeting point for additive manufacturing, 3D printing, design and production technologies, with the 2026 edition at Istanbul Fair Center.",
     zhOfficialPoint:
