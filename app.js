@@ -543,18 +543,6 @@ const services = [
   },
 ];
 
-const serviceImages = [
-  "/assets/endustriyel-makine.jpg",
-  "/assets/fuar-organizasyon.jpg",
-  "/assets/akilli-teknoloji.jpg",
-  "/assets/eko-donusum.jpg",
-  "/assets/endustriyel-makine.jpg",
-  "/assets/yapi-hirdavat.jpg",
-  "/assets/dijital-pazarlama.jpg",
-  "/assets/fuar-organizasyon.jpg",
-  "/assets/eko-donusum.jpg",
-];
-
 const marketDetails = {
   china: {
     title: "China Supply Chain",
@@ -583,7 +571,6 @@ const exhibitionNews = [
     fair: "KOMATEK 2026",
     sourceName: "CECE / KOMATEK",
     source: "https://www.cece.eu/news/cece-heads-to-komatek-2026-in-istanbul-turkiye/",
-    image: "/assets/endustriyel-makine.jpg",
     officialPoint:
       "CECE highlights KOMATEK as a major international meeting point for construction equipment, machinery, technology and business opportunities.",
     zhOfficialPoint:
@@ -601,7 +588,6 @@ const exhibitionNews = [
     fair: "WIN EURASIA 2026",
     sourceName: "Istanbul Expo Center / WIN EURASIA",
     source: "https://ifm.com.tr/en/fairs/win-eurasia-2026",
-    image: "/assets/akilli-teknoloji.jpg",
     officialPoint:
       "The fair brings automation, logistics, welding, electrical, electronics, energy, metalworking, hydraulic and pneumatic industries under one roof.",
     zhOfficialPoint:
@@ -619,7 +605,6 @@ const exhibitionNews = [
     fair: "CF Istanbul 2026",
     sourceName: "CF Istanbul",
     source: "https://www.cfistanbul.com/english",
-    image: "/assets/yapi-hirdavat.jpg",
     officialPoint:
       "CF Istanbul presents construction materials, HVAC-R, bathroom and kitchen, plumbing, doors, windows and smart building systems.",
     zhOfficialPoint:
@@ -637,7 +622,6 @@ const exhibitionNews = [
     fair: "MAKTEK Eurasia 2026",
     sourceName: "MAKTEK Eurasia",
     source: "https://www.maktekfuari.com/en/press/blog/maktek-eurasia-a-production-bridge-from-europe-to-the-world",
-    image: "/assets/endustriyel-makine.jpg",
     officialPoint:
       "MAKTEK Eurasia is positioned as a major platform for machine tools, production technologies and industrial decision-makers.",
     zhOfficialPoint:
@@ -655,7 +639,6 @@ const exhibitionNews = [
     fair: "Expo 3D Istanbul 2026",
     sourceName: "Expo 3D Istanbul",
     source: "https://expo3d.istanbul/en/",
-    image: "/assets/akilli-teknoloji.jpg",
     officialPoint:
       "The official fair page presents Expo 3D Istanbul as a meeting point for additive manufacturing, 3D printing, design and production technologies, with the 2026 edition at Istanbul Fair Center.",
     zhOfficialPoint:
@@ -748,7 +731,8 @@ function renderCards() {
     .map(
       (service, index) => `
       <button class="service-card" data-service="${index}">
-        <span class="service-image" style="--service-image:url('${serviceImages[index]}')">
+        <span class="service-image service-tone-${(index % 5) + 1}">
+          <span class="service-number">${String(index + 1).padStart(2, "0")}</span>
           <span class="service-icon">${service.icon}</span>
         </span>
         <span class="service-body">
@@ -771,7 +755,7 @@ function renderCards() {
       .map(
         (news) => `
         <button class="news-item" data-news="${news.title}">
-          <span class="news-image" style="--news-image:url('${news.image}')"></span>
+          <span class="news-image">${news.fair.split(" ")[0]}</span>
           <span class="news-copy">
             <time>${news.date} · ${news.sourceName}</time>
             <strong>${currentLang === "zh" ? news.zh : news.title}</strong>

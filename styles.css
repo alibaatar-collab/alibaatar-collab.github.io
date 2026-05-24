@@ -132,8 +132,9 @@ select {
   overflow: hidden;
   color: var(--white);
   background:
-    linear-gradient(110deg, rgba(17, 24, 33, 0.95) 0%, rgba(24, 38, 55, 0.86) 44%, rgba(17, 24, 33, 0.74) 100%),
-    url("/assets/endustriyel-makine.jpg") center/cover;
+    radial-gradient(circle at 78% 28%, rgba(184, 121, 54, 0.16), transparent 28%),
+    radial-gradient(circle at 58% 72%, rgba(125, 134, 68, 0.14), transparent 34%),
+    linear-gradient(120deg, #111821 0%, #182637 48%, #123047 100%);
 }
 
 .hero-media {
@@ -434,11 +435,59 @@ select {
 
 .service-image {
   position: relative;
+  overflow: hidden;
   display: block;
   min-height: 138px;
-  background:
-    linear-gradient(180deg, rgba(17, 24, 33, 0.12), rgba(17, 24, 33, 0.42)),
-    var(--service-image, none) center/cover no-repeat;
+  background: linear-gradient(135deg, rgba(17, 24, 33, 0.98), rgba(36, 74, 99, 0.88));
+}
+
+.service-image::before,
+.service-image::after {
+  content: "";
+  position: absolute;
+  border-radius: 50%;
+  pointer-events: none;
+}
+
+.service-image::before {
+  width: 190px;
+  height: 190px;
+  right: -68px;
+  top: -72px;
+  border: 1px solid rgba(184, 121, 54, 0.42);
+}
+
+.service-image::after {
+  width: 120px;
+  height: 120px;
+  right: 34px;
+  bottom: -68px;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+}
+
+.service-tone-2 {
+  background: linear-gradient(135deg, #172536, #27465d);
+}
+
+.service-tone-3 {
+  background: linear-gradient(135deg, #132a33, #526238);
+}
+
+.service-tone-4 {
+  background: linear-gradient(135deg, #1b2630, #7d8644);
+}
+
+.service-tone-5 {
+  background: linear-gradient(135deg, #111821, #8a5f32);
+}
+
+.service-number {
+  position: absolute;
+  right: 18px;
+  top: 18px;
+  color: rgba(255, 255, 255, 0.58);
+  font-size: 34px;
+  font-weight: 850;
 }
 
 .service-body {
@@ -494,8 +543,8 @@ select {
 .exhibition-gateway {
   color: var(--white);
   background:
-    linear-gradient(120deg, rgba(17, 24, 33, 0.96), rgba(24, 38, 55, 0.88)),
-    url("/assets/fuar-organizasyon.jpg") center/cover;
+    radial-gradient(circle at 82% 18%, rgba(184, 121, 54, 0.18), transparent 28%),
+    linear-gradient(135deg, #111821, #182637 55%, #123047);
 }
 
 .exhibition-gateway .section-head p {
@@ -547,8 +596,8 @@ select {
   text-align: left;
   padding: 28px;
   background:
-    linear-gradient(rgba(24, 38, 55, 0.62), rgba(17, 24, 33, 0.72)),
-    url("/assets/fuar-organizasyon.jpg") center/cover;
+    linear-gradient(135deg, rgba(184, 121, 54, 0.22), rgba(255, 255, 255, 0.07)),
+    linear-gradient(135deg, #182637, #111821);
   cursor: pointer;
 }
 
@@ -604,13 +653,14 @@ select {
 }
 
 .news-image {
+  display: grid;
+  place-items: center;
   min-height: 118px;
   border-radius: 6px;
-  background:
-    linear-gradient(rgba(17, 24, 33, 0.16), rgba(17, 24, 33, 0.16)),
-    var(--news-image, none) center/cover no-repeat;
-  background-position: center;
-  background-size: cover;
+  color: var(--white);
+  background: linear-gradient(135deg, rgba(184, 121, 54, 0.82), rgba(36, 74, 99, 0.92));
+  font-size: 20px;
+  font-weight: 900;
 }
 
 .news-copy {
@@ -736,8 +786,8 @@ select {
 .workflow-section {
   color: var(--white);
   background:
-    linear-gradient(rgba(17, 24, 33, 0.91), rgba(17, 24, 33, 0.91)),
-    url("/assets/endustriyel-makine.jpg") center/cover;
+    radial-gradient(circle at 12% 20%, rgba(184, 121, 54, 0.16), transparent 26%),
+    linear-gradient(135deg, #111821, #182637);
 }
 
 .workflow-section .section-head p {
@@ -900,8 +950,7 @@ select {
 .partner-links-section {
   color: var(--white);
   background:
-    linear-gradient(120deg, rgba(17, 24, 33, 0.97), rgba(24, 38, 55, 0.94)),
-    url("/assets/dijital-pazarlama.jpg") center/cover;
+    linear-gradient(135deg, #111821, #172536 52%, #182637);
   border-top: 1px solid rgba(255, 255, 255, 0.12);
 }
 
