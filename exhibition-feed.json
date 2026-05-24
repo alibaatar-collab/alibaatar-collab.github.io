@@ -1,0 +1,41 @@
+{
+  "updatedAt": "2026-05-24",
+  "note": "Preview feed for NJ GROUP exhibition intelligence. In production this file can be updated by a scheduled job or connected to an approved exhibition data source.",
+  "fairs": [
+    {
+      "name": "KOMATEK 2026",
+      "date": "3-6 June 2026",
+      "venue": "Istanbul Expo Center",
+      "sector": "Construction machinery, building technology",
+      "source": "https://komatekfuar.com/en/"
+    },
+    {
+      "name": "WIN EURASIA 2026",
+      "date": "10-13 June 2026",
+      "venue": "Istanbul Expo Center",
+      "sector": "Automation, robotics, energy, manufacturing technologies",
+      "source": "https://ifm.com.tr/en/fairs/win-eurasia-2026"
+    },
+    {
+      "name": "CF Istanbul 2026",
+      "date": "2-4 July 2026",
+      "venue": "Istanbul Expo Center",
+      "sector": "Construction materials, HVAC, smart building systems",
+      "source": "https://www.cfistanbul.com/english"
+    },
+    {
+      "name": "Expo 3D Istanbul 2026",
+      "date": "17-19 September 2026",
+      "venue": "Istanbul Expo Center",
+      "sector": "Additive manufacturing, advanced materials, design and production",
+      "source": "https://expo3d.istanbul/en/"
+    },
+    {
+      "name": "MAKTEK Eurasia 2026",
+      "date": "28 September - 3 October 2026",
+      "venue": "Tüyap Fair and Congress Center",
+      "sector": "Machine tools, metal processing, CAD/CAM, production technologies",
+      "source": "https://www.maktekfuari.com/en"
+    }
+  ]
+}

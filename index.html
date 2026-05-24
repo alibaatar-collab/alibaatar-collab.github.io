@@ -1,13 +1,335 @@
 <!doctype html>
 <html lang="en">
   <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>ChatGPT</title>
-    <script type="module" crossorigin src="/assets/index-Cqf2coBv.js"></script>
-    <link rel="stylesheet" crossorigin href="/assets/index-B3gkJjnR.css">
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>NJ GROUP | Eurasia Industrial Trade & Market Entry Platform</title>
+    <meta
+      name="description"
+      content="NJ GROUP connects China, Türkiye and Europe through industrial trade, market entry, green circular economy, smart technologies and business organization services."
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./styles.css" />
   </head>
   <body>
-    <div id="root"></div>
+    <header class="site-header">
+      <a class="brand" href="#top" aria-label="NJ GROUP home">
+        <img src="./assets/nj-logo-mark.svg" alt="NJ GROUP logo" />
+        <span>
+          <strong>NJ GROUP</strong>
+          <small data-i18n="brandLine">Eurasia Industrial Platform</small>
+        </span>
+      </a>
+
+      <nav class="main-nav" aria-label="Primary navigation">
+        <a href="#services" data-i18n="navServices">Services</a>
+        <a href="#exhibitions" data-i18n="navExhibitions">Exhibitions</a>
+        <a href="#markets" data-i18n="navMarkets">Markets</a>
+        <a href="#workflow" data-i18n="navWorkflow">Workflow</a>
+        <a href="#contact" data-i18n="navContact">Contact</a>
+      </nav>
+
+      <div class="header-actions">
+        <select id="languageSelect" aria-label="Language">
+          <option value="en">EN</option>
+          <option value="zh">中文</option>
+          <option value="tr">TR</option>
+          <option value="de">DE</option>
+          <option value="fr">FR</option>
+        </select>
+        <button class="menu-button" id="menuButton" type="button" aria-label="Open menu">☰</button>
+      </div>
+    </header>
+
+    <main id="top">
+      <section class="hero">
+        <div class="hero-media" aria-hidden="true">
+          <div class="route route-a"></div>
+          <div class="route route-b"></div>
+          <div class="industrial-grid"></div>
+        </div>
+        <p class="eyebrow hero-top-eyebrow" data-i18n="heroEyebrow">Türkiye-based Eurasia industrial gateway</p>
+        <div class="hero-content">
+          <a class="top-expo-strip" href="#exhibitions" aria-label="Türkiye exhibition information">
+            <span data-i18n="topExpoLabel">Türkiye Exhibition Gateway</span>
+            <strong data-i18n="topExpoTitle">Upcoming industrial fairs: KOMATEK • WIN EURASIA • CF Istanbul</strong>
+            <em data-i18n="topExpoAction">View calendar</em>
+          </a>
+          <h1 data-i18n="heroTitle">Connecting China, Türkiye & Europe</h1>
+          <p class="hero-copy" data-i18n="heroCopy">
+            NJ GROUP helps industrial companies enter Türkiye, connect with Europe, integrate Chinese supply chains
+            and build real market channels.
+          </p>
+          <div class="hero-actions">
+            <a class="primary-button" href="#contact" data-i18n="heroCta">Start a Market Entry Project</a>
+            <a class="secondary-button" href="#services" data-i18n="heroSecondary">Explore Services</a>
+          </div>
+        </div>
+        <div class="hero-panel" aria-label="NJ GROUP positioning">
+          <img src="./assets/nj-logo-mark.svg" alt="NJ GROUP logo mark" />
+          <div>
+            <strong data-i18n="heroPanelTitle">Industrial Trade • Market Expansion • Green Transformation</strong>
+            <span data-i18n="heroPanelText">A platform model for supply, market, compliance and execution.</span>
+          </div>
+        </div>
+      </section>
+
+      <section class="section intro-section" id="about">
+        <div class="section-kicker" data-i18n="aboutKicker">Official Positioning</div>
+        <div class="split">
+          <div>
+            <h2 data-i18n="aboutTitle">Not a product catalogue. An industrial ecosystem platform.</h2>
+          </div>
+          <p data-i18n="aboutCopy">
+            NJ GROUP is designed to help clients build commercial connections between Chinese manufacturing,
+            Türkiye-based local execution and European market access.
+          </p>
+        </div>
+        <div class="metrics">
+          <div><strong>China</strong><span data-i18n="metricChina">Factory resources and sourcing</span></div>
+          <div><strong>Türkiye</strong><span data-i18n="metricTurkey">Local channels and market entry</span></div>
+          <div><strong>Europe</strong><span data-i18n="metricEurope">Distribution, compliance and expansion</span></div>
+        </div>
+      </section>
+
+      <section class="exhibition-gateway" id="exhibitions">
+        <div class="section">
+          <div class="section-head">
+            <div>
+              <div class="section-kicker" data-i18n="expoKicker">Client Traffic Gateway</div>
+              <h2 data-i18n="expoTitle">Türkiye exhibitions as the entry point of the Eurasia industrial loop</h2>
+            </div>
+            <p data-i18n="expoCopy">
+              Exhibition service is not only booth support. It is NJ GROUP's industrial customer acquisition center:
+              Chinese factories meet Türkiye channels, then connect to Europe and long-term orders.
+            </p>
+          </div>
+
+          <div class="loop-band" aria-label="NJ GROUP business loop">
+            <div><span>01</span><strong data-i18n="loop1">Chinese Factories</strong></div>
+            <div><span>02</span><strong data-i18n="loop2">Türkiye Exhibitions</strong></div>
+            <div><span>03</span><strong data-i18n="loop3">Distributor Conversion</strong></div>
+            <div><span>04</span><strong data-i18n="loop4">Europe Connection</strong></div>
+            <div><span>05</span><strong data-i18n="loop5">After-sales & Repeat Orders</strong></div>
+          </div>
+
+          <div class="expo-layout">
+            <button class="expo-feature" data-expo-detail="service">
+              <span class="expo-badge" data-i18n="expoBadgeService">Service System</span>
+              <h3 data-i18n="expoServiceTitle">China companies exhibiting in Türkiye</h3>
+              <p data-i18n="expoServiceCopy">
+                Booth booking, stand construction, translation, reception, hotel, transport, exhibit logistics and B2B
+                customer development.
+              </p>
+            </button>
+
+            <div class="expo-news">
+              <div class="mini-head">
+                <span data-i18n="expoNewsTitle">Exhibition Intelligence Window</span>
+                <small data-i18n="expoNewsSmall">Auto-update-ready feed</small>
+              </div>
+              <div id="expoNewsList"></div>
+            </div>
+          </div>
+
+          <div class="section-head compact-head">
+            <div>
+              <div class="section-kicker" data-i18n="expoCalendarKicker">Future Türkiye Exhibitions</div>
+              <h2 data-i18n="expoCalendarTitle">Priority fairs for NJ GROUP industrial growth</h2>
+            </div>
+            <p data-i18n="expoCalendarCopy">
+              Dates are shown for planning and should be verified with official fair organizers before booking.
+            </p>
+          </div>
+          <div class="expo-calendar" id="expoCalendar"></div>
+        </div>
+      </section>
+
+      <section class="section" id="services">
+        <div class="section-head">
+          <div>
+            <div class="section-kicker" data-i18n="servicesKicker">Core Business System</div>
+            <h2 data-i18n="servicesTitle">Nine integrated service platforms</h2>
+          </div>
+          <p data-i18n="servicesCopy">
+            Each service is built for practical execution: sourcing, channels, compliance, logistics, marketing and
+            long-term market growth.
+          </p>
+        </div>
+        <div class="service-grid" id="serviceGrid"></div>
+      </section>
+
+      <section class="section markets-section" id="markets">
+        <div class="section-head">
+          <div>
+            <div class="section-kicker" data-i18n="marketsKicker">Market Architecture</div>
+            <h2 data-i18n="marketsTitle">Three-region operating model</h2>
+          </div>
+          <p data-i18n="marketsCopy">
+            NJ GROUP aligns Chinese supply capacity, Türkiye local landing power and European market standards.
+          </p>
+        </div>
+        <div class="market-map">
+          <button class="market-node" data-detail="china">
+            <span>01</span><strong data-i18n="marketChina">China Supply Chain</strong>
+          </button>
+          <div class="map-line"></div>
+          <button class="market-node center" data-detail="turkey">
+            <span>02</span><strong data-i18n="marketTurkey">Türkiye Market Entry</strong>
+          </button>
+          <div class="map-line"></div>
+          <button class="market-node" data-detail="europe">
+            <span>03</span><strong data-i18n="marketEurope">Europe Connection</strong>
+          </button>
+        </div>
+      </section>
+
+      <section class="workflow-section" id="workflow">
+        <div class="section">
+          <div class="section-head">
+            <div>
+              <div class="section-kicker" data-i18n="workflowKicker">Execution Method</div>
+              <h2 data-i18n="workflowTitle">From opportunity to market operation</h2>
+            </div>
+            <p data-i18n="workflowCopy">
+              NJ GROUP works as an execution partner: research, source, verify, negotiate, deliver and grow.
+            </p>
+          </div>
+          <div class="timeline">
+            <div><span>01</span><strong data-i18n="step1Title">Market Diagnosis</strong><p data-i18n="step1Copy">Demand, customer type, price logic and competitive pressure.</p></div>
+            <div><span>02</span><strong data-i18n="step2Title">Supply Matching</strong><p data-i18n="step2Copy">Factory sourcing, OEM/ODM options, cost and quality verification.</p></div>
+            <div><span>03</span><strong data-i18n="step3Title">Commercial Setup</strong><p data-i18n="step3Copy">Quotation, negotiation, compliance documents and logistics plan.</p></div>
+            <div><span>04</span><strong data-i18n="step4Title">Channel Growth</strong><p data-i18n="step4Copy">Distributor development, promotion, after-sales and repeat orders.</p></div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section contact-section" id="contact">
+        <div class="contact-copy">
+          <div class="section-kicker" data-i18n="contactKicker">Start Cooperation</div>
+          <h2 data-i18n="contactTitle">Build your China-Türkiye-Europe business route with NJ GROUP.</h2>
+          <p data-i18n="contactCopy">
+            Tell us your product, target market and cooperation goal. NJ GROUP will structure the market entry,
+            sourcing or trade execution plan.
+          </p>
+          <div class="direct-contact-links" aria-label="Direct contact links">
+            <a href="mailto:info@njgrup.com" data-i18n="contactEmail">Email: info@njgrup.com</a>
+            <a
+              href="https://wa.me/905372054333?text=Hello%20NJ%20GROUP%2C%20I%20would%20like%20to%20discuss%20a%20business%20cooperation%20project."
+              target="_blank"
+              rel="noopener"
+              data-i18n="contactWhatsApp"
+            >WhatsApp: Start business chat</a>
+          </div>
+        </div>
+        <form class="contact-form">
+          <label>
+            <span data-i18n="formName">Name</span>
+            <input type="text" name="name" />
+          </label>
+          <label>
+            <span data-i18n="formCompany">Company</span>
+            <input type="text" name="company" />
+          </label>
+          <label>
+            <span data-i18n="formNeed">Business need</span>
+            <textarea name="need" rows="4"></textarea>
+          </label>
+          <button type="button" data-i18n="formButton">Prepare Cooperation Brief</button>
+        </form>
+      </section>
+    </main>
+
+    <section class="partner-links-section" aria-label="Industry associations and chambers">
+      <div class="partner-links-inner">
+        <div class="partner-links-head">
+          <div>
+            <div class="section-kicker" data-i18n="partnerKicker">Industry Network</div>
+            <h2 data-i18n="partnerTitle">Associations, chambers and industrial institutions</h2>
+          </div>
+          <div>
+            <p data-i18n="partnerCopy">
+              Selected official industry links related to trade, market entry, machinery, construction materials,
+              automation, recycling and European industrial standards.
+            </p>
+            <div class="partner-contact-strip">
+              <a href="mailto:info@njgrup.com">info@njgrup.com</a>
+              <a
+                href="https://wa.me/905372054333?text=Hello%20NJ%20GROUP%2C%20I%20would%20like%20to%20discuss%20a%20business%20cooperation%20project."
+                target="_blank"
+                rel="noopener"
+              >WhatsApp</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="partner-link-grid">
+          <div class="partner-link-group">
+            <h3 data-i18n="partnerTurkey">Türkiye Business & Trade</h3>
+            <a href="https://www.tobb.org.tr/Sayfalar/Eng/AnaSayfa.php?lang=en" target="_blank" rel="noopener">TOBB</a>
+            <a href="https://www.deik.org.tr/" target="_blank" rel="noopener">DEİK</a>
+            <a href="https://tim.org.tr/" target="_blank" rel="noopener">TİM</a>
+            <a href="https://www.ito.org.tr/" target="_blank" rel="noopener">Istanbul Chamber of Commerce</a>
+          </div>
+
+          <div class="partner-link-group">
+            <h3 data-i18n="partnerChina">China Supply Chain</h3>
+            <a href="https://www.cccme.cn/cp/about/profile.aspx" target="_blank" rel="noopener">CCCME</a>
+            <a href="https://www.ccpit.org/" target="_blank" rel="noopener">CCPIT</a>
+            <a href="https://www.cbmf.org/en/" target="_blank" rel="noopener">China Building Materials Federation</a>
+            <a href="https://www.chinarubber.org/" target="_blank" rel="noopener">China Rubber Industry Association</a>
+          </div>
+
+          <div class="partner-link-group">
+            <h3 data-i18n="partnerEurope">Europe Industry & Standards</h3>
+            <a href="https://www.cece.eu/home" target="_blank" rel="noopener">CECE</a>
+            <a href="https://orgalim.eu/" target="_blank" rel="noopener">Orgalim</a>
+            <a href="https://european-aluminium.eu/" target="_blank" rel="noopener">European Aluminium</a>
+            <a href="https://www.etrma.org/" target="_blank" rel="noopener">ETRMA</a>
+          </div>
+
+          <div class="partner-link-group">
+            <h3 data-i18n="partnerSector">Machinery, Automation & Circular Economy</h3>
+            <a href="https://www.turkishmachinery.org/" target="_blank" rel="noopener">Turkish Machinery</a>
+            <a href="https://enosad.org.tr/en" target="_blank" rel="noopener">ENOSAD</a>
+            <a href="https://www.euric.org/" target="_blank" rel="noopener">EuRIC</a>
+            <a href="https://www.tarmakbir.org.tr/en/" target="_blank" rel="noopener">TARMAKBIR</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <aside class="detail-drawer" id="detailDrawer" aria-hidden="true">
+      <div class="drawer-panel">
+        <button class="drawer-close" id="drawerClose" type="button" aria-label="Close">×</button>
+        <p class="eyebrow" id="drawerKicker">NJ GROUP</p>
+        <h3 id="drawerTitle"></h3>
+        <p id="drawerText"></p>
+        <ul id="drawerList"></ul>
+      </div>
+    </aside>
+
+    <footer class="site-footer">
+      <div>
+        <strong>NJ GROUP</strong>
+        <span data-i18n="footerLine">Yeşil Dönüşüm Teknoloji Sanayi ve Dış Ticaret Limited Şirketi</span>
+      </div>
+      <div class="footer-actions">
+        <a href="mailto:info@njgrup.com">info@njgrup.com</a>
+        <a
+          href="https://wa.me/905372054333?text=Hello%20NJ%20GROUP%2C%20I%20would%20like%20to%20discuss%20a%20business%20cooperation%20project."
+          target="_blank"
+          rel="noopener"
+        >WhatsApp</a>
+        <a href="#top" data-i18n="footerTop">Back to top</a>
+      </div>
+    </footer>
+
+    <script src="./app.js"></script>
   </body>
 </html>
