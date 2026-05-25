@@ -667,6 +667,7 @@ const exhibitionNews = [
 const exhibitionCalendar = [
   {
     name: "KOMATEK 2026",
+    poster: "./assets/exhibition-posters/komatek-2026.jpg",
     sector: "Construction machinery, building technology",
     zhSector: "工程机械、建筑技术",
     date: "3-6 June 2026",
@@ -676,6 +677,7 @@ const exhibitionCalendar = [
   },
   {
     name: "WIN EURASIA 2026",
+    poster: "./assets/exhibition-posters/win-eurasia-2026.jpg",
     sector: "Automation, robotics, energy, manufacturing technologies",
     zhSector: "自动化、机器人、能源、制造技术",
     date: "10-13 June 2026",
@@ -685,6 +687,7 @@ const exhibitionCalendar = [
   },
   {
     name: "CF Istanbul 2026",
+    poster: "./assets/exhibition-posters/cf-istanbul-2026.jpg",
     sector: "Construction materials, HVAC, smart building systems",
     zhSector: "建筑材料、暖通、智能建筑系统",
     date: "2-4 July 2026",
@@ -694,6 +697,7 @@ const exhibitionCalendar = [
   },
   {
     name: "Expo 3D Istanbul 2026",
+    poster: "./assets/exhibition-posters/expo-3d-istanbul-2026.webp",
     sector: "Additive manufacturing, advanced materials, design and production",
     zhSector: "3D 打印、先进材料、设计与制造",
     date: "17-19 September 2026",
@@ -703,6 +707,7 @@ const exhibitionCalendar = [
   },
   {
     name: "MAKTEK Eurasia 2026",
+    poster: "./assets/exhibition-posters/maktek-eurasia-2026.jpg",
     sector: "Machine tools, metal processing, CAD/CAM, production technologies",
     zhSector: "机床、金属加工、CAD/CAM、生产技术",
     date: "28 September - 3 October 2026",
@@ -828,10 +833,11 @@ function renderCards() {
       .map(
         (fair, index) => `
         <button class="fair-card ${fairPosterClass(fair.name)}" data-fair="${index}">
-          <span class="fair-poster" aria-hidden="true">
+          <span class="fair-poster">
+            <img class="fair-poster-img" src="${fair.poster}" alt="${fair.name} official promotional visual" loading="lazy" />
+            <span class="fair-poster-shade" aria-hidden="true"></span>
             <span class="fair-poster-kicker">Türkiye Exhibition</span>
             <span class="fair-poster-title">${fair.name.replace(" 2026", "")}</span>
-            <span class="fair-visual">${fairVisual(fair.name)}</span>
           </span>
           <span class="fair-date">${fair.date}</span>
           <h3>${fair.name}</h3>

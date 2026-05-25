@@ -1182,43 +1182,50 @@ select {
   overflow: hidden;
   display: grid;
   align-content: space-between;
-  min-height: 160px;
+  min-height: 178px;
   margin: 0 -18px 18px;
   padding: 16px;
   border-bottom: 1px solid rgba(255, 255, 255, 0.14);
-  background:
-    radial-gradient(circle at 82% 18%, rgba(255, 255, 255, 0.18), transparent 28%),
-    linear-gradient(135deg, rgba(184, 121, 54, 0.72), rgba(36, 74, 99, 0.72));
+  background: #172536;
 }
 
-.fair-poster::after {
-  content: "";
+.fair-poster-img,
+.fair-poster-shade {
   position: absolute;
-  inset: auto -30px -62px auto;
-  width: 150px;
-  height: 150px;
-  border: 1px solid rgba(255, 255, 255, 0.2);
-  border-radius: 50%;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.fair-poster-img {
+  object-fit: cover;
+  transform: scale(1.02);
+}
+
+.fair-poster-shade {
+  background:
+    linear-gradient(180deg, rgba(17, 24, 33, 0.18), rgba(17, 24, 33, 0.72)),
+    linear-gradient(90deg, rgba(17, 24, 33, 0.74), rgba(17, 24, 33, 0.08));
 }
 
 .poster-komatek .fair-poster {
-  background: linear-gradient(135deg, rgba(184, 121, 54, 0.88), rgba(58, 72, 72, 0.92));
+  background: #57412b;
 }
 
 .poster-win .fair-poster {
-  background: linear-gradient(135deg, rgba(27, 74, 103, 0.9), rgba(55, 94, 118, 0.94));
+  background: #17354c;
 }
 
 .poster-cf .fair-poster {
-  background: linear-gradient(135deg, rgba(125, 134, 68, 0.86), rgba(36, 74, 99, 0.94));
+  background: #526238;
 }
 
 .poster-3d .fair-poster {
-  background: linear-gradient(135deg, rgba(84, 91, 132, 0.88), rgba(36, 74, 99, 0.94));
+  background: #3d496d;
 }
 
 .poster-maktek .fair-poster {
-  background: linear-gradient(135deg, rgba(94, 83, 70, 0.92), rgba(184, 121, 54, 0.72));
+  background: #4c3e30;
 }
 
 .fair-poster-kicker,
@@ -1236,8 +1243,9 @@ select {
 }
 
 .fair-poster-title {
-  max-width: 150px;
+  max-width: 220px;
   color: var(--white);
+  text-shadow: 0 3px 18px rgba(0, 0, 0, 0.55);
   font-size: 22px;
   font-weight: 900;
   line-height: 1.05;
