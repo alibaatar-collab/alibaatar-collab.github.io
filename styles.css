@@ -515,50 +515,160 @@ select {
   height: 100%;
 }
 
-.route-culture-visual path,
-.route-culture-visual circle {
+.route-culture-visual * {
+  vector-effect: non-scaling-stroke;
+}
+
+.scene-sky {
+  fill: #f4ead9;
+}
+
+.scene-sun {
+  fill: #d8994b;
+  opacity: 0.62;
+}
+
+.scene-cloud {
+  fill: #ffffff;
+  opacity: 0.74;
+}
+
+.china-hill {
+  fill: #dce5df;
+}
+
+.china-wall,
+.china-wall-tower {
   fill: none;
-  stroke: currentColor;
+  stroke: #876f4e;
+  stroke-width: 6;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.china-wall-tower {
+  fill: #c4a26a;
+}
+
+.china-palace-roof {
+  fill: #a83f35;
+}
+
+.china-palace-body {
+  fill: #d6aa55;
+}
+
+.china-palace-door {
+  fill: #14354a;
+}
+
+.china-mask-face {
+  fill: #f5efe5;
+  stroke: #14354a;
+  stroke-width: 4;
+}
+
+.china-mask-red {
+  fill: #b83d34;
+}
+
+.china-mask-blue {
+  fill: #244a63;
+}
+
+.turkey-sky {
+  fill: #edf4f2;
+}
+
+.turkey-water {
+  fill: #bdd2d5;
+}
+
+.turkey-bridge,
+.turkey-bridge-deck {
+  fill: none;
+  stroke: #b87936;
+  stroke-width: 6;
+  stroke-linecap: round;
+}
+
+.turkey-bridge-tower {
+  fill: #b87936;
+}
+
+.turkey-mosque-dome {
+  fill: #244a63;
+}
+
+.turkey-mosque-body,
+.turkey-minaret {
+  fill: #d3b074;
+}
+
+.turkey-bazaar {
+  fill: #7d8644;
+}
+
+.turkey-bazaar-roof {
+  fill: #b87936;
+}
+
+.turkey-dervish-head {
+  fill: #14354a;
+}
+
+.turkey-dervish {
+  fill: none;
+  stroke: #14354a;
+  stroke-width: 6;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.europe-sky {
+  fill: #edf1f4;
+}
+
+.europe-moon {
+  fill: #d7c69b;
+  opacity: 0.7;
+}
+
+.europe-river {
+  fill: #c6d5dd;
+}
+
+.eiffel {
+  fill: none;
+  stroke: #8a6a4e;
+  stroke-width: 6;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.cathedral-fill {
+  fill: #244a63;
+  opacity: 0.88;
+}
+
+.cathedral-roof {
+  fill: none;
+  stroke: #d3b074;
   stroke-width: 5;
   stroke-linecap: round;
   stroke-linejoin: round;
 }
 
-.route-culture-visual .wall,
-.china-culture {
-  color: rgba(18, 68, 102, 0.22);
+.europe-building {
+  fill: #7d8644;
 }
 
-.china-culture .palace {
-  stroke: rgba(184, 121, 54, 0.44);
+.europe-building.tall {
+  fill: #b87936;
 }
 
-.china-culture .mask {
-  stroke: rgba(129, 38, 40, 0.34);
-}
-
-.turkey-culture {
-  color: rgba(184, 121, 54, 0.42);
-}
-
-.turkey-culture .mosque {
-  stroke: rgba(18, 68, 102, 0.24);
-}
-
-.turkey-culture .dervish {
-  stroke: rgba(125, 134, 68, 0.34);
-}
-
-.europe-culture {
-  color: rgba(18, 68, 102, 0.28);
-}
-
-.europe-culture .cathedral {
-  stroke: rgba(184, 121, 54, 0.34);
-}
-
-.europe-culture .stars {
-  stroke: rgba(125, 134, 68, 0.34);
+.europe-star {
+  fill: #d3b074;
 }
 
 .metrics strong {
