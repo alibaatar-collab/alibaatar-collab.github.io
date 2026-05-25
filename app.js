@@ -742,18 +742,26 @@ function localizedService(service) {
 
 function fairVisual(name) {
   if (name.includes("KOMATEK")) {
-    return `<svg viewBox="0 0 160 110"><path d="M32 74h70l18-22h18v22h-14" /><circle cx="52" cy="82" r="12" /><circle cx="118" cy="82" r="12" /><path d="M44 54h30l12-18h22" /><path d="M30 82h10M64 82h42M130 82h10" /></svg>`;
+    return `<svg viewBox="0 0 220 150"><path d="M22 112h102l28-36h28v36h-18" /><circle cx="58" cy="122" r="16" /><circle cx="166" cy="122" r="16" /><path d="M48 82h48l22-34h42" /><path d="M26 122h16M74 122h76M182 122h14" /><path d="M138 48l28-22" /></svg>`;
   }
   if (name.includes("WIN")) {
-    return `<svg viewBox="0 0 160 110"><rect x="36" y="34" width="42" height="42" rx="6" /><path d="M78 55h30l18-18M108 55l18 18" /><circle cx="132" cy="32" r="8" /><circle cx="132" cy="78" r="8" /><path d="M48 24v10M66 24v10M48 76v10M66 76v10" /></svg>`;
+    return `<svg viewBox="0 0 220 150"><rect x="44" y="48" width="60" height="60" rx="8" /><path d="M104 78h42l28-28M146 78l28 28" /><circle cx="184" cy="42" r="10" /><circle cx="184" cy="116" r="10" /><path d="M60 32v16M86 32v16M60 108v16M86 108v16M32 64h12M32 92h12M104 64h12M104 92h12" /></svg>`;
   }
   if (name.includes("CF")) {
-    return `<svg viewBox="0 0 160 110"><path d="M34 82V38l46-22 46 22v44" /><path d="M58 82V58h44v24M44 46h72M52 34h56" /><path d="M70 58v24M90 58v24" /></svg>`;
+    return `<svg viewBox="0 0 220 150"><path d="M42 118V54l68-32 68 32v64" /><path d="M78 118V82h64v36M58 66h104M72 48h76" /><path d="M96 82v36M124 82v36M38 118h144" /></svg>`;
   }
   if (name.includes("3D")) {
-    return `<svg viewBox="0 0 160 110"><path d="M80 20 120 42v44L80 108 40 86V42L80 20Z" /><path d="M40 42l40 22 40-22M80 64v44" /><path d="M58 34l40 22M102 76 62 98" /></svg>`;
+    return `<svg viewBox="0 0 220 150"><path d="M110 22 170 56v66l-60 34-60-34V56l60-34Z" /><path d="M50 56l60 34 60-34M110 90v66" /><path d="M76 44l60 34M140 108l-60 34" /><path d="M34 34h30M156 34h30M34 122h30M156 122h30" /></svg>`;
   }
-  return `<svg viewBox="0 0 160 110"><path d="M38 78h84" /><circle cx="60" cy="78" r="16" /><circle cx="104" cy="78" r="16" /><path d="M60 34v28M104 34v28M48 34h68M54 22h56" /><path d="M72 50h20" /></svg>`;
+  return `<svg viewBox="0 0 220 150"><path d="M48 112h124" /><circle cx="78" cy="112" r="20" /><circle cx="142" cy="112" r="20" /><path d="M78 48v44M142 48v44M58 48h104M70 30h80" /><path d="M94 72h32M110 48v64" /></svg>`;
+}
+
+function fairPosterClass(name) {
+  if (name.includes("KOMATEK")) return "poster-komatek";
+  if (name.includes("WIN")) return "poster-win";
+  if (name.includes("CF")) return "poster-cf";
+  if (name.includes("3D")) return "poster-3d";
+  return "poster-maktek";
 }
 
 function renderCards() {
@@ -803,9 +811,13 @@ function renderCards() {
     calendar.innerHTML = exhibitionCalendar
       .map(
         (fair, index) => `
-        <button class="fair-card" data-fair="${index}">
+        <button class="fair-card ${fairPosterClass(fair.name)}" data-fair="${index}">
+          <span class="fair-poster" aria-hidden="true">
+            <span class="fair-poster-kicker">Türkiye Exhibition</span>
+            <span class="fair-poster-title">${fair.name.replace(" 2026", "")}</span>
+            <span class="fair-visual">${fairVisual(fair.name)}</span>
+          </span>
           <span class="fair-date">${fair.date}</span>
-          <span class="fair-visual" aria-hidden="true">${fairVisual(fair.name)}</span>
           <h3>${fair.name}</h3>
           <p>${currentLang === "zh" ? fair.zhSector : fair.sector}</p>
           <small>${fair.venue}</small>
