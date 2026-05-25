@@ -1,7 +1,0 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 240" role="img" aria-label="Exhibition and business organization visual">
-  <defs><linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#123047"/><stop offset="1" stop-color="#7d8644"/></linearGradient></defs>
-  <rect width="720" height="240" rx="20" fill="url(#bg)"/>
-  <path d="M58 188h604V82H58v106Z" fill="#f6efe1"/><path d="M94 82 150 34h420l56 48" fill="none" stroke="#d3b074" stroke-width="11" stroke-linecap="round" stroke-linejoin="round"/>
-  <path d="M122 188v-66h476v66M188 122v66M278 122v66M368 122v66M458 122v66M548 122v66" stroke="#244a63" stroke-width="9" stroke-linecap="round"/>
-  <circle cx="184" cy="64" r="14" fill="#b87936"/><circle cx="536" cy="64" r="14" fill="#b87936"/><path d="M222 64h276" stroke="#244a63" stroke-width="8" stroke-linecap="round"/>
-</svg>

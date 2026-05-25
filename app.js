@@ -747,33 +747,21 @@ function localizedService(service) {
 
 function serviceVisual(index) {
   const visuals = [
-    "trade-services.svg",
-    "turkey-market-entry.svg",
-    "europe-distribution.svg",
-    "circular-economy.svg",
-    "smart-equipment.svg",
-    "construction-materials.svg",
-    "digital-growth.svg",
-    "exhibition-organization.svg",
-    "resource-platform.svg",
+    "trade-services.jpg",
+    "turkey-market-entry.jpg",
+    "europe-distribution.jpg",
+    "circular-economy.jpg",
+    "smart-equipment.jpg",
+    "construction-materials.jpg",
+    "digital-growth.jpg",
+    "exhibition-organization.jpg",
+    "resource-platform.jpg",
   ];
   return `./assets/service-visuals/${visuals[index] || visuals[0]}`;
 }
 
 function fairVisual(name) {
-  if (name.includes("KOMATEK")) {
-    return `<svg viewBox="0 0 220 150"><path d="M22 112h102l28-36h28v36h-18" /><circle cx="58" cy="122" r="16" /><circle cx="166" cy="122" r="16" /><path d="M48 82h48l22-34h42" /><path d="M26 122h16M74 122h76M182 122h14" /><path d="M138 48l28-22" /></svg>`;
-  }
-  if (name.includes("WIN")) {
-    return `<svg viewBox="0 0 220 150"><rect x="44" y="48" width="60" height="60" rx="8" /><path d="M104 78h42l28-28M146 78l28 28" /><circle cx="184" cy="42" r="10" /><circle cx="184" cy="116" r="10" /><path d="M60 32v16M86 32v16M60 108v16M86 108v16M32 64h12M32 92h12M104 64h12M104 92h12" /></svg>`;
-  }
-  if (name.includes("CF")) {
-    return `<svg viewBox="0 0 220 150"><path d="M42 118V54l68-32 68 32v64" /><path d="M78 118V82h64v36M58 66h104M72 48h76" /><path d="M96 82v36M124 82v36M38 118h144" /></svg>`;
-  }
-  if (name.includes("3D")) {
-    return `<svg viewBox="0 0 220 150"><path d="M110 22 170 56v66l-60 34-60-34V56l60-34Z" /><path d="M50 56l60 34 60-34M110 90v66" /><path d="M76 44l60 34M140 108l-60 34" /><path d="M34 34h30M156 34h30M34 122h30M156 122h30" /></svg>`;
-  }
-  return `<svg viewBox="0 0 220 150"><path d="M48 112h124" /><circle cx="78" cy="112" r="20" /><circle cx="142" cy="112" r="20" /><path d="M78 48v44M142 48v44M58 48h104M70 30h80" /><path d="M94 72h32M110 48v64" /></svg>`;
+  return `<img src="${fairPoster(name)}" alt="" loading="lazy" />`;
 }
 
 function fairPosterClass(name) {

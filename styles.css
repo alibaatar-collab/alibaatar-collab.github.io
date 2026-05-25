@@ -765,19 +765,11 @@ select {
 }
 
 .service-image::before {
-  width: 190px;
-  height: 190px;
-  right: -68px;
-  top: -72px;
-  border: 1px solid rgba(184, 121, 54, 0.42);
+  display: none;
 }
 
 .service-image::after {
-  width: 120px;
-  height: 120px;
-  right: 34px;
-  bottom: -68px;
-  border: 1px solid rgba(255, 255, 255, 0.18);
+  display: none;
 }
 
 .service-visual {
@@ -921,27 +913,27 @@ select {
 .loop-visual {
   display: block;
   width: 100%;
-  height: 78px;
-  color: rgba(255, 255, 255, 0.78);
-  opacity: 0.96;
+  height: 92px;
+  margin-bottom: 14px;
+  overflow: hidden;
+  border-radius: 10px;
+  opacity: 1;
 }
 
-.loop-visual svg {
+.loop-visual img {
   width: 100%;
   height: 100%;
+  display: block;
+  object-fit: cover;
 }
 
 .loop-visual path,
 .loop-visual circle {
-  fill: none;
-  stroke: currentColor;
-  stroke-width: 5;
-  stroke-linecap: round;
-  stroke-linejoin: round;
+  display: none;
 }
 
 .loop-factory {
-  color: rgba(255, 255, 255, 0.82);
+  color: var(--white);
 }
 
 .loop-expo {
@@ -1273,27 +1265,25 @@ select {
 
 .fair-visual {
   position: absolute;
-  right: 8px;
-  bottom: 0;
-  width: 58%;
-  height: 120px;
-  color: rgba(255, 255, 255, 0.58);
-}
-
-.fair-visual svg {
+  inset: 0;
+  z-index: 1;
   width: 100%;
   height: 100%;
+}
+
+.fair-visual img {
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: cover;
+  opacity: 0.72;
 }
 
 .fair-visual path,
 .fair-visual circle,
 .fair-visual rect,
 .fair-visual line {
-  fill: none;
-  stroke: currentColor;
-  stroke-width: 5;
-  stroke-linecap: round;
-  stroke-linejoin: round;
+  display: none;
 }
 
 .fair-card:hover,
