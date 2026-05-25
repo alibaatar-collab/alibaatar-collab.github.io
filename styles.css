@@ -1002,24 +1002,35 @@ select {
 
 .expo-feature-visual {
   position: absolute;
-  inset: 20px 20px auto auto;
-  width: min(46%, 300px);
-  height: 160px;
+  inset: 0;
+  width: 100%;
+  height: 100%;
   color: rgba(255, 255, 255, 0.2);
 }
 
-.expo-feature-visual svg {
+.expo-feature-visual img {
   width: 100%;
   height: 100%;
+  object-fit: cover;
+  opacity: 0.42;
+  transform: scale(1.02);
 }
 
-.expo-feature-visual path,
-.expo-feature-visual circle {
-  fill: none;
-  stroke: currentColor;
-  stroke-width: 7;
-  stroke-linecap: round;
-  stroke-linejoin: round;
+.expo-feature::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background:
+    linear-gradient(90deg, rgba(17, 24, 33, 0.92), rgba(17, 24, 33, 0.46)),
+    linear-gradient(180deg, rgba(17, 24, 33, 0.08), rgba(17, 24, 33, 0.72));
+  pointer-events: none;
+}
+
+.expo-feature .expo-badge,
+.expo-feature h3,
+.expo-feature p {
+  position: relative;
+  z-index: 2;
 }
 
 .expo-feature h3 {
@@ -1084,6 +1095,25 @@ select {
   background: linear-gradient(135deg, rgba(184, 121, 54, 0.82), rgba(36, 74, 99, 0.92));
   font-size: 20px;
   font-weight: 900;
+}
+
+.news-image img,
+.news-image-shade {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.news-image img {
+  object-fit: cover;
+  transform: scale(1.04);
+}
+
+.news-image-shade {
+  background:
+    linear-gradient(180deg, rgba(17, 24, 33, 0.16), rgba(17, 24, 33, 0.72)),
+    linear-gradient(90deg, rgba(184, 121, 54, 0.28), rgba(36, 74, 99, 0.18));
 }
 
 .news-image svg {

@@ -784,6 +784,14 @@ function fairPosterClass(name) {
   return "poster-maktek";
 }
 
+function fairPoster(name) {
+  if (name.includes("KOMATEK")) return "./assets/exhibition-posters/komatek-2026.jpg";
+  if (name.includes("WIN")) return "./assets/exhibition-posters/win-eurasia-2026.jpg";
+  if (name.includes("CF")) return "./assets/exhibition-posters/cf-istanbul-2026.jpg";
+  if (name.includes("3D")) return "./assets/exhibition-posters/expo-3d-istanbul-2026.webp";
+  return "./assets/exhibition-posters/maktek-eurasia-2026.jpg";
+}
+
 function renderCards() {
   const serviceGrid = document.getElementById("serviceGrid");
   serviceGrid.innerHTML = services
@@ -815,7 +823,11 @@ function renderCards() {
       .map(
         (news) => `
         <button class="news-item" data-news="${news.title}">
-          <span class="news-image">${fairVisual(news.fair)}<span class="news-label">${news.fair.split(" ")[0]}</span></span>
+          <span class="news-image">
+            <img src="${fairPoster(news.fair)}" alt="${news.fair} promotional visual" loading="lazy" />
+            <span class="news-image-shade" aria-hidden="true"></span>
+            <span class="news-label">${news.fair.split(" ")[0]}</span>
+          </span>
           <span class="news-copy">
             <time>${news.date} · ${news.sourceName}</time>
             <strong>${currentLang === "zh" ? news.zh : news.title}</strong>
