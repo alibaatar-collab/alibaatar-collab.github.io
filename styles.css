@@ -423,7 +423,18 @@ select {
   position: absolute;
   inset: 18px 34px;
   z-index: 1;
-  opacity: 0.9;
+  opacity: 0;
+}
+
+.culture-panorama-image {
+  position: absolute;
+  inset: 14px 18px;
+  z-index: 1;
+  width: calc(100% - 36px);
+  height: calc(100% - 28px);
+  object-fit: cover;
+  border-radius: 10px;
+  pointer-events: none;
 }
 
 .silk-route-line {
@@ -488,7 +499,7 @@ select {
   position: absolute;
   top: 30px;
   right: 34px;
-  color: rgba(18, 68, 102, 0.06);
+  color: rgba(255, 255, 255, 0.24);
   font-size: clamp(48px, 6vw, 82px);
   font-weight: 850;
   line-height: 1;
@@ -499,15 +510,11 @@ select {
 }
 
 .route-card-europe .route-symbol {
-  color: rgba(125, 134, 68, 0.18);
+  color: rgba(255, 255, 255, 0.24);
 }
 
 .route-culture-visual {
-  position: absolute;
-  inset: 30px 22px 72px;
-  z-index: 1;
-  display: block;
-  opacity: 0.92;
+  display: none;
 }
 
 .route-culture-visual svg {
@@ -675,7 +682,12 @@ select {
   position: relative;
   z-index: 2;
   display: block;
-  color: var(--blue);
+  width: fit-content;
+  border-radius: 6px;
+  padding: 4px 8px;
+  color: var(--white);
+  background: rgba(17, 24, 33, 0.72);
+  backdrop-filter: blur(10px);
   font-size: clamp(24px, 2.6vw, 34px);
   line-height: 1.05;
 }
@@ -685,7 +697,13 @@ select {
   z-index: 2;
   display: block;
   margin-top: 12px;
-  color: var(--muted);
+  width: fit-content;
+  max-width: min(270px, 100%);
+  border-radius: 6px;
+  padding: 4px 8px;
+  color: rgba(255, 255, 255, 0.88);
+  background: rgba(17, 24, 33, 0.52);
+  backdrop-filter: blur(10px);
   line-height: 1.55;
 }
 
