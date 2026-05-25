@@ -95,10 +95,40 @@
             Türkiye-based local execution and European market access.
           </p>
         </div>
-        <div class="metrics">
-          <div><strong>China</strong><span data-i18n="metricChina">Factory resources and sourcing</span></div>
-          <div><strong>Türkiye</strong><span data-i18n="metricTurkey">Local channels and market entry</span></div>
-          <div><strong>Europe</strong><span data-i18n="metricEurope">Distribution, compliance and expansion</span></div>
+        <div class="metrics silk-route" aria-label="China Türkiye Europe business route">
+          <svg class="silk-route-map" viewBox="0 0 1200 210" preserveAspectRatio="none" aria-hidden="true">
+            <path class="silk-mountain" d="M0 154 L72 104 L132 154 L210 88 L306 154 L0 154Z" />
+            <path class="silk-route-line" d="M130 124 C330 42 490 182 610 110 S860 62 1068 116" />
+            <path class="silk-route-line silk-route-glow" d="M130 124 C330 42 490 182 610 110 S860 62 1068 116" />
+            <g class="silk-bridge">
+              <path d="M557 128 C589 80 635 80 667 128" />
+              <path d="M554 128 H670" />
+              <path d="M573 128 V103 M650 128 V103" />
+            </g>
+            <g class="silk-europe-lines">
+              <path d="M930 88 L1088 88" />
+              <path d="M906 118 L1126 118" />
+              <path d="M958 148 L1110 148" />
+            </g>
+          </svg>
+          <div class="route-card route-card-china">
+            <span class="route-pin">01</span>
+            <span class="route-symbol">CN</span>
+            <strong data-i18n="routeChinaTitle">China</strong>
+            <span data-i18n="metricChina">Factory resources and sourcing</span>
+          </div>
+          <div class="route-card route-card-turkey">
+            <span class="route-pin">02</span>
+            <span class="route-symbol">TR</span>
+            <strong data-i18n="routeTurkeyTitle">Türkiye</strong>
+            <span data-i18n="metricTurkey">Local channels and market entry</span>
+          </div>
+          <div class="route-card route-card-europe">
+            <span class="route-pin">03</span>
+            <span class="route-symbol">EU</span>
+            <strong data-i18n="routeEuropeTitle">Europe</strong>
+            <span data-i18n="metricEurope">Distribution, compliance and expansion</span>
+          </div>
         </div>
       </section>
 

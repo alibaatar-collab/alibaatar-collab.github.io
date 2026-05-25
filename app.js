@@ -21,6 +21,9 @@ const translations = {
     aboutTitle: "Not a product catalogue. An industrial ecosystem platform.",
     aboutCopy:
       "NJ GROUP is designed to help clients build commercial connections between Chinese manufacturing, Türkiye-based local execution and European market access.",
+    routeChinaTitle: "China",
+    routeTurkeyTitle: "Türkiye",
+    routeEuropeTitle: "Europe",
     metricChina: "Factory resources and sourcing",
     metricTurkey: "Local channels and market entry",
     metricEurope: "Distribution, compliance and expansion",
@@ -107,6 +110,9 @@ const translations = {
     aboutTitle: "不是产品目录网站，而是工业生态平台。",
     aboutCopy:
       "NJ GROUP 的核心价值不是简单卖货，而是帮助客户在中国制造、土耳其本地落地和欧洲市场之间建立真实商业连接。",
+    routeChinaTitle: "中国",
+    routeTurkeyTitle: "土耳其",
+    routeEuropeTitle: "欧洲",
     metricChina: "工厂资源与供应链整合",
     metricTurkey: "本地渠道与市场落地",
     metricEurope: "分销、合规与市场扩张",
@@ -191,6 +197,9 @@ const translations = {
     aboutTitle: "Ürün kataloğu değil. Endüstriyel ekosistem platformu.",
     aboutCopy:
       "NJ GROUP, Çin üretimi, Türkiye yerel uygulaması ve Avrupa pazar erişimi arasında ticari bağlantılar kurar.",
+    routeChinaTitle: "Çin",
+    routeTurkeyTitle: "Türkiye",
+    routeEuropeTitle: "Avrupa",
     metricChina: "Fabrika kaynakları ve tedarik",
     metricTurkey: "Yerel kanallar ve pazara giriş",
     metricEurope: "Dağıtım, uygunluk ve büyüme",
@@ -275,6 +284,9 @@ const translations = {
     aboutTitle: "Kein Produktkatalog. Eine industrielle Ökosystem-Plattform.",
     aboutCopy:
       "NJ GROUP schafft kommerzielle Verbindungen zwischen chinesischer Produktion, lokaler Umsetzung in Türkiye und europäischem Marktzugang.",
+    routeChinaTitle: "China",
+    routeTurkeyTitle: "Türkiye",
+    routeEuropeTitle: "Europa",
     metricChina: "Fabriken und Beschaffung",
     metricTurkey: "Lokale Kanäle und Markteintritt",
     metricEurope: "Distribution, Compliance und Wachstum",
@@ -359,6 +371,9 @@ const translations = {
     aboutTitle: "Pas un catalogue produit. Une plateforme d'écosystème industriel.",
     aboutCopy:
       "NJ GROUP crée des connexions commerciales entre fabrication chinoise, exécution locale en Türkiye et accès au marché européen.",
+    routeChinaTitle: "Chine",
+    routeTurkeyTitle: "Türkiye",
+    routeEuropeTitle: "Europe",
     metricChina: "Ressources d'usines et sourcing",
     metricTurkey: "Canaux locaux et entrée marché",
     metricEurope: "Distribution, conformité et expansion",
