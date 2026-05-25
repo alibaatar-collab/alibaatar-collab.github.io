@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 240" role="img" aria-label="International industrial trade visual">
+  <defs><linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#123047"/><stop offset="1" stop-color="#b87936"/></linearGradient></defs>
+  <rect width="720" height="240" rx="20" fill="url(#bg)"/>
+  <path d="M42 176c106-68 218-70 332-4 92 54 184 54 304-8" fill="none" stroke="#f4d39a" stroke-width="8" stroke-dasharray="24 18" stroke-linecap="round"/>
+  <g transform="translate(70 78)"><rect width="130" height="72" rx="8" fill="#f7f0df"/><rect x="18" y="18" width="94" height="12" rx="6" fill="#244a63"/><rect x="18" y="42" width="58" height="10" rx="5" fill="#7d8644"/></g>
+  <g transform="translate(292 54)"><path d="M0 98h168l32-42h42v42h-24" fill="none" stroke="#fff" stroke-width="12" stroke-linecap="round"/><circle cx="46" cy="110" r="20" fill="#f4d39a"/><circle cx="202" cy="110" r="20" fill="#f4d39a"/><path d="M54 70h82l34-46" stroke="#fff" stroke-width="10" stroke-linecap="round"/></g>
+  <g transform="translate(544 64)"><rect width="112" height="88" rx="8" fill="#7d8644"/><path d="M18 28h76M18 48h76M18 68h52" stroke="#fff6df" stroke-width="7" stroke-linecap="round"/></g>
+</svg>

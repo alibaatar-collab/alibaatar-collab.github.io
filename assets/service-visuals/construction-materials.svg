@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 240" role="img" aria-label="Construction and decorative materials visual">
+  <defs><linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#123047"/><stop offset="1" stop-color="#5e7f99"/></linearGradient></defs>
+  <rect width="720" height="240" rx="20" fill="url(#bg)"/>
+  <path d="M72 196V78l128-56 128 56v118" fill="#d3b074"/><path d="M116 196v-72h166v72M96 92h206" fill="none" stroke="#fff6df" stroke-width="9" stroke-linecap="round"/>
+  <rect x="386" y="70" width="94" height="126" rx="8" fill="#f6efe1"/><rect x="500" y="48" width="94" height="148" rx="8" fill="#7d8644"/><rect x="418" y="98" width="146" height="18" rx="9" fill="#244a63"/><rect x="418" y="138" width="126" height="18" rx="9" fill="#b87936"/>
+  <path d="M616 196V84h48v112M608 196h64" stroke="#fff6df" stroke-width="9" stroke-linecap="round"/>
+</svg>

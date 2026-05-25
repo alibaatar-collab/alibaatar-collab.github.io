@@ -747,17 +747,17 @@ function localizedService(service) {
 
 function serviceVisual(index) {
   const visuals = [
-    `<svg viewBox="0 0 360 150"><path d="M38 102h84l26-36h54l34 36h86" /><path d="M52 102V74h56v28M214 102V70h70v32" /><path d="M124 94c46-42 88-42 132 0" /><path d="M78 58h42M232 54h48M92 44l20 14M250 40l-18 14" /><circle cx="180" cy="74" r="13" /></svg>`,
-    `<svg viewBox="0 0 360 150"><path d="M48 116h96M76 116V76h40v40M62 76l34-28 34 28" /><path d="M190 116V62c0-24 60-24 60 0v54M176 116h88M182 68c14-32 82-32 96 0" /><path d="M282 116h34V80h-34v36M274 80l25-22 25 22" /></svg>`,
-    `<svg viewBox="0 0 360 150"><path d="M48 110h260" /><path d="M78 110 122 40l44 70M96 78h52M88 96h68" /><path d="M204 108V58l30-22 30 22v50M190 108h88M216 108V78h36v30" /><path d="M286 84h34M286 100h48" /></svg>`,
-    `<svg viewBox="0 0 360 150"><circle cx="96" cy="78" r="36" /><path d="M96 42v72M60 78h72M76 54c24 18 24 30 0 48M116 54c-24 18-24 30 0 48" /><path d="M192 112c38-48 78-48 116 0M210 112l32-58 34 58M218 82h50" /><path d="M278 52c18 18 18 42 0 60" /></svg>`,
-    `<svg viewBox="0 0 360 150"><rect x="52" y="46" width="76" height="58" rx="10" /><path d="M128 76h58l36-36M186 76l36 36" /><circle cx="242" cy="36" r="12" /><circle cx="242" cy="116" r="12" /><path d="M70 30v16M110 30v16M70 104v18M110 104v18M52 66H30M52 88H30" /><path d="M282 102c18-18 18-38 0-56M300 116c32-32 32-72 0-104" /></svg>`,
-    `<svg viewBox="0 0 360 150"><path d="M54 118V58l68-34 68 34v60M78 118V82h88v36M70 70h104" /><path d="M210 118h96V66h-96v52M226 82h64M226 100h64" /><path d="M116 82v36M142 82v36M258 66V42h28v24" /></svg>`,
-    `<svg viewBox="0 0 360 150"><rect x="48" y="52" width="96" height="62" rx="8" /><path d="M68 74h56M68 92h36" /><circle cx="220" cy="80" r="34" /><path d="M220 46v68M186 80h68M196 56c24 18 24 30 0 48M244 56c-24 18-24 30 0 48" /><path d="M284 112V56h28v56M278 112h40" /></svg>`,
-    `<svg viewBox="0 0 360 150"><path d="M44 116h272V54H44v62Z" /><path d="M64 54l24-24h184l24 24M96 116V76h168v40" /><path d="M124 76v40M168 76v40M212 76v40M256 76v40" /><circle cx="104" cy="42" r="8" /><circle cx="256" cy="42" r="8" /><path d="M126 42h108" /></svg>`,
-    `<svg viewBox="0 0 360 150"><circle cx="180" cy="78" r="48" /><path d="M180 30v96M132 78h96M146 46c46 24 68 24 68 0M146 110c46-24 68-24 68 0" /><path d="M72 112h50M238 112h50M98 38l44 26M262 38l-44 26" /><circle cx="72" cy="112" r="12" /><circle cx="288" cy="112" r="12" /></svg>`,
+    "trade-services.svg",
+    "turkey-market-entry.svg",
+    "europe-distribution.svg",
+    "circular-economy.svg",
+    "smart-equipment.svg",
+    "construction-materials.svg",
+    "digital-growth.svg",
+    "exhibition-organization.svg",
+    "resource-platform.svg",
   ];
-  return visuals[index] || visuals[0];
+  return `./assets/service-visuals/${visuals[index] || visuals[0]}`;
 }
 
 function fairVisual(name) {
@@ -801,7 +801,7 @@ function renderCards() {
         <span class="service-image service-tone-${(index % 5) + 1}">
           <span class="service-number">${String(index + 1).padStart(2, "0")}</span>
           <span class="service-icon">${service.icon}</span>
-          <span class="service-visual" aria-hidden="true">${serviceVisual(index)}</span>
+          <img class="service-visual" src="${serviceVisual(index)}" alt="${localizedTitle(service)} visual" loading="lazy" />
         </span>
         <span class="service-body">
           <h3>${localizedTitle(service)}</h3>
