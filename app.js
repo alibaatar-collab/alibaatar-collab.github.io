@@ -740,6 +740,22 @@ function localizedService(service) {
   };
 }
 
+function fairVisual(name) {
+  if (name.includes("KOMATEK")) {
+    return `<svg viewBox="0 0 160 110"><path d="M32 74h70l18-22h18v22h-14" /><circle cx="52" cy="82" r="12" /><circle cx="118" cy="82" r="12" /><path d="M44 54h30l12-18h22" /><path d="M30 82h10M64 82h42M130 82h10" /></svg>`;
+  }
+  if (name.includes("WIN")) {
+    return `<svg viewBox="0 0 160 110"><rect x="36" y="34" width="42" height="42" rx="6" /><path d="M78 55h30l18-18M108 55l18 18" /><circle cx="132" cy="32" r="8" /><circle cx="132" cy="78" r="8" /><path d="M48 24v10M66 24v10M48 76v10M66 76v10" /></svg>`;
+  }
+  if (name.includes("CF")) {
+    return `<svg viewBox="0 0 160 110"><path d="M34 82V38l46-22 46 22v44" /><path d="M58 82V58h44v24M44 46h72M52 34h56" /><path d="M70 58v24M90 58v24" /></svg>`;
+  }
+  if (name.includes("3D")) {
+    return `<svg viewBox="0 0 160 110"><path d="M80 20 120 42v44L80 108 40 86V42L80 20Z" /><path d="M40 42l40 22 40-22M80 64v44" /><path d="M58 34l40 22M102 76 62 98" /></svg>`;
+  }
+  return `<svg viewBox="0 0 160 110"><path d="M38 78h84" /><circle cx="60" cy="78" r="16" /><circle cx="104" cy="78" r="16" /><path d="M60 34v28M104 34v28M48 34h68M54 22h56" /><path d="M72 50h20" /></svg>`;
+}
+
 function renderCards() {
   const serviceGrid = document.getElementById("serviceGrid");
   serviceGrid.innerHTML = services
@@ -770,7 +786,7 @@ function renderCards() {
       .map(
         (news) => `
         <button class="news-item" data-news="${news.title}">
-          <span class="news-image">${news.fair.split(" ")[0]}</span>
+          <span class="news-image">${fairVisual(news.fair)}<span class="news-label">${news.fair.split(" ")[0]}</span></span>
           <span class="news-copy">
             <time>${news.date} · ${news.sourceName}</time>
             <strong>${currentLang === "zh" ? news.zh : news.title}</strong>
@@ -789,6 +805,7 @@ function renderCards() {
         (fair, index) => `
         <button class="fair-card" data-fair="${index}">
           <span class="fair-date">${fair.date}</span>
+          <span class="fair-visual" aria-hidden="true">${fairVisual(fair.name)}</span>
           <h3>${fair.name}</h3>
           <p>${currentLang === "zh" ? fair.zhSector : fair.sector}</p>
           <small>${fair.venue}</small>
