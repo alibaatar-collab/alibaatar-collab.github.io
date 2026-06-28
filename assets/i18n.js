@@ -34,7 +34,7 @@
       visionText1: "Vizyonumuz, Çinli şirketlerin Türkiye ve Avrupa pazarına girişinde en güçlü yerelleştirilmiş endüstriyel operasyon platformlarından biri olmaktır.",
       visionText2: "Misyonumuz; Çin üretimini uluslararası pazarlara taşımak, güçlü yerel operasyon sistemleri oluşturmak, Çin - Türkiye - Avrupa iş birliklerini geliştirmek ve sürdürülebilir ticari değer üretmektir.",
       contactTitle: "NJ GROUP ile İletişime Geçin", contactText: "İş birliği, tedarik, distribütörlük veya proje görüşmeleri için bize ulaşın.", email: "E-posta Gönder",
-      footer: "© 2026 NJ GROUP. Tüm hakları saklıdır. · "
+      footer: "© 2018 NJ GROUP. Tüm hakları saklıdır. · "
     },
     en: {
       navBusiness: "Business Areas", navStrengths: "Strengths", navAbout: "About", navContact: "Contact",
@@ -57,7 +57,7 @@
       visionText1: "Our vision is to become one of the strongest localized industrial operation platforms for Chinese companies entering Türkiye and Europe.",
       visionText2: "Our mission is to bring Chinese manufacturing to international markets, build strong local operation systems, develop China - Türkiye - Europe cooperation and create sustainable commercial value.",
       contactTitle: "Contact NJ GROUP", contactText: "Reach us for cooperation, sourcing, distribution or project discussions.", email: "Send Email",
-      footer: "© 2026 NJ GROUP. All rights reserved. · "
+      footer: "© 2018 NJ GROUP. All rights reserved. · "
     },
     zh: {
       navBusiness: "业务板块", navStrengths: "核心优势", navAbout: "关于我们", navContact: "联系我们",
@@ -80,7 +80,7 @@
       visionText1: "我们的愿景是成为中国企业进入土耳其和欧洲市场时最强的本地化工业运营平台之一。",
       visionText2: "我们的使命是把中国制造带向国际市场，建立强大的本地运营体系，推动中国、土耳其与欧洲之间的合作，并创造可持续商业价值。",
       contactTitle: "联系 NJ GROUP", contactText: "如需合作、采购、代理或项目洽谈，请联系我们。", email: "发送邮件",
-      footer: "© 2026 NJ GROUP. 版权所有。 · "
+      footer: "© 2018 NJ GROUP. 版权所有。 · "
     },
     fr: {
       navBusiness: "Activités", navStrengths: "Forces", navAbout: "À propos", navContact: "Contact",
@@ -103,7 +103,7 @@
       visionText1: "Notre vision est de devenir l'une des plateformes industrielles localisées les plus fortes pour les entreprises chinoises entrant en Türkiye et en Europe.",
       visionText2: "Notre mission est d'amener la production chinoise vers les marchés internationaux, de créer des opérations locales solides, de développer la coopération Chine - Türkiye - Europe et de générer une valeur durable.",
       contactTitle: "Contacter NJ GROUP", contactText: "Contactez-nous pour coopération, sourcing, distribution ou projets.", email: "Envoyer un e-mail",
-      footer: "© 2026 NJ GROUP. Tous droits réservés. · "
+      footer: "© 2018 NJ GROUP. Tous droits réservés. · "
     },
     de: {
       navBusiness: "Geschäftsfelder", navStrengths: "Stärken", navAbout: "Über uns", navContact: "Kontakt",
@@ -126,7 +126,7 @@
       visionText1: "Unsere Vision ist es, eine der stärksten lokalisierten Industrieplattformen für chinesische Unternehmen beim Eintritt in Türkiye und Europa zu werden.",
       visionText2: "Unsere Mission ist es, chinesische Produktion auf internationale Märkte zu bringen, starke lokale Betriebssysteme aufzubauen, die Zusammenarbeit China - Türkiye - Europa zu entwickeln und nachhaltigen kommerziellen Wert zu schaffen.",
       contactTitle: "NJ GROUP kontaktieren", contactText: "Kontaktieren Sie uns für Kooperation, Beschaffung, Vertrieb oder Projektgespräche.", email: "E-Mail senden",
-      footer: "© 2026 NJ GROUP. Alle Rechte vorbehalten. · "
+      footer: "© 2018 NJ GROUP. Alle Rechte vorbehalten. · "
     }
   };
 
