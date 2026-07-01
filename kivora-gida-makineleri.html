@@ -45,7 +45,11 @@
     .machine-spec-table th{background:#082a49;color:#fff;padding:11px 12px;text-align:left}
     .machine-spec-table td{padding:11px 12px;border-bottom:1px solid var(--line);vertical-align:top}
     .machine-spec-table td:first-child{font-weight:900;color:var(--navy);width:180px}
-    @media(max-width:760px){.machine-detail-hero{grid-template-columns:1fr}.machine-detail-media{min-height:250px}.machine-detail-media img{max-height:260px;padding:22px}.machine-detail-caption{position:relative;left:auto;right:auto;bottom:auto;margin:0 14px 14px}.machine-detail-panel h2{margin-right:44px}}
+    .machine-detail-source-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin:18px 0}
+    .machine-detail-source-card{border:1px solid var(--line);background:#fff;padding:16px;min-height:128px}
+    .machine-detail-source-card strong{display:block;color:var(--navy);margin-bottom:8px}
+    .machine-detail-source-card span{display:block;color:#486176;font-size:13px;line-height:1.65}
+    @media(max-width:760px){.machine-detail-hero,.machine-detail-source-grid{grid-template-columns:1fr}.machine-detail-media{min-height:250px}.machine-detail-media img{max-height:260px;padding:22px}.machine-detail-caption{position:relative;left:auto;right:auto;bottom:auto;margin:0 14px 14px}.machine-detail-panel h2{margin-right:44px}}
   </style>
   <script type="application/ld+json">{"@context":"https://schema.org","@type":"Brand","name":"KIVORA","parentOrganization":{"@type":"Organization","name":"NJ GROUP","url":"https://njgrup.com/"},"url":"https://njgrup.com/kivora-gida-makineleri.html"}</script>
 </head>
@@ -197,6 +201,7 @@
           </table>
         </div>
       </div>
+      <div class="machine-detail-source-grid" id="machine-detail-source-grid"></div>
       <div class="machine-detail-points"><strong id="machine-detail-points-label">Öne çıkan noktalar</strong><ul id="machine-detail-points"></ul></div>
       <div class="machine-detail-actions">
         <a class="btn" id="machine-detail-request" href="mailto:info@njgrup.com">Bu makine için teklif iste</a>
@@ -222,8 +227,460 @@
   document.getElementById('lang').addEventListener('change',e=>applyLang(e.target.value));const saved=localStorage.getItem('nj-lang')||'tr';document.getElementById('lang').value=maps[saved]?saved:'tr';applyLang(maps[saved]?saved:'tr');
   const detailLabels={tr:{use:'Kullanım alanı',config:'Konfigürasyon',value:'KIVORA proje değeri',specs:'Teknik parametreler',points:'Öne çıkan noktalar',request:'Bu makine için teklif iste',back:'Kataloğa dön',close:'Kapat'},zh:{use:'应用场景',config:'配置重点',value:'KIVORA 项目价值',specs:'机器参数',points:'核心要点',request:'咨询这台设备',back:'返回目录',close:'关闭'},en:{use:'Application',config:'Configuration',value:'KIVORA project value',specs:'Machine parameters',points:'Key points',request:'Request a quote for this machine',back:'Back to catalog',close:'Close'},fr:{use:'Application',config:'Configuration',value:'Valeur projet KIVORA',specs:'Paramètres techniques',points:'Points clés',request:'Demander une offre pour cette machine',back:'Retour au catalogue',close:'Fermer'},de:{use:'Anwendung',config:'Konfiguration',value:'KIVORA Projektwert',specs:'Technische Parameter',points:'Kernpunkte',request:'Angebot für diese Maschine anfragen',back:'Zurück zum Katalog',close:'Schließen'}};
   const categoryProfiles={'Hamur işi':{use:'Bao, bun, mantou ve dolgulu hamur ürünleri için restoran, zincir işletme, merkezi mutfak ve donuk gıda üretiminde kullanılır.',config:'Hamur yapısı, ürün gramajı, dolgu oranı, tepsi/kağıt ihtiyacı, proofing ve buhar pişirme akışı birlikte değerlendirilir.',value:'KIVORA seçimi; el işçiliğine yakın görünüm, standart porsiyon, daha düşük iş gücü ve büyümeye açık üretim planı sağlar.'},Dumpling:{use:'Dumpling, mantı, wonton, gyoza ve benzeri dolgulu ürünlerde taze servis, perakende paket ve donuk ürün hatları için uygundur.',config:'Hamur kalınlığı, dolgu miktarı, şekil kalıbı, konveyör uzunluğu ve sonraki pişirme/şoklama adımları proje bazında seçilir.',value:'NJ GROUP, farklı pazar formlarını tek makine ailesinde değerlendirerek kapasite, kalite ve ürün çeşitliliğini dengeler.'},Noodle:{use:'Taze erişte, noodle, pirinç noodle ve özel kesim ürünlerde restoran, yemekhane, atölye ve fabrika üretimi için planlanır.',config:'Un reçetesi, nem oranı, merdane kademesi, kesici tipi, unlama, katlama ve kurutma öncesi akış birlikte belirlenir.',value:'KIVORA yaklaşımı, kesim standardı ve kapasiteyi netleştirerek işletmenin ürün gamını daha kontrollü büyütmesine yardım eder.'},Soya:{use:'Tofu, soya sütü, tofu skin, qianzhang ve bitkisel protein ürünlerinde yerel taze satıştan fabrika üretimine kadar kullanılır.',config:'Islatma, öğütme, filtrasyon, pişirme, koagülasyon, presleme ve soğutma istasyonları hedef ürüne göre kurulur.',value:'Bitkisel protein pazarında daha temiz akış, daha tutarlı ürün ve daha ölçeklenebilir yatırım modeli oluşturur.'},Sebze:{use:'Merkezi mutfak, hazır yemek, restoran zinciri ve paketli taze ürünlerde sebze yıkama, soyma, kesme ve susuzlaştırma için kullanılır.',config:'Ürün tipi, kesim formu, yıkama hassasiyeti, fire oranı, kapasite ve hijyen alanı yerleşimi birlikte değerlendirilir.',value:'KIVORA sebze hazırlık ekipmanları iş gücünü azaltır, porsiyon standardını yükseltir ve sonraki pişirme/paketleme akışını hızlandırır.'},Et:{use:'Kasap hazırlığı, restoran, merkezi mutfak, hazır yemek ve donuk ürün üretiminde et kesme, kıyma, dilimleme ve şekillendirme için kullanılır.',config:'Ürün sıcaklığı, kesim formu, porsiyon hedefi, güvenlik ekipmanı, temizlik gereksinimi ve vardiya kapasitesi dikkate alınır.',value:'NJ GROUP, et hazırlık hattında hız, güvenlik, porsiyon standardı ve fire yönetimini aynı proje içinde değerlendirir.'},Yardımcı:{use:'Ana üretim makinelerinin ön hazırlık, pişirme, temizlik, paketleme ve hat sonu işlemlerini tamamlamak için kullanılır.',config:'Ana makine kapasitesi, enerji altyapısı, su/buhar ihtiyacı, alan yerleşimi ve günlük temizlik planı birlikte ele alınır.',value:'Yardımcı ekipman doğru seçildiğinde ana hattın darboğazları azalır, hijyen standardı ve teslimat güvenilirliği artar.'}};
+  const machineSourceFacts={
+    "仿手工包子机": {
+      "image": "assets/kivora-source-machine-01.jpg",
+      "sourceTitle": "仿手工包子机",
+      "sourceUrl": "http://www.57212888.com/?lm1/115.html",
+      "modelHints": "100型",
+      "forms": "包子、牛肉包、素馅包、豆沙包、馒头、馅饼、烧饼",
+      "process": "仿手工压面制皮、卷面包合、自动供面供馅、切断成型，可联动上面机、摆盘机、垫纸机等工位",
+      "application": "食品厂、连锁早餐、中央厨房、学校食堂和速冻面点生产",
+      "focus": "自动"
+    },
+    "多功能包子机": {
+      "image": "assets/kivora-source-machine-02.jpg",
+      "sourceTitle": "多功能包子机",
+      "sourceUrl": "http://www.57212888.com/?lm1/114.html",
+      "modelHints": "100型、90型、80型",
+      "forms": "包子、馒头、馅饼、菜包、牛肉包、甜馅面点",
+      "process": "多功能供面供馅与成型结构，支持不同克重、馅料比例和花型切换",
+      "application": "多品类门店、团餐厨房、速冻面点和小型工厂",
+      "focus": "重量、不锈钢"
+    },
+    "仿手工饺子机": {
+      "image": "assets/kivora-source-machine-03.jpg",
+      "sourceTitle": "仿手工饺子机",
+      "sourceUrl": "http://www.57212888.com/?lm1/173.html",
+      "modelHints": "1300型、1200型、1000型、600型、500型、400型、390型",
+      "forms": "饺子、锅贴、蒸饺、月牙饺、圆边饺、鱼形饺、馄饨类产品",
+      "process": "模拟手工包合成型，面皮厚薄、馅料多少和速度可调，支持更换模具",
+      "application": "配送中心、饺子工厂、早餐工程、餐饮连锁",
+      "focus": "和面、自动、清洗"
+    },
+    "馄饨机": {
+      "image": "assets/kivora-source-machine-04.jpg",
+      "sourceTitle": "馄饨机",
+      "sourceUrl": "http://www.57212888.com/?lm1/109.html",
+      "modelHints": "按订单产能配置",
+      "forms": "馄饨、云吞、抄手、小型汤食类带馅制品",
+      "process": "供皮、注馅、折叠包合和出料节拍联动，适合小克重连续生产",
+      "application": "中央厨房、冷冻馄饨、餐饮后厨和零售包装",
+      "focus": "馄饨、尺寸、重量、自动、流水线"
+    },
+    "馒头机": {
+      "image": "assets/kivora-source-machine-05.jpg",
+      "sourceTitle": "馒头机",
+      "sourceUrl": "http://www.57212888.com/?lm1/108.html",
+      "modelHints": "100型、S型",
+      "forms": "馒头、刀切馒头、圆馒头、方馒头、发酵面坯",
+      "process": "连续供面、整形、分切和成型，可与醒发箱、蒸箱配套",
+      "application": "团餐、学校食堂、早餐连锁和面点工厂",
+      "focus": "醒发、和面、自动、流水线"
+    },
+    "面条机": {
+      "image": "assets/kivora-source-machine-06.jpg",
+      "sourceTitle": "面条机",
+      "sourceUrl": "http://www.57212888.com/?lm1/107.html",
+      "modelHints": "260型",
+      "forms": "鲜面、宽面、细面、圆面、方形面、挂面前处理",
+      "process": "多级压延、切条、撒粉和收集，面皮厚度与切刀规格可调",
+      "application": "面馆、中央厨房、面制品工厂和食堂",
+      "focus": "变频、不锈钢"
+    },
+    "刀削面机": {
+      "image": "assets/kivora-source-machine-07.jpg",
+      "sourceTitle": "刀削面机",
+      "sourceUrl": "http://www.57212888.com/?lm1/106.html",
+      "modelHints": "按订单产能配置",
+      "forms": "刀削面、特色面片、餐厅现场制面",
+      "process": "仿手工削面动作，切削速度和面团投放节奏可按场景配置",
+      "application": "面馆、开放厨房、连锁餐饮和特色面食档口",
+      "focus": "不锈钢、馄饨"
+    },
+    "拉面机": {
+      "image": "assets/kivora-source-machine-08.jpg",
+      "sourceTitle": "拉面机",
+      "sourceUrl": "http://www.57212888.com/?lm1/105.html",
+      "modelHints": "按订单产能配置",
+      "forms": "拉面、抻面、手工风格面条",
+      "process": "辅助拉伸、整形或出面流程，降低人工强度并保持产品稳定",
+      "application": "拉面店、快餐后厨、食堂面档",
+      "focus": "自动、馄饨"
+    },
+    "饺子皮机": {
+      "image": "assets/kivora-source-machine-09.jpg",
+      "sourceTitle": "饺子皮机",
+      "sourceUrl": "http://www.57212888.com/?lm1/104.html",
+      "modelHints": "100型、60型",
+      "forms": "饺子皮、馄饨皮、包合类面皮",
+      "process": "压延、定厚、切皮和收集流程，面皮直径与厚度按产品配置",
+      "application": "饺子门店、中央厨房、手工包制配套",
+      "focus": "馄饨、重量"
+    },
+    "凉皮机": {
+      "image": "assets/kivora-source-machine-10.jpg",
+      "sourceTitle": "凉皮机",
+      "sourceUrl": "http://www.57212888.com/?lm1/103.html",
+      "modelHints": "按订单产能配置",
+      "forms": "凉皮、面皮、淀粉皮类产品",
+      "process": "洗面、浆液处理、成型蒸制和切分流程可按产能组合",
+      "application": "小吃工厂、中央厨房、地方特色食品生产",
+      "focus": "自动、尺寸、产量"
+    },
+    "米粉机": {
+      "image": "assets/kivora-source-machine-11.jpg",
+      "sourceTitle": "米粉机",
+      "sourceUrl": "http://www.57212888.com/?lm1/102.html",
+      "modelHints": "60型",
+      "forms": "米粉、米线、米浆类制品",
+      "process": "磨浆、熟化、挤出或成型工序按配方选择，支持米制品连续化",
+      "application": "米粉工厂、区域食品项目、团餐配送",
+      "focus": "自动、馄饨"
+    },
+    "中小型豆腐机": {
+      "image": "assets/kivora-source-machine-12.jpg",
+      "sourceTitle": "中小型豆腐机",
+      "sourceUrl": "http://www.57212888.com/?lm3/57.html",
+      "modelHints": "130A150A型",
+      "forms": "豆腐、豆花、豆浆、豆腐脑",
+      "process": "浸泡、磨浆、煮浆、点浆、压制等小型流程组合",
+      "application": "社区作坊、餐饮门店、鲜豆腐项目",
+      "focus": "豆浆"
+    },
+    "工厂式豆腐机": {
+      "image": "assets/kivora-source-machine-13.jpg",
+      "sourceTitle": "工厂式豆腐机",
+      "sourceUrl": "http://www.57212888.com/?lm3/58.html",
+      "modelHints": "800型",
+      "forms": "豆腐、豆干、豆花、豆浆、豆制品系列",
+      "process": "工厂化磨浆、煮浆、过滤、凝固、成型和压制连续流程",
+      "application": "豆制品工厂、中央厨房、植物蛋白项目",
+      "focus": "自动、豆浆"
+    },
+    "千张豆皮机": {
+      "image": "assets/kivora-source-machine-14.jpg",
+      "sourceTitle": "千张豆皮机",
+      "sourceUrl": "http://www.57212888.com/?lm3/101.html",
+      "modelHints": "600型",
+      "forms": "千张、豆皮、薄片豆制品",
+      "process": "豆浆铺膜、成型、揭皮、压制和后段处理按厚度配置",
+      "application": "豆制品工厂、素食产品、火锅食材供应",
+      "focus": "自动"
+    },
+    "豆芽机": {
+      "image": "assets/kivora-source-machine-15.jpg",
+      "sourceTitle": "豆芽机",
+      "sourceUrl": "http://www.57212888.com/?lm3/100.html",
+      "modelHints": "1000型",
+      "forms": "绿豆芽、黄豆芽、芽菜类鲜品",
+      "process": "温湿度、喷淋、培育周期和箱体卫生条件集中控制",
+      "application": "蔬菜供应链、餐饮配送、鲜品加工",
+      "focus": "按产品工艺配置"
+    },
+    "豆制品辅助设备": {
+      "image": "assets/kivora-source-machine-16.jpg",
+      "sourceTitle": "豆制品辅助设备",
+      "sourceUrl": "http://www.57212888.com/?lm3/98.html",
+      "modelHints": "按订单产能配置",
+      "forms": "磨浆、过滤、压榨、输送、清洗和周转配套",
+      "process": "围绕主豆腐线补齐前后处理工位，减少瓶颈",
+      "application": "豆制品工厂、作坊升级、中央厨房",
+      "focus": "按产品工艺配置"
+    },
+    "豆浆机": {
+      "image": "assets/kivora-source-machine-17.jpg",
+      "sourceTitle": "豆浆机",
+      "sourceUrl": "http://www.57212888.com/?lm3/99.html",
+      "modelHints": "按订单产能配置",
+      "forms": "豆浆、植物饮品、豆腐前端浆料",
+      "process": "磨浆、加热、过滤和保温流程一体化或分体配置",
+      "application": "早餐店、饮品店、豆制品项目",
+      "focus": "豆浆、自动"
+    },
+    "多功能切菜机": {
+      "image": "assets/kivora-source-machine-18.jpg",
+      "sourceTitle": "多功能切菜机",
+      "sourceUrl": "http://www.57212888.com/?lm4/86.html",
+      "modelHints": "按订单产能配置",
+      "forms": "叶菜、根茎菜、片、丝、丁、段等形态",
+      "process": "可换刀组实现切片、切丝、切丁、切段，配合输送进料",
+      "application": "中央厨房、净菜加工、团餐配送",
+      "focus": "切片"
+    },
+    "叶菜类洗菜机": {
+      "image": "assets/kivora-source-machine-19.jpg",
+      "sourceTitle": "叶菜类洗菜机",
+      "sourceUrl": "http://www.57212888.com/?lm4/85.html",
+      "modelHints": "300型、260型",
+      "forms": "叶菜、白菜、菠菜、生菜、香菜等",
+      "process": "气泡、喷淋或循环水清洗，适合切配前除杂和初洗",
+      "application": "净菜工厂、中央厨房、食堂配送",
+      "focus": "清洗、自动、流水线"
+    },
+    "根茎类去皮机": {
+      "image": "assets/kivora-source-machine-20.jpg",
+      "sourceTitle": "根茎类去皮机",
+      "sourceUrl": "http://www.57212888.com/?lm4/84.html",
+      "modelHints": "按订单产能配置",
+      "forms": "土豆、胡萝卜、红薯、萝卜等根茎类",
+      "process": "摩擦去皮或滚筒去皮，降低人工削皮强度并减少损耗",
+      "application": "净菜加工、团餐、薯类制品前处理",
+      "focus": "清洗"
+    },
+    "脱水机": {
+      "image": "assets/kivora-source-machine-21.jpg",
+      "sourceTitle": "脱水机",
+      "sourceUrl": "http://www.57212888.com/?lm4/83.html",
+      "modelHints": "200型、500型",
+      "forms": "清洗后的蔬菜、馅料、豆制品或食品原料",
+      "process": "离心脱水或连续脱水，控制含水率并改善包装与后续加工",
+      "application": "净菜、馅料准备、中央厨房和包装前处理",
+      "focus": "自动"
+    },
+    "斩拌机": {
+      "image": "assets/kivora-source-machine-22.jpg",
+      "sourceTitle": "斩拌机",
+      "sourceUrl": "http://www.57212888.com/?lm5/95.html",
+      "modelHints": "400型",
+      "forms": "肉馅、鱼糜、蔬菜馅、复合馅料",
+      "process": "高速斩切与搅拌实现细化、乳化和混合均匀",
+      "application": "肉制品、包馅食品、丸类和调理食品",
+      "focus": "斩拌、绞肉、切片"
+    },
+    "绞肉机": {
+      "image": "assets/kivora-source-machine-23.jpg",
+      "sourceTitle": "绞肉机",
+      "sourceUrl": "http://www.57212888.com/?lm5/94.html",
+      "modelHints": "200型",
+      "forms": "牛肉、羊肉、禽肉及混合馅料",
+      "process": "螺旋推进、孔板绞制，支持不同粗细肉馅需求",
+      "application": "中央厨房、肉制品工厂、包子饺子馅料",
+      "focus": "绞肉、斩拌、切片"
+    },
+    "肉丝肉片机": {
+      "image": "assets/kivora-source-machine-24.jpg",
+      "sourceTitle": "肉丝肉片机",
+      "sourceUrl": "http://www.57212888.com/?lm5/93.html",
+      "modelHints": "360型、300型、100型",
+      "forms": "牛肉片、羊肉片、鸡肉片、肉丝、肉条",
+      "process": "刀组切割形成稳定厚度，减少人工切配差异",
+      "application": "餐饮后厨、调理肉、火锅食材和团餐",
+      "focus": "尺寸、绞肉、斩拌、切片"
+    },
+    "熟肉切片机": {
+      "image": "assets/kivora-source-machine-25.jpg",
+      "sourceTitle": "熟肉切片机",
+      "sourceUrl": "http://www.57212888.com/?lm5/97.html",
+      "modelHints": "按订单产能配置",
+      "forms": "熟牛肉、熟鸡肉、火腿、卤味、熟食制品",
+      "process": "针对熟制肉料进行均匀切片，保证摆盘和包装一致性",
+      "application": "熟食工厂、餐饮配餐、零售包装",
+      "focus": "切片、尺寸、斩拌、绞肉"
+    },
+    "切肉丁机": {
+      "image": "assets/kivora-source-machine-26.jpg",
+      "sourceTitle": "切肉丁机",
+      "sourceUrl": "http://www.57212888.com/?lm5/92.html",
+      "modelHints": "300型",
+      "forms": "牛肉丁、鸡肉丁、羊肉丁、调理肉丁",
+      "process": "定向切条再切丁，丁形规格按刀组和物料状态配置",
+      "application": "预制菜、馅料、炒制配料和食品工厂",
+      "focus": "尺寸、切丁、斩拌、绞肉、切片"
+    },
+    "锯骨机": {
+      "image": "assets/kivora-source-machine-27.jpg",
+      "sourceTitle": "锯骨机",
+      "sourceUrl": "http://www.57212888.com/?lm5/90.html",
+      "modelHints": "按订单产能配置",
+      "forms": "冻肉、骨类、排骨、带骨肉块",
+      "process": "锯带切割，适合带骨原料的分割和标准化份量",
+      "application": "肉类加工、商超后场、餐饮供应链",
+      "focus": "斩拌、绞肉、切片"
+    },
+    "砍排机": {
+      "image": "assets/kivora-source-machine-28.jpg",
+      "sourceTitle": "砍排机",
+      "sourceUrl": "http://www.57212888.com/?lm5/89.html",
+      "modelHints": "500型、100型",
+      "forms": "排骨、骨块、带骨肉段",
+      "process": "连续砍切或切段结构，稳定长度和加工节拍",
+      "application": "预制菜、商超、餐饮供应链",
+      "focus": "斩拌、绞肉、切片"
+    },
+    "羊肉切片机": {
+      "image": "assets/kivora-source-machine-29.jpg",
+      "sourceTitle": "羊肉切片机",
+      "sourceUrl": "http://www.57212888.com/?lm5/88.html",
+      "modelHints": "200型、100型",
+      "forms": "羊肉卷、牛肉卷、火锅肉片、薄片肉",
+      "process": "冻肉或半冻肉切片，厚度和卷形按产品配置",
+      "application": "火锅供应链、餐饮后厨、零售包装",
+      "focus": "切片、斩拌、绞肉"
+    },
+    "牛肉去膜机": {
+      "image": "assets/kivora-source-machine-30.jpg",
+      "sourceTitle": "牛肉去膜机",
+      "sourceUrl": "http://www.57212888.com/?lm5/96.html",
+      "modelHints": "按订单产能配置",
+      "forms": "牛肉筋膜、表面筋膜与修整前处理",
+      "process": "用于大块肉表面筋膜分离，提升修整速度和一致性",
+      "application": "牛肉加工、中央厨房、肉类分割线",
+      "focus": "不锈钢、斩拌、绞肉、切片"
+    },
+    "切鸡鸭块机": {
+      "image": "assets/kivora-source-machine-31.jpg",
+      "sourceTitle": "切鸡鸭块机",
+      "sourceUrl": "http://www.57212888.com/?lm5/91.html",
+      "modelHints": "340型",
+      "forms": "鸡块、鸭块、禽类带骨块",
+      "process": "定长切块和连续下料，适合禽类原料标准化处理",
+      "application": "团餐、预制菜、禽类加工",
+      "focus": "斩拌、绞肉、切片"
+    },
+    "肉丸机": {
+      "image": "assets/kivora-source-machine-32.jpg",
+      "sourceTitle": "肉丸机",
+      "sourceUrl": "http://www.57212888.com/?lm5/87.html",
+      "modelHints": "100型",
+      "forms": "牛肉丸、鸡肉丸、鱼丸、蔬菜丸",
+      "process": "定量出料和成型，控制丸径、重量和出料节拍",
+      "application": "火锅食材、调理食品、中央厨房",
+      "focus": "尺寸、斩拌、绞肉、切片"
+    },
+    "和面机": {
+      "image": "assets/kivora-source-machine-33.jpg",
+      "sourceTitle": "和面机",
+      "sourceUrl": "http://www.57212888.com/?lm2/82.html",
+      "modelHints": "按订单产能配置",
+      "forms": "包子面团、饺子面团、面条面团、馒头面团",
+      "process": "搅拌桨或双动结构混合面粉和水，形成稳定面团",
+      "application": "面点工厂、食堂、餐饮后厨",
+      "focus": "和面、馄饨"
+    },
+    "揉面机": {
+      "image": "assets/kivora-source-machine-34.jpg",
+      "sourceTitle": "揉面机",
+      "sourceUrl": "http://www.57212888.com/?lm2/80.html",
+      "modelHints": "500型、550型",
+      "forms": "发酵面团、饺子皮面团、面条面团",
+      "process": "反复揉压改善面筋结构，使面团更细腻有延展性",
+      "application": "面点门店、中央厨房、面条生产",
+      "focus": "自动、揉面、不锈钢、和面、醒发"
+    },
+    "拌面机": {
+      "image": "assets/kivora-source-machine-35.jpg",
+      "sourceTitle": "拌面机",
+      "sourceUrl": "http://www.57212888.com/?lm2/79.html",
+      "modelHints": "50型",
+      "forms": "面条面团、拌粉、低水分面絮",
+      "process": "针对面条生产的干湿混合，形成均匀面絮",
+      "application": "面条机前端、挂面前处理、食堂面档",
+      "focus": "和面"
+    },
+    "醒发箱": {
+      "image": "assets/kivora-source-machine-36.jpg",
+      "sourceTitle": "醒发箱",
+      "sourceUrl": "http://www.57212888.com/?lm2/77.html",
+      "modelHints": "按订单产能配置",
+      "forms": "包子、馒头、面包类发酵面坯",
+      "process": "控制温度、湿度和时间，保证发酵稳定",
+      "application": "面点工厂、早餐店、中央厨房",
+      "focus": "醒发、尺寸、和面、揉面"
+    },
+    "蒸箱，蒸房": {
+      "image": "assets/kivora-source-machine-37.jpg",
+      "sourceTitle": "蒸箱，蒸房",
+      "sourceUrl": "http://www.57212888.com/?lm2/76.html",
+      "modelHints": "按订单产能配置",
+      "forms": "包子、馒头、米制品、熟食、团餐菜品",
+      "process": "箱式或房式蒸汽加热，按盘数、车数和产能配置",
+      "application": "中央厨房、学校食堂、工厂蒸制线",
+      "focus": "按产品工艺配置"
+    },
+    "洗面机": {
+      "image": "assets/kivora-source-machine-38.jpg",
+      "sourceTitle": "洗面机",
+      "sourceUrl": "http://www.57212888.com/?lm2/75.html",
+      "modelHints": "100型",
+      "forms": "凉皮浆、面筋、淀粉浆",
+      "process": "通过洗面和分离得到淀粉浆与面筋，服务凉皮工艺",
+      "application": "凉皮加工、地方特色食品、面筋生产",
+      "focus": "和面、揉面"
+    },
+    "多功能夹层锅": {
+      "image": "assets/kivora-source-machine-39.jpg",
+      "sourceTitle": "多功能夹层锅",
+      "sourceUrl": "http://www.57212888.com/?lm2/73.html",
+      "modelHints": "按订单产能配置",
+      "forms": "馅料、酱料、汤料、豆浆、卤煮和预制菜",
+      "process": "夹层加热、可配搅拌，适合批量熬煮与保温",
+      "application": "中央厨房、调味品、预制菜和馅料加工",
+      "focus": "和面、揉面、醒发"
+    },
+    "电饼铛": {
+      "image": "assets/kivora-source-machine-40.jpg",
+      "sourceTitle": "电饼铛",
+      "sourceUrl": "http://www.57212888.com/?lm2/78.html",
+      "modelHints": "按订单产能配置",
+      "forms": "饼、馅饼、烧饼、薄饼、早餐面点",
+      "process": "上下或单面加热，控制烙制温度和时间",
+      "application": "早餐店、餐饮后厨、面点档口",
+      "focus": "和面、揉面、醒发"
+    },
+    "拌馅机": {
+      "image": "assets/kivora-source-machine-41.jpg",
+      "sourceTitle": "拌馅机",
+      "sourceUrl": "http://www.57212888.com/?lm2/74.html",
+      "modelHints": "50型",
+      "forms": "牛肉馅、蔬菜馅、肉菜混合馅、豆制品馅",
+      "process": "搅拌混合使调味和水分分布均匀，减少人工翻拌",
+      "application": "包子、饺子、馄饨、肉丸和调理食品",
+      "focus": "按产品工艺配置"
+    },
+    "洗碗机": {
+      "image": "assets/kivora-source-machine-42.jpg",
+      "sourceTitle": "洗碗机",
+      "sourceUrl": "http://www.57212888.com/?lm2/111.html",
+      "modelHints": "按订单产能配置",
+      "forms": "餐具、周转筐、托盘、厨房器具",
+      "process": "喷淋清洗、漂洗和烘干模块按通道长度配置",
+      "application": "中央厨房、学校食堂、酒店餐饮",
+      "focus": "尺寸、和面、揉面、醒发"
+    },
+    "蒸汽发生器": {
+      "image": "assets/kivora-source-machine-43.jpg",
+      "sourceTitle": "蒸汽发生器",
+      "sourceUrl": "http://www.57212888.com/?lm2/112.html",
+      "modelHints": "按订单产能配置",
+      "forms": "蒸箱、蒸房、夹层锅和热加工设备配套",
+      "process": "快速产生蒸汽，为蒸制、加热和保温工位供能",
+      "application": "食品工厂、中央厨房、蒸制生产线",
+      "focus": "蒸汽、自动"
+    },
+    "大米磨浆机": {
+      "image": "assets/kivora-source-machine-44.jpg",
+      "sourceTitle": "大米磨浆机",
+      "sourceUrl": "http://www.57212888.com/?lm2/72.html",
+      "modelHints": "按订单产能配置",
+      "forms": "米浆、米粉浆、豆浆及湿磨浆料",
+      "process": "湿磨结构把浸泡原料处理成细腻浆料",
+      "application": "米粉、米浆饮品、豆制品和地方食品",
+      "focus": "和面、揉面、醒发"
+    },
+    "封口机": {
+      "image": "assets/kivora-source-machine-45.jpg",
+      "sourceTitle": "封口机",
+      "sourceUrl": "http://www.57212888.com/?lm2/110.html",
+      "modelHints": "按订单产能配置",
+      "forms": "杯、盒、袋、托盘及半成品包装",
+      "process": "热封或压封形式完成包装闭合，保护运输和陈列",
+      "application": "零售包装、中央厨房配送、半成品出货",
+      "focus": "封口、豆浆、和面"
+    }
+  };
   const imageByCategory={'Hamur işi':'assets/kivora-bun-machine.jpg',Dumpling:'assets/kivora-dumpling-multishape.jpg',Noodle:'assets/kivora-noodle-line.jpg',Soya:'assets/kivora-auxiliary-line.jpg',Sebze:'assets/kivora-dumpling-line.jpg',Et:'assets/kivora-bun-horizontal.jpg',Yardımcı:'assets/kivora-auxiliary-line.jpg'};
-  const imageForMachine=(item)=>{const original=item.original||'';const title=item.title||'';if(/包子|馒头|醒发|蒸箱|蒸房/.test(original))return 'assets/kivora-bun-line.jpg';if(/多功能包子|拌馅|夹层锅/.test(original))return 'assets/kivora-bun-machine.jpg';if(/饺子|馄饨|烧卖|饺子皮|面皮/.test(original)||/dumpling|wonton/i.test(title))return 'assets/kivora-dumpling-multishape.jpg';if(/面条|刀削|拉面|凉皮|米粉|洗面|磨浆|拌面/.test(original)||/noodle|rice/i.test(title))return 'assets/kivora-noodle-line.jpg';if(/豆腐|豆浆|豆皮|豆芽|豆制品/.test(original))return 'assets/kivora-auxiliary-line.jpg';if(/切菜|洗菜|去皮|脱水/.test(original))return 'assets/kivora-dumpling-line.jpg';if(/斩拌|绞肉|肉|骨|排|鸡|鸭|羊|牛/.test(original))return 'assets/kivora-bun-horizontal.jpg';if(/封口|洗碗|蒸汽|电饼铛/.test(original))return 'assets/kivora-bun-machine.jpg';return imageByCategory[item.category]||'assets/kivora-auxiliary-line.jpg'};
+  const imageForMachine=(item)=>{const original=item.original||'';const title=item.title||'';const facts=machineSourceFacts[original];if(facts&&facts.image)return facts.image;if(/包子|馒头|醒发|蒸箱|蒸房/.test(original))return 'assets/kivora-bun-line.jpg';if(/多功能包子|拌馅|夹层锅/.test(original))return 'assets/kivora-bun-machine.jpg';if(/饺子|馄饨|烧卖|饺子皮|面皮/.test(original)||/dumpling|wonton/i.test(title))return 'assets/kivora-dumpling-multishape.jpg';if(/面条|刀削|拉面|凉皮|米粉|洗面|磨浆|拌面/.test(original)||/noodle|rice/i.test(title))return 'assets/kivora-noodle-line.jpg';if(/豆腐|豆浆|豆皮|豆芽|豆制品/.test(original))return 'assets/kivora-auxiliary-line.jpg';if(/切菜|洗菜|去皮|脱水/.test(original))return 'assets/kivora-dumpling-line.jpg';if(/斩拌|绞肉|肉|骨|排|鸡|鸭|羊|牛/.test(original))return 'assets/kivora-bun-horizontal.jpg';if(/封口|洗碗|蒸汽|电饼铛/.test(original))return 'assets/kivora-bun-machine.jpg';return imageByCategory[item.category]||'assets/kivora-auxiliary-line.jpg'};
   const specProfiles={
     'Hamur işi':{model:'KIVORA B-SERIES',capacity:'800-4,000 adet/saat, reçete ve gramaja göre',voltage:'220 / 380 V, 50/60 Hz',power:'1.5-5.5 kW aralığı',dimensions:'Yaklaşık 1,200-5,800 mm hat uzunluğu, modül seçimine göre',material:'Gıda temas yüzeylerinde paslanmaz çelik',automation:'Gramaj, dolgu, hız ve ürün formu ayarlanabilir',products:'Bao, bun, mantou, dolgulu hamur ürünleri'},
     Dumpling:{model:'KIVORA D-SERIES',capacity:'3,000-32,000 adet/saat, kalıp ve gramaja göre',voltage:'220 / 380 V, 50/60 Hz',power:'1.1-8 kW aralığı',dimensions:'Kompakt makineden konveyörlü hatta kadar proje bazlı',material:'Paslanmaz temas yüzeyleri ve gıda uyumlu parçalar',automation:'Hamur kalınlığı, dolgu oranı, kapatma formu ve hız ayarı',products:'Dumpling, mantı, wonton, gyoza, shumai'},
@@ -233,11 +690,12 @@
     Et:{model:'KIVORA M-SERIES',capacity:'120-650 kg/saat, ürün sıcaklığı ve kesim formuna göre',voltage:'220 / 380 V, 50/60 Hz',power:'0.55-5.5 kW aralığı',dimensions:'Kesim, kıyma, dilimleme veya şekillendirme modülüne göre',material:'Paslanmaz temas yüzeyleri, güvenlik korumalı kesim alanı',automation:'Kesim kalınlığı, porsiyon, hız ve güvenlik ayarları',products:'Dana eti, koyun eti, kanatlı ürün, köfte, kemikli parça'},
     Yardımcı:{model:'KIVORA K-SERIES',capacity:'Ana üretim hattı kapasitesine göre proje bazlı',voltage:'220 / 380 V, 50/60 Hz',power:'0.75 kW üzeri, ekipman tipine göre',dimensions:'Mikser, buhar, pişirme, yıkama veya kapama modülüne göre',material:'Paslanmaz veya gıda uyumlu temas yüzeyleri',automation:'Süre, sıcaklık, hız, karıştırma, buhar veya kapama ayarı',products:'Hamur hazırlık, buhar, pişirme, temizlik, paketleme ve hat sonu'}
   };
-  const specRowsForMachine=(item)=>{const spec=specProfiles[item.category]||specProfiles.Yardımcı;return [['KIVORA series',spec.model],['Product scope',spec.products],['Capacity range',spec.capacity],['Voltage',spec.voltage],['Power',spec.power],['Machine size',spec.dimensions],['Material',spec.material],['Control / automation',spec.automation],['Order note','Final model, voltage, capacity and dimensions are confirmed in writing according to recipe, target output and facility conditions.']]};
+  const specRowsForMachine=(item)=>{const spec=specProfiles[item.category]||specProfiles.Yardımcı;const facts=machineSourceFacts[item.original]||{};return [['KIVORA matched item',facts.sourceTitle||item.original],['Matched model clues',facts.modelHints||'Project-based'],['Product scope',facts.forms||spec.products],['Process focus',facts.process||spec.automation],['Capacity range',spec.capacity],['Voltage',spec.voltage],['Power',spec.power],['Machine size',spec.dimensions],['Material',spec.material],['Control / automation',spec.automation],['Order note','Final model, voltage, capacity and dimensions are confirmed in writing according to recipe, target output and facility conditions.']]};
+  const renderSourceCards=(item)=>{const wrap=document.getElementById('machine-detail-source-grid');const facts=machineSourceFacts[item.original]||{};wrap.innerHTML='';[['对应产品图文','已按 '+(facts.sourceTitle||item.original)+' 的来源页面匹配图片与资料，不用其他机器替代。'],['工艺与产品','适配：'+(facts.forms||'按产品配置')+'。工艺重点：'+(facts.process||'按订单工艺配置')+'。'],['应用场景','适用：'+(facts.application||'食品生产、中央厨房和餐饮项目')+'。型号线索：'+(facts.modelHints||'按项目确认')+'。']].forEach(([title,text])=>{const card=document.createElement('div');card.className='machine-detail-source-card';const strong=document.createElement('strong');strong.textContent=title;const span=document.createElement('span');span.textContent=text;card.append(strong,span);wrap.appendChild(card)})};
   const machineDetailState={items:new Map(),byOriginal:new Map(),current:null};
   const textOf=(el)=>el?el.textContent.trim():'';
   const detailLang=()=>detailLabels[document.getElementById('lang').value]?document.getElementById('lang').value:'tr';
-  const openMachineDetail=(id,pushHash=true)=>{const item=machineDetailState.items.get(id);if(!item)return;machineDetailState.current=id;const labels=detailLabels[detailLang()]||detailLabels.tr;const profile=categoryProfiles[item.category]||categoryProfiles.Yardımcı;const image=document.getElementById('machine-detail-image');image.src=imageForMachine(item);image.alt='KIVORA '+item.title+' / '+item.original;document.getElementById('machine-detail-image-label').textContent='KIVORA '+item.category;document.getElementById('machine-detail-image-caption').textContent=item.original;document.getElementById('machine-detail-category').textContent=item.category;document.getElementById('machine-detail-title').textContent=item.title;document.getElementById('machine-detail-original').textContent=item.original;document.getElementById('machine-detail-description').textContent=item.description;document.getElementById('machine-detail-use-label').textContent=labels.use;document.getElementById('machine-detail-config-label').textContent=labels.config;document.getElementById('machine-detail-value-label').textContent=labels.value;document.getElementById('machine-detail-specs-label').textContent=labels.specs;document.getElementById('machine-detail-points-label').textContent=labels.points;document.getElementById('machine-detail-use').textContent=profile.use;document.getElementById('machine-detail-config').textContent=profile.config;document.getElementById('machine-detail-value').textContent=profile.value;const specBody=document.getElementById('machine-detail-specs');specBody.innerHTML='';specRowsForMachine(item).forEach(([name,value])=>{const tr=document.createElement('tr');const label=document.createElement('td');const cell=document.createElement('td');label.textContent=name;cell.textContent=value;tr.append(label,cell);specBody.appendChild(tr)});const points=document.getElementById('machine-detail-points');points.innerHTML='';item.points.forEach(point=>{const li=document.createElement('li');li.textContent=point;points.appendChild(li)});const request=document.getElementById('machine-detail-request');request.textContent=labels.request;request.href='mailto:info@njgrup.com?subject='+encodeURIComponent('KIVORA '+item.title+' / '+item.original);document.getElementById('machine-detail-back').textContent=labels.back;document.querySelector('.machine-detail-close').setAttribute('aria-label',labels.close);document.getElementById('machine-detail-modal').hidden=false;document.body.classList.add('machine-detail-open');if(pushHash&&location.hash!=='#'+id)history.pushState(null,'','#'+id);document.querySelector('.machine-detail-close').focus()};
+  const openMachineDetail=(id,pushHash=true)=>{const item=machineDetailState.items.get(id);if(!item)return;machineDetailState.current=id;const labels=detailLabels[detailLang()]||detailLabels.tr;const profile=categoryProfiles[item.category]||categoryProfiles.Yardımcı;const image=document.getElementById('machine-detail-image');image.src=imageForMachine(item);image.alt='KIVORA '+item.title+' / '+item.original;document.getElementById('machine-detail-image-label').textContent='KIVORA '+item.category;document.getElementById('machine-detail-image-caption').textContent=item.original;document.getElementById('machine-detail-category').textContent=item.category;document.getElementById('machine-detail-title').textContent=item.title;document.getElementById('machine-detail-original').textContent=item.original;document.getElementById('machine-detail-description').textContent=item.description;document.getElementById('machine-detail-use-label').textContent=labels.use;document.getElementById('machine-detail-config-label').textContent=labels.config;document.getElementById('machine-detail-value-label').textContent=labels.value;document.getElementById('machine-detail-specs-label').textContent=labels.specs;document.getElementById('machine-detail-points-label').textContent=labels.points;document.getElementById('machine-detail-use').textContent=profile.use;document.getElementById('machine-detail-config').textContent=profile.config;document.getElementById('machine-detail-value').textContent=profile.value;renderSourceCards(item);const specBody=document.getElementById('machine-detail-specs');specBody.innerHTML='';specRowsForMachine(item).forEach(([name,value])=>{const tr=document.createElement('tr');const label=document.createElement('td');const cell=document.createElement('td');label.textContent=name;cell.textContent=value;tr.append(label,cell);specBody.appendChild(tr)});const points=document.getElementById('machine-detail-points');points.innerHTML='';item.points.forEach(point=>{const li=document.createElement('li');li.textContent=point;points.appendChild(li)});const request=document.getElementById('machine-detail-request');request.textContent=labels.request;request.href='mailto:info@njgrup.com?subject='+encodeURIComponent('KIVORA '+item.title+' / '+item.original);document.getElementById('machine-detail-back').textContent=labels.back;document.querySelector('.machine-detail-close').setAttribute('aria-label',labels.close);document.getElementById('machine-detail-modal').hidden=false;document.body.classList.add('machine-detail-open');if(pushHash&&location.hash!=='#'+id)history.pushState(null,'','#'+id);document.querySelector('.machine-detail-close').focus()};
   const closeMachineDetail=()=>{document.getElementById('machine-detail-modal').hidden=true;document.body.classList.remove('machine-detail-open');if(location.hash&&machineDetailState.items.has(location.hash.slice(1)))history.pushState(null,'',location.pathname+location.search)};
   const initMachineDetails=()=>{document.querySelectorAll('.machine-card').forEach((card,index)=>{const category=textOf(card.querySelector('.mc-cat'));const h4=card.querySelector('h4');const title=textOf(h4);const original=textOf(card.querySelector('em'));const description=textOf(card.querySelector('p'));const points=[...card.querySelectorAll('ul li')].map(textOf).filter(Boolean);const id='kivora-machine-'+String(index+1).padStart(2,'0');card.id=id;card.dataset.machineId=id;machineDetailState.items.set(id,{id,category,title,original,description,points});if(original)machineDetailState.byOriginal.set(original,id);if(h4&&!h4.querySelector('button')){h4.textContent='';const btn=document.createElement('button');btn.type='button';btn.className='machine-link';btn.dataset.machineId=id;btn.textContent=title;h4.appendChild(btn)}});document.querySelectorAll('.directory-col li').forEach(li=>{const original=textOf(li.querySelector('em'));const span=li.querySelector('span');const id=machineDetailState.byOriginal.get(original);if(!span||!id||span.querySelector('button'))return;const btn=document.createElement('button');btn.type='button';btn.className='machine-link';btn.dataset.machineId=id;btn.textContent=textOf(span);span.replaceWith(btn)});document.addEventListener('click',event=>{const trigger=event.target.closest('button[data-machine-id]');if(trigger){event.preventDefault();openMachineDetail(trigger.dataset.machineId);return}if(event.target.closest('[data-machine-close]'))closeMachineDetail()});document.addEventListener('keydown',event=>{if(event.key==='Escape'&&!document.getElementById('machine-detail-modal').hidden)closeMachineDetail()});window.addEventListener('hashchange',()=>{const id=location.hash.slice(1);if(machineDetailState.items.has(id))openMachineDetail(id,false)});const initial=location.hash.slice(1);if(machineDetailState.items.has(initial))openMachineDetail(initial,false)};
   initMachineDetails();
