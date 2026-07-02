@@ -1,0 +1,708 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NJ GROUP AI OS</title>
+  <meta name="description" content="NJ GROUP AI OS 企业级 AI员工管理、任务分配、日报、风险和文件上传后台。">
+  <style>
+    :root {
+      --navy: #07111f;
+      --navy-2: #0b1b2e;
+      --panel: rgba(12, 27, 45, 0.92);
+      --panel-2: rgba(16, 36, 58, 0.92);
+      --line: rgba(206, 222, 238, 0.16);
+      --line-strong: rgba(206, 222, 238, 0.28);
+      --gold: #d6a756;
+      --gold-2: #f0d28b;
+      --green: #45b879;
+      --green-soft: rgba(69, 184, 121, 0.16);
+      --white: #f7fbff;
+      --muted: #9fb0c2;
+      --danger: #e36b6b;
+      --danger-soft: rgba(227, 107, 107, 0.14);
+      --shadow: 0 24px 72px rgba(0, 0, 0, 0.34);
+      --radius: 8px;
+    }
+
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; background: var(--navy); }
+    body {
+      margin: 0;
+      min-width: 320px;
+      color: var(--white);
+      font-family: Inter, "Segoe UI", "Microsoft YaHei", Arial, sans-serif;
+      letter-spacing: 0;
+      background:
+        linear-gradient(135deg, rgba(214, 167, 86, 0.10), transparent 30%),
+        linear-gradient(215deg, rgba(69, 184, 121, 0.08), transparent 34%),
+        repeating-linear-gradient(90deg, rgba(255,255,255,0.035) 0 1px, transparent 1px 92px),
+        repeating-linear-gradient(180deg, rgba(255,255,255,0.025) 0 1px, transparent 1px 92px),
+        linear-gradient(180deg, var(--navy), var(--navy-2) 48%, #050b13);
+    }
+
+    button, input, select, textarea { font: inherit; }
+    button { cursor: pointer; }
+    a { color: inherit; text-decoration: none; }
+
+    .topbar {
+      position: sticky;
+      top: 0;
+      z-index: 30;
+      border-bottom: 1px solid var(--line);
+      background: rgba(7, 17, 31, 0.9);
+      backdrop-filter: blur(16px);
+    }
+
+    .topbar-inner {
+      max-width: 1480px;
+      margin: 0 auto;
+      padding: 14px 28px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 18px;
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      min-width: 250px;
+    }
+
+    .mark {
+      width: 40px;
+      height: 40px;
+      border: 1px solid rgba(214, 167, 86, 0.45);
+      border-radius: 8px;
+      display: grid;
+      place-items: center;
+      color: var(--navy);
+      background: linear-gradient(135deg, var(--gold), var(--gold-2));
+      font-weight: 900;
+      box-shadow: 0 12px 32px rgba(214, 167, 86, 0.22);
+    }
+
+    .brand strong { display: block; font-size: 1rem; line-height: 1.15; }
+    .brand span:last-child { display: block; color: var(--muted); font-size: 0.78rem; margin-top: 3px; }
+
+    .nav {
+      display: flex;
+      justify-content: flex-end;
+      flex-wrap: wrap;
+      gap: 6px;
+    }
+
+    .nav a {
+      min-height: 36px;
+      display: inline-flex;
+      align-items: center;
+      padding: 0 12px;
+      border-radius: 8px;
+      color: #d7e5ee;
+      font-size: 0.88rem;
+      font-weight: 750;
+    }
+
+    .nav a:hover { background: rgba(255,255,255,0.07); color: var(--gold-2); }
+
+    .shell {
+      max-width: 1480px;
+      margin: 0 auto;
+      padding: 34px 28px 48px;
+    }
+
+    .hero {
+      display: grid;
+      grid-template-columns: minmax(0, 1.1fr) minmax(320px, 0.9fr);
+      gap: 24px;
+      align-items: stretch;
+      margin-bottom: 22px;
+    }
+
+    .hero-main, .panel, .employee-card, .stat, .task-card, .risk-card {
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      background: linear-gradient(145deg, rgba(255,255,255,0.07), rgba(255,255,255,0.025)), var(--panel);
+      box-shadow: var(--shadow);
+    }
+
+    .hero-main {
+      min-height: 292px;
+      padding: 28px;
+      display: grid;
+      align-content: end;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .hero-main::after {
+      content: "";
+      position: absolute;
+      inset: 22px;
+      border: 1px solid rgba(214, 167, 86, 0.15);
+      pointer-events: none;
+    }
+
+    .kicker {
+      margin: 0 0 12px;
+      color: var(--gold-2);
+      font-size: 0.78rem;
+      font-weight: 850;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+    }
+
+    h1 {
+      margin: 0;
+      font-size: clamp(2.2rem, 5vw, 5rem);
+      line-height: 0.98;
+      letter-spacing: 0;
+    }
+
+    .hero-main p {
+      max-width: 840px;
+      margin: 18px 0 0;
+      color: var(--muted);
+      line-height: 1.75;
+    }
+
+    .command-panel {
+      padding: 20px;
+      display: grid;
+      gap: 14px;
+    }
+
+    .section {
+      margin-top: 22px;
+    }
+
+    .section-head {
+      display: flex;
+      align-items: flex-end;
+      justify-content: space-between;
+      gap: 16px;
+      margin-bottom: 14px;
+    }
+
+    .section-title { margin: 0; font-size: 1.18rem; line-height: 1.3; }
+    .section-note { margin: 6px 0 0; color: var(--muted); font-size: 0.92rem; line-height: 1.55; }
+
+    .panel { padding: 18px; }
+
+    .stats {
+      display: grid;
+      grid-template-columns: repeat(5, minmax(0, 1fr));
+      gap: 12px;
+    }
+
+    .stat {
+      min-height: 110px;
+      padding: 16px;
+      display: grid;
+      align-content: space-between;
+      box-shadow: none;
+    }
+
+    .stat span { color: var(--muted); font-size: 0.88rem; }
+    .stat strong { font-size: 2rem; line-height: 1; color: #fff; }
+
+    .grid-2 {
+      display: grid;
+      grid-template-columns: minmax(330px, 0.72fr) minmax(0, 1.28fr);
+      gap: 18px;
+      align-items: start;
+    }
+
+    .form-grid {
+      display: grid;
+      gap: 12px;
+    }
+
+    label {
+      display: grid;
+      gap: 7px;
+      color: #dfeaf4;
+      font-size: 0.9rem;
+      font-weight: 750;
+    }
+
+    textarea, select, input[type="text"], input[type="date"] {
+      width: 100%;
+      border: 1px solid var(--line-strong);
+      border-radius: 8px;
+      background: rgba(5, 12, 21, 0.74);
+      color: var(--white);
+      outline: none;
+      padding: 11px 12px;
+      line-height: 1.5;
+    }
+
+    textarea { min-height: 118px; resize: vertical; }
+    textarea:focus, select:focus, input:focus { border-color: var(--gold); box-shadow: 0 0 0 3px rgba(214, 167, 86, 0.14); }
+
+    .btn-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+    }
+
+    .btn {
+      min-height: 38px;
+      border: 1px solid transparent;
+      border-radius: 8px;
+      padding: 0 13px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 7px;
+      color: var(--white);
+      background: rgba(255,255,255,0.08);
+      font-weight: 800;
+    }
+
+    .btn:hover { transform: translateY(-1px); box-shadow: 0 12px 26px rgba(0,0,0,0.18); }
+    .btn-primary { color: #07111f; background: linear-gradient(90deg, var(--gold), var(--gold-2)); }
+    .btn-green { background: linear-gradient(90deg, #218553, var(--green)); color: #fff; }
+    .btn-outline { border-color: var(--line-strong); background: transparent; color: #dceaf3; }
+
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      gap: 14px;
+    }
+
+    .employee-card {
+      min-height: 312px;
+      padding: 16px;
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+      box-shadow: 0 16px 38px rgba(0,0,0,0.18);
+    }
+
+    .card-top {
+      display: flex;
+      justify-content: space-between;
+      gap: 12px;
+      align-items: flex-start;
+    }
+
+    .employee-card h3 { margin: 0; font-size: 1.03rem; line-height: 1.35; }
+    .meta { color: var(--muted); font-size: 0.86rem; line-height: 1.5; }
+    .role-line { color: #dce8f2; line-height: 1.5; font-size: 0.92rem; }
+
+    .badge {
+      flex: 0 0 auto;
+      min-height: 28px;
+      display: inline-flex;
+      align-items: center;
+      border-radius: 999px;
+      padding: 0 10px;
+      font-size: 0.76rem;
+      font-weight: 900;
+      white-space: nowrap;
+    }
+
+    .waiting { background: rgba(255,255,255,0.08); color: #c7d4e0; }
+    .working { background: var(--green-soft); color: #80e2ad; }
+    .completed { background: rgba(214, 167, 86, 0.18); color: var(--gold-2); }
+    .decision { background: var(--danger-soft); color: #ffaaaa; }
+
+    .employee-actions { margin-top: auto; display: grid; grid-template-columns: 1fr 1fr; gap: 8px; }
+
+    .task-board {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 12px;
+    }
+
+    .task-column {
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      background: rgba(5, 12, 21, 0.42);
+      padding: 12px;
+      min-height: 220px;
+    }
+
+    .task-column h3 { margin: 0 0 10px; font-size: 0.98rem; }
+    .task-list { display: grid; gap: 10px; }
+    .task-card, .risk-card {
+      padding: 12px;
+      box-shadow: none;
+      background: rgba(255,255,255,0.055);
+    }
+    .task-card strong, .risk-card strong { display: block; margin-bottom: 5px; }
+    .task-card p, .risk-card p { margin: 0; color: var(--muted); line-height: 1.5; font-size: 0.88rem; }
+
+    .risk-grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 12px;
+    }
+
+    .risk-card { border-left: 3px solid var(--gold); }
+    .risk-card.high { border-left-color: var(--danger); }
+    .risk-card.ok { border-left-color: var(--green); }
+
+    .upload-zone {
+      border: 1px dashed rgba(214, 167, 86, 0.54);
+      border-radius: 8px;
+      padding: 18px;
+      background: rgba(214, 167, 86, 0.08);
+      display: grid;
+      gap: 12px;
+    }
+
+    .file-list { margin: 0; padding: 0; list-style: none; display: grid; gap: 8px; }
+    .file-list li { border: 1px solid var(--line); border-radius: 8px; padding: 10px 12px; color: #dce8f2; background: rgba(255,255,255,0.045); }
+
+    .modal {
+      position: fixed;
+      inset: 0;
+      z-index: 60;
+      display: none;
+      align-items: center;
+      justify-content: center;
+      padding: 20px;
+      background: rgba(0,0,0,0.62);
+    }
+
+    .modal.open { display: flex; }
+    .modal-card {
+      width: min(880px, 100%);
+      max-height: 88vh;
+      overflow: auto;
+      border: 1px solid var(--line-strong);
+      border-radius: 8px;
+      background: #0a1727;
+      box-shadow: var(--shadow);
+      padding: 20px;
+    }
+    .modal-head { display: flex; justify-content: space-between; gap: 14px; align-items: flex-start; margin-bottom: 14px; }
+    .modal h2 { margin: 0; }
+    .detail-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 12px; }
+    .detail-box { border: 1px solid var(--line); border-radius: 8px; padding: 12px; background: rgba(255,255,255,0.045); }
+    .detail-box strong { display: block; margin-bottom: 6px; color: var(--gold-2); }
+    .detail-box p { margin: 0; color: #dce8f2; line-height: 1.6; }
+
+    footer { padding: 28px; text-align: center; color: var(--muted); border-top: 1px solid var(--line); background: rgba(5, 11, 19, 0.8); }
+
+    @media (max-width: 1180px) {
+      .hero, .grid-2 { grid-template-columns: 1fr; }
+      .cards { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+      .stats { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+    }
+    @media (max-width: 860px) {
+      .topbar-inner { align-items: flex-start; flex-direction: column; }
+      .nav { justify-content: flex-start; }
+      .cards, .task-board, .risk-grid, .detail-grid { grid-template-columns: 1fr; }
+      .stats { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+    }
+    @media (max-width: 560px) {
+      .shell, .topbar-inner { padding-left: 16px; padding-right: 16px; }
+      .hero-main { padding: 20px; min-height: 250px; }
+      .stats { grid-template-columns: 1fr; }
+      .employee-actions { grid-template-columns: 1fr; }
+      .btn { width: 100%; }
+    }
+  </style>
+</head>
+<body>
+  <header class="topbar">
+    <div class="topbar-inner">
+      <a class="brand" href="#top" aria-label="NJ GROUP AI OS">
+        <span class="mark">NJ</span>
+        <span><strong>NJ GROUP AI OS</strong><span>Enterprise AI Operating System</span></span>
+      </a>
+      <nav class="nav" aria-label="主导航">
+        <a href="#employees">AI员工</a>
+        <a href="#tasks">任务发布</a>
+        <a href="#reports">日报</a>
+        <a href="#risks">风险</a>
+        <a href="#files">文件上传</a>
+        <a href="index.html">返回首页</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="top" class="shell">
+    <section class="hero">
+      <div class="hero-main">
+        <p class="kicker">NJ GROUP AI Operating System</p>
+        <h1>AI员工自动化工作流中控台</h1>
+        <p>统一管理 16 位 AI员工、任务分配、工作状态、日报、风险提醒和文件输入。系统仅使用 HTML、CSS、JavaScript，可双击打开，也可部署到 GitHub Pages。</p>
+      </div>
+      <aside class="panel command-panel">
+        <div>
+          <h2 class="section-title">老板今日总控</h2>
+          <p class="section-note">优先查看进行中任务、需决策事项和高风险提醒。</p>
+        </div>
+        <div class="stats">
+          <div class="stat"><span>AI员工</span><strong id="totalEmployees">16</strong></div>
+          <div class="stat"><span>工作中</span><strong id="workingCount">0</strong></div>
+          <div class="stat"><span>已完成</span><strong id="completedCount">0</strong></div>
+          <div class="stat"><span>待命</span><strong id="waitingCount">0</strong></div>
+          <div class="stat"><span>需决策</span><strong id="decisionCount">0</strong></div>
+        </div>
+      </aside>
+    </section>
+
+    <section id="employees" class="section">
+      <div class="section-head">
+        <div>
+          <h2 class="section-title">AI员工详情与工作状态</h2>
+          <p class="section-note">点击详情查看岗位档案；点击状态可在待命、工作中、已完成、需老板决策之间切换。</p>
+        </div>
+      </div>
+      <div id="employeeCards" class="cards"></div>
+    </section>
+
+    <section id="tasks" class="section grid-2">
+      <article class="panel">
+        <div class="section-head">
+          <div>
+            <h2 class="section-title">任务发布功能</h2>
+            <p class="section-note">发布后进入 pending，可继续切换到 working 或 completed。</p>
+          </div>
+        </div>
+        <div class="form-grid">
+          <label>任务标题<input id="taskTitle" type="text" placeholder="例如：开发土耳其建材客户"></label>
+          <label>分配给<select id="taskOwner"></select></label>
+          <label>优先级<select id="taskPriority"><option>P1 今日完成</option><option>P0 紧急</option><option>P2 本周完成</option><option>P3 资料沉淀</option></select></label>
+          <label>任务说明<textarea id="taskDescription" placeholder="输入背景、目标、交付格式、截止时间和资料链接"></textarea></label>
+          <div class="btn-row">
+            <button class="btn btn-primary" id="publishTask">发布任务</button>
+            <button class="btn btn-outline" id="clearTask">清空</button>
+          </div>
+        </div>
+      </article>
+
+      <article class="panel">
+        <div class="section-head">
+          <div>
+            <h2 class="section-title">任务状态看板</h2>
+            <p class="section-note">本地交互看板，适合双击打开演示和日常轻量记录。</p>
+          </div>
+        </div>
+        <div class="task-board">
+          <div class="task-column"><h3>Pending</h3><div id="pendingTasks" class="task-list"></div></div>
+          <div class="task-column"><h3>Working</h3><div id="workingTasks" class="task-list"></div></div>
+          <div class="task-column"><h3>Completed</h3><div id="completedTasks" class="task-list"></div></div>
+        </div>
+      </article>
+    </section>
+
+    <section id="reports" class="section grid-2">
+      <article class="panel">
+        <h2 class="section-title">日报查看功能</h2>
+        <p class="section-note">选择 AI员工查看自动生成的日报框架。</p>
+        <div class="form-grid" style="margin-top:14px">
+          <label>AI员工<select id="reportEmployee"></select></label>
+          <button class="btn btn-green" id="viewReport">查看日报</button>
+        </div>
+      </article>
+      <article class="panel">
+        <h2 class="section-title">今日日报</h2>
+        <div id="reportOutput" class="detail-grid" style="margin-top:14px"></div>
+      </article>
+    </section>
+
+    <section id="risks" class="section">
+      <div class="section-head">
+        <div>
+          <h2 class="section-title">风险提醒系统</h2>
+          <p class="section-note">跟踪采购、合同、内容发布、现金流和数据合规风险。</p>
+        </div>
+        <button class="btn btn-outline" id="addRisk">新增风险提醒</button>
+      </div>
+      <div id="riskGrid" class="risk-grid"></div>
+    </section>
+
+    <section id="files" class="section grid-2">
+      <article class="panel">
+        <h2 class="section-title">文件上传区域</h2>
+        <p class="section-note">浏览器安全限制下不会自动写入本地文件夹；这里用于选择资料并显示文件清单，适合任务交接前核对。</p>
+        <div class="upload-zone" style="margin-top:14px">
+          <input id="fileUpload" type="file" multiple>
+          <span class="meta">支持报价表、合同、产品图片、客户名单、日报附件等。</span>
+        </div>
+      </article>
+      <article class="panel">
+        <h2 class="section-title">已选择文件</h2>
+        <ul id="fileList" class="file-list" style="margin-top:14px"></ul>
+      </article>
+    </section>
+  </main>
+
+  <div id="modal" class="modal" role="dialog" aria-modal="true">
+    <div class="modal-card">
+      <div class="modal-head">
+        <div><p class="kicker">AI Employee Detail</p><h2 id="modalTitle"></h2></div>
+        <button class="btn btn-outline" id="closeModal">关闭</button>
+      </div>
+      <div id="modalBody" class="detail-grid"></div>
+    </div>
+  </div>
+
+  <footer>© 2018 NJ GROUP · AI OS · Deep Blue / Gold / White / Green Industrial Interface</footer>
+
+  <script>
+    const employees = [
+      {name:"总经理助理", dept:"管理中心", status:"工作中", task:"拆解老板指令并跟踪跨部门执行", output:"行动清单、决策事项、会议纪要"},
+      {name:"金牌销售", dept:"销售中心", status:"工作中", task:"开发高价值客户并推进报价", output:"开发信、跟进话术、成交复盘"},
+      {name:"市场情报官", dept:"市场中心", status:"工作中", task:"监控行业、竞品、价格和渠道变化", output:"市场简报、机会清单、风险预警"},
+      {name:"客服专员", dept:"销售与客服中心", status:"待命", task:"处理售前售后咨询并沉淀 FAQ", output:"客户回复、问题处理单、FAQ"},
+      {name:"翻译官", dept:"管理中心", status:"工作中", task:"处理中英土商务资料翻译", output:"双语文档、合同译文、本地化文案"},
+      {name:"视频剪辑师", dept:"内容中心", status:"工作中", task:"制作 TikTok 脚本、分镜和剪辑清单", output:"视频脚本、分镜表、标题建议"},
+      {name:"平面设计师", dept:"内容中心", status:"待命", task:"输出工业风品牌视觉物料", output:"海报、页面草图、VI模板"},
+      {name:"采购主管", dept:"采购与供应链中心", status:"需老板决策", task:"整理供应商报价和采购建议", output:"供应商对比表、成本分析"},
+      {name:"财务分析师", dept:"财务法务中心", status:"工作中", task:"评估现金流、ROI 和汇率风险", output:"利润分析、资金配置建议"},
+      {name:"法务顾问", dept:"财务法务中心", status:"需老板决策", task:"审查客户合作协议和付款条款", output:"合同风险清单、审批建议"},
+      {name:"高分子工程师", dept:"技术与产品中心", status:"工作中", task:"评估材料性能和应用场景", output:"技术说明书、应用报告"},
+      {name:"爬虫工程师", dept:"自动化与数据中心", status:"工作中", task:"采集公开价格、客户和竞品数据", output:"数据表、采集日志、质量报告"},
+      {name:"SEO运营官", dept:"市场中心", status:"工作中", task:"优化独立站关键词和页面结构", output:"SEO计划、页面优化建议"},
+      {name:"社媒运营官", dept:"内容中心", status:"工作中", task:"维护 TikTok 与社媒发布节奏", output:"发布日历、文案、互动复盘"},
+      {name:"展会运营主管", dept:"市场中心", status:"待命", task:"规划展会预算、物料和客户邀约", output:"展会方案、接待流程、展后报告"},
+      {name:"行政主管", dept:"财务法务行政中心", status:"待命", task:"管理制度、会议、招聘和内部台账", output:"制度文件、招聘JD、会议纪要"}
+    ];
+
+    const tasks = [
+      {title:"生成 TikTok 工业产品内容计划", owner:"社媒运营官", priority:"P1 今日完成", status:"working", desc:"围绕 NJ GROUP 工业产品线输出 7 天选题。"},
+      {title:"采购土耳其建材供应商比价", owner:"采购主管", priority:"P0 紧急", status:"pending", desc:"收集报价、交期、付款条件并提交老板决策。"},
+      {title:"审查客户合作协议", owner:"法务顾问", priority:"P1 今日完成", status:"working", desc:"标记付款、交付、质保和违约风险。"},
+      {title:"整理网站 SEO 页面建议", owner:"SEO运营官", priority:"P2 本周完成", status:"completed", desc:"输出关键词、页面标题和内容结构。"}
+    ];
+
+    const risks = [
+      {level:"high", title:"采购报价待老板确认", text:"采购主管已整理供应商比价，但付款节点和供应商选择需要老板拍板。"},
+      {level:"high", title:"合同审批可能阻塞成交", text:"法务顾问发现付款和质保条款存在风险，建议先审后发。"},
+      {level:"mid", title:"TikTok 发布节奏需稳定", text:"社媒运营官与视频剪辑师需要保持每日内容生产和复盘。"},
+      {level:"ok", title:"SEO 更新可推进", text:"网站关键词和页面结构已形成初步建议，可进入内容更新。"}
+    ];
+
+    const statusClass = {"待命":"waiting", "工作中":"working", "已完成":"completed", "需老板决策":"decision"};
+    const statusOrder = ["待命", "工作中", "已完成", "需老板决策"];
+
+    const byId = id => document.getElementById(id);
+
+    function renderEmployees() {
+      byId("employeeCards").innerHTML = employees.map((e, index) =>
+        '<article class="employee-card"><div class="card-top"><h3>' + e.name + '</h3><span class="badge ' + statusClass[e.status] + '">' + e.status + '</span></div><div class="meta">' + e.dept + '</div><div class="role-line"><strong>今日任务：</strong>' + e.task + '</div><div class="role-line"><strong>核心输出：</strong>' + e.output + '</div><div class="employee-actions"><button class="btn btn-outline" data-detail="' + index + '">详情</button><button class="btn btn-green" data-status="' + index + '">切换状态</button></div></article>'
+      ).join("");
+      updateStats();
+      fillSelects();
+    }
+
+    function updateStats() {
+      byId("totalEmployees").textContent = employees.length;
+      byId("workingCount").textContent = employees.filter(e => e.status === "工作中").length;
+      byId("completedCount").textContent = employees.filter(e => e.status === "已完成").length;
+      byId("waitingCount").textContent = employees.filter(e => e.status === "待命").length;
+      byId("decisionCount").textContent = employees.filter(e => e.status === "需老板决策").length;
+    }
+
+    function fillSelects() {
+      const options = employees.map(e => '<option>' + e.name + '</option>').join("");
+      byId("taskOwner").innerHTML = options;
+      byId("reportEmployee").innerHTML = options;
+    }
+
+    function renderTasks() {
+      const columns = {pending:"pendingTasks", working:"workingTasks", completed:"completedTasks"};
+      Object.values(columns).forEach(id => byId(id).innerHTML = "");
+      tasks.forEach((t, index) => {
+        const card = document.createElement("div");
+        card.className = "task-card";
+        card.innerHTML = '<strong>' + t.title + '</strong><p>' + t.priority + ' · ' + t.owner + '</p><p>' + t.desc + '</p><div class="btn-row" style="margin-top:10px"><button class="btn btn-outline" data-move="' + index + '">流转</button></div>';
+        byId(columns[t.status]).appendChild(card);
+      });
+    }
+
+    function renderRisks() {
+      byId("riskGrid").innerHTML = risks.map(r => '<article class="risk-card ' + (r.level === "high" ? "high" : r.level === "ok" ? "ok" : "") + '"><strong>' + r.title + '</strong><p>' + r.text + '</p></article>').join("");
+    }
+
+    function showDetail(index) {
+      const e = employees[index];
+      byId("modalTitle").textContent = e.name;
+      byId("modalBody").innerHTML =
+        '<div class="detail-box"><strong>所属部门</strong><p>' + e.dept + '</p></div>' +
+        '<div class="detail-box"><strong>当前状态</strong><p>' + e.status + '</p></div>' +
+        '<div class="detail-box"><strong>岗位任务</strong><p>' + e.task + '</p></div>' +
+        '<div class="detail-box"><strong>交付成果</strong><p>' + e.output + '</p></div>' +
+        '<div class="detail-box"><strong>协作规则</strong><p>接收任务、确认资料、执行输出、标记风险、提交日报。涉及合同、报价、付款、公开发布必须人工审批。</p></div>' +
+        '<div class="detail-box"><strong>文件路径</strong><p>employees/' + employeeSlug(e.name) + '/employee-profile.md</p></div>';
+      byId("modal").classList.add("open");
+    }
+
+    function employeeSlug(name) {
+      const map = {"总经理助理":"general-manager-assistant","金牌销售":"gold-sales","市场情报官":"market-intelligence-officer","客服专员":"customer-service-specialist","翻译官":"translator","视频剪辑师":"video-editor","平面设计师":"graphic-designer","采购主管":"procurement-manager","财务分析师":"financial-analyst","法务顾问":"legal-advisor","高分子工程师":"polymer-engineer","爬虫工程师":"crawler-engineer","SEO运营官":"seo-operator","社媒运营官":"social-media-operator","展会运营主管":"exhibition-operations-manager","行政主管":"administration-manager"};
+      return map[name] || "";
+    }
+
+    function showReport() {
+      const name = byId("reportEmployee").value;
+      const e = employees.find(item => item.name === name);
+      byId("reportOutput").innerHTML =
+        '<div class="detail-box"><strong>今日完成</strong><p>' + e.task + '；已形成阶段性输出：' + e.output + '。</p></div>' +
+        '<div class="detail-box"><strong>风险提醒</strong><p>如涉及外部发布、报价、合同、付款或品牌承诺，需老板或负责人审批。</p></div>' +
+        '<div class="detail-box"><strong>明日计划</strong><p>继续推进未完成任务，补齐资料，提交可执行版本。</p></div>' +
+        '<div class="detail-box"><strong>老板待决策事项</strong><p>确认优先级、预算、客户承诺或对外发布口径。</p></div>';
+    }
+
+    document.addEventListener("click", event => {
+      const detailIndex = event.target.dataset.detail;
+      const statusIndex = event.target.dataset.status;
+      const moveIndex = event.target.dataset.move;
+      if (detailIndex !== undefined) showDetail(Number(detailIndex));
+      if (statusIndex !== undefined) {
+        const employee = employees[Number(statusIndex)];
+        employee.status = statusOrder[(statusOrder.indexOf(employee.status) + 1) % statusOrder.length];
+        renderEmployees();
+      }
+      if (moveIndex !== undefined) {
+        const task = tasks[Number(moveIndex)];
+        task.status = task.status === "pending" ? "working" : task.status === "working" ? "completed" : "pending";
+        renderTasks();
+      }
+    });
+
+    byId("publishTask").addEventListener("click", () => {
+      const title = byId("taskTitle").value.trim();
+      const desc = byId("taskDescription").value.trim();
+      if (!title) { alert("请输入任务标题。"); return; }
+      tasks.unshift({title, owner: byId("taskOwner").value, priority: byId("taskPriority").value, status: "pending", desc: desc || "等待补充任务说明。"});
+      byId("taskTitle").value = "";
+      byId("taskDescription").value = "";
+      renderTasks();
+    });
+
+    byId("clearTask").addEventListener("click", () => {
+      byId("taskTitle").value = "";
+      byId("taskDescription").value = "";
+    });
+
+    byId("viewReport").addEventListener("click", showReport);
+    byId("closeModal").addEventListener("click", () => byId("modal").classList.remove("open"));
+    byId("modal").addEventListener("click", event => { if (event.target.id === "modal") byId("modal").classList.remove("open"); });
+
+    byId("addRisk").addEventListener("click", () => {
+      risks.unshift({level:"mid", title:"新增风险待确认", text:"请在任务复盘中补充风险来源、影响范围、负责人和截止时间。"});
+      renderRisks();
+    });
+
+    byId("fileUpload").addEventListener("change", event => {
+      const files = Array.from(event.target.files);
+      byId("fileList").innerHTML = files.length ? files.map(file => '<li>' + file.name + ' · ' + Math.ceil(file.size / 1024) + ' KB</li>').join("") : "";
+    });
+
+    renderEmployees();
+    renderTasks();
+    renderRisks();
+    showReport();
+  </script>
+  <!-- Cloudflare Web Analytics --><script defer src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "48d5c39378e14316b6745a5be6f213bb"}'></script><!-- End Cloudflare Web Analytics -->
+</body>
+</html>
