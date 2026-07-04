@@ -230,12 +230,12 @@ html = f"""<!doctype html>
   <meta name="description" content="NJ GROUP gıda makineleri showroomu: sebze yıkama, sebze doğrama, et hazırlama, hamur yoğurma, makarna, vakum paketleme, filizlendirme ve buharlı pişirme çözümleri.">
   <link rel="canonical" href="https://njgrup.com/gida-makinalari.html">
   <style>
-    :root {{ --ink:#10201c; --deep:#0b2f27; --green:#134c3d; --gold:#c79b3b; --paper:#f7f8f6; --muted:#60736d; --line:#dfe8e3; --white:#fff; }}
+    :root {{ --ink:#10201c; --deep:#0b2f27; --green:#134c3d; --gold:#c79b3b; --paper:#eef4f2; --muted:#60736d; --line:#dfe8e3; --white:#fff; --navy:#111821; }}
     * {{ box-sizing:border-box; }}
     html {{ scroll-behavior:smooth; }}
     body {{ margin:0; font-family:Inter, Arial, Helvetica, sans-serif; color:var(--ink); background:var(--paper); line-height:1.6; overflow-x:hidden; }}
     a {{ color:inherit; text-decoration:none; }}
-    .wrap {{ width:min(1180px, calc(100% - 32px)); margin:auto; }}
+    .wrap {{ width:min(1180px, calc(100% - 32px)); margin:auto; min-width:0; }}
     header {{ position:sticky; top:0; z-index:40; background:rgba(11,47,39,.96); color:#fff; border-bottom:1px solid rgba(255,255,255,.12); backdrop-filter:blur(14px); }}
     .head {{ min-height:76px; display:flex; align-items:center; justify-content:space-between; gap:18px; }}
     .brand {{ display:flex; align-items:center; gap:12px; font-weight:800; letter-spacing:.2px; }}
@@ -244,12 +244,18 @@ html = f"""<!doctype html>
     nav {{ display:flex; align-items:center; gap:20px; color:rgba(255,255,255,.82); font-size:14px; font-weight:700; }}
     nav a:hover {{ color:#fff; }}
     .lang {{ height:34px; border:1px solid rgba(255,255,255,.22); border-radius:6px; color:#fff; background:rgba(255,255,255,.08); padding:0 8px; }}
-    .hero {{ position:relative; color:#fff; background:linear-gradient(90deg,rgba(7,28,24,.94),rgba(19,76,61,.78)), url('assets/food-vegetable-washing.jpg') center/cover; }}
-    .hero .wrap {{ min-height:610px; display:grid; align-content:center; padding:86px 0; }}
+    .hero {{ position:relative; color:#fff; overflow:hidden; background:linear-gradient(120deg,#0b2f27 0%,#111821 58%,#173d34 100%); }}
+    .hero:before {{ content:""; position:absolute; inset:0; background:linear-gradient(90deg,rgba(255,255,255,.05) 1px,transparent 1px),linear-gradient(180deg,rgba(255,255,255,.04) 1px,transparent 1px); background-size:72px 72px; opacity:.28; }}
+    .hero .wrap {{ position:relative; z-index:1; min-height:640px; display:grid; grid-template-columns:minmax(0,1fr) minmax(330px,.86fr); align-items:center; gap:48px; padding:86px 0; }}
     .eyebrow {{ color:#f2c96d; font-weight:900; letter-spacing:.12em; text-transform:uppercase; font-size:13px; }}
     h1 {{ margin:14px 0 18px; max-width:900px; font-size:clamp(38px,6vw,72px); line-height:1.02; }}
     h1 span {{ display:block; }}
-    .hero p {{ max-width:760px; margin:0 0 28px; color:#e6f3ef; font-size:20px; }}
+    .hero p {{ max-width:720px; margin:0 0 28px; color:#e6f3ef; font-size:20px; }}
+    .hero-copy,.hero-gallery,.product-media,.product-copy,.detail-grid,.catalog-group,.process-card,.contact-box {{ min-width:0; }}
+    .hero-gallery {{ display:grid; grid-template-columns:1fr 1fr; gap:14px; align-items:stretch; width:100%; max-width:100%; }}
+    .hero-shot {{ min-width:0; border:1px solid rgba(255,255,255,.18); border-radius:8px; background:rgba(255,255,255,.08); padding:10px; box-shadow:0 22px 58px rgba(0,0,0,.28); }}
+    .hero-shot:first-child {{ grid-column:1 / -1; }}
+    .hero-shot img {{ width:100%; height:100%; min-height:178px; object-fit:contain; border-radius:5px; background:#f8faf8; display:block; }}
     .cta-row {{ display:flex; flex-wrap:wrap; gap:14px; }}
     .btn {{ display:inline-flex; align-items:center; justify-content:center; min-height:46px; padding:12px 20px; border-radius:6px; font-weight:900; }}
     .btn.gold {{ background:var(--gold); color:#171308; }}
@@ -270,9 +276,9 @@ html = f"""<!doctype html>
     .catalog-links a {{ border:1px solid #d7e4dd; border-radius:999px; padding:7px 10px; color:#173d34; background:#fff; font-weight:800; font-size:13px; }}
     .products {{ background:#f4f7f5; }}
     .product-list {{ display:grid; gap:26px; }}
-    .product-card {{ display:grid; grid-template-columns:minmax(320px,.92fr) minmax(0,1.08fr); gap:28px; align-items:start; border:1px solid var(--line); border-radius:8px; background:#fff; padding:18px; box-shadow:0 18px 46px rgba(13,49,41,.08); scroll-margin-top:96px; }}
+    .product-card {{ min-width:0; display:grid; grid-template-columns:minmax(360px,.95fr) minmax(0,1.05fr); gap:28px; align-items:start; border:1px solid var(--line); border-radius:8px; background:#fff; padding:22px; box-shadow:0 18px 46px rgba(13,49,41,.08); scroll-margin-top:96px; overflow:hidden; }}
     .product-card:nth-child(even) .product-media {{ order:2; }}
-    .product-media img {{ width:100%; aspect-ratio:4/3; object-fit:cover; border-radius:6px; border:1px solid #edf2ef; background:#eef3f1; }}
+    .product-media img {{ width:100%; aspect-ratio:4/4.7; object-fit:contain; border-radius:6px; border:1px solid #edf2ef; background:#fff; }}
     .product-copy {{ padding:8px 4px; }}
     .category {{ display:inline-flex; color:#8d671f; font-weight:900; text-transform:uppercase; letter-spacing:.08em; font-size:12px; }}
     .product-copy h3 {{ margin:8px 0 4px; color:var(--deep); font-size:clamp(26px,3vw,38px); line-height:1.1; }}
@@ -282,7 +288,7 @@ html = f"""<!doctype html>
     .detail-grid {{ display:grid; grid-template-columns:.8fr 1.2fr; gap:18px; margin:18px 0; }}
     .detail-grid h4 {{ margin:0 0 8px; color:var(--deep); }}
     ul {{ margin:0; padding-left:18px; }}
-    .spec-table {{ width:100%; border-collapse:collapse; font-size:14px; overflow:hidden; border-radius:6px; }}
+    .spec-table {{ width:100%; max-width:100%; border-collapse:collapse; font-size:14px; overflow:hidden; border-radius:6px; }}
     .spec-table th, .spec-table td {{ padding:8px 10px; border:1px solid #e0e9e5; text-align:left; vertical-align:top; }}
     .spec-table th {{ width:42%; background:#f3f7f5; color:#244139; }}
     .mini-cta {{ display:inline-flex; align-items:center; justify-content:center; min-height:40px; border-radius:6px; padding:9px 14px; background:var(--green); color:#fff; font-weight:900; }}
@@ -298,8 +304,8 @@ html = f"""<!doctype html>
     .contact-box strong {{ display:block; color:#f2c96d; margin-top:10px; }}
     footer {{ padding:28px 0; color:#dcebe6; background:#071b17; font-size:14px; }}
     .wa-fixed {{ position:fixed; right:18px; bottom:18px; z-index:50; display:flex; align-items:center; justify-content:center; width:58px; height:58px; border-radius:50%; color:#fff; background:#1faa59; font-weight:900; box-shadow:0 10px 26px rgba(0,0,0,.24); }}
-    @media (max-width:980px) {{ nav a {{ display:none; }} .hero-stats,.catalog-grid,.process-grid,.contact-grid {{ grid-template-columns:1fr 1fr; }} .product-card,.product-card:nth-child(even) .product-media {{ grid-template-columns:1fr; order:initial; }} .detail-grid {{ grid-template-columns:1fr; }} }}
-    @media (max-width:640px) {{ main,section,header,footer {{ max-width:100vw; overflow-x:hidden; }} .wrap {{ width:calc(100vw - 32px); max-width:calc(100vw - 32px); overflow:hidden; }} .head {{ min-height:66px; gap:10px; }} .brand {{ min-width:0; }} .brand img {{ width:46px; height:46px; }} .brand span {{ font-size:16px; }} .brand small {{ font-size:11px; }} .lang {{ width:64px; }} h1 {{ font-size:32px; line-height:1.1; max-width:100%; overflow-wrap:break-word; white-space:normal; }} .hero {{ overflow:hidden; }} .hero .wrap {{ min-height:auto; padding:58px 0 64px; }} .hero p,.section-head p,.product-copy p {{ width:100%; max-width:100%; font-size:16px; overflow-wrap:break-word; white-space:normal; }} .cta-row {{ display:grid; grid-template-columns:1fr; }} .btn {{ width:100%; text-align:center; white-space:normal; }} .hero-stats,.catalog-grid,.process-grid,.contact-grid {{ grid-template-columns:1fr; }} .product-card {{ padding:12px; }} }}
+    @media (max-width:980px) {{ nav a {{ display:none; }} .hero .wrap {{ grid-template-columns:1fr; }} .hero-gallery {{ max-width:720px; }} .hero-stats,.catalog-grid,.process-grid,.contact-grid {{ grid-template-columns:1fr 1fr; }} .product-card,.product-card:nth-child(even) .product-media {{ grid-template-columns:1fr; order:initial; }} .detail-grid {{ grid-template-columns:1fr; }} }}
+    @media (max-width:640px) {{ html,body,main,section,header,footer {{ width:100%; max-width:100%; overflow-x:hidden; }} .wrap {{ width:min(100% - 18px, 100vw - 18px); max-width:calc(100vw - 18px); overflow:hidden; }} .head {{ min-height:66px; gap:10px; }} .brand {{ min-width:0; }} .brand img {{ width:46px; height:46px; }} .brand span {{ font-size:16px; }} .brand small {{ font-size:11px; }} .lang {{ width:64px; flex:0 0 auto; }} h1 {{ font-size:32px; line-height:1.1; max-width:100%; overflow-wrap:break-word; white-space:normal; }} .hero .wrap {{ min-height:auto; padding:52px 0 52px; gap:28px; }} .hero p,.section-head p,.product-copy p,.subtitle {{ width:100%; max-width:100%; font-size:16px; overflow-wrap:anywhere; white-space:normal; }} .hero-gallery {{ grid-template-columns:minmax(0,1fr); }} .hero-shot:not(:first-child) {{ display:none; }} .hero-shot {{ padding:8px; }} .hero-shot img {{ min-height:0; height:auto; max-height:none; }} .cta-row {{ display:grid; grid-template-columns:minmax(0,1fr); }} .btn {{ width:100%; max-width:100%; text-align:center; white-space:normal; }} .hero-stats,.catalog-grid,.process-grid,.contact-grid {{ grid-template-columns:minmax(0,1fr); }} .product-card {{ grid-template-columns:minmax(0,1fr); padding:12px; }} .product-media img {{ aspect-ratio:auto; height:auto; }} .detail-grid {{ grid-template-columns:minmax(0,1fr); }} .spec-table {{ display:block; overflow-x:auto; }} }}
   </style>
   <script type="application/ld+json">
   {{
@@ -334,18 +340,25 @@ html = f"""<!doctype html>
   <main>
     <section class="hero">
       <div class="wrap">
-        <div class="eyebrow">NJ GROUP Food Machinery</div>
-        <h1><span>Endüstriyel</span><span>gıda makineleri</span></h1>
-        <p>Sebze, et, hamur ve makarna.<br>Paketleme, filizlendirme ve pişirme.<br>Tüm makineleri tek sayfada inceleyin.</p>
-        <div class="cta-row">
-          <a class="btn gold" href="#catalog">Makineleri İncele</a>
-          <a class="btn light" href="{WA}?text=Merhaba%20NJ%20GROUP,%20g%C4%B1da%20makineleri%20i%C3%A7in%20teklif%20almak%20istiyorum.">WhatsApp ile teklif al</a>
+        <div class="hero-copy">
+          <div class="eyebrow">NJ GROUP Product Showroom</div>
+          <h1><span>Endüstriyel</span><span>gıda makineleri</span></h1>
+          <p>Sebze hazırlama, et ve dolgu işleme, hamur ve makarna üretimi, vakum paketleme, filizlendirme ve buharlı pişirme ekipmanları için temiz ve doğru ürün vitrini.</p>
+          <div class="cta-row">
+            <a class="btn gold" href="#catalog">Ürünleri İncele</a>
+            <a class="btn light" href="{WA}?text=Merhaba%20NJ%20GROUP,%20g%C4%B1da%20makineleri%20i%C3%A7in%20teklif%20almak%20istiyorum.">WhatsApp ile teklif al</a>
+          </div>
+          <div class="hero-stats">
+            <div class="stat"><strong>14</strong><span>seçilmiş ürün grubu</span></div>
+            <div class="stat"><strong>304</strong><span>paslanmaz çelik seçenekleri</span></div>
+            <div class="stat"><strong>TR</strong><span>Türkiye projelerine uygun</span></div>
+            <div class="stat"><strong>2018</strong><span>NJ GROUP işletme vizyonu</span></div>
+          </div>
         </div>
-        <div class="hero-stats">
-          <div class="stat"><strong>14</strong><span>net ürün grubu</span></div>
-          <div class="stat"><strong>304</strong><span>paslanmaz çelik seçenekleri</span></div>
-          <div class="stat"><strong>TR</strong><span>Türkiye pazarına uygun sunum</span></div>
-          <div class="stat"><strong>2018</strong><span>NJ GROUP işletme vizyonu</span></div>
+        <div class="hero-gallery" aria-label="NJ GROUP gıda makinesi ürün görselleri">
+          <figure class="hero-shot"><img src="assets/food-double-head-vegetable-cutter.jpg" alt="Çift kafa sebze doğrama makinesi"></figure>
+          <figure class="hero-shot"><img src="assets/food-double-chamber-vacuum-packaging.jpg" alt="Vakumlu paketleme makinesi"></figure>
+          <figure class="hero-shot"><img src="assets/food-pasta-production-line.jpg" alt="Makarna üretim hattı"></figure>
         </div>
       </div>
     </section>
@@ -353,8 +366,8 @@ html = f"""<!doctype html>
     <section id="catalog" class="catalog">
       <div class="wrap">
         <div class="section-head">
-          <h2>Doğru makineyi hızlı bulun</h2>
-          <p>Eski dağınık ürün listesi kaldırıldı. Aşağıdaki katalog yalnızca yeni NJ GROUP materyallerine göre düzenlenen, görseli ve açıklaması eşleşen makineleri gösterir.</p>
+          <h2>Ürün aileleri</h2>
+          <p>NJ GROUP gıda makineleri ürün vitrini; görseli, kullanım alanı ve teknik bilgisi eşleşen seçilmiş ürün gruplarını tek sayfada sunar.</p>
         </div>
         <div class="catalog-grid">
 {directory}
