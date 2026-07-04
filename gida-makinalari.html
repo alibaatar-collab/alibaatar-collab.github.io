@@ -3,110 +3,100 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>KIVORA Gıda Makineleri | NJ GROUP Endüstriyel Mutfak Ekipmanları</title>
-  <meta name="description" content="KIVORA gıda makineleri, endüstriyel mutfak ekipmanları, sebze yıkama, sebze kesme, et işleme, hamur, tofu ve merkezi mutfak çözümleri. NJ GROUP İstanbul.">
+  <title>NJ GROUP Gıda Makineleri | Endüstriyel Mutfak ve Üretim Ekipmanları</title>
+  <meta name="description" content="NJ GROUP gıda makineleri showroomu: sebze yıkama, sebze doğrama, et hazırlama, hamur yoğurma, makarna, vakum paketleme, filizlendirme ve buharlı pişirme çözümleri.">
   <link rel="canonical" href="https://njgrup.com/gida-makinalari.html">
   <style>
-    :root { --green:#0f3d31; --deep:#06271f; --gold:#d6a43a; --ink:#0b1f1a; --muted:#5c6f68; --line:#d9e3df; --soft:#f4f8f6; }
+    :root { --ink:#10201c; --deep:#0b2f27; --green:#134c3d; --gold:#c79b3b; --paper:#f7f8f6; --muted:#60736d; --line:#dfe8e3; --white:#fff; }
     * { box-sizing:border-box; }
-    body { margin:0; font-family:Arial, Helvetica, sans-serif; color:var(--ink); background:#fff; line-height:1.6; }
-    a { color:inherit; }
+    html { scroll-behavior:smooth; }
+    body { margin:0; font-family:Inter, Arial, Helvetica, sans-serif; color:var(--ink); background:var(--paper); line-height:1.6; overflow-x:hidden; }
+    a { color:inherit; text-decoration:none; }
     .wrap { width:min(1180px, calc(100% - 32px)); margin:auto; }
-    header { position:sticky; top:0; z-index:20; background:var(--green); color:#fff; box-shadow:0 4px 18px rgba(0,0,0,.12); }
-    .head { min-height:72px; display:flex; align-items:center; justify-content:space-between; gap:22px; }
-    .brand { display:flex; align-items:center; gap:12px; text-decoration:none; font-weight:800; letter-spacing:.3px; }
-    .brand img { width:92px; height:auto; background:#fff; border-radius:4px; padding:6px; }
-    nav { display:flex; gap:18px; align-items:center; font-size:14px; font-weight:700; }
-    nav a { text-decoration:none; opacity:.94; }
-    .hero { background:linear-gradient(90deg,rgba(6,39,31,.92),rgba(15,61,49,.72)), url('assets/kivora-dumpling-machine.jpg') center/cover; color:#fff; }
-    .hero .wrap { min-height:560px; display:grid; align-content:center; padding:72px 0; max-width:1180px; }
-    .eyebrow { color:#ffd983; font-weight:800; text-transform:uppercase; font-size:13px; letter-spacing:.08em; }
-    h1 { font-size:clamp(38px, 6vw, 72px); line-height:1.02; margin:14px 0 18px; max-width:920px; }
-    .hero p { font-size:20px; max-width:760px; margin:0 0 28px; }
+    header { position:sticky; top:0; z-index:40; background:rgba(11,47,39,.96); color:#fff; border-bottom:1px solid rgba(255,255,255,.12); backdrop-filter:blur(14px); }
+    .head { min-height:76px; display:flex; align-items:center; justify-content:space-between; gap:18px; }
+    .brand { display:flex; align-items:center; gap:12px; font-weight:800; letter-spacing:.2px; }
+    .brand img { width:54px; height:54px; object-fit:contain; border-radius:6px; background:rgba(255,255,255,.06); padding:4px; }
+    .brand small { display:block; color:rgba(255,255,255,.72); font-size:12px; margin-top:2px; }
+    nav { display:flex; align-items:center; gap:20px; color:rgba(255,255,255,.82); font-size:14px; font-weight:700; }
+    nav a:hover { color:#fff; }
+    .lang { height:34px; border:1px solid rgba(255,255,255,.22); border-radius:6px; color:#fff; background:rgba(255,255,255,.08); padding:0 8px; }
+    .hero { position:relative; color:#fff; background:linear-gradient(90deg,rgba(7,28,24,.94),rgba(19,76,61,.78)), url('assets/food-vegetable-washing.jpg') center/cover; }
+    .hero .wrap { min-height:610px; display:grid; align-content:center; padding:86px 0; }
+    .eyebrow { color:#f2c96d; font-weight:900; letter-spacing:.12em; text-transform:uppercase; font-size:13px; }
+    h1 { margin:14px 0 18px; max-width:900px; font-size:clamp(38px,6vw,72px); line-height:1.02; }
+    h1 span { display:block; }
+    .hero p { max-width:760px; margin:0 0 28px; color:#e6f3ef; font-size:20px; }
     .cta-row { display:flex; flex-wrap:wrap; gap:14px; }
-    .btn { display:inline-flex; align-items:center; justify-content:center; min-height:46px; padding:12px 20px; border-radius:6px; text-decoration:none; font-weight:800; }
-    .btn.gold { background:var(--gold); color:#1a1609; }
+    .btn { display:inline-flex; align-items:center; justify-content:center; min-height:46px; padding:12px 20px; border-radius:6px; font-weight:900; }
+    .btn.gold { background:var(--gold); color:#171308; }
     .btn.light { border:1px solid rgba(255,255,255,.55); color:#fff; }
-    section { padding:64px 0; }
-    .section-head { max-width:850px; margin-bottom:28px; }
-    .section-head h2 { font-size:34px; line-height:1.15; margin:0 0 10px; color:var(--deep); }
+    .hero-stats { display:grid; grid-template-columns:repeat(4,minmax(0,1fr)); gap:12px; margin-top:44px; max-width:900px; }
+    .stat { border:1px solid rgba(255,255,255,.18); border-radius:8px; padding:14px; background:rgba(255,255,255,.08); }
+    .stat strong { display:block; color:#fff; font-size:22px; }
+    .stat span { color:#d4e6df; font-size:13px; }
+    section { padding:68px 0; }
+    .section-head { max-width:820px; margin-bottom:28px; }
+    .section-head h2 { margin:0 0 10px; color:var(--deep); font-size:clamp(30px,4vw,44px); line-height:1.1; }
     .section-head p { margin:0; color:var(--muted); }
-    .directory { background:var(--soft); }
-    .directory-grid { display:grid; grid-template-columns:repeat(5, 1fr); gap:14px; }
-    .directory-col { background:#fff; border:1px solid var(--line); border-radius:8px; padding:18px; }
-    .directory-col h3 { margin:0 0 12px; color:var(--green); font-size:18px; }
-    .directory-col ul { list-style:none; margin:0; padding:0; display:grid; gap:8px; }
-    .directory-col a { font-weight:700; color:#0a362c; }
-    .cards { display:grid; gap:18px; }
-    .machine-card { display:grid; grid-template-columns:260px 1fr; gap:22px; border:1px solid var(--line); border-radius:8px; padding:16px; background:#fff; scroll-margin-top:90px; }
-    .machine-card img { width:100%; height:180px; object-fit:cover; border-radius:6px; background:#edf2f0; }
-    .machine-card span { color:var(--gold); font-weight:800; font-size:13px; text-transform:uppercase; }
-    .machine-card h3 { margin:4px 0 8px; font-size:24px; color:var(--deep); }
-    .machine-card p { margin:0 0 10px; color:#31443d; }
-    .machine-card ul { margin:0 0 14px; padding-left:20px; }
-    .mini-cta { display:inline-flex; align-items:center; min-height:38px; padding:8px 14px; border-radius:6px; background:var(--green); color:#fff; text-decoration:none; font-weight:800; }
-    .contact { background:var(--green); color:#fff; }
-    .contact-grid { display:grid; grid-template-columns:1.2fr .8fr; gap:28px; align-items:center; }
-    .contact h2 { color:#fff; font-size:42px; line-height:1.1; margin:0 0 14px; }
-    .contact p { margin:0 0 18px; color:#d8eee7; }
-    .contact-box { background:rgba(255,255,255,.08); border:1px solid rgba(255,255,255,.2); border-radius:8px; padding:22px; }
-    .contact-box strong { display:block; margin-top:10px; color:#ffd983; }
-    footer { background:var(--deep); color:#dcebe6; padding:28px 0; font-size:14px; }
-    .wa-fixed { position:fixed; right:18px; bottom:18px; z-index:30; background:#1faa59; color:#fff; width:58px; height:58px; border-radius:50%; display:flex; align-items:center; justify-content:center; font-weight:900; text-decoration:none; box-shadow:0 8px 22px rgba(0,0,0,.22); }
-    @media (max-width:980px) { nav { display:none; } .directory-grid { grid-template-columns:repeat(2,1fr); } .machine-card { grid-template-columns:1fr; } .contact-grid { grid-template-columns:1fr; } }
-    @media (max-width:640px) { .directory-grid { grid-template-columns:1fr; } h1 { font-size:38px; } .hero .wrap { min-height:500px; } }
+    .catalog { background:#fff; }
+    .catalog-grid { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:16px; }
+    .catalog-group { border:1px solid var(--line); border-radius:8px; padding:18px; background:#fbfdfc; }
+    .catalog-group h3 { margin:0 0 12px; color:var(--green); font-size:19px; }
+    .catalog-links { display:flex; flex-wrap:wrap; gap:8px; }
+    .catalog-links a { border:1px solid #d7e4dd; border-radius:999px; padding:7px 10px; color:#173d34; background:#fff; font-weight:800; font-size:13px; }
+    .products { background:#f4f7f5; }
+    .product-list { display:grid; gap:26px; }
+    .product-card { display:grid; grid-template-columns:minmax(320px,.92fr) minmax(0,1.08fr); gap:28px; align-items:start; border:1px solid var(--line); border-radius:8px; background:#fff; padding:18px; box-shadow:0 18px 46px rgba(13,49,41,.08); scroll-margin-top:96px; }
+    .product-card:nth-child(even) .product-media { order:2; }
+    .product-media img { width:100%; aspect-ratio:4/3; object-fit:cover; border-radius:6px; border:1px solid #edf2ef; background:#eef3f1; }
+    .product-copy { padding:8px 4px; }
+    .category { display:inline-flex; color:#8d671f; font-weight:900; text-transform:uppercase; letter-spacing:.08em; font-size:12px; }
+    .product-copy h3 { margin:8px 0 4px; color:var(--deep); font-size:clamp(26px,3vw,38px); line-height:1.1; }
+    .subtitle { margin:0 0 14px; color:var(--green); font-size:18px; font-weight:800; }
+    .feature-list { display:flex; flex-wrap:wrap; gap:8px; margin:16px 0 20px; }
+    .feature-list span { border:1px solid #d8e4df; border-radius:999px; padding:7px 10px; background:#f8fbfa; font-size:13px; font-weight:800; color:#183c34; }
+    .detail-grid { display:grid; grid-template-columns:.8fr 1.2fr; gap:18px; margin:18px 0; }
+    .detail-grid h4 { margin:0 0 8px; color:var(--deep); }
+    ul { margin:0; padding-left:18px; }
+    .spec-table { width:100%; border-collapse:collapse; font-size:14px; overflow:hidden; border-radius:6px; }
+    .spec-table th, .spec-table td { padding:8px 10px; border:1px solid #e0e9e5; text-align:left; vertical-align:top; }
+    .spec-table th { width:42%; background:#f3f7f5; color:#244139; }
+    .mini-cta { display:inline-flex; align-items:center; justify-content:center; min-height:40px; border-radius:6px; padding:9px 14px; background:var(--green); color:#fff; font-weight:900; }
+    .process { background:#fff; }
+    .process-grid { display:grid; grid-template-columns:repeat(4,minmax(0,1fr)); gap:14px; }
+    .process-card { border-left:3px solid var(--gold); background:#f7faf8; padding:18px; border-radius:6px; }
+    .process-card strong { display:block; color:var(--deep); margin-bottom:6px; }
+    .contact { color:#fff; background:linear-gradient(120deg,#0b2f27,#10201c); }
+    .contact-grid { display:grid; grid-template-columns:1.15fr .85fr; gap:30px; align-items:center; }
+    .contact h2 { margin:0 0 12px; font-size:clamp(32px,4vw,48px); line-height:1.08; }
+    .contact p { color:#dceee8; margin:0 0 20px; }
+    .contact-box { border:1px solid rgba(255,255,255,.18); background:rgba(255,255,255,.08); border-radius:8px; padding:22px; }
+    .contact-box strong { display:block; color:#f2c96d; margin-top:10px; }
+    footer { padding:28px 0; color:#dcebe6; background:#071b17; font-size:14px; }
+    .wa-fixed { position:fixed; right:18px; bottom:18px; z-index:50; display:flex; align-items:center; justify-content:center; width:58px; height:58px; border-radius:50%; color:#fff; background:#1faa59; font-weight:900; box-shadow:0 10px 26px rgba(0,0,0,.24); }
+    @media (max-width:980px) { nav a { display:none; } .hero-stats,.catalog-grid,.process-grid,.contact-grid { grid-template-columns:1fr 1fr; } .product-card,.product-card:nth-child(even) .product-media { grid-template-columns:1fr; order:initial; } .detail-grid { grid-template-columns:1fr; } }
+    @media (max-width:640px) { main,section,header,footer { max-width:100vw; overflow-x:hidden; } .wrap { width:calc(100vw - 32px); max-width:calc(100vw - 32px); overflow:hidden; } .head { min-height:66px; gap:10px; } .brand { min-width:0; } .brand img { width:46px; height:46px; } .brand span { font-size:16px; } .brand small { font-size:11px; } .lang { width:64px; } h1 { font-size:32px; line-height:1.1; max-width:100%; overflow-wrap:break-word; white-space:normal; } .hero { overflow:hidden; } .hero .wrap { min-height:auto; padding:58px 0 64px; } .hero p,.section-head p,.product-copy p { width:100%; max-width:100%; font-size:16px; overflow-wrap:break-word; white-space:normal; } .cta-row { display:grid; grid-template-columns:1fr; } .btn { width:100%; text-align:center; white-space:normal; } .hero-stats,.catalog-grid,.process-grid,.contact-grid { grid-template-columns:1fr; } .product-card { padding:12px; } }
   </style>
   <script type="application/ld+json">
   {
     "@context":"https://schema.org",
     "@graph":[
-      {"@type":"Organization","name":"NJ GROUP YEŞİL DÖNÜŞÜM TEKNOLOJİ SANAYİ VE DIŞ TİCARET LTD. ŞTİ.","url":"https://njgrup.com","telephone":"+90 535 572 7525","address":{"@type":"PostalAddress","streetAddress":"İstoç 34. Ada No:82-84","addressLocality":"Bağcılar","addressRegion":"İstanbul","addressCountry":"TR"}},
-      {"@type":"Brand","name":"KIVORA","url":"https://njgrup.com/gida-makinalari.html"},
-      {"@type":"Product","name":"El Yapımı Tip Bao Makinesi","brand":{"@type":"Brand","name":"KIVORA"},"category":"Hamur ve Unlu Mamuller","areaServed":"Türkiye","url":"https://njgrup.com/gida-makinalari.html#el-yapimi-tip-bao-makinesi"},
-      {"@type":"Product","name":"Çok Fonksiyonlu Bao Makinesi","brand":{"@type":"Brand","name":"KIVORA"},"category":"Hamur ve Unlu Mamuller","areaServed":"Türkiye","url":"https://njgrup.com/gida-makinalari.html#cok-fonksiyonlu-bao-makinesi"},
-      {"@type":"Product","name":"El Yapımı Tip Mantı Makinesi","brand":{"@type":"Brand","name":"KIVORA"},"category":"Hamur ve Unlu Mamuller","areaServed":"Türkiye","url":"https://njgrup.com/gida-makinalari.html#el-yapimi-tip-manti-makinesi"},
-      {"@type":"Product","name":"Wonton Makinesi","brand":{"@type":"Brand","name":"KIVORA"},"category":"Hamur ve Unlu Mamuller","areaServed":"Türkiye","url":"https://njgrup.com/gida-makinalari.html#wonton-makinesi"},
-      {"@type":"Product","name":"Mantou Makinesi","brand":{"@type":"Brand","name":"KIVORA"},"category":"Hamur ve Unlu Mamuller","areaServed":"Türkiye","url":"https://njgrup.com/gida-makinalari.html#mantou-makinesi"},
-      {"@type":"Product","name":"Erişte Makinesi","brand":{"@type":"Brand","name":"KIVORA"},"category":"Hamur ve Unlu Mamuller","areaServed":"Türkiye","url":"https://njgrup.com/gida-makinalari.html#eriste-makinesi"},
-      {"@type":"Product","name":"Bıçak Kesim Erişte Makinesi","brand":{"@type":"Brand","name":"KIVORA"},"category":"Hamur ve Unlu Mamuller","areaServed":"Türkiye","url":"https://njgrup.com/gida-makinalari.html#bicak-kesim-eriste-makinesi"},
-      {"@type":"Product","name":"Lamian Makinesi","brand":{"@type":"Brand","name":"KIVORA"},"category":"Hamur ve Unlu Mamuller","areaServed":"Türkiye","url":"https://njgrup.com/gida-makinalari.html#lamian-makinesi"},
-      {"@type":"Product","name":"Mantı Hamuru Açma Makinesi","brand":{"@type":"Brand","name":"KIVORA"},"category":"Hamur ve Unlu Mamuller","areaServed":"Türkiye","url":"https://njgrup.com/gida-makinalari.html#manti-hamuru-acma-makinesi"},
-      {"@type":"Product","name":"Liangpi Makinesi","brand":{"@type":"Brand","name":"KIVORA"},"category":"Hamur ve Unlu Mamuller","areaServed":"Türkiye","url":"https://njgrup.com/gida-makinalari.html#liangpi-makinesi"},
-      {"@type":"Product","name":"Pirinç Eriştesi Makinesi","brand":{"@type":"Brand","name":"KIVORA"},"category":"Hamur ve Unlu Mamuller","areaServed":"Türkiye","url":"https://njgrup.com/gida-makinalari.html#pirinc-eristesi-makinesi"},
-      {"@type":"Product","name":"Kompakt Tofu Makinesi","brand":{"@type":"Brand","name":"KIVORA"},"category":"Soya ve Bitkisel Protein","areaServed":"Türkiye","url":"https://njgrup.com/gida-makinalari.html#kompakt-tofu-makinesi"},
-      {"@type":"Product","name":"Fabrika Tipi Tofu Üretim Hattı","brand":{"@type":"Brand","name":"KIVORA"},"category":"Soya ve Bitkisel Protein","areaServed":"Türkiye","url":"https://njgrup.com/gida-makinalari.html#fabrika-tipi-tofu-uretim-hatti"},
-      {"@type":"Product","name":"Tofu Derisi Makinesi","brand":{"@type":"Brand","name":"KIVORA"},"category":"Soya ve Bitkisel Protein","areaServed":"Türkiye","url":"https://njgrup.com/gida-makinalari.html#tofu-derisi-makinesi"},
-      {"@type":"Product","name":"Fasulye Filizi Makinesi","brand":{"@type":"Brand","name":"KIVORA"},"category":"Soya ve Bitkisel Protein","areaServed":"Türkiye","url":"https://njgrup.com/gida-makinalari.html#fasulye-filizi-makinesi"},
-      {"@type":"Product","name":"Soya Ürünleri Yardımcı Ekipmanları","brand":{"@type":"Brand","name":"KIVORA"},"category":"Soya ve Bitkisel Protein","areaServed":"Türkiye","url":"https://njgrup.com/gida-makinalari.html#soya-urunleri-yardimci-ekipmanlari"},
-      {"@type":"Product","name":"Soya Sütü Makinesi","brand":{"@type":"Brand","name":"KIVORA"},"category":"Soya ve Bitkisel Protein","areaServed":"Türkiye","url":"https://njgrup.com/gida-makinalari.html#soya-sutu-makinesi"},
-      {"@type":"Product","name":"Çok Fonksiyonlu Sebze Kesme Makinesi","brand":{"@type":"Brand","name":"KIVORA"},"category":"Sebze Hazırlama","areaServed":"Türkiye","url":"https://njgrup.com/gida-makinalari.html#cok-fonksiyonlu-sebze-kesme-makinesi"},
-      {"@type":"Product","name":"Yaprak Sebze Yıkama Makinesi","brand":{"@type":"Brand","name":"KIVORA"},"category":"Sebze Hazırlama","areaServed":"Türkiye","url":"https://njgrup.com/gida-makinalari.html#yaprak-sebze-yikama-makinesi"},
-      {"@type":"Product","name":"Kök Sebze Soyma Makinesi","brand":{"@type":"Brand","name":"KIVORA"},"category":"Sebze Hazırlama","areaServed":"Türkiye","url":"https://njgrup.com/gida-makinalari.html#kok-sebze-soyma-makinesi"},
-      {"@type":"Product","name":"Sebze Kurutma Makinesi","brand":{"@type":"Brand","name":"KIVORA"},"category":"Sebze Hazırlama","areaServed":"Türkiye","url":"https://njgrup.com/gida-makinalari.html#sebze-kurutma-makinesi"},
-      {"@type":"Product","name":"Kase Kesici / Parçalayıcı","brand":{"@type":"Brand","name":"KIVORA"},"category":"Et İşleme","areaServed":"Türkiye","url":"https://njgrup.com/gida-makinalari.html#kase-kesici-parcalayici"},
-      {"@type":"Product","name":"Et Kıyma Makinesi","brand":{"@type":"Brand","name":"KIVORA"},"category":"Et İşleme","areaServed":"Türkiye","url":"https://njgrup.com/gida-makinalari.html#et-kiyma-makinesi"},
-      {"@type":"Product","name":"Et Şerit ve Dilim Kesme Makinesi","brand":{"@type":"Brand","name":"KIVORA"},"category":"Et İşleme","areaServed":"Türkiye","url":"https://njgrup.com/gida-makinalari.html#et-serit-ve-dilim-kesme-makinesi"},
-      {"@type":"Product","name":"Pişmiş Et Dilimleme Makinesi","brand":{"@type":"Brand","name":"KIVORA"},"category":"Et İşleme","areaServed":"Türkiye","url":"https://njgrup.com/gida-makinalari.html#pismis-et-dilimleme-makinesi"},
-      {"@type":"Product","name":"Et Küp Doğrama Makinesi","brand":{"@type":"Brand","name":"KIVORA"},"category":"Et İşleme","areaServed":"Türkiye","url":"https://njgrup.com/gida-makinalari.html#et-kup-dograma-makinesi"},
-      {"@type":"Product","name":"Kemik Testere Makinesi","brand":{"@type":"Brand","name":"KIVORA"},"category":"Et İşleme","areaServed":"Türkiye","url":"https://njgrup.com/gida-makinalari.html#kemik-testere-makinesi"},
-      {"@type":"Product","name":"Kaburga Doğrama Makinesi","brand":{"@type":"Brand","name":"KIVORA"},"category":"Et İşleme","areaServed":"Türkiye","url":"https://njgrup.com/gida-makinalari.html#kaburga-dograma-makinesi"},
-      {"@type":"Product","name":"Koyun Eti Dilimleme Makinesi","brand":{"@type":"Brand","name":"KIVORA"},"category":"Et İşleme","areaServed":"Türkiye","url":"https://njgrup.com/gida-makinalari.html#koyun-eti-dilimleme-makinesi"},
-      {"@type":"Product","name":"Dana Zarı Soyma Makinesi","brand":{"@type":"Brand","name":"KIVORA"},"category":"Et İşleme","areaServed":"Türkiye","url":"https://njgrup.com/gida-makinalari.html#dana-zari-soyma-makinesi"},
-      {"@type":"Product","name":"Tavuk ve Ördek Blok Kesme Makinesi","brand":{"@type":"Brand","name":"KIVORA"},"category":"Et İşleme","areaServed":"Türkiye","url":"https://njgrup.com/gida-makinalari.html#tavuk-ve-ordek-blok-kesme-makinesi"},
-      {"@type":"Product","name":"Köfte Makinesi","brand":{"@type":"Brand","name":"KIVORA"},"category":"Et İşleme","areaServed":"Türkiye","url":"https://njgrup.com/gida-makinalari.html#kofte-makinesi"},
-      {"@type":"Product","name":"Hamur Mikseri","brand":{"@type":"Brand","name":"KIVORA"},"category":"Yardımcı Mutfak Ekipmanları","areaServed":"Türkiye","url":"https://njgrup.com/gida-makinalari.html#hamur-mikseri"},
-      {"@type":"Product","name":"Hamur Yoğurma Makinesi","brand":{"@type":"Brand","name":"KIVORA"},"category":"Yardımcı Mutfak Ekipmanları","areaServed":"Türkiye","url":"https://njgrup.com/gida-makinalari.html#hamur-yogurma-makinesi"},
-      {"@type":"Product","name":"Erişte Karıştırma Makinesi","brand":{"@type":"Brand","name":"KIVORA"},"category":"Yardımcı Mutfak Ekipmanları","areaServed":"Türkiye","url":"https://njgrup.com/gida-makinalari.html#eriste-karistirma-makinesi"},
-      {"@type":"Product","name":"Mayalama Kabini","brand":{"@type":"Brand","name":"KIVORA"},"category":"Yardımcı Mutfak Ekipmanları","areaServed":"Türkiye","url":"https://njgrup.com/gida-makinalari.html#mayalama-kabini"},
-      {"@type":"Product","name":"Buhar Dolabı / Buhar Odası","brand":{"@type":"Brand","name":"KIVORA"},"category":"Yardımcı Mutfak Ekipmanları","areaServed":"Türkiye","url":"https://njgrup.com/gida-makinalari.html#buhar-dolabi-buhar-odasi"},
-      {"@type":"Product","name":"Hamur Yıkama Makinesi","brand":{"@type":"Brand","name":"KIVORA"},"category":"Yardımcı Mutfak Ekipmanları","areaServed":"Türkiye","url":"https://njgrup.com/gida-makinalari.html#hamur-yikama-makinesi"},
-      {"@type":"Product","name":"Ceketli Pişirme Kazanı","brand":{"@type":"Brand","name":"KIVORA"},"category":"Yardımcı Mutfak Ekipmanları","areaServed":"Türkiye","url":"https://njgrup.com/gida-makinalari.html#ceketli-pisirme-kazani"},
-      {"@type":"Product","name":"Elektrikli Izgara","brand":{"@type":"Brand","name":"KIVORA"},"category":"Yardımcı Mutfak Ekipmanları","areaServed":"Türkiye","url":"https://njgrup.com/gida-makinalari.html#elektrikli-izgara"},
-      {"@type":"Product","name":"Dolgu Karıştırma Makinesi","brand":{"@type":"Brand","name":"KIVORA"},"category":"Yardımcı Mutfak Ekipmanları","areaServed":"Türkiye","url":"https://njgrup.com/gida-makinalari.html#dolgu-karistirma-makinesi"},
-      {"@type":"Product","name":"Bulaşık Yıkama Makinesi","brand":{"@type":"Brand","name":"KIVORA"},"category":"Yardımcı Mutfak Ekipmanları","areaServed":"Türkiye","url":"https://njgrup.com/gida-makinalari.html#bulasik-yikama-makinesi"},
-      {"@type":"Product","name":"Buhar Jeneratörü","brand":{"@type":"Brand","name":"KIVORA"},"category":"Yardımcı Mutfak Ekipmanları","areaServed":"Türkiye","url":"https://njgrup.com/gida-makinalari.html#buhar-jeneratoru"},
-      {"@type":"Product","name":"Pirinç Öğütme Makinesi","brand":{"@type":"Brand","name":"KIVORA"},"category":"Yardımcı Mutfak Ekipmanları","areaServed":"Türkiye","url":"https://njgrup.com/gida-makinalari.html#pirinc-ogutme-makinesi"},
-      {"@type":"Product","name":"Paketleme / Kapama Makinesi","brand":{"@type":"Brand","name":"KIVORA"},"category":"Yardımcı Mutfak Ekipmanları","areaServed":"Türkiye","url":"https://njgrup.com/gida-makinalari.html#paketleme-kapama-makinesi"}
+      {"@type":"Organization","name":"NJ GROUP YEŞİL DÖNÜŞÜM TEKNOLOJİ SANAYİ VE DIŞ TİCARET LİMİTED ŞİRKETİ","url":"https://njgrup.com","telephone":"+90 535 572 7525","address":{"@type":"PostalAddress","addressLocality":"İstanbul","addressCountry":"TR"}},
+      {"@type":"Product","name":"Sebze Yıkama Makinesi","brand":{"@type":"Brand","name":"NJ GROUP"},"category":"Sebze Hazırlama","image":"https://njgrup.com/assets/food-vegetable-washing.jpg","areaServed":"Türkiye","url":"https://njgrup.com/gida-makinalari.html#sebze-yikama-makinesi"},
+      {"@type":"Product","name":"Makarna Üretim Hattı","brand":{"@type":"Brand","name":"NJ GROUP"},"category":"Hamur & Makarna","image":"https://njgrup.com/assets/food-pasta-production-line.jpg","areaServed":"Türkiye","url":"https://njgrup.com/gida-makinalari.html#makarna-uretim-hatti"},
+      {"@type":"Product","name":"Et Doğrama & Karıştırma Makinesi","brand":{"@type":"Brand","name":"NJ GROUP"},"category":"Et & Dolgu Hazırlama","image":"https://njgrup.com/assets/food-bowl-cutter-mixer.jpg","areaServed":"Türkiye","url":"https://njgrup.com/gida-makinalari.html#et-dograma-karistirma-makinesi"},
+      {"@type":"Product","name":"Çift Kafa Et Doğrama Makinesi","brand":{"@type":"Brand","name":"NJ GROUP"},"category":"Et & Dolgu Hazırlama","image":"https://njgrup.com/assets/food-double-head-meat-cutter.jpg","areaServed":"Türkiye","url":"https://njgrup.com/gida-makinalari.html#cift-kafa-et-dograma-makinesi"},
+      {"@type":"Product","name":"Sebze Kurutma Santrifüj Makinesi","brand":{"@type":"Brand","name":"NJ GROUP"},"category":"Sebze Hazırlama","image":"https://njgrup.com/assets/food-vegetable-centrifuge.jpg","areaServed":"Türkiye","url":"https://njgrup.com/gida-makinalari.html#sebze-kurutma-santrifuj-makinesi"},
+      {"@type":"Product","name":"Endüstriyel Karıştırma Makinesi","brand":{"@type":"Brand","name":"NJ GROUP"},"category":"Et & Dolgu Hazırlama","image":"https://njgrup.com/assets/food-industrial-filling-mixer.jpg","areaServed":"Türkiye","url":"https://njgrup.com/gida-makinalari.html#endustriyel-karistirma-makinesi"},
+      {"@type":"Product","name":"Lahmacun & Noodle Makinesi","brand":{"@type":"Brand","name":"NJ GROUP"},"category":"Hamur & Makarna","image":"https://njgrup.com/assets/food-lahmacun-noodle-machine.jpg","areaServed":"Türkiye","url":"https://njgrup.com/gida-makinalari.html#lahmacun-noodle-makinesi"},
+      {"@type":"Product","name":"Çift Kafa Sebze Doğrama Makinesi","brand":{"@type":"Brand","name":"NJ GROUP"},"category":"Sebze Hazırlama","image":"https://njgrup.com/assets/food-double-head-vegetable-cutter.jpg","areaServed":"Türkiye","url":"https://njgrup.com/gida-makinalari.html#cift-kafa-sebze-dograma-makinesi"},
+      {"@type":"Product","name":"Çift Hazneli Vakumlu Paketleme Makinesi","brand":{"@type":"Brand","name":"NJ GROUP"},"category":"Paketleme & Pişirme","image":"https://njgrup.com/assets/food-double-chamber-vacuum-packaging.jpg","areaServed":"Türkiye","url":"https://njgrup.com/gida-makinalari.html#cift-hazneli-vakumlu-paketleme-makinesi"},
+      {"@type":"Product","name":"Endüstriyel Sebze Soyma Makinesi","brand":{"@type":"Brand","name":"NJ GROUP"},"category":"Sebze Hazırlama","image":"https://njgrup.com/assets/food-root-vegetable-peeler.jpg","areaServed":"Türkiye","url":"https://njgrup.com/gida-makinalari.html#endustriyel-sebze-soyma-makinesi"},
+      {"@type":"Product","name":"Endüstriyel Hamur Yoğurma Makinesi","brand":{"@type":"Brand","name":"NJ GROUP"},"category":"Hamur & Makarna","image":"https://njgrup.com/assets/food-dough-kneader.jpg","areaServed":"Türkiye","url":"https://njgrup.com/gida-makinalari.html#endustriyel-hamur-yogurma-makinesi"},
+      {"@type":"Product","name":"Hamur Yoğurma Rulo Makinesi","brand":{"@type":"Brand","name":"NJ GROUP"},"category":"Hamur & Makarna","image":"https://njgrup.com/assets/food-dough-roller.jpg","areaServed":"Türkiye","url":"https://njgrup.com/gida-makinalari.html#hamur-yogurma-rulo-makinesi"},
+      {"@type":"Product","name":"Otomatik Filizlendirme Makinesi","brand":{"@type":"Brand","name":"NJ GROUP"},"category":"Filizlendirme","image":"https://njgrup.com/assets/food-sprout-machine.jpg","areaServed":"Türkiye","url":"https://njgrup.com/gida-makinalari.html#otomatik-filizlendirme-makinesi"},
+      {"@type":"Product","name":"12 Katlı Buharlı Pişirici","brand":{"@type":"Brand","name":"NJ GROUP"},"category":"Paketleme & Pişirme","image":"https://njgrup.com/assets/food-steam-cabinet.jpg","areaServed":"Türkiye","url":"https://njgrup.com/gida-makinalari.html#12-katli-buharli-pisirici"}
     ]
   }
   </script>
@@ -114,771 +104,574 @@
 <body>
   <header>
     <div class="wrap head">
-      <a class="brand" href="index.html"><img src="assets/kivora-logo-transparent.png" alt="KIVORA NJ GROUP gıda makineleri logosu"><span>KIVORA<br><small>NJ GROUP GIDA MAKİNELERİ</small></span></a>
-      <nav><a href="index.html#home">Home</a><a href="index.html#production">Production</a><a href="index.html#trade">Trade</a><a href="index.html#services">Services</a><a href="index.html#about">About</a><a href="index.html#contact">Contact</a></nav>
+      <a class="brand" href="index.html">
+        <img src="assets/nj-logo-mark.svg" alt="NJ GROUP">
+        <span>NJ GROUP<small>Gıda Makineleri Showroom</small></span>
+      </a>
+      <nav>
+        <a href="index.html#home">Home</a>
+        <a href="index.html#production">Production</a>
+        <a href="index.html#trade">Trade</a>
+        <a href="index.html#services">Services</a>
+        <a href="#contact">Contact</a>
+        <select class="lang" aria-label="Language">
+          <option>TR</option><option>EN</option><option>中文</option><option>FR</option><option>DE</option>
+        </select>
+      </nav>
     </div>
   </header>
 
   <main>
     <section class="hero">
       <div class="wrap">
-        <div class="eyebrow">KIVORA Gıda Makineleri</div>
-        <h1>Türkiye için endüstriyel mutfak ve gıda üretim makineleri</h1>
-        <p>NJ GROUP; merkezi mutfak, yemek fabrikası, restoran zinciri, sebze hazırlama, et işleme, hamur işi, tofu ve paketleme projeleri için makine seçimi, teklif, kurulum ve servis desteği sağlar.</p>
+        <div class="eyebrow">NJ GROUP Food Machinery</div>
+        <h1><span>Endüstriyel</span><span>gıda makineleri</span></h1>
+        <p>Sebze, et, hamur ve makarna.<br>Paketleme, filizlendirme ve pişirme.<br>Tüm makineleri tek sayfada inceleyin.</p>
         <div class="cta-row">
-          <a class="btn gold" href="https://wa.me/905355727525?text=Merhaba%20NJ%20GROUP,%20g%C4%B1da%20makineleri%20i%C3%A7in%20fiyat%20ve%20proje%20g%C3%B6r%C3%BC%C5%9Fmesi%20istiyorum.">WhatsApp ile teklif al</a>
-          <a class="btn light" href="tel:+905355727525">+90 535 572 7525</a>
+          <a class="btn gold" href="#catalog">Makineleri İncele</a>
+          <a class="btn light" href="https://wa.me/905355727525?text=Merhaba%20NJ%20GROUP,%20g%C4%B1da%20makineleri%20i%C3%A7in%20teklif%20almak%20istiyorum.">WhatsApp ile teklif al</a>
+        </div>
+        <div class="hero-stats">
+          <div class="stat"><strong>14</strong><span>net ürün grubu</span></div>
+          <div class="stat"><strong>304</strong><span>paslanmaz çelik seçenekleri</span></div>
+          <div class="stat"><strong>TR</strong><span>Türkiye pazarına uygun sunum</span></div>
+          <div class="stat"><strong>2018</strong><span>NJ GROUP işletme vizyonu</span></div>
         </div>
       </div>
     </section>
 
-    <section id="katalog" class="directory">
+    <section id="catalog" class="catalog">
       <div class="wrap">
         <div class="section-head">
-          <h2>KIVORA tam ekipman kataloğu</h2>
-          <p>Aşağıdaki tüm ürün adları Türkiye Google aramaları ve Google Maps görünürlüğü için Türkçe hazırlanmıştır. Her makine için günlük tanıtım, Google Post, reklam metni ve WhatsApp satış mesajı üretilebilir.</p>
+          <h2>Doğru makineyi hızlı bulun</h2>
+          <p>Eski dağınık ürün listesi kaldırıldı. Aşağıdaki katalog yalnızca yeni NJ GROUP materyallerine göre düzenlenen, görseli ve açıklaması eşleşen makineleri gösterir.</p>
         </div>
-        <div class="directory-grid">
-        <div class="directory-col">
-          <h3>Hamur ve Unlu Mamuller</h3>
-          <ul>
-            <li><a href="#el-yapimi-tip-bao-makinesi">El Yapımı Tip Bao Makinesi</a></li>
-            <li><a href="#cok-fonksiyonlu-bao-makinesi">Çok Fonksiyonlu Bao Makinesi</a></li>
-            <li><a href="#el-yapimi-tip-manti-makinesi">El Yapımı Tip Mantı Makinesi</a></li>
-            <li><a href="#wonton-makinesi">Wonton Makinesi</a></li>
-            <li><a href="#mantou-makinesi">Mantou Makinesi</a></li>
-            <li><a href="#eriste-makinesi">Erişte Makinesi</a></li>
-            <li><a href="#bicak-kesim-eriste-makinesi">Bıçak Kesim Erişte Makinesi</a></li>
-            <li><a href="#lamian-makinesi">Lamian Makinesi</a></li>
-            <li><a href="#manti-hamuru-acma-makinesi">Mantı Hamuru Açma Makinesi</a></li>
-            <li><a href="#liangpi-makinesi">Liangpi Makinesi</a></li>
-            <li><a href="#pirinc-eristesi-makinesi">Pirinç Eriştesi Makinesi</a></li>
-          </ul>
-        </div>
-        <div class="directory-col">
-          <h3>Soya ve Bitkisel Protein</h3>
-          <ul>
-            <li><a href="#kompakt-tofu-makinesi">Kompakt Tofu Makinesi</a></li>
-            <li><a href="#fabrika-tipi-tofu-uretim-hatti">Fabrika Tipi Tofu Üretim Hattı</a></li>
-            <li><a href="#tofu-derisi-makinesi">Tofu Derisi Makinesi</a></li>
-            <li><a href="#fasulye-filizi-makinesi">Fasulye Filizi Makinesi</a></li>
-            <li><a href="#soya-urunleri-yardimci-ekipmanlari">Soya Ürünleri Yardımcı Ekipmanları</a></li>
-            <li><a href="#soya-sutu-makinesi">Soya Sütü Makinesi</a></li>
-          </ul>
-        </div>
-        <div class="directory-col">
+        <div class="catalog-grid">
+
+        <section class="catalog-group">
           <h3>Sebze Hazırlama</h3>
-          <ul>
-            <li><a href="#cok-fonksiyonlu-sebze-kesme-makinesi">Çok Fonksiyonlu Sebze Kesme Makinesi</a></li>
-            <li><a href="#yaprak-sebze-yikama-makinesi">Yaprak Sebze Yıkama Makinesi</a></li>
-            <li><a href="#kok-sebze-soyma-makinesi">Kök Sebze Soyma Makinesi</a></li>
-            <li><a href="#sebze-kurutma-makinesi">Sebze Kurutma Makinesi</a></li>
-          </ul>
-        </div>
-        <div class="directory-col">
-          <h3>Et İşleme</h3>
-          <ul>
-            <li><a href="#kase-kesici-parcalayici">Kase Kesici / Parçalayıcı</a></li>
-            <li><a href="#et-kiyma-makinesi">Et Kıyma Makinesi</a></li>
-            <li><a href="#et-serit-ve-dilim-kesme-makinesi">Et Şerit ve Dilim Kesme Makinesi</a></li>
-            <li><a href="#pismis-et-dilimleme-makinesi">Pişmiş Et Dilimleme Makinesi</a></li>
-            <li><a href="#et-kup-dograma-makinesi">Et Küp Doğrama Makinesi</a></li>
-            <li><a href="#kemik-testere-makinesi">Kemik Testere Makinesi</a></li>
-            <li><a href="#kaburga-dograma-makinesi">Kaburga Doğrama Makinesi</a></li>
-            <li><a href="#koyun-eti-dilimleme-makinesi">Koyun Eti Dilimleme Makinesi</a></li>
-            <li><a href="#dana-zari-soyma-makinesi">Dana Zarı Soyma Makinesi</a></li>
-            <li><a href="#tavuk-ve-ordek-blok-kesme-makinesi">Tavuk ve Ördek Blok Kesme Makinesi</a></li>
-            <li><a href="#kofte-makinesi">Köfte Makinesi</a></li>
-          </ul>
-        </div>
-        <div class="directory-col">
-          <h3>Yardımcı Mutfak Ekipmanları</h3>
-          <ul>
-            <li><a href="#hamur-mikseri">Hamur Mikseri</a></li>
-            <li><a href="#hamur-yogurma-makinesi">Hamur Yoğurma Makinesi</a></li>
-            <li><a href="#eriste-karistirma-makinesi">Erişte Karıştırma Makinesi</a></li>
-            <li><a href="#mayalama-kabini">Mayalama Kabini</a></li>
-            <li><a href="#buhar-dolabi-buhar-odasi">Buhar Dolabı / Buhar Odası</a></li>
-            <li><a href="#hamur-yikama-makinesi">Hamur Yıkama Makinesi</a></li>
-            <li><a href="#ceketli-pisirme-kazani">Ceketli Pişirme Kazanı</a></li>
-            <li><a href="#elektrikli-izgara">Elektrikli Izgara</a></li>
-            <li><a href="#dolgu-karistirma-makinesi">Dolgu Karıştırma Makinesi</a></li>
-            <li><a href="#bulasik-yikama-makinesi">Bulaşık Yıkama Makinesi</a></li>
-            <li><a href="#buhar-jeneratoru">Buhar Jeneratörü</a></li>
-            <li><a href="#pirinc-ogutme-makinesi">Pirinç Öğütme Makinesi</a></li>
-            <li><a href="#paketleme-kapama-makinesi">Paketleme / Kapama Makinesi</a></li>
-          </ul>
-        </div>
+          <div class="catalog-links">
+            <a href="#sebze-yikama-makinesi">Sebze Yıkama Makinesi</a><a href="#sebze-kurutma-santrifuj-makinesi">Sebze Kurutma Santrifüj Makinesi</a><a href="#cift-kafa-sebze-dograma-makinesi">Çift Kafa Sebze Doğrama Makinesi</a><a href="#endustriyel-sebze-soyma-makinesi">Endüstriyel Sebze Soyma Makinesi</a>
+          </div>
+        </section>
+
+        <section class="catalog-group">
+          <h3>Hamur & Makarna</h3>
+          <div class="catalog-links">
+            <a href="#makarna-uretim-hatti">Makarna Üretim Hattı</a><a href="#lahmacun-noodle-makinesi">Lahmacun & Noodle Makinesi</a><a href="#endustriyel-hamur-yogurma-makinesi">Endüstriyel Hamur Yoğurma Makinesi</a><a href="#hamur-yogurma-rulo-makinesi">Hamur Yoğurma Rulo Makinesi</a>
+          </div>
+        </section>
+
+        <section class="catalog-group">
+          <h3>Et & Dolgu Hazırlama</h3>
+          <div class="catalog-links">
+            <a href="#et-dograma-karistirma-makinesi">Et Doğrama & Karıştırma Makinesi</a><a href="#cift-kafa-et-dograma-makinesi">Çift Kafa Et Doğrama Makinesi</a><a href="#endustriyel-karistirma-makinesi">Endüstriyel Karıştırma Makinesi</a>
+          </div>
+        </section>
+
+        <section class="catalog-group">
+          <h3>Paketleme & Pişirme</h3>
+          <div class="catalog-links">
+            <a href="#cift-hazneli-vakumlu-paketleme-makinesi">Çift Hazneli Vakumlu Paketleme Makinesi</a><a href="#12-katli-buharli-pisirici">12 Katlı Buharlı Pişirici</a>
+          </div>
+        </section>
+
+        <section class="catalog-group">
+          <h3>Filizlendirme</h3>
+          <div class="catalog-links">
+            <a href="#otomatik-filizlendirme-makinesi">Otomatik Filizlendirme Makinesi</a>
+          </div>
+        </section>
         </div>
       </div>
     </section>
 
-    <section id="makineler">
+    <section id="machines" class="products">
       <div class="wrap">
         <div class="section-head">
-          <h2>Tanıtıma hazır makine sayfaları</h2>
-          <p>Her makine, müşterinin ihtiyacına göre kapasite, ölçü, enerji, malzeme ve teslimat koşulları netleştirilerek tekliflendirilir.</p>
+          <h2>Makine tanıtımları</h2>
+          <p>Her makine görseli, adı ve açıklaması aynı ürün grubuna aittir. Kapasite, ölçü ve enerji değerleri proje koşullarına göre son teklif aşamasında teyit edilir.</p>
         </div>
-        <div class="cards">
-        <article class="machine-card" id="el-yapimi-tip-bao-makinesi">
-          <img src="assets/kivora-machine-01.jpg" alt="NJ GROUP El Yapımı Tip Bao Makinesi İstanbul" loading="lazy">
-          <div>
-            <span>Hamur ve Unlu Mamuller</span>
-            <h3>El Yapımı Tip Bao Makinesi</h3>
-            <p>El Yapımı Tip Bao Makinesi, gıda üretimi, merkezi mutfak, restoran zinciri ve yemek fabrikası projeleri için NJ GROUP tarafından Türkiye pazarına sunulan profesyonel ekipman grubudur.</p>
-            <ul>
-              <li>İstanbul showroom ve proje görüşmesi</li>
-              <li>Kapasiteye göre makine seçimi ve fiyat teklifi</li>
-              <li>Kurulum, yedek parça ve satış sonrası destek</li>
-            </ul>
-            <a class="mini-cta" href="https://wa.me/905355727525?text=Merhaba%20NJ%20GROUP,%20El%20Yapımı%20Tip%20Bao%20Makinesi%20hakk%C4%B1nda%20bilgi%20ve%20fiyat%20almak%20istiyorum.">WhatsApp ile fiyat iste</a>
+        <div class="product-list">
+
+        <article class="product-card" id="sebze-yikama-makinesi">
+          <div class="product-media">
+            <img src="assets/food-vegetable-washing.jpg" alt="NJ GROUP Sebze Yıkama Makinesi" loading="lazy">
+          </div>
+          <div class="product-copy">
+            <span class="category">Sebze Hazırlama</span>
+            <h3>Sebze Yıkama Makinesi</h3>
+            <p class="subtitle">Yüksek verim, derin temizlik ve hijyenik yıkama</p>
+            <p>Meyve ve sebzelerin yüzeyindeki toz, toprak ve tarım kalıntılarını balonlu su akışı ile temizlemek için tasarlanmış profesyonel yıkama çözümüdür.</p>
+            <div class="feature-list">
+              <span>360° balonlu su yıkama</span><span>Gıda sınıfı 304 paslanmaz çelik</span><span>Hızlı drenaj sistemi</span><span>Akıllı kontrol paneli</span><span>Düşük enerji tüketimi</span>
+            </div>
+            <div class="detail-grid">
+              <div>
+                <h4>Kullanım alanları</h4>
+                <ul><li>Yemek fabrikaları</li><li>Otel ve restoran mutfakları</li><li>Sebze işleme tesisleri</li><li>Market hazırlık alanları</li></ul>
+              </div>
+              <div>
+                <h4>Teknik bilgiler</h4>
+                <table class="spec-table"><tbody><tr><th>Malzeme</th><td>304 paslanmaz çelik</td></tr>
+<tr><th>Yıkama sistemi</th><td>Balonlu / sirkülasyonlu su akışı</td></tr>
+<tr><th>Kapasite</th><td>Proje ihtiyacına göre belirlenir</td></tr>
+<tr><th>Kontrol</th><td>Zaman ve çalışma ayarı yapılabilir</td></tr></tbody></table>
+              </div>
+            </div>
+            <a class="mini-cta" href="https://wa.me/905355727525?text=Merhaba%20NJ%20GROUP%2C%20Sebze%20Y%C4%B1kama%20Makinesi%20i%C3%A7in%20bilgi%20ve%20fiyat%20teklifi%20almak%20istiyorum.">WhatsApp ile teklif iste</a>
           </div>
         </article>
-        <article class="machine-card" id="cok-fonksiyonlu-bao-makinesi">
-          <img src="assets/kivora-machine-02.jpg" alt="NJ GROUP Çok Fonksiyonlu Bao Makinesi İstanbul" loading="lazy">
-          <div>
-            <span>Hamur ve Unlu Mamuller</span>
-            <h3>Çok Fonksiyonlu Bao Makinesi</h3>
-            <p>Çok Fonksiyonlu Bao Makinesi, gıda üretimi, merkezi mutfak, restoran zinciri ve yemek fabrikası projeleri için NJ GROUP tarafından Türkiye pazarına sunulan profesyonel ekipman grubudur.</p>
-            <ul>
-              <li>İstanbul showroom ve proje görüşmesi</li>
-              <li>Kapasiteye göre makine seçimi ve fiyat teklifi</li>
-              <li>Kurulum, yedek parça ve satış sonrası destek</li>
-            </ul>
-            <a class="mini-cta" href="https://wa.me/905355727525?text=Merhaba%20NJ%20GROUP,%20Çok%20Fonksiyonlu%20Bao%20Makinesi%20hakk%C4%B1nda%20bilgi%20ve%20fiyat%20almak%20istiyorum.">WhatsApp ile fiyat iste</a>
+
+        <article class="product-card" id="makarna-uretim-hatti">
+          <div class="product-media">
+            <img src="assets/food-pasta-production-line.jpg" alt="NJ GROUP Makarna Üretim Hattı" loading="lazy">
+          </div>
+          <div class="product-copy">
+            <span class="category">Hamur & Makarna</span>
+            <h3>Makarna Üretim Hattı</h3>
+            <p class="subtitle">Verimli, akıllı ve özelleştirilebilir üretim hattı</p>
+            <p>Taze makarna, noodle ve farklı hamur ürünleri için yoğurma, taşıma, şekillendirme ve kesim süreçlerini tek projede birleştiren üretim hattıdır.</p>
+            <div class="feature-list">
+              <span>Paslanmaz çelik temas yüzeyi</span><span>Akıllı kontrol sistemi</span><span>Yüksek üretim verimliliği</span><span>Farklı makarna tiplerine uyum</span><span>İhtiyaca göre hat tasarımı</span>
+            </div>
+            <div class="detail-grid">
+              <div>
+                <h4>Kullanım alanları</h4>
+                <ul><li>Makarna üretim atölyeleri</li><li>Merkezi mutfaklar</li><li>Restoran zincirleri</li><li>Gıda fabrikaları</li></ul>
+              </div>
+              <div>
+                <h4>Teknik bilgiler</h4>
+                <table class="spec-table"><tbody><tr><th>Hat yapısı</th><td>Karıştırma, taşıma, şekillendirme ve kesim modülleri</td></tr>
+<tr><th>Ürün tipi</th><td>İnce, orta, kalın ve geniş kesim seçenekleri</td></tr>
+<tr><th>Kapasite</th><td>Üretim hedefi ve reçeteye göre projelendirilir</td></tr></tbody></table>
+              </div>
+            </div>
+            <a class="mini-cta" href="https://wa.me/905355727525?text=Merhaba%20NJ%20GROUP%2C%20Makarna%20%C3%9Cretim%20Hatt%C4%B1%20i%C3%A7in%20bilgi%20ve%20fiyat%20teklifi%20almak%20istiyorum.">WhatsApp ile teklif iste</a>
           </div>
         </article>
-        <article class="machine-card" id="el-yapimi-tip-manti-makinesi">
-          <img src="assets/kivora-machine-03.jpg" alt="NJ GROUP El Yapımı Tip Mantı Makinesi İstanbul" loading="lazy">
-          <div>
-            <span>Hamur ve Unlu Mamuller</span>
-            <h3>El Yapımı Tip Mantı Makinesi</h3>
-            <p>El Yapımı Tip Mantı Makinesi, gıda üretimi, merkezi mutfak, restoran zinciri ve yemek fabrikası projeleri için NJ GROUP tarafından Türkiye pazarına sunulan profesyonel ekipman grubudur.</p>
-            <ul>
-              <li>İstanbul showroom ve proje görüşmesi</li>
-              <li>Kapasiteye göre makine seçimi ve fiyat teklifi</li>
-              <li>Kurulum, yedek parça ve satış sonrası destek</li>
-            </ul>
-            <a class="mini-cta" href="https://wa.me/905355727525?text=Merhaba%20NJ%20GROUP,%20El%20Yapımı%20Tip%20Mantı%20Makinesi%20hakk%C4%B1nda%20bilgi%20ve%20fiyat%20almak%20istiyorum.">WhatsApp ile fiyat iste</a>
+
+        <article class="product-card" id="et-dograma-karistirma-makinesi">
+          <div class="product-media">
+            <img src="assets/food-bowl-cutter-mixer.jpg" alt="NJ GROUP Et Doğrama & Karıştırma Makinesi" loading="lazy">
+          </div>
+          <div class="product-copy">
+            <span class="category">Et & Dolgu Hazırlama</span>
+            <h3>Et Doğrama & Karıştırma Makinesi</h3>
+            <p class="subtitle">Hızlı, güçlü ve homojen hazırlık</p>
+            <p>Dana eti, tavuk, balık ve sebzeleri kısa sürede doğrayarak kıyma, kuşbaşı, karışım ve püre kıvamına getiren profesyonel kase tipi doğrama çözümüdür.</p>
+            <div class="feature-list">
+              <span>Yüksek hızlı bıçak sistemi</span><span>Güçlü motor</span><span>304 paslanmaz çelik gövde</span><span>Kolay sökülebilir temizlik yapısı</span><span>Koruyucu kapak ile güvenli kullanım</span>
+            </div>
+            <div class="detail-grid">
+              <div>
+                <h4>Kullanım alanları</h4>
+                <ul><li>Köfte ve dolgu hazırlığı</li><li>Tavuk ve balık işleme</li><li>Sebze doğrama</li><li>Sos ve püre hazırlığı</li></ul>
+              </div>
+              <div>
+                <h4>Teknik bilgiler</h4>
+                <table class="spec-table"><tbody><tr><th>Bıçak hızı</th><td>Yaklaşık 1500-3000 rpm aralığında seçenekler</td></tr>
+<tr><th>Malzeme</th><td>Gıda sınıfı paslanmaz çelik</td></tr>
+<tr><th>Kapasite</th><td>Model ve kazan hacmine göre belirlenir</td></tr></tbody></table>
+              </div>
+            </div>
+            <a class="mini-cta" href="https://wa.me/905355727525?text=Merhaba%20NJ%20GROUP%2C%20Et%20Do%C4%9Frama%20%26%20Kar%C4%B1%C5%9Ft%C4%B1rma%20Makinesi%20i%C3%A7in%20bilgi%20ve%20fiyat%20teklifi%20almak%20istiyorum.">WhatsApp ile teklif iste</a>
           </div>
         </article>
-        <article class="machine-card" id="wonton-makinesi">
-          <img src="assets/kivora-machine-04.jpg" alt="NJ GROUP Wonton Makinesi İstanbul" loading="lazy">
-          <div>
-            <span>Hamur ve Unlu Mamuller</span>
-            <h3>Wonton Makinesi</h3>
-            <p>Wonton Makinesi, gıda üretimi, merkezi mutfak, restoran zinciri ve yemek fabrikası projeleri için NJ GROUP tarafından Türkiye pazarına sunulan profesyonel ekipman grubudur.</p>
-            <ul>
-              <li>İstanbul showroom ve proje görüşmesi</li>
-              <li>Kapasiteye göre makine seçimi ve fiyat teklifi</li>
-              <li>Kurulum, yedek parça ve satış sonrası destek</li>
-            </ul>
-            <a class="mini-cta" href="https://wa.me/905355727525?text=Merhaba%20NJ%20GROUP,%20Wonton%20Makinesi%20hakk%C4%B1nda%20bilgi%20ve%20fiyat%20almak%20istiyorum.">WhatsApp ile fiyat iste</a>
+
+        <article class="product-card" id="cift-kafa-et-dograma-makinesi">
+          <div class="product-media">
+            <img src="assets/food-double-head-meat-cutter.jpg" alt="NJ GROUP Çift Kafa Et Doğrama Makinesi" loading="lazy">
+          </div>
+          <div class="product-copy">
+            <span class="category">Et & Dolgu Hazırlama</span>
+            <h3>Çift Kafa Et Doğrama Makinesi</h3>
+            <p class="subtitle">Et işlemede güçlü, hızlı ve verimli çözüm</p>
+            <p>Dana eti, tavuk ve benzeri ürünlerde kıyma, şerit ve dilim kesim işlemlerini aynı üretim alanında yönetmek için çift kafa tasarımlı endüstriyel makinedir.</p>
+            <div class="feature-list">
+              <span>Çift kafa kesim sistemi</span><span>Farklı kesim seçenekleri</span><span>Paslanmaz çelik gövde</span><span>Düşük sesli çalışma</span><span>Kolay kontrol paneli</span>
+            </div>
+            <div class="detail-grid">
+              <div>
+                <h4>Kullanım alanları</h4>
+                <ul><li>Kasaplar</li><li>Restoranlar</li><li>Et hazırlık mutfakları</li><li>Gıda üretim tesisleri</li></ul>
+              </div>
+              <div>
+                <h4>Teknik bilgiler</h4>
+                <table class="spec-table"><tbody><tr><th>Kesim türleri</th><td>Kıyma, et şeridi ve et dilimi</td></tr>
+<tr><th>Gövde</th><td>Paslanmaz çelik</td></tr>
+<tr><th>Kapasite</th><td>Kesim türü ve modele göre projelendirilir</td></tr></tbody></table>
+              </div>
+            </div>
+            <a class="mini-cta" href="https://wa.me/905355727525?text=Merhaba%20NJ%20GROUP%2C%20%C3%87ift%20Kafa%20Et%20Do%C4%9Frama%20Makinesi%20i%C3%A7in%20bilgi%20ve%20fiyat%20teklifi%20almak%20istiyorum.">WhatsApp ile teklif iste</a>
           </div>
         </article>
-        <article class="machine-card" id="mantou-makinesi">
-          <img src="assets/kivora-machine-05.jpg" alt="NJ GROUP Mantou Makinesi İstanbul" loading="lazy">
-          <div>
-            <span>Hamur ve Unlu Mamuller</span>
-            <h3>Mantou Makinesi</h3>
-            <p>Mantou Makinesi, gıda üretimi, merkezi mutfak, restoran zinciri ve yemek fabrikası projeleri için NJ GROUP tarafından Türkiye pazarına sunulan profesyonel ekipman grubudur.</p>
-            <ul>
-              <li>İstanbul showroom ve proje görüşmesi</li>
-              <li>Kapasiteye göre makine seçimi ve fiyat teklifi</li>
-              <li>Kurulum, yedek parça ve satış sonrası destek</li>
-            </ul>
-            <a class="mini-cta" href="https://wa.me/905355727525?text=Merhaba%20NJ%20GROUP,%20Mantou%20Makinesi%20hakk%C4%B1nda%20bilgi%20ve%20fiyat%20almak%20istiyorum.">WhatsApp ile fiyat iste</a>
+
+        <article class="product-card" id="sebze-kurutma-santrifuj-makinesi">
+          <div class="product-media">
+            <img src="assets/food-vegetable-centrifuge.jpg" alt="NJ GROUP Sebze Kurutma Santrifüj Makinesi" loading="lazy">
+          </div>
+          <div class="product-copy">
+            <span class="category">Sebze Hazırlama</span>
+            <h3>Sebze Kurutma Santrifüj Makinesi</h3>
+            <p class="subtitle">Doğranmış sebzeler için hızlı su atma sistemi</p>
+            <p>Yıkanmış ve doğranmış sebzelerde fazla suyu saniyeler içinde uzaklaştırarak tazeliği, doku kalitesini ve servis hazırlık hızını artırır.</p>
+            <div class="feature-list">
+              <span>Yüksek hızlı santrifüj</span><span>Hızlı su tahliyesi</span><span>Paslanmaz çelik iç sepet</span><span>Düşük ses seviyesi</span><span>Kolay sökülür hijyenik tasarım</span>
+            </div>
+            <div class="detail-grid">
+              <div>
+                <h4>Kullanım alanları</h4>
+                <ul><li>Marul</li><li>Lahana</li><li>Havuç</li><li>Salatalık</li><li>Yeşil soğan</li></ul>
+              </div>
+              <div>
+                <h4>Teknik bilgiler</h4>
+                <table class="spec-table"><tbody><tr><th>Hız</th><td>Yaklaşık 1000-1200 rpm</td></tr>
+<tr><th>Malzeme</th><td>Paslanmaz çelik sepet</td></tr>
+<tr><th>Kapasite</th><td>Sepet hacmine göre belirlenir</td></tr></tbody></table>
+              </div>
+            </div>
+            <a class="mini-cta" href="https://wa.me/905355727525?text=Merhaba%20NJ%20GROUP%2C%20Sebze%20Kurutma%20Santrif%C3%BCj%20Makinesi%20i%C3%A7in%20bilgi%20ve%20fiyat%20teklifi%20almak%20istiyorum.">WhatsApp ile teklif iste</a>
           </div>
         </article>
-        <article class="machine-card" id="eriste-makinesi">
-          <img src="assets/kivora-machine-06.jpg" alt="NJ GROUP Erişte Makinesi İstanbul" loading="lazy">
-          <div>
-            <span>Hamur ve Unlu Mamuller</span>
-            <h3>Erişte Makinesi</h3>
-            <p>Erişte Makinesi, gıda üretimi, merkezi mutfak, restoran zinciri ve yemek fabrikası projeleri için NJ GROUP tarafından Türkiye pazarına sunulan profesyonel ekipman grubudur.</p>
-            <ul>
-              <li>İstanbul showroom ve proje görüşmesi</li>
-              <li>Kapasiteye göre makine seçimi ve fiyat teklifi</li>
-              <li>Kurulum, yedek parça ve satış sonrası destek</li>
-            </ul>
-            <a class="mini-cta" href="https://wa.me/905355727525?text=Merhaba%20NJ%20GROUP,%20Erişte%20Makinesi%20hakk%C4%B1nda%20bilgi%20ve%20fiyat%20almak%20istiyorum.">WhatsApp ile fiyat iste</a>
+
+        <article class="product-card" id="endustriyel-karistirma-makinesi">
+          <div class="product-media">
+            <img src="assets/food-industrial-filling-mixer.jpg" alt="NJ GROUP Endüstriyel Karıştırma Makinesi" loading="lazy">
+          </div>
+          <div class="product-copy">
+            <span class="category">Et & Dolgu Hazırlama</span>
+            <h3>Endüstriyel Karıştırma Makinesi</h3>
+            <p class="subtitle">Homojen karışım ve lezzetli sonuçlar</p>
+            <p>Dana eti, sebze, baharat ve dolgu malzemelerini homojen şekilde karıştırmak için merkezi mutfak ve gıda üretim tesislerine uygun profesyonel mikserdir.</p>
+            <div class="feature-list">
+              <span>Çift yönlü karıştırma</span><span>Güçlü motor</span><span>Paslanmaz çelik gövde</span><span>Düşük sesli çalışma</span><span>Acil durdurma ile güvenli kullanım</span>
+            </div>
+            <div class="detail-grid">
+              <div>
+                <h4>Kullanım alanları</h4>
+                <ul><li>Köfte içi</li><li>Mantı içi</li><li>Börek içi</li><li>Baozi / bun içi</li><li>Lahmacun içi</li></ul>
+              </div>
+              <div>
+                <h4>Teknik bilgiler</h4>
+                <table class="spec-table"><tbody><tr><th>Karıştırma</th><td>Homojen dolgu hazırlığı</td></tr>
+<tr><th>Gövde</th><td>Paslanmaz çelik</td></tr>
+<tr><th>Kapasite</th><td>Kazan hacmine göre seçilir</td></tr></tbody></table>
+              </div>
+            </div>
+            <a class="mini-cta" href="https://wa.me/905355727525?text=Merhaba%20NJ%20GROUP%2C%20End%C3%BCstriyel%20Kar%C4%B1%C5%9Ft%C4%B1rma%20Makinesi%20i%C3%A7in%20bilgi%20ve%20fiyat%20teklifi%20almak%20istiyorum.">WhatsApp ile teklif iste</a>
           </div>
         </article>
-        <article class="machine-card" id="bicak-kesim-eriste-makinesi">
-          <img src="assets/kivora-machine-07.jpg" alt="NJ GROUP Bıçak Kesim Erişte Makinesi İstanbul" loading="lazy">
-          <div>
-            <span>Hamur ve Unlu Mamuller</span>
-            <h3>Bıçak Kesim Erişte Makinesi</h3>
-            <p>Bıçak Kesim Erişte Makinesi, gıda üretimi, merkezi mutfak, restoran zinciri ve yemek fabrikası projeleri için NJ GROUP tarafından Türkiye pazarına sunulan profesyonel ekipman grubudur.</p>
-            <ul>
-              <li>İstanbul showroom ve proje görüşmesi</li>
-              <li>Kapasiteye göre makine seçimi ve fiyat teklifi</li>
-              <li>Kurulum, yedek parça ve satış sonrası destek</li>
-            </ul>
-            <a class="mini-cta" href="https://wa.me/905355727525?text=Merhaba%20NJ%20GROUP,%20Bıçak%20Kesim%20Erişte%20Makinesi%20hakk%C4%B1nda%20bilgi%20ve%20fiyat%20almak%20istiyorum.">WhatsApp ile fiyat iste</a>
+
+        <article class="product-card" id="lahmacun-noodle-makinesi">
+          <div class="product-media">
+            <img src="assets/food-lahmacun-noodle-machine.jpg" alt="NJ GROUP Lahmacun & Noodle Makinesi" loading="lazy">
+          </div>
+          <div class="product-copy">
+            <span class="category">Hamur & Makarna</span>
+            <h3>Lahmacun & Noodle Makinesi</h3>
+            <p class="subtitle">Farklı noodle şekilleri ve profesyonel üretim</p>
+            <p>Taze noodle, erişte ve lahmacun hamuru hazırlığında kesim kalınlığı ve üretim hızını kontrol ederek standart ürün kalitesi sağlar.</p>
+            <div class="feature-list">
+              <span>Farklı noodle kalınlıkları</span><span>Keskin paslanmaz bıçaklar</span><span>Akıllı kontrol sistemi</span><span>Ayarlanabilir hız</span><span>Kolay temizlik ve bakım</span>
+            </div>
+            <div class="detail-grid">
+              <div>
+                <h4>Kullanım alanları</h4>
+                <ul><li>İnce noodle</li><li>Orta kesim noodle</li><li>Kalın noodle</li><li>Geniş bıçak kesimi</li><li>Lahmacun hamuru hazırlığı</li></ul>
+              </div>
+              <div>
+                <h4>Teknik bilgiler</h4>
+                <table class="spec-table"><tbody><tr><th>Kesim seçenekleri</th><td>İnce, orta, kalın ve geniş</td></tr>
+<tr><th>Kontrol</th><td>Hız ve kalınlık ayarı</td></tr>
+<tr><th>Kapasite</th><td>Saatlik üretim hedefi ile belirlenir</td></tr></tbody></table>
+              </div>
+            </div>
+            <a class="mini-cta" href="https://wa.me/905355727525?text=Merhaba%20NJ%20GROUP%2C%20Lahmacun%20%26%20Noodle%20Makinesi%20i%C3%A7in%20bilgi%20ve%20fiyat%20teklifi%20almak%20istiyorum.">WhatsApp ile teklif iste</a>
           </div>
         </article>
-        <article class="machine-card" id="lamian-makinesi">
-          <img src="assets/kivora-machine-08.jpg" alt="NJ GROUP Lamian Makinesi İstanbul" loading="lazy">
-          <div>
-            <span>Hamur ve Unlu Mamuller</span>
-            <h3>Lamian Makinesi</h3>
-            <p>Lamian Makinesi, gıda üretimi, merkezi mutfak, restoran zinciri ve yemek fabrikası projeleri için NJ GROUP tarafından Türkiye pazarına sunulan profesyonel ekipman grubudur.</p>
-            <ul>
-              <li>İstanbul showroom ve proje görüşmesi</li>
-              <li>Kapasiteye göre makine seçimi ve fiyat teklifi</li>
-              <li>Kurulum, yedek parça ve satış sonrası destek</li>
-            </ul>
-            <a class="mini-cta" href="https://wa.me/905355727525?text=Merhaba%20NJ%20GROUP,%20Lamian%20Makinesi%20hakk%C4%B1nda%20bilgi%20ve%20fiyat%20almak%20istiyorum.">WhatsApp ile fiyat iste</a>
+
+        <article class="product-card" id="cift-kafa-sebze-dograma-makinesi">
+          <div class="product-media">
+            <img src="assets/food-double-head-vegetable-cutter.jpg" alt="NJ GROUP Çift Kafa Sebze Doğrama Makinesi" loading="lazy">
+          </div>
+          <div class="product-copy">
+            <span class="category">Sebze Hazırlama</span>
+            <h3>Çift Kafa Sebze Doğrama Makinesi</h3>
+            <p class="subtitle">Dilim, küp, julienne, şerit ve blok kesim</p>
+            <p>Profesyonel mutfaklarda sebzeleri standart ölçülerde dilim, küp, julienne, şerit ve blok formunda hazırlamak için çift kafa tasarımlı kesim makinesidir.</p>
+            <div class="feature-list">
+              <span>Çift kafa tasarımı</span><span>Ayarlanabilir kesim boyutu</span><span>Dokunmatik / kullanıcı dostu kontrol</span><span>Paslanmaz çelik gövde</span><span>Yüksek verimli hijyenik temizlik</span>
+            </div>
+            <div class="detail-grid">
+              <div>
+                <h4>Kullanım alanları</h4>
+                <ul><li>Salatalık dilimleme</li><li>Havuç küp kesim</li><li>Julienne sebze</li><li>Şerit kesim</li><li>Blok kesim</li></ul>
+              </div>
+              <div>
+                <h4>Teknik bilgiler</h4>
+                <table class="spec-table"><tbody><tr><th>Kapasite</th><td>Yaklaşık 500-1000 kg/saat seçenekleri</td></tr>
+<tr><th>Motor</th><td>1.5 kW sınıfı güçlü motor seçenekleri</td></tr>
+<tr><th>Bıçak</th><td>Paslanmaz ve değiştirilebilir kesim bıçakları</td></tr></tbody></table>
+              </div>
+            </div>
+            <a class="mini-cta" href="https://wa.me/905355727525?text=Merhaba%20NJ%20GROUP%2C%20%C3%87ift%20Kafa%20Sebze%20Do%C4%9Frama%20Makinesi%20i%C3%A7in%20bilgi%20ve%20fiyat%20teklifi%20almak%20istiyorum.">WhatsApp ile teklif iste</a>
           </div>
         </article>
-        <article class="machine-card" id="manti-hamuru-acma-makinesi">
-          <img src="assets/kivora-machine-09.jpg" alt="NJ GROUP Mantı Hamuru Açma Makinesi İstanbul" loading="lazy">
-          <div>
-            <span>Hamur ve Unlu Mamuller</span>
-            <h3>Mantı Hamuru Açma Makinesi</h3>
-            <p>Mantı Hamuru Açma Makinesi, gıda üretimi, merkezi mutfak, restoran zinciri ve yemek fabrikası projeleri için NJ GROUP tarafından Türkiye pazarına sunulan profesyonel ekipman grubudur.</p>
-            <ul>
-              <li>İstanbul showroom ve proje görüşmesi</li>
-              <li>Kapasiteye göre makine seçimi ve fiyat teklifi</li>
-              <li>Kurulum, yedek parça ve satış sonrası destek</li>
-            </ul>
-            <a class="mini-cta" href="https://wa.me/905355727525?text=Merhaba%20NJ%20GROUP,%20Mantı%20Hamuru%20Açma%20Makinesi%20hakk%C4%B1nda%20bilgi%20ve%20fiyat%20almak%20istiyorum.">WhatsApp ile fiyat iste</a>
+
+        <article class="product-card" id="cift-hazneli-vakumlu-paketleme-makinesi">
+          <div class="product-media">
+            <img src="assets/food-double-chamber-vacuum-packaging.jpg" alt="NJ GROUP Çift Hazneli Vakumlu Paketleme Makinesi" loading="lazy">
+          </div>
+          <div class="product-copy">
+            <span class="category">Paketleme & Pişirme</span>
+            <h3>Çift Hazneli Vakumlu Paketleme Makinesi</h3>
+            <p class="subtitle">Yüksek verim, güçlü vakum ve uzun raf ömrü</p>
+            <p>Gıda ürünlerini vakumlayarak tazeliği korur, raf ömrünü uzatır ve hijyenik ambalajlama sağlar. Çift hazneli yapı kesintisiz çalışma için uygundur.</p>
+            <div class="feature-list">
+              <span>Çift hazne ile yüksek verim</span><span>Güçlü vakum sistemi</span><span>Dijital kontrol paneli</span><span>Paslanmaz çelik gövde</span><span>Et, sebze, deniz ürünü ve kuru gıda için geniş kullanım</span>
+            </div>
+            <div class="detail-grid">
+              <div>
+                <h4>Kullanım alanları</h4>
+                <ul><li>Dana eti ürünleri</li><li>Sebze ve meyveler</li><li>Deniz ürünleri</li><li>Kuru gıdalar</li></ul>
+              </div>
+              <div>
+                <h4>Teknik bilgiler</h4>
+                <table class="spec-table"><tbody><tr><th>Model</th><td>DZ-600/2S</td></tr>
+<tr><th>Güç</th><td>2200 W</td></tr>
+<tr><th>Voltaj</th><td>380V / 50Hz</td></tr>
+<tr><th>Vakum pompası</th><td>20 m³/h</td></tr>
+<tr><th>Hazne ölçüsü</th><td>600 x 540 x 110 mm (x2)</td></tr>
+<tr><th>Maks. paket boyutu</th><td>600 x 450 mm</td></tr>
+<tr><th>Kaynak uzunluğu</th><td>600 mm (x2)</td></tr>
+<tr><th>Kaynak genişliği</th><td>10 mm</td></tr>
+<tr><th>Makine boyutu</th><td>1510 x 700 x 960 mm</td></tr>
+<tr><th>Ağırlık</th><td>280 kg</td></tr></tbody></table>
+              </div>
+            </div>
+            <a class="mini-cta" href="https://wa.me/905355727525?text=Merhaba%20NJ%20GROUP%2C%20%C3%87ift%20Hazneli%20Vakumlu%20Paketleme%20Makinesi%20i%C3%A7in%20bilgi%20ve%20fiyat%20teklifi%20almak%20istiyorum.">WhatsApp ile teklif iste</a>
           </div>
         </article>
-        <article class="machine-card" id="liangpi-makinesi">
-          <img src="assets/kivora-machine-10.jpg" alt="NJ GROUP Liangpi Makinesi İstanbul" loading="lazy">
-          <div>
-            <span>Hamur ve Unlu Mamuller</span>
-            <h3>Liangpi Makinesi</h3>
-            <p>Liangpi Makinesi, gıda üretimi, merkezi mutfak, restoran zinciri ve yemek fabrikası projeleri için NJ GROUP tarafından Türkiye pazarına sunulan profesyonel ekipman grubudur.</p>
-            <ul>
-              <li>İstanbul showroom ve proje görüşmesi</li>
-              <li>Kapasiteye göre makine seçimi ve fiyat teklifi</li>
-              <li>Kurulum, yedek parça ve satış sonrası destek</li>
-            </ul>
-            <a class="mini-cta" href="https://wa.me/905355727525?text=Merhaba%20NJ%20GROUP,%20Liangpi%20Makinesi%20hakk%C4%B1nda%20bilgi%20ve%20fiyat%20almak%20istiyorum.">WhatsApp ile fiyat iste</a>
+
+        <article class="product-card" id="endustriyel-sebze-soyma-makinesi">
+          <div class="product-media">
+            <img src="assets/food-root-vegetable-peeler.jpg" alt="NJ GROUP Endüstriyel Sebze Soyma Makinesi" loading="lazy">
+          </div>
+          <div class="product-copy">
+            <span class="category">Sebze Hazırlama</span>
+            <h3>Endüstriyel Sebze Soyma Makinesi</h3>
+            <p class="subtitle">Patates ve havuç için hızlı, verimli soyma</p>
+            <p>Patates, havuç ve benzeri kök sebzelerin kabuklarını hızlı ve etkili şekilde soyarak iş gücü tasarrufu ve standart üretim kalitesi sağlar.</p>
+            <div class="feature-list">
+              <span>Aşındırıcı iç yüzey</span><span>Kısa sürede yüksek verim</span><span>Sağlam paslanmaz çelik gövde</span><span>Kolay kullanım ve bakım</span><span>Su tasarruflu çalışma</span>
+            </div>
+            <div class="detail-grid">
+              <div>
+                <h4>Kullanım alanları</h4>
+                <ul><li>Patates</li><li>Havuç</li><li>Tatlı patates</li><li>Pancar</li><li>Turp ve kök sebzeler</li></ul>
+              </div>
+              <div>
+                <h4>Teknik bilgiler</h4>
+                <table class="spec-table"><tbody><tr><th>Model</th><td>TP-1000</td></tr>
+<tr><th>Kapasite</th><td>1000 kg/saat</td></tr>
+<tr><th>Güç</th><td>1500 W</td></tr>
+<tr><th>Voltaj</th><td>380V / 50Hz</td></tr>
+<tr><th>Soyma süresi</th><td>1-3 dakika (ürüne göre)</td></tr>
+<tr><th>Dönüş hızı</th><td>220 rpm</td></tr>
+<tr><th>İç yüzey</th><td>Aşındırıcı zımpara kaplama</td></tr>
+<tr><th>Gövde malzemesi</th><td>Paslanmaz çelik</td></tr>
+<tr><th>Su girişi</th><td>1/2 inch</td></tr>
+<tr><th>Tahliye çıkışı</th><td>1 inch</td></tr>
+<tr><th>Makine boyutu</th><td>1100 x 700 x 1100 mm</td></tr>
+<tr><th>Ağırlık</th><td>120 kg</td></tr></tbody></table>
+              </div>
+            </div>
+            <a class="mini-cta" href="https://wa.me/905355727525?text=Merhaba%20NJ%20GROUP%2C%20End%C3%BCstriyel%20Sebze%20Soyma%20Makinesi%20i%C3%A7in%20bilgi%20ve%20fiyat%20teklifi%20almak%20istiyorum.">WhatsApp ile teklif iste</a>
           </div>
         </article>
-        <article class="machine-card" id="pirinc-eristesi-makinesi">
-          <img src="assets/kivora-machine-11.jpg" alt="NJ GROUP Pirinç Eriştesi Makinesi İstanbul" loading="lazy">
-          <div>
-            <span>Hamur ve Unlu Mamuller</span>
-            <h3>Pirinç Eriştesi Makinesi</h3>
-            <p>Pirinç Eriştesi Makinesi, gıda üretimi, merkezi mutfak, restoran zinciri ve yemek fabrikası projeleri için NJ GROUP tarafından Türkiye pazarına sunulan profesyonel ekipman grubudur.</p>
-            <ul>
-              <li>İstanbul showroom ve proje görüşmesi</li>
-              <li>Kapasiteye göre makine seçimi ve fiyat teklifi</li>
-              <li>Kurulum, yedek parça ve satış sonrası destek</li>
-            </ul>
-            <a class="mini-cta" href="https://wa.me/905355727525?text=Merhaba%20NJ%20GROUP,%20Pirinç%20Eriştesi%20Makinesi%20hakk%C4%B1nda%20bilgi%20ve%20fiyat%20almak%20istiyorum.">WhatsApp ile fiyat iste</a>
+
+        <article class="product-card" id="endustriyel-hamur-yogurma-makinesi">
+          <div class="product-media">
+            <img src="assets/food-dough-kneader.jpg" alt="NJ GROUP Endüstriyel Hamur Yoğurma Makinesi" loading="lazy">
+          </div>
+          <div class="product-copy">
+            <span class="category">Hamur & Makarna</span>
+            <h3>Endüstriyel Hamur Yoğurma Makinesi</h3>
+            <p class="subtitle">Güçlü performans ve mükemmel hamur kıvamı</p>
+            <p>Ekmek, pide, pizza, börek, mantı ve benzeri hamur işleri için yüksek hacimli, homojen ve hijyenik yoğurma sağlar.</p>
+            <div class="feature-list">
+              <span>Güçlü motor</span><span>Paslanmaz çelik hazne</span><span>Kolay kontrol paneli</span><span>Kolay temizlik</span><span>Düşük sesli çalışma</span>
+            </div>
+            <div class="detail-grid">
+              <div>
+                <h4>Kullanım alanları</h4>
+                <ul><li>Ekmek üretimi</li><li>Pide ve pizza</li><li>Börek ve katmer</li><li>Mantı ve erişte</li><li>Poğaça ve çörek</li></ul>
+              </div>
+              <div>
+                <h4>Teknik bilgiler</h4>
+                <table class="spec-table"><tbody><tr><th>Kapasite</th><td>25 kg un</td></tr>
+<tr><th>Un kapasitesi</th><td>25 kg</td></tr>
+<tr><th>Hamur kapasitesi</th><td>40-50 kg</td></tr>
+<tr><th>Güç</th><td>1.5 kW</td></tr>
+<tr><th>Voltaj</th><td>380V / 50Hz</td></tr>
+<tr><th>Karıştırma hızı</th><td>40-45 rpm</td></tr>
+<tr><th>Kazan ölçüsü</th><td>620 x 420 x 400 mm</td></tr>
+<tr><th>Makine ölçüsü</th><td>930 x 580 x 900 mm</td></tr>
+<tr><th>Ağırlık</th><td>120 kg</td></tr></tbody></table>
+              </div>
+            </div>
+            <a class="mini-cta" href="https://wa.me/905355727525?text=Merhaba%20NJ%20GROUP%2C%20End%C3%BCstriyel%20Hamur%20Yo%C4%9Furma%20Makinesi%20i%C3%A7in%20bilgi%20ve%20fiyat%20teklifi%20almak%20istiyorum.">WhatsApp ile teklif iste</a>
           </div>
         </article>
-        <article class="machine-card" id="kompakt-tofu-makinesi">
-          <img src="assets/kivora-machine-12.jpg" alt="NJ GROUP Kompakt Tofu Makinesi İstanbul" loading="lazy">
-          <div>
-            <span>Soya ve Bitkisel Protein</span>
-            <h3>Kompakt Tofu Makinesi</h3>
-            <p>Kompakt Tofu Makinesi, gıda üretimi, merkezi mutfak, restoran zinciri ve yemek fabrikası projeleri için NJ GROUP tarafından Türkiye pazarına sunulan profesyonel ekipman grubudur.</p>
-            <ul>
-              <li>İstanbul showroom ve proje görüşmesi</li>
-              <li>Kapasiteye göre makine seçimi ve fiyat teklifi</li>
-              <li>Kurulum, yedek parça ve satış sonrası destek</li>
-            </ul>
-            <a class="mini-cta" href="https://wa.me/905355727525?text=Merhaba%20NJ%20GROUP,%20Kompakt%20Tofu%20Makinesi%20hakk%C4%B1nda%20bilgi%20ve%20fiyat%20almak%20istiyorum.">WhatsApp ile fiyat iste</a>
+
+        <article class="product-card" id="hamur-yogurma-rulo-makinesi">
+          <div class="product-media">
+            <img src="assets/food-dough-roller.jpg" alt="NJ GROUP Hamur Yoğurma Rulo Makinesi" loading="lazy">
+          </div>
+          <div class="product-copy">
+            <span class="category">Hamur & Makarna</span>
+            <h3>Hamur Yoğurma Rulo Makinesi</h3>
+            <p class="subtitle">Pürüzsüz, esnek ve standart hamur yüzeyi</p>
+            <p>Hamurun gluten yapısını güçlendirir, yüzeyini pürüzsüz hale getirir ve pizza, börek, mantı, yufka, erişte ve dumpling hamurlarında standart sonuç verir.</p>
+            <div class="feature-list">
+              <span>Çift yönlü yoğurma</span><span>Ayarlanabilir kalınlık</span><span>Paslanmaz çelik gövde</span><span>Acil durdurma ve koruyucu kapak</span><span>Kolay temizlenir yapı</span>
+            </div>
+            <div class="detail-grid">
+              <div>
+                <h4>Kullanım alanları</h4>
+                <ul><li>Ekmek hamuru</li><li>Pizza hamuru</li><li>Börek ve yufka</li><li>Mantı ve erişte</li><li>Dumpling hamuru</li></ul>
+              </div>
+              <div>
+                <h4>Teknik bilgiler</h4>
+                <table class="spec-table"><tbody><tr><th>Model</th><td>YJ-520</td></tr>
+<tr><th>Güç</th><td>1500 W</td></tr>
+<tr><th>Voltaj</th><td>220V / 50Hz</td></tr>
+<tr><th>Yoğurma genişliği</th><td>520 mm</td></tr>
+<tr><th>Konveyör uzunluğu</th><td>1200 mm</td></tr>
+<tr><th>Yoğurma kalınlığı</th><td>1-35 mm ayarlanabilir</td></tr>
+<tr><th>Yoğurma hızı</th><td>60 rpm ileri / 42 rpm geri</td></tr>
+<tr><th>Makine ölçüleri</th><td>1450 x 750 x 620 mm</td></tr>
+<tr><th>Ağırlık</th><td>120 kg</td></tr></tbody></table>
+              </div>
+            </div>
+            <a class="mini-cta" href="https://wa.me/905355727525?text=Merhaba%20NJ%20GROUP%2C%20Hamur%20Yo%C4%9Furma%20Rulo%20Makinesi%20i%C3%A7in%20bilgi%20ve%20fiyat%20teklifi%20almak%20istiyorum.">WhatsApp ile teklif iste</a>
           </div>
         </article>
-        <article class="machine-card" id="fabrika-tipi-tofu-uretim-hatti">
-          <img src="assets/kivora-machine-13.jpg" alt="NJ GROUP Fabrika Tipi Tofu Üretim Hattı İstanbul" loading="lazy">
-          <div>
-            <span>Soya ve Bitkisel Protein</span>
-            <h3>Fabrika Tipi Tofu Üretim Hattı</h3>
-            <p>Fabrika Tipi Tofu Üretim Hattı, gıda üretimi, merkezi mutfak, restoran zinciri ve yemek fabrikası projeleri için NJ GROUP tarafından Türkiye pazarına sunulan profesyonel ekipman grubudur.</p>
-            <ul>
-              <li>İstanbul showroom ve proje görüşmesi</li>
-              <li>Kapasiteye göre makine seçimi ve fiyat teklifi</li>
-              <li>Kurulum, yedek parça ve satış sonrası destek</li>
-            </ul>
-            <a class="mini-cta" href="https://wa.me/905355727525?text=Merhaba%20NJ%20GROUP,%20Fabrika%20Tipi%20Tofu%20Üretim%20Hattı%20hakk%C4%B1nda%20bilgi%20ve%20fiyat%20almak%20istiyorum.">WhatsApp ile fiyat iste</a>
+
+        <article class="product-card" id="otomatik-filizlendirme-makinesi">
+          <div class="product-media">
+            <img src="assets/food-sprout-machine.jpg" alt="NJ GROUP Otomatik Filizlendirme Makinesi" loading="lazy">
+          </div>
+          <div class="product-copy">
+            <span class="category">Filizlendirme</span>
+            <h3>Otomatik Filizlendirme Makinesi</h3>
+            <p class="subtitle">Tam otomatik, temiz, verimli ve kolay kullanım</p>
+            <p>Sarı soya fasulyesi, yeşil mung fasulyesi ve benzeri filiz ürünleri için sulama, temizlik, havalandırma ve sıcaklık kontrolünü otomatik yönetir.</p>
+            <div class="feature-list">
+              <span>Otomatik zaman ayarlı sulama</span><span>360° döner sprey başlıkları</span><span>Güçlü havalandırma sistemi</span><span>Dijital sıcaklık kontrolü</span><span>Katlı tepsi sistemi</span>
+            </div>
+            <div class="detail-grid">
+              <div>
+                <h4>Kullanım alanları</h4>
+                <ul><li>Soya filizi</li><li>Yeşil mung filizi</li><li>Restoran ve oteller</li><li>Gıda üretim tesisleri</li><li>Market ve sağlıklı gıda üreticileri</li></ul>
+              </div>
+              <div>
+                <h4>Teknik bilgiler</h4>
+                <table class="spec-table"><tbody><tr><th>Model</th><td>NJ-FLZ-200</td></tr>
+<tr><th>Kapasite</th><td>200 kg kuru fasulye/gün</td></tr>
+<tr><th>Malzeme</th><td>304 paslanmaz çelik</td></tr>
+<tr><th>Sulama sistemi</th><td>Otomatik zaman ayarlı sprey sulama</td></tr>
+<tr><th>Temizleme sistemi</th><td>360° döner sprey başlıkları</td></tr>
+<tr><th>Havalandırma</th><td>Güçlü fan ile hava sirkülasyonu</td></tr>
+<tr><th>Sıcaklık kontrolü</th><td>Dijital termostat 15-35°C</td></tr>
+<tr><th>Kat sayısı</th><td>5 kat, isteğe bağlı özelleştirilebilir</td></tr>
+<tr><th>Tepsi ölçüsü</th><td>600 x 400 mm</td></tr>
+<tr><th>Güç</th><td>2.2 kW</td></tr>
+<tr><th>Voltaj</th><td>380V / 50Hz</td></tr>
+<tr><th>Makine ölçüleri</th><td>2000 x 800 x 1800 mm</td></tr>
+<tr><th>Ağırlık</th><td>280 kg</td></tr></tbody></table>
+              </div>
+            </div>
+            <a class="mini-cta" href="https://wa.me/905355727525?text=Merhaba%20NJ%20GROUP%2C%20Otomatik%20Filizlendirme%20Makinesi%20i%C3%A7in%20bilgi%20ve%20fiyat%20teklifi%20almak%20istiyorum.">WhatsApp ile teklif iste</a>
           </div>
         </article>
-        <article class="machine-card" id="tofu-derisi-makinesi">
-          <img src="assets/kivora-machine-14.jpg" alt="NJ GROUP Tofu Derisi Makinesi İstanbul" loading="lazy">
-          <div>
-            <span>Soya ve Bitkisel Protein</span>
-            <h3>Tofu Derisi Makinesi</h3>
-            <p>Tofu Derisi Makinesi, gıda üretimi, merkezi mutfak, restoran zinciri ve yemek fabrikası projeleri için NJ GROUP tarafından Türkiye pazarına sunulan profesyonel ekipman grubudur.</p>
-            <ul>
-              <li>İstanbul showroom ve proje görüşmesi</li>
-              <li>Kapasiteye göre makine seçimi ve fiyat teklifi</li>
-              <li>Kurulum, yedek parça ve satış sonrası destek</li>
-            </ul>
-            <a class="mini-cta" href="https://wa.me/905355727525?text=Merhaba%20NJ%20GROUP,%20Tofu%20Derisi%20Makinesi%20hakk%C4%B1nda%20bilgi%20ve%20fiyat%20almak%20istiyorum.">WhatsApp ile fiyat iste</a>
+
+        <article class="product-card" id="12-katli-buharli-pisirici">
+          <div class="product-media">
+            <img src="assets/food-steam-cabinet.jpg" alt="NJ GROUP 12 Katlı Buharlı Pişirici" loading="lazy">
           </div>
-        </article>
-        <article class="machine-card" id="fasulye-filizi-makinesi">
-          <img src="assets/kivora-machine-15.jpg" alt="NJ GROUP Fasulye Filizi Makinesi İstanbul" loading="lazy">
-          <div>
-            <span>Soya ve Bitkisel Protein</span>
-            <h3>Fasulye Filizi Makinesi</h3>
-            <p>Fasulye Filizi Makinesi, gıda üretimi, merkezi mutfak, restoran zinciri ve yemek fabrikası projeleri için NJ GROUP tarafından Türkiye pazarına sunulan profesyonel ekipman grubudur.</p>
-            <ul>
-              <li>İstanbul showroom ve proje görüşmesi</li>
-              <li>Kapasiteye göre makine seçimi ve fiyat teklifi</li>
-              <li>Kurulum, yedek parça ve satış sonrası destek</li>
-            </ul>
-            <a class="mini-cta" href="https://wa.me/905355727525?text=Merhaba%20NJ%20GROUP,%20Fasulye%20Filizi%20Makinesi%20hakk%C4%B1nda%20bilgi%20ve%20fiyat%20almak%20istiyorum.">WhatsApp ile fiyat iste</a>
-          </div>
-        </article>
-        <article class="machine-card" id="soya-urunleri-yardimci-ekipmanlari">
-          <img src="assets/kivora-machine-16.jpg" alt="NJ GROUP Soya Ürünleri Yardımcı Ekipmanları İstanbul" loading="lazy">
-          <div>
-            <span>Soya ve Bitkisel Protein</span>
-            <h3>Soya Ürünleri Yardımcı Ekipmanları</h3>
-            <p>Soya Ürünleri Yardımcı Ekipmanları, gıda üretimi, merkezi mutfak, restoran zinciri ve yemek fabrikası projeleri için NJ GROUP tarafından Türkiye pazarına sunulan profesyonel ekipman grubudur.</p>
-            <ul>
-              <li>İstanbul showroom ve proje görüşmesi</li>
-              <li>Kapasiteye göre makine seçimi ve fiyat teklifi</li>
-              <li>Kurulum, yedek parça ve satış sonrası destek</li>
-            </ul>
-            <a class="mini-cta" href="https://wa.me/905355727525?text=Merhaba%20NJ%20GROUP,%20Soya%20Ürünleri%20Yardımcı%20Ekipmanları%20hakk%C4%B1nda%20bilgi%20ve%20fiyat%20almak%20istiyorum.">WhatsApp ile fiyat iste</a>
-          </div>
-        </article>
-        <article class="machine-card" id="soya-sutu-makinesi">
-          <img src="assets/kivora-machine-17.jpg" alt="NJ GROUP Soya Sütü Makinesi İstanbul" loading="lazy">
-          <div>
-            <span>Soya ve Bitkisel Protein</span>
-            <h3>Soya Sütü Makinesi</h3>
-            <p>Soya Sütü Makinesi, gıda üretimi, merkezi mutfak, restoran zinciri ve yemek fabrikası projeleri için NJ GROUP tarafından Türkiye pazarına sunulan profesyonel ekipman grubudur.</p>
-            <ul>
-              <li>İstanbul showroom ve proje görüşmesi</li>
-              <li>Kapasiteye göre makine seçimi ve fiyat teklifi</li>
-              <li>Kurulum, yedek parça ve satış sonrası destek</li>
-            </ul>
-            <a class="mini-cta" href="https://wa.me/905355727525?text=Merhaba%20NJ%20GROUP,%20Soya%20Sütü%20Makinesi%20hakk%C4%B1nda%20bilgi%20ve%20fiyat%20almak%20istiyorum.">WhatsApp ile fiyat iste</a>
-          </div>
-        </article>
-        <article class="machine-card" id="cok-fonksiyonlu-sebze-kesme-makinesi">
-          <img src="assets/kivora-machine-18.jpg" alt="NJ GROUP Çok Fonksiyonlu Sebze Kesme Makinesi İstanbul" loading="lazy">
-          <div>
-            <span>Sebze Hazırlama</span>
-            <h3>Çok Fonksiyonlu Sebze Kesme Makinesi</h3>
-            <p>Çok Fonksiyonlu Sebze Kesme Makinesi, gıda üretimi, merkezi mutfak, restoran zinciri ve yemek fabrikası projeleri için NJ GROUP tarafından Türkiye pazarına sunulan profesyonel ekipman grubudur.</p>
-            <ul>
-              <li>İstanbul showroom ve proje görüşmesi</li>
-              <li>Kapasiteye göre makine seçimi ve fiyat teklifi</li>
-              <li>Kurulum, yedek parça ve satış sonrası destek</li>
-            </ul>
-            <a class="mini-cta" href="https://wa.me/905355727525?text=Merhaba%20NJ%20GROUP,%20Çok%20Fonksiyonlu%20Sebze%20Kesme%20Makinesi%20hakk%C4%B1nda%20bilgi%20ve%20fiyat%20almak%20istiyorum.">WhatsApp ile fiyat iste</a>
-          </div>
-        </article>
-        <article class="machine-card" id="yaprak-sebze-yikama-makinesi">
-          <img src="assets/kivora-machine-19.jpg" alt="NJ GROUP Yaprak Sebze Yıkama Makinesi İstanbul" loading="lazy">
-          <div>
-            <span>Sebze Hazırlama</span>
-            <h3>Yaprak Sebze Yıkama Makinesi</h3>
-            <p>Yaprak Sebze Yıkama Makinesi, gıda üretimi, merkezi mutfak, restoran zinciri ve yemek fabrikası projeleri için NJ GROUP tarafından Türkiye pazarına sunulan profesyonel ekipman grubudur.</p>
-            <ul>
-              <li>İstanbul showroom ve proje görüşmesi</li>
-              <li>Kapasiteye göre makine seçimi ve fiyat teklifi</li>
-              <li>Kurulum, yedek parça ve satış sonrası destek</li>
-            </ul>
-            <a class="mini-cta" href="https://wa.me/905355727525?text=Merhaba%20NJ%20GROUP,%20Yaprak%20Sebze%20Yıkama%20Makinesi%20hakk%C4%B1nda%20bilgi%20ve%20fiyat%20almak%20istiyorum.">WhatsApp ile fiyat iste</a>
-          </div>
-        </article>
-        <article class="machine-card" id="kok-sebze-soyma-makinesi">
-          <img src="assets/kivora-machine-20.jpg" alt="NJ GROUP Kök Sebze Soyma Makinesi İstanbul" loading="lazy">
-          <div>
-            <span>Sebze Hazırlama</span>
-            <h3>Kök Sebze Soyma Makinesi</h3>
-            <p>Kök Sebze Soyma Makinesi, gıda üretimi, merkezi mutfak, restoran zinciri ve yemek fabrikası projeleri için NJ GROUP tarafından Türkiye pazarına sunulan profesyonel ekipman grubudur.</p>
-            <ul>
-              <li>İstanbul showroom ve proje görüşmesi</li>
-              <li>Kapasiteye göre makine seçimi ve fiyat teklifi</li>
-              <li>Kurulum, yedek parça ve satış sonrası destek</li>
-            </ul>
-            <a class="mini-cta" href="https://wa.me/905355727525?text=Merhaba%20NJ%20GROUP,%20Kök%20Sebze%20Soyma%20Makinesi%20hakk%C4%B1nda%20bilgi%20ve%20fiyat%20almak%20istiyorum.">WhatsApp ile fiyat iste</a>
-          </div>
-        </article>
-        <article class="machine-card" id="sebze-kurutma-makinesi">
-          <img src="assets/kivora-machine-21.jpg" alt="NJ GROUP Sebze Kurutma Makinesi İstanbul" loading="lazy">
-          <div>
-            <span>Sebze Hazırlama</span>
-            <h3>Sebze Kurutma Makinesi</h3>
-            <p>Sebze Kurutma Makinesi, gıda üretimi, merkezi mutfak, restoran zinciri ve yemek fabrikası projeleri için NJ GROUP tarafından Türkiye pazarına sunulan profesyonel ekipman grubudur.</p>
-            <ul>
-              <li>İstanbul showroom ve proje görüşmesi</li>
-              <li>Kapasiteye göre makine seçimi ve fiyat teklifi</li>
-              <li>Kurulum, yedek parça ve satış sonrası destek</li>
-            </ul>
-            <a class="mini-cta" href="https://wa.me/905355727525?text=Merhaba%20NJ%20GROUP,%20Sebze%20Kurutma%20Makinesi%20hakk%C4%B1nda%20bilgi%20ve%20fiyat%20almak%20istiyorum.">WhatsApp ile fiyat iste</a>
-          </div>
-        </article>
-        <article class="machine-card" id="kase-kesici-parcalayici">
-          <img src="assets/kivora-machine-22.jpg" alt="NJ GROUP Kase Kesici / Parçalayıcı İstanbul" loading="lazy">
-          <div>
-            <span>Et İşleme</span>
-            <h3>Kase Kesici / Parçalayıcı</h3>
-            <p>Kase Kesici / Parçalayıcı, gıda üretimi, merkezi mutfak, restoran zinciri ve yemek fabrikası projeleri için NJ GROUP tarafından Türkiye pazarına sunulan profesyonel ekipman grubudur.</p>
-            <ul>
-              <li>İstanbul showroom ve proje görüşmesi</li>
-              <li>Kapasiteye göre makine seçimi ve fiyat teklifi</li>
-              <li>Kurulum, yedek parça ve satış sonrası destek</li>
-            </ul>
-            <a class="mini-cta" href="https://wa.me/905355727525?text=Merhaba%20NJ%20GROUP,%20Kase%20Kesici%20/%20Parçalayıcı%20hakk%C4%B1nda%20bilgi%20ve%20fiyat%20almak%20istiyorum.">WhatsApp ile fiyat iste</a>
-          </div>
-        </article>
-        <article class="machine-card" id="et-kiyma-makinesi">
-          <img src="assets/kivora-machine-23.jpg" alt="NJ GROUP Et Kıyma Makinesi İstanbul" loading="lazy">
-          <div>
-            <span>Et İşleme</span>
-            <h3>Et Kıyma Makinesi</h3>
-            <p>Et Kıyma Makinesi, gıda üretimi, merkezi mutfak, restoran zinciri ve yemek fabrikası projeleri için NJ GROUP tarafından Türkiye pazarına sunulan profesyonel ekipman grubudur.</p>
-            <ul>
-              <li>İstanbul showroom ve proje görüşmesi</li>
-              <li>Kapasiteye göre makine seçimi ve fiyat teklifi</li>
-              <li>Kurulum, yedek parça ve satış sonrası destek</li>
-            </ul>
-            <a class="mini-cta" href="https://wa.me/905355727525?text=Merhaba%20NJ%20GROUP,%20Et%20Kıyma%20Makinesi%20hakk%C4%B1nda%20bilgi%20ve%20fiyat%20almak%20istiyorum.">WhatsApp ile fiyat iste</a>
-          </div>
-        </article>
-        <article class="machine-card" id="et-serit-ve-dilim-kesme-makinesi">
-          <img src="assets/kivora-machine-24.jpg" alt="NJ GROUP Et Şerit ve Dilim Kesme Makinesi İstanbul" loading="lazy">
-          <div>
-            <span>Et İşleme</span>
-            <h3>Et Şerit ve Dilim Kesme Makinesi</h3>
-            <p>Et Şerit ve Dilim Kesme Makinesi, gıda üretimi, merkezi mutfak, restoran zinciri ve yemek fabrikası projeleri için NJ GROUP tarafından Türkiye pazarına sunulan profesyonel ekipman grubudur.</p>
-            <ul>
-              <li>İstanbul showroom ve proje görüşmesi</li>
-              <li>Kapasiteye göre makine seçimi ve fiyat teklifi</li>
-              <li>Kurulum, yedek parça ve satış sonrası destek</li>
-            </ul>
-            <a class="mini-cta" href="https://wa.me/905355727525?text=Merhaba%20NJ%20GROUP,%20Et%20Şerit%20ve%20Dilim%20Kesme%20Makinesi%20hakk%C4%B1nda%20bilgi%20ve%20fiyat%20almak%20istiyorum.">WhatsApp ile fiyat iste</a>
-          </div>
-        </article>
-        <article class="machine-card" id="pismis-et-dilimleme-makinesi">
-          <img src="assets/kivora-machine-25.jpg" alt="NJ GROUP Pişmiş Et Dilimleme Makinesi İstanbul" loading="lazy">
-          <div>
-            <span>Et İşleme</span>
-            <h3>Pişmiş Et Dilimleme Makinesi</h3>
-            <p>Pişmiş Et Dilimleme Makinesi, gıda üretimi, merkezi mutfak, restoran zinciri ve yemek fabrikası projeleri için NJ GROUP tarafından Türkiye pazarına sunulan profesyonel ekipman grubudur.</p>
-            <ul>
-              <li>İstanbul showroom ve proje görüşmesi</li>
-              <li>Kapasiteye göre makine seçimi ve fiyat teklifi</li>
-              <li>Kurulum, yedek parça ve satış sonrası destek</li>
-            </ul>
-            <a class="mini-cta" href="https://wa.me/905355727525?text=Merhaba%20NJ%20GROUP,%20Pişmiş%20Et%20Dilimleme%20Makinesi%20hakk%C4%B1nda%20bilgi%20ve%20fiyat%20almak%20istiyorum.">WhatsApp ile fiyat iste</a>
-          </div>
-        </article>
-        <article class="machine-card" id="et-kup-dograma-makinesi">
-          <img src="assets/kivora-machine-26.jpg" alt="NJ GROUP Et Küp Doğrama Makinesi İstanbul" loading="lazy">
-          <div>
-            <span>Et İşleme</span>
-            <h3>Et Küp Doğrama Makinesi</h3>
-            <p>Et Küp Doğrama Makinesi, gıda üretimi, merkezi mutfak, restoran zinciri ve yemek fabrikası projeleri için NJ GROUP tarafından Türkiye pazarına sunulan profesyonel ekipman grubudur.</p>
-            <ul>
-              <li>İstanbul showroom ve proje görüşmesi</li>
-              <li>Kapasiteye göre makine seçimi ve fiyat teklifi</li>
-              <li>Kurulum, yedek parça ve satış sonrası destek</li>
-            </ul>
-            <a class="mini-cta" href="https://wa.me/905355727525?text=Merhaba%20NJ%20GROUP,%20Et%20Küp%20Doğrama%20Makinesi%20hakk%C4%B1nda%20bilgi%20ve%20fiyat%20almak%20istiyorum.">WhatsApp ile fiyat iste</a>
-          </div>
-        </article>
-        <article class="machine-card" id="kemik-testere-makinesi">
-          <img src="assets/kivora-machine-27.jpg" alt="NJ GROUP Kemik Testere Makinesi İstanbul" loading="lazy">
-          <div>
-            <span>Et İşleme</span>
-            <h3>Kemik Testere Makinesi</h3>
-            <p>Kemik Testere Makinesi, gıda üretimi, merkezi mutfak, restoran zinciri ve yemek fabrikası projeleri için NJ GROUP tarafından Türkiye pazarına sunulan profesyonel ekipman grubudur.</p>
-            <ul>
-              <li>İstanbul showroom ve proje görüşmesi</li>
-              <li>Kapasiteye göre makine seçimi ve fiyat teklifi</li>
-              <li>Kurulum, yedek parça ve satış sonrası destek</li>
-            </ul>
-            <a class="mini-cta" href="https://wa.me/905355727525?text=Merhaba%20NJ%20GROUP,%20Kemik%20Testere%20Makinesi%20hakk%C4%B1nda%20bilgi%20ve%20fiyat%20almak%20istiyorum.">WhatsApp ile fiyat iste</a>
-          </div>
-        </article>
-        <article class="machine-card" id="kaburga-dograma-makinesi">
-          <img src="assets/kivora-machine-28.jpg" alt="NJ GROUP Kaburga Doğrama Makinesi İstanbul" loading="lazy">
-          <div>
-            <span>Et İşleme</span>
-            <h3>Kaburga Doğrama Makinesi</h3>
-            <p>Kaburga Doğrama Makinesi, gıda üretimi, merkezi mutfak, restoran zinciri ve yemek fabrikası projeleri için NJ GROUP tarafından Türkiye pazarına sunulan profesyonel ekipman grubudur.</p>
-            <ul>
-              <li>İstanbul showroom ve proje görüşmesi</li>
-              <li>Kapasiteye göre makine seçimi ve fiyat teklifi</li>
-              <li>Kurulum, yedek parça ve satış sonrası destek</li>
-            </ul>
-            <a class="mini-cta" href="https://wa.me/905355727525?text=Merhaba%20NJ%20GROUP,%20Kaburga%20Doğrama%20Makinesi%20hakk%C4%B1nda%20bilgi%20ve%20fiyat%20almak%20istiyorum.">WhatsApp ile fiyat iste</a>
-          </div>
-        </article>
-        <article class="machine-card" id="koyun-eti-dilimleme-makinesi">
-          <img src="assets/kivora-machine-29.jpg" alt="NJ GROUP Koyun Eti Dilimleme Makinesi İstanbul" loading="lazy">
-          <div>
-            <span>Et İşleme</span>
-            <h3>Koyun Eti Dilimleme Makinesi</h3>
-            <p>Koyun Eti Dilimleme Makinesi, gıda üretimi, merkezi mutfak, restoran zinciri ve yemek fabrikası projeleri için NJ GROUP tarafından Türkiye pazarına sunulan profesyonel ekipman grubudur.</p>
-            <ul>
-              <li>İstanbul showroom ve proje görüşmesi</li>
-              <li>Kapasiteye göre makine seçimi ve fiyat teklifi</li>
-              <li>Kurulum, yedek parça ve satış sonrası destek</li>
-            </ul>
-            <a class="mini-cta" href="https://wa.me/905355727525?text=Merhaba%20NJ%20GROUP,%20Koyun%20Eti%20Dilimleme%20Makinesi%20hakk%C4%B1nda%20bilgi%20ve%20fiyat%20almak%20istiyorum.">WhatsApp ile fiyat iste</a>
-          </div>
-        </article>
-        <article class="machine-card" id="dana-zari-soyma-makinesi">
-          <img src="assets/kivora-machine-30.jpg" alt="NJ GROUP Dana Zarı Soyma Makinesi İstanbul" loading="lazy">
-          <div>
-            <span>Et İşleme</span>
-            <h3>Dana Zarı Soyma Makinesi</h3>
-            <p>Dana Zarı Soyma Makinesi, gıda üretimi, merkezi mutfak, restoran zinciri ve yemek fabrikası projeleri için NJ GROUP tarafından Türkiye pazarına sunulan profesyonel ekipman grubudur.</p>
-            <ul>
-              <li>İstanbul showroom ve proje görüşmesi</li>
-              <li>Kapasiteye göre makine seçimi ve fiyat teklifi</li>
-              <li>Kurulum, yedek parça ve satış sonrası destek</li>
-            </ul>
-            <a class="mini-cta" href="https://wa.me/905355727525?text=Merhaba%20NJ%20GROUP,%20Dana%20Zarı%20Soyma%20Makinesi%20hakk%C4%B1nda%20bilgi%20ve%20fiyat%20almak%20istiyorum.">WhatsApp ile fiyat iste</a>
-          </div>
-        </article>
-        <article class="machine-card" id="tavuk-ve-ordek-blok-kesme-makinesi">
-          <img src="assets/kivora-machine-31.jpg" alt="NJ GROUP Tavuk ve Ördek Blok Kesme Makinesi İstanbul" loading="lazy">
-          <div>
-            <span>Et İşleme</span>
-            <h3>Tavuk ve Ördek Blok Kesme Makinesi</h3>
-            <p>Tavuk ve Ördek Blok Kesme Makinesi, gıda üretimi, merkezi mutfak, restoran zinciri ve yemek fabrikası projeleri için NJ GROUP tarafından Türkiye pazarına sunulan profesyonel ekipman grubudur.</p>
-            <ul>
-              <li>İstanbul showroom ve proje görüşmesi</li>
-              <li>Kapasiteye göre makine seçimi ve fiyat teklifi</li>
-              <li>Kurulum, yedek parça ve satış sonrası destek</li>
-            </ul>
-            <a class="mini-cta" href="https://wa.me/905355727525?text=Merhaba%20NJ%20GROUP,%20Tavuk%20ve%20Ördek%20Blok%20Kesme%20Makinesi%20hakk%C4%B1nda%20bilgi%20ve%20fiyat%20almak%20istiyorum.">WhatsApp ile fiyat iste</a>
-          </div>
-        </article>
-        <article class="machine-card" id="kofte-makinesi">
-          <img src="assets/kivora-machine-32.jpg" alt="NJ GROUP Köfte Makinesi İstanbul" loading="lazy">
-          <div>
-            <span>Et İşleme</span>
-            <h3>Köfte Makinesi</h3>
-            <p>Köfte Makinesi, gıda üretimi, merkezi mutfak, restoran zinciri ve yemek fabrikası projeleri için NJ GROUP tarafından Türkiye pazarına sunulan profesyonel ekipman grubudur.</p>
-            <ul>
-              <li>İstanbul showroom ve proje görüşmesi</li>
-              <li>Kapasiteye göre makine seçimi ve fiyat teklifi</li>
-              <li>Kurulum, yedek parça ve satış sonrası destek</li>
-            </ul>
-            <a class="mini-cta" href="https://wa.me/905355727525?text=Merhaba%20NJ%20GROUP,%20Köfte%20Makinesi%20hakk%C4%B1nda%20bilgi%20ve%20fiyat%20almak%20istiyorum.">WhatsApp ile fiyat iste</a>
-          </div>
-        </article>
-        <article class="machine-card" id="hamur-mikseri">
-          <img src="assets/kivora-machine-33.jpg" alt="NJ GROUP Hamur Mikseri İstanbul" loading="lazy">
-          <div>
-            <span>Yardımcı Mutfak Ekipmanları</span>
-            <h3>Hamur Mikseri</h3>
-            <p>Hamur Mikseri, gıda üretimi, merkezi mutfak, restoran zinciri ve yemek fabrikası projeleri için NJ GROUP tarafından Türkiye pazarına sunulan profesyonel ekipman grubudur.</p>
-            <ul>
-              <li>İstanbul showroom ve proje görüşmesi</li>
-              <li>Kapasiteye göre makine seçimi ve fiyat teklifi</li>
-              <li>Kurulum, yedek parça ve satış sonrası destek</li>
-            </ul>
-            <a class="mini-cta" href="https://wa.me/905355727525?text=Merhaba%20NJ%20GROUP,%20Hamur%20Mikseri%20hakk%C4%B1nda%20bilgi%20ve%20fiyat%20almak%20istiyorum.">WhatsApp ile fiyat iste</a>
-          </div>
-        </article>
-        <article class="machine-card" id="hamur-yogurma-makinesi">
-          <img src="assets/kivora-machine-34.jpg" alt="NJ GROUP Hamur Yoğurma Makinesi İstanbul" loading="lazy">
-          <div>
-            <span>Yardımcı Mutfak Ekipmanları</span>
-            <h3>Hamur Yoğurma Makinesi</h3>
-            <p>Hamur Yoğurma Makinesi, gıda üretimi, merkezi mutfak, restoran zinciri ve yemek fabrikası projeleri için NJ GROUP tarafından Türkiye pazarına sunulan profesyonel ekipman grubudur.</p>
-            <ul>
-              <li>İstanbul showroom ve proje görüşmesi</li>
-              <li>Kapasiteye göre makine seçimi ve fiyat teklifi</li>
-              <li>Kurulum, yedek parça ve satış sonrası destek</li>
-            </ul>
-            <a class="mini-cta" href="https://wa.me/905355727525?text=Merhaba%20NJ%20GROUP,%20Hamur%20Yoğurma%20Makinesi%20hakk%C4%B1nda%20bilgi%20ve%20fiyat%20almak%20istiyorum.">WhatsApp ile fiyat iste</a>
-          </div>
-        </article>
-        <article class="machine-card" id="eriste-karistirma-makinesi">
-          <img src="assets/kivora-machine-35.jpg" alt="NJ GROUP Erişte Karıştırma Makinesi İstanbul" loading="lazy">
-          <div>
-            <span>Yardımcı Mutfak Ekipmanları</span>
-            <h3>Erişte Karıştırma Makinesi</h3>
-            <p>Erişte Karıştırma Makinesi, gıda üretimi, merkezi mutfak, restoran zinciri ve yemek fabrikası projeleri için NJ GROUP tarafından Türkiye pazarına sunulan profesyonel ekipman grubudur.</p>
-            <ul>
-              <li>İstanbul showroom ve proje görüşmesi</li>
-              <li>Kapasiteye göre makine seçimi ve fiyat teklifi</li>
-              <li>Kurulum, yedek parça ve satış sonrası destek</li>
-            </ul>
-            <a class="mini-cta" href="https://wa.me/905355727525?text=Merhaba%20NJ%20GROUP,%20Erişte%20Karıştırma%20Makinesi%20hakk%C4%B1nda%20bilgi%20ve%20fiyat%20almak%20istiyorum.">WhatsApp ile fiyat iste</a>
-          </div>
-        </article>
-        <article class="machine-card" id="mayalama-kabini">
-          <img src="assets/kivora-machine-36.jpg" alt="NJ GROUP Mayalama Kabini İstanbul" loading="lazy">
-          <div>
-            <span>Yardımcı Mutfak Ekipmanları</span>
-            <h3>Mayalama Kabini</h3>
-            <p>Mayalama Kabini, gıda üretimi, merkezi mutfak, restoran zinciri ve yemek fabrikası projeleri için NJ GROUP tarafından Türkiye pazarına sunulan profesyonel ekipman grubudur.</p>
-            <ul>
-              <li>İstanbul showroom ve proje görüşmesi</li>
-              <li>Kapasiteye göre makine seçimi ve fiyat teklifi</li>
-              <li>Kurulum, yedek parça ve satış sonrası destek</li>
-            </ul>
-            <a class="mini-cta" href="https://wa.me/905355727525?text=Merhaba%20NJ%20GROUP,%20Mayalama%20Kabini%20hakk%C4%B1nda%20bilgi%20ve%20fiyat%20almak%20istiyorum.">WhatsApp ile fiyat iste</a>
-          </div>
-        </article>
-        <article class="machine-card" id="buhar-dolabi-buhar-odasi">
-          <img src="assets/kivora-machine-37.jpg" alt="NJ GROUP Buhar Dolabı / Buhar Odası İstanbul" loading="lazy">
-          <div>
-            <span>Yardımcı Mutfak Ekipmanları</span>
-            <h3>Buhar Dolabı / Buhar Odası</h3>
-            <p>Buhar Dolabı / Buhar Odası, gıda üretimi, merkezi mutfak, restoran zinciri ve yemek fabrikası projeleri için NJ GROUP tarafından Türkiye pazarına sunulan profesyonel ekipman grubudur.</p>
-            <ul>
-              <li>İstanbul showroom ve proje görüşmesi</li>
-              <li>Kapasiteye göre makine seçimi ve fiyat teklifi</li>
-              <li>Kurulum, yedek parça ve satış sonrası destek</li>
-            </ul>
-            <a class="mini-cta" href="https://wa.me/905355727525?text=Merhaba%20NJ%20GROUP,%20Buhar%20Dolabı%20/%20Buhar%20Odası%20hakk%C4%B1nda%20bilgi%20ve%20fiyat%20almak%20istiyorum.">WhatsApp ile fiyat iste</a>
-          </div>
-        </article>
-        <article class="machine-card" id="hamur-yikama-makinesi">
-          <img src="assets/kivora-machine-38.jpg" alt="NJ GROUP Hamur Yıkama Makinesi İstanbul" loading="lazy">
-          <div>
-            <span>Yardımcı Mutfak Ekipmanları</span>
-            <h3>Hamur Yıkama Makinesi</h3>
-            <p>Hamur Yıkama Makinesi, gıda üretimi, merkezi mutfak, restoran zinciri ve yemek fabrikası projeleri için NJ GROUP tarafından Türkiye pazarına sunulan profesyonel ekipman grubudur.</p>
-            <ul>
-              <li>İstanbul showroom ve proje görüşmesi</li>
-              <li>Kapasiteye göre makine seçimi ve fiyat teklifi</li>
-              <li>Kurulum, yedek parça ve satış sonrası destek</li>
-            </ul>
-            <a class="mini-cta" href="https://wa.me/905355727525?text=Merhaba%20NJ%20GROUP,%20Hamur%20Yıkama%20Makinesi%20hakk%C4%B1nda%20bilgi%20ve%20fiyat%20almak%20istiyorum.">WhatsApp ile fiyat iste</a>
-          </div>
-        </article>
-        <article class="machine-card" id="ceketli-pisirme-kazani">
-          <img src="assets/kivora-machine-39.jpg" alt="NJ GROUP Ceketli Pişirme Kazanı İstanbul" loading="lazy">
-          <div>
-            <span>Yardımcı Mutfak Ekipmanları</span>
-            <h3>Ceketli Pişirme Kazanı</h3>
-            <p>Ceketli Pişirme Kazanı, gıda üretimi, merkezi mutfak, restoran zinciri ve yemek fabrikası projeleri için NJ GROUP tarafından Türkiye pazarına sunulan profesyonel ekipman grubudur.</p>
-            <ul>
-              <li>İstanbul showroom ve proje görüşmesi</li>
-              <li>Kapasiteye göre makine seçimi ve fiyat teklifi</li>
-              <li>Kurulum, yedek parça ve satış sonrası destek</li>
-            </ul>
-            <a class="mini-cta" href="https://wa.me/905355727525?text=Merhaba%20NJ%20GROUP,%20Ceketli%20Pişirme%20Kazanı%20hakk%C4%B1nda%20bilgi%20ve%20fiyat%20almak%20istiyorum.">WhatsApp ile fiyat iste</a>
-          </div>
-        </article>
-        <article class="machine-card" id="elektrikli-izgara">
-          <img src="assets/kivora-machine-40.jpg" alt="NJ GROUP Elektrikli Izgara İstanbul" loading="lazy">
-          <div>
-            <span>Yardımcı Mutfak Ekipmanları</span>
-            <h3>Elektrikli Izgara</h3>
-            <p>Elektrikli Izgara, gıda üretimi, merkezi mutfak, restoran zinciri ve yemek fabrikası projeleri için NJ GROUP tarafından Türkiye pazarına sunulan profesyonel ekipman grubudur.</p>
-            <ul>
-              <li>İstanbul showroom ve proje görüşmesi</li>
-              <li>Kapasiteye göre makine seçimi ve fiyat teklifi</li>
-              <li>Kurulum, yedek parça ve satış sonrası destek</li>
-            </ul>
-            <a class="mini-cta" href="https://wa.me/905355727525?text=Merhaba%20NJ%20GROUP,%20Elektrikli%20Izgara%20hakk%C4%B1nda%20bilgi%20ve%20fiyat%20almak%20istiyorum.">WhatsApp ile fiyat iste</a>
-          </div>
-        </article>
-        <article class="machine-card" id="dolgu-karistirma-makinesi">
-          <img src="assets/kivora-machine-41.jpg" alt="NJ GROUP Dolgu Karıştırma Makinesi İstanbul" loading="lazy">
-          <div>
-            <span>Yardımcı Mutfak Ekipmanları</span>
-            <h3>Dolgu Karıştırma Makinesi</h3>
-            <p>Dolgu Karıştırma Makinesi, gıda üretimi, merkezi mutfak, restoran zinciri ve yemek fabrikası projeleri için NJ GROUP tarafından Türkiye pazarına sunulan profesyonel ekipman grubudur.</p>
-            <ul>
-              <li>İstanbul showroom ve proje görüşmesi</li>
-              <li>Kapasiteye göre makine seçimi ve fiyat teklifi</li>
-              <li>Kurulum, yedek parça ve satış sonrası destek</li>
-            </ul>
-            <a class="mini-cta" href="https://wa.me/905355727525?text=Merhaba%20NJ%20GROUP,%20Dolgu%20Karıştırma%20Makinesi%20hakk%C4%B1nda%20bilgi%20ve%20fiyat%20almak%20istiyorum.">WhatsApp ile fiyat iste</a>
-          </div>
-        </article>
-        <article class="machine-card" id="bulasik-yikama-makinesi">
-          <img src="assets/kivora-machine-42.jpg" alt="NJ GROUP Bulaşık Yıkama Makinesi İstanbul" loading="lazy">
-          <div>
-            <span>Yardımcı Mutfak Ekipmanları</span>
-            <h3>Bulaşık Yıkama Makinesi</h3>
-            <p>Bulaşık Yıkama Makinesi, gıda üretimi, merkezi mutfak, restoran zinciri ve yemek fabrikası projeleri için NJ GROUP tarafından Türkiye pazarına sunulan profesyonel ekipman grubudur.</p>
-            <ul>
-              <li>İstanbul showroom ve proje görüşmesi</li>
-              <li>Kapasiteye göre makine seçimi ve fiyat teklifi</li>
-              <li>Kurulum, yedek parça ve satış sonrası destek</li>
-            </ul>
-            <a class="mini-cta" href="https://wa.me/905355727525?text=Merhaba%20NJ%20GROUP,%20Bulaşık%20Yıkama%20Makinesi%20hakk%C4%B1nda%20bilgi%20ve%20fiyat%20almak%20istiyorum.">WhatsApp ile fiyat iste</a>
-          </div>
-        </article>
-        <article class="machine-card" id="buhar-jeneratoru">
-          <img src="assets/kivora-machine-43.jpg" alt="NJ GROUP Buhar Jeneratörü İstanbul" loading="lazy">
-          <div>
-            <span>Yardımcı Mutfak Ekipmanları</span>
-            <h3>Buhar Jeneratörü</h3>
-            <p>Buhar Jeneratörü, gıda üretimi, merkezi mutfak, restoran zinciri ve yemek fabrikası projeleri için NJ GROUP tarafından Türkiye pazarına sunulan profesyonel ekipman grubudur.</p>
-            <ul>
-              <li>İstanbul showroom ve proje görüşmesi</li>
-              <li>Kapasiteye göre makine seçimi ve fiyat teklifi</li>
-              <li>Kurulum, yedek parça ve satış sonrası destek</li>
-            </ul>
-            <a class="mini-cta" href="https://wa.me/905355727525?text=Merhaba%20NJ%20GROUP,%20Buhar%20Jeneratörü%20hakk%C4%B1nda%20bilgi%20ve%20fiyat%20almak%20istiyorum.">WhatsApp ile fiyat iste</a>
-          </div>
-        </article>
-        <article class="machine-card" id="pirinc-ogutme-makinesi">
-          <img src="assets/kivora-machine-44.jpg" alt="NJ GROUP Pirinç Öğütme Makinesi İstanbul" loading="lazy">
-          <div>
-            <span>Yardımcı Mutfak Ekipmanları</span>
-            <h3>Pirinç Öğütme Makinesi</h3>
-            <p>Pirinç Öğütme Makinesi, gıda üretimi, merkezi mutfak, restoran zinciri ve yemek fabrikası projeleri için NJ GROUP tarafından Türkiye pazarına sunulan profesyonel ekipman grubudur.</p>
-            <ul>
-              <li>İstanbul showroom ve proje görüşmesi</li>
-              <li>Kapasiteye göre makine seçimi ve fiyat teklifi</li>
-              <li>Kurulum, yedek parça ve satış sonrası destek</li>
-            </ul>
-            <a class="mini-cta" href="https://wa.me/905355727525?text=Merhaba%20NJ%20GROUP,%20Pirinç%20Öğütme%20Makinesi%20hakk%C4%B1nda%20bilgi%20ve%20fiyat%20almak%20istiyorum.">WhatsApp ile fiyat iste</a>
-          </div>
-        </article>
-        <article class="machine-card" id="paketleme-kapama-makinesi">
-          <img src="assets/kivora-machine-45.jpg" alt="NJ GROUP Paketleme / Kapama Makinesi İstanbul" loading="lazy">
-          <div>
-            <span>Yardımcı Mutfak Ekipmanları</span>
-            <h3>Paketleme / Kapama Makinesi</h3>
-            <p>Paketleme / Kapama Makinesi, gıda üretimi, merkezi mutfak, restoran zinciri ve yemek fabrikası projeleri için NJ GROUP tarafından Türkiye pazarına sunulan profesyonel ekipman grubudur.</p>
-            <ul>
-              <li>İstanbul showroom ve proje görüşmesi</li>
-              <li>Kapasiteye göre makine seçimi ve fiyat teklifi</li>
-              <li>Kurulum, yedek parça ve satış sonrası destek</li>
-            </ul>
-            <a class="mini-cta" href="https://wa.me/905355727525?text=Merhaba%20NJ%20GROUP,%20Paketleme%20/%20Kapama%20Makinesi%20hakk%C4%B1nda%20bilgi%20ve%20fiyat%20almak%20istiyorum.">WhatsApp ile fiyat iste</a>
+          <div class="product-copy">
+            <span class="category">Paketleme & Pişirme</span>
+            <h3>12 Katlı Buharlı Pişirici</h3>
+            <p class="subtitle">Çok amaçlı, yüksek verimli buharlı pişirme kabini</p>
+            <p>12 katlı tepsi sistemi ile buharda pişirme ihtiyaçlarını hijyenik, hızlı ve güvenilir şekilde karşılayan endüstriyel pişirme çözümüdür.</p>
+            <div class="feature-list">
+              <span>Güçlü buhar sistemi</span><span>12 katlı geniş kapasite</span><span>Paslanmaz çelik kabin</span><span>Enerji tasarruflu ısıtma</span><span>Kolay temizlik ve bakım</span>
+            </div>
+            <div class="detail-grid">
+              <div>
+                <h4>Kullanım alanları</h4>
+                <ul><li>Bao ve buharda hamur işleri</li><li>Pirinç</li><li>Sebze</li><li>Mantı / dumpling</li><li>Balık ve dana eti ürünleri</li></ul>
+              </div>
+              <div>
+                <h4>Teknik bilgiler</h4>
+                <table class="spec-table"><tbody><tr><th>Kapasite</th><td>12 tepsi</td></tr>
+<tr><th>Malzeme</th><td>Paslanmaz çelik</td></tr>
+<tr><th>Isıtma yöntemi</th><td>Buhar</td></tr>
+<tr><th>Güç</th><td>18 kW</td></tr>
+<tr><th>Voltaj</th><td>380V / 50Hz</td></tr>
+<tr><th>Tepsi ölçüsü</th><td>400 x 600 mm</td></tr>
+<tr><th>Boyutlar</th><td>700 x 850 x 1750 mm</td></tr>
+<tr><th>Ağırlık</th><td>120 kg</td></tr></tbody></table>
+              </div>
+            </div>
+            <a class="mini-cta" href="https://wa.me/905355727525?text=Merhaba%20NJ%20GROUP%2C%2012%20Katl%C4%B1%20Buharl%C4%B1%20Pi%C5%9Firici%20i%C3%A7in%20bilgi%20ve%20fiyat%20teklifi%20almak%20istiyorum.">WhatsApp ile teklif iste</a>
           </div>
         </article>
         </div>
       </div>
     </section>
 
-    <section id="iletisim" class="contact">
+    <section class="process">
+      <div class="wrap">
+        <div class="section-head">
+          <h2>NJ GROUP proje yaklaşımı</h2>
+          <p>Gıda makinesi satışında sadece ürün listesi değil, doğru kapasite, hijyen standardı, yerleşim ve satış sonrası destek birlikte değerlendirilir.</p>
+        </div>
+        <div class="process-grid">
+          <div class="process-card"><strong>1. İhtiyaç analizi</strong>Ürün tipi, günlük üretim hedefi ve çalışma alanı birlikte netleştirilir.</div>
+          <div class="process-card"><strong>2. Makine seçimi</strong>Kapasite, malzeme, enerji ve bakım koşullarına göre uygun model hazırlanır.</div>
+          <div class="process-card"><strong>3. Teklif ve teslimat</strong>Makine, aksesuar, yedek parça ve lojistik detayları tek teklifte düzenlenir.</div>
+          <div class="process-card"><strong>4. Kurulum desteği</strong>Kullanım, temizlik, bakım ve satış sonrası destek planı oluşturulur.</div>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact" class="contact">
       <div class="wrap contact-grid">
         <div>
+          <div class="eyebrow">Project Quote</div>
           <h2>Gıda makinesi projeniz için NJ GROUP ile görüşün</h2>
-          <p>İstanbul İstoç showroom, ürün numunesi, kapasite planlaması, makine seçimi ve fiyat teklifi için doğrudan WhatsApp veya telefonla ulaşabilirsiniz.</p>
-          <div class="cta-row">
-            <a class="btn gold" href="https://wa.me/905355727525?text=Merhaba%20NJ%20GROUP,%20g%C4%B1da%20makinesi%20projem%20i%C3%A7in%20g%C3%B6r%C3%BC%C5%9Fmek%20istiyorum.">WhatsApp'tan yaz</a>
-            <a class="btn light" href="tel:+905355727525">Hemen ara</a>
-          </div>
+          <p>Merkezi mutfak, restoran zinciri, yemek fabrikası, sebze işleme veya paketleme hattı için ihtiyacınızı paylaşın; uygun makine grubunu ve teklif sürecini birlikte netleştirelim.</p>
+          <a class="btn gold" href="https://wa.me/905355727525?text=Merhaba%20NJ%20GROUP,%20g%C4%B1da%20makinesi%20projem%20i%C3%A7in%20g%C3%B6r%C3%BC%C5%9Fmek%20istiyorum.">WhatsApp ile iletişim</a>
         </div>
         <div class="contact-box">
-          <strong>Firma</strong>
-          NJ GROUP YEŞİL DÖNÜŞÜM TEKNOLOJİ SANAYİ VE DIŞ TİCARET LTD. ŞTİ.
-          <strong>Adres</strong>
-          İstoç 34. Ada No:82-84, Bağcılar / İstanbul, Türkiye
-          <strong>Telefon / WhatsApp</strong>
-          +90 535 572 7525
-          <strong>Web</strong>
-          www.njgrup.com
+          <span>Telefon / WhatsApp</span>
+          <strong>+90 535 572 7525</strong>
+          <span>E-posta</span>
+          <strong>info@njgrup.com</strong>
+          <span>Web</span>
+          <strong>www.njgrup.com</strong>
         </div>
       </div>
     </section>
   </main>
 
-  <a class="wa-fixed" href="https://wa.me/905355727525?text=Merhaba%20NJ%20GROUP,%20g%C4%B1da%20makinesi%20hakk%C4%B1nda%20bilgi%20almak%20istiyorum." aria-label="WhatsApp">WA</a>
-  <footer><div class="wrap">© 2018 NJ GROUP · KIVORA Gıda Makineleri · İstanbul, Türkiye</div></footer>
+  <footer>
+    <div class="wrap">© 2018 NJ GROUP · Gıda Makineleri · İstanbul, Türkiye</div>
+  </footer>
+  <a class="wa-fixed" href="https://wa.me/905355727525?text=Merhaba%20NJ%20GROUP,%20g%C4%B1da%20makineleri%20hakk%C4%B1nda%20bilgi%20almak%20istiyorum." aria-label="WhatsApp">WA</a>
+  <!-- Cloudflare Web Analytics --><script defer src="https://static.cloudflareinsights.com/beacon.min.js" data-cf-beacon='{"token": "48d5c39378e14316b6745a5be6f213bb"}'></script><!-- End Cloudflare Web Analytics -->
 </body>
 </html>
