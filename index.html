@@ -361,21 +361,89 @@
       color: #16324b;
       font-weight: 800;
     }
+    .serve-route {
+      position: relative;
+      margin-top: 8px;
+      padding-top: 24px;
+    }
+    .silk-road {
+      position: absolute;
+      z-index: 3;
+      left: 0;
+      right: 0;
+      top: 18px;
+      width: 100%;
+      height: 126px;
+      pointer-events: none;
+      overflow: visible;
+    }
+    .silk-road .road-shadow {
+      fill: none;
+      stroke: rgba(0,0,0,.22);
+      stroke-width: 13;
+      stroke-linecap: round;
+      opacity: .45;
+    }
+    .silk-road .road-main {
+      fill: none;
+      stroke: url(#silkRoadGradient);
+      stroke-width: 5;
+      stroke-linecap: round;
+    }
+    .silk-road .road-thread {
+      fill: none;
+      stroke: rgba(255,255,255,.72);
+      stroke-width: 1.4;
+      stroke-linecap: round;
+      stroke-dasharray: 8 12;
+    }
+    .silk-road .route-node {
+      fill: #f5c663;
+      stroke: #07111f;
+      stroke-width: 5;
+    }
+    .silk-road .route-ring {
+      fill: none;
+      stroke: rgba(245,198,99,.38);
+      stroke-width: 2;
+    }
     .serve-grid {
+      position: relative;
+      z-index: 1;
       display: grid;
       grid-template-columns: repeat(5, minmax(0, 1fr));
       gap: 12px;
     }
     .serve-card {
+      position: relative;
       min-height: 190px;
-      padding: 20px;
+      padding: 76px 20px 20px;
       border-radius: 8px;
-      background: var(--deep);
+      background:
+        linear-gradient(145deg, rgba(255,255,255,.045), rgba(255,255,255,0) 42%),
+        radial-gradient(circle at 50% 42px, rgba(199,155,59,.16), transparent 38px),
+        var(--deep);
       color: #dce8ef;
-      border: 1px solid rgba(255,255,255,.08);
+      border: 1px solid rgba(255,255,255,.1);
       display: flex;
       align-items: flex-end;
       font-weight: 900;
+      overflow: hidden;
+      box-shadow: 0 18px 42px rgba(6,17,31,.12);
+    }
+    .serve-card::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background:
+        linear-gradient(90deg, rgba(255,255,255,.045) 1px, transparent 1px),
+        linear-gradient(180deg, rgba(255,255,255,.035) 1px, transparent 1px);
+      background-size: 38px 38px;
+      opacity: .28;
+    }
+    .serve-card span {
+      position: relative;
+      z-index: 2;
     }
     .about-grid {
       display: grid;
@@ -476,7 +544,34 @@
       .hero-lead { max-width: 100%; }
       .hero-panel { max-width: 520px; }
       .business-grid, .about-grid { grid-template-columns: 1fr; }
+      .serve-route { padding-top: 10px; }
+      .silk-road { display: none; }
+      .serve-route::before {
+        content: "";
+        position: absolute;
+        z-index: 2;
+        left: 24px;
+        top: 10px;
+        bottom: 0;
+        width: 4px;
+        border-radius: 999px;
+        background: linear-gradient(180deg, #2f7960, #c79b3b, #16324b);
+      }
       .serve-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+      .serve-card { min-height: 160px; padding: 54px 18px 18px; }
+      .serve-card::after {
+        content: "";
+        position: absolute;
+        z-index: 3;
+        left: 16px;
+        top: 24px;
+        width: 20px;
+        height: 20px;
+        border-radius: 50%;
+        background: #f5c663;
+        border: 4px solid #07111f;
+        box-shadow: 0 0 0 6px rgba(245,198,99,.2);
+      }
     }
     @media (max-width: 640px) {
       .shell { width: min(100% - 24px, 1180px); }
@@ -492,6 +587,7 @@
       .business-card { min-height: auto; }
       .card-image { height: 210px; }
       .check-grid, .serve-grid { grid-template-columns: 1fr; }
+      .serve-card { padding-left: 58px; }
       .image-stack { grid-template-columns: 1fr; }
       .image-stack .wide { grid-column: auto; }
       .btn { width: 100%; }
@@ -623,12 +719,31 @@
           <span class="kicker" data-i18n="serveKicker">Who We Serve</span>
           <h2 data-i18n="serveTitle">Built for manufacturers, distributors, buyers and industrial partners</h2>
         </div>
-        <div class="serve-grid">
-          <div class="serve-card" data-i18n="serve1">Chinese manufacturers entering Türkiye</div>
-          <div class="serve-card" data-i18n="serve2">Turkish distributors seeking Chinese products</div>
-          <div class="serve-card" data-i18n="serve3">European buyers looking for sustainable materials</div>
-          <div class="serve-card" data-i18n="serve4">Industrial companies seeking local partners</div>
-          <div class="serve-card" data-i18n="serve5">Brands needing sales, after-sales and marketing operation in Türkiye</div>
+        <div class="serve-route" id="serve-route" aria-label="Silk Road business connection">
+          <svg class="silk-road" viewBox="0 0 1200 126" preserveAspectRatio="none" aria-hidden="true">
+            <defs>
+              <linearGradient id="silkRoadGradient" x1="0" y1="0" x2="1" y2="0">
+                <stop offset="0%" stop-color="#2f7960"/>
+                <stop offset="48%" stop-color="#c79b3b"/>
+                <stop offset="100%" stop-color="#4e8eb8"/>
+              </linearGradient>
+            </defs>
+            <path class="road-shadow" d="M 86 62 C 210 18, 360 24, 500 58 S 760 116, 908 70 S 1090 36, 1160 72"/>
+            <path class="road-main" d="M 86 62 C 210 18, 360 24, 500 58 S 760 116, 908 70 S 1090 36, 1160 72"/>
+            <path class="road-thread" d="M 86 62 C 210 18, 360 24, 500 58 S 760 116, 908 70 S 1090 36, 1160 72"/>
+            <circle class="route-ring" cx="86" cy="62" r="21"/><circle class="route-node" cx="86" cy="62" r="9"/>
+            <circle class="route-ring" cx="320" cy="36" r="21"/><circle class="route-node" cx="320" cy="36" r="9"/>
+            <circle class="route-ring" cx="570" cy="78" r="21"/><circle class="route-node" cx="570" cy="78" r="9"/>
+            <circle class="route-ring" cx="860" cy="82" r="21"/><circle class="route-node" cx="860" cy="82" r="9"/>
+            <circle class="route-ring" cx="1110" cy="54" r="21"/><circle class="route-node" cx="1110" cy="54" r="9"/>
+          </svg>
+          <div class="serve-grid">
+            <div class="serve-card"><span data-i18n="serve1">Chinese manufacturers entering Türkiye</span></div>
+            <div class="serve-card"><span data-i18n="serve2">Turkish distributors seeking Chinese products</span></div>
+            <div class="serve-card"><span data-i18n="serve3">European buyers looking for sustainable materials</span></div>
+            <div class="serve-card"><span data-i18n="serve4">Industrial companies seeking local partners</span></div>
+            <div class="serve-card"><span data-i18n="serve5">Brands needing sales, after-sales and marketing operation in Türkiye</span></div>
+          </div>
         </div>
       </div>
     </section>
