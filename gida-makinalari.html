@@ -15,8 +15,9 @@
     .wrap { width:min(1180px, calc(100% - 32px)); margin:auto; min-width:0; }
     header { position:sticky; top:0; z-index:40; background:rgba(11,47,39,.96); color:#fff; border-bottom:1px solid rgba(255,255,255,.12); backdrop-filter:blur(14px); }
     .head { min-height:76px; display:flex; align-items:center; justify-content:space-between; gap:18px; }
-    .brand { display:flex; align-items:center; gap:12px; font-weight:800; letter-spacing:.2px; }
-    .brand img { width:54px; height:54px; object-fit:contain; border-radius:6px; background:rgba(255,255,255,.06); padding:4px; }
+    .brand { display:flex; align-items:center; gap:12px; font-weight:800; letter-spacing:.2px; min-width:0; }
+    .brand-mark { flex:0 0 auto; width:94px; height:54px; display:flex; align-items:center; justify-content:center; overflow:hidden; border-radius:6px; background:#fff; padding:5px; }
+    .brand-mark img { display:block; width:auto; height:auto; max-width:100%; max-height:100%; object-fit:contain; border-radius:0; background:transparent; padding:0; }
     .brand small { display:block; color:rgba(255,255,255,.72); font-size:12px; margin-top:2px; }
     nav { display:flex; align-items:center; gap:20px; color:rgba(255,255,255,.82); font-size:14px; font-weight:700; }
     nav a:hover { color:#fff; }
@@ -82,7 +83,7 @@
     footer { padding:28px 0; color:#dcebe6; background:#071b17; font-size:14px; }
     .wa-fixed { position:fixed; right:18px; bottom:18px; z-index:50; display:flex; align-items:center; justify-content:center; width:58px; height:58px; border-radius:50%; color:#fff; background:#1faa59; font-weight:900; box-shadow:0 10px 26px rgba(0,0,0,.24); }
     @media (max-width:980px) { nav a { display:none; } .hero .wrap { grid-template-columns:1fr; } .hero-gallery { max-width:720px; } .hero-stats,.catalog-grid,.process-grid,.contact-grid { grid-template-columns:1fr 1fr; } .product-card,.product-card:nth-child(even) .product-media { grid-template-columns:1fr; order:initial; } .detail-grid { grid-template-columns:1fr; } }
-    @media (max-width:640px) { html,body,main,section,header,footer { width:100%; max-width:100%; overflow-x:hidden; } .wrap { width:min(100% - 18px, 100vw - 18px); max-width:calc(100vw - 18px); overflow:hidden; } .head { min-height:66px; gap:10px; } .brand { min-width:0; } .brand img { width:46px; height:46px; } .brand span { font-size:16px; } .brand small { font-size:11px; } .lang { width:64px; flex:0 0 auto; } h1 { font-size:32px; line-height:1.1; max-width:100%; overflow-wrap:break-word; white-space:normal; } .hero .wrap { min-height:auto; padding:52px 0 52px; gap:28px; } .hero p,.section-head p,.product-copy p,.subtitle { width:100%; max-width:100%; font-size:16px; overflow-wrap:anywhere; white-space:normal; } .hero-gallery { grid-template-columns:minmax(0,1fr); } .hero-shot:not(:first-child) { display:none; } .hero-shot { padding:8px; } .hero-shot img { min-height:0; height:auto; max-height:none; } .cta-row { display:grid; grid-template-columns:minmax(0,1fr); } .btn { width:100%; max-width:100%; text-align:center; white-space:normal; } .hero-stats,.catalog-grid,.process-grid,.contact-grid { grid-template-columns:minmax(0,1fr); } .product-card { grid-template-columns:minmax(0,1fr); padding:12px; } .product-media img { aspect-ratio:auto; height:auto; } .detail-grid { grid-template-columns:minmax(0,1fr); } .spec-table { display:block; overflow-x:auto; } }
+    @media (max-width:640px) { html,body,main,section,header,footer { width:100%; max-width:100%; overflow-x:hidden; } .wrap { width:min(100% - 18px, 100vw - 18px); max-width:calc(100vw - 18px); overflow:hidden; } .head { min-height:66px; gap:10px; } .brand { min-width:0; } .brand-mark { width:82px; height:48px; padding:4px; } .brand span { font-size:16px; } .brand small { font-size:11px; } .lang { width:64px; flex:0 0 auto; } h1 { font-size:32px; line-height:1.1; max-width:100%; overflow-wrap:break-word; white-space:normal; } .hero .wrap { min-height:auto; padding:52px 0 52px; gap:28px; } .hero p,.section-head p,.product-copy p,.subtitle { width:100%; max-width:100%; font-size:16px; overflow-wrap:anywhere; white-space:normal; } .hero-gallery { grid-template-columns:minmax(0,1fr); } .hero-shot:not(:first-child) { display:none; } .hero-shot { padding:8px; } .hero-shot img { min-height:0; height:auto; max-height:none; } .cta-row { display:grid; grid-template-columns:minmax(0,1fr); } .btn { width:100%; max-width:100%; text-align:center; white-space:normal; } .hero-stats,.catalog-grid,.process-grid,.contact-grid { grid-template-columns:minmax(0,1fr); } .product-card { grid-template-columns:minmax(0,1fr); padding:12px; } .product-media img { aspect-ratio:auto; height:auto; } .detail-grid { grid-template-columns:minmax(0,1fr); } .spec-table { display:block; overflow-x:auto; } }
   </style>
   <script type="application/ld+json">
   {
@@ -111,7 +112,7 @@
   <header>
     <div class="wrap head">
       <a class="brand" href="index.html">
-        <img src="assets/nj-logo-mark.svg" alt="NJ GROUP">
+        <span class="brand-mark"><img src="assets/nj-group-official-logo.jpg" alt="NJ GROUP logo"></span>
         <span>NJ GROUP<small>Gıda Makineleri Showroom</small></span>
       </a>
       <nav>
