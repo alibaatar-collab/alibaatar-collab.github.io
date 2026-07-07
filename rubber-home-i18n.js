@@ -4,7 +4,7 @@
       metaTitle: "NJGROUP | Lastik Kalitesinde Rejenere Kauçuk ve Döngüsel Kauçuk Teknolojileri",
       metaDescription: "NJGROUP, Türkiye'de tire-grade reclaimed rubber, CO2 assisted devulcanization ve döngüsel kauçuk ekonomisi odaklı yüksek kaliteli rejenere kauçuk platformu geliştirir.",
       topbar: "NJGROUP — Lastik Kalitesinde Rejenere Kauçuk ve Döngüsel Kauçuk Teknolojileri Platformu",
-      brandSmall: "Circular Rubber Technology",
+      brandSmall: "Döngüsel Kauçuk Teknolojisi",
       navHome: "Ana Sayfa", navTechnology: "Teknoloji", navProducts: "Ürünler", navPlant: "Tesis Çözümleri", navSustainability: "Sürdürülebilirlik", navAbout: "Hakkımızda", navContact: "İletişim",
       heroKicker: "Tire-Grade Reclaimed Rubber Platform",
       heroTitle: "Lastik Kalitesinde Rejenere Kauçuk Üretimi",
