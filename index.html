@@ -1,960 +1,179 @@
 <!doctype html>
-<html lang="en">
+<html lang="tr">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>NJ GROUP | Production, Trade and Türkiye Market Entry</title>
-  <meta name="description" content="NJ GROUP connects Chinese supply chains, Türkiye-based operations and European market opportunities through production, trade and market entry services.">
+  <title>NJGROUP | Lastik Kalitesinde Rejenere Kauçuk ve Döngüsel Kauçuk Teknolojileri</title>
+  <meta name="description" content="NJGROUP, Türkiye'de tire-grade reclaimed rubber, CO2 assisted devulcanization ve döngüsel kauçuk ekonomisi odaklı yüksek kaliteli rejenere kauçuk platformu geliştirir.">
+  <meta name="keywords" content="rejenere kauçuk, lastik kalitesinde rejenere kauçuk, tire grade reclaimed rubber, reclaimed rubber Turkey, kauçuk tozu, kauçuk granül, devulkanizasyon, CO2 assisted devulcanization, rubber recycling technology">
   <link rel="canonical" href="https://njgrup.com/">
-  <style>
-    :root {
-      --ink: #07111f;
-      --navy: #0b2742;
-      --deep: #061725;
-      --black: #070b10;
-      --silver: #d8e0e6;
-      --muted: #718093;
-      --line: rgba(216, 224, 230, .34);
-      --green: #1f8a63;
-      --green-soft: #dff4ea;
-      --gold: #d1a24a;
-      --white: #ffffff;
-      --paper: #f4f7f8;
-      --shadow: 0 24px 80px rgba(7, 17, 31, .14);
-    }
-    * { box-sizing: border-box; }
-    html { scroll-behavior: smooth; }
-    body {
-      margin: 0;
-      font-family: Arial, Helvetica, sans-serif;
-      color: var(--ink);
-      background: var(--paper);
-      line-height: 1.6;
-      letter-spacing: 0;
-      overflow-x: hidden;
-    }
-    a { color: inherit; }
-    img { max-width: 100%; display: block; }
-    .shell { width: min(1180px, calc(100% - 32px)); margin: auto; }
-    .topbar {
-      background: var(--deep);
-      color: #dce8ef;
-      font-size: 13px;
-      border-bottom: 1px solid rgba(255,255,255,.08);
-    }
-    .topbar .shell {
-      min-height: 38px;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      gap: 18px;
-    }
-    .topbar span { min-width: 0; overflow-wrap: anywhere; }
-    .topbar a { color: #ffffff; text-decoration: none; font-weight: 700; }
-    header {
-      position: sticky;
-      top: 0;
-      z-index: 40;
-      background: rgba(255,255,255,.94);
-      border-bottom: 1px solid rgba(7,17,31,.1);
-      backdrop-filter: blur(14px);
-    }
-    .nav {
-      min-height: 86px;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      gap: 24px;
-    }
-    .brand {
-      display: flex;
-      align-items: center;
-      gap: 14px;
-      text-decoration: none;
-      min-width: 240px;
-    }
-    .brand-mark {
-      width: 76px;
-      height: 58px;
-      border: 1px solid rgba(7,17,31,.1);
-      border-radius: 8px;
-      background: #fff;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      overflow: hidden;
-    }
-    .brand-mark img {
-      display: block;
-      width: auto;
-      height: auto;
-      max-width: 100%;
-      max-height: 100%;
-      object-fit: contain;
-    }
-    .brand strong {
-      display: block;
-      color: var(--navy);
-      font-size: 21px;
-      line-height: 1.1;
-      letter-spacing: .02em;
-    }
-    .brand small {
-      display: block;
-      color: var(--muted);
-      font-size: 12px;
-      margin-top: 4px;
-      font-weight: 700;
-    }
-    .nav-links {
-      display: flex;
-      align-items: center;
-      gap: 8px;
-      font-weight: 800;
-      font-size: 14px;
-    }
-    .nav-links a {
-      text-decoration: none;
-      color: #16324b;
-      padding: 10px 12px;
-      border-radius: 6px;
-    }
-    .nav-links a:hover { background: #eef4f6; }
-    .language-select {
-      min-height: 40px;
-      border: 1px solid rgba(7,17,31,.14);
-      border-radius: 6px;
-      padding: 0 12px;
-      background: #fff;
-      color: var(--navy);
-      font-weight: 800;
-    }
-    .hero {
-      position: relative;
-      min-height: 660px;
-      color: #fff;
-      background:
-        linear-gradient(90deg, rgba(6, 23, 37, .96), rgba(6, 23, 37, .82) 52%, rgba(31, 138, 99, .34)),
-        url("assets/nj-waterjet-production-line.jpg") center / cover no-repeat;
-      overflow: hidden;
-    }
-    .hero::before {
-      content: "";
-      position: absolute;
-      inset: 0;
-      background:
-        linear-gradient(90deg, rgba(255,255,255,.035) 1px, transparent 1px),
-        linear-gradient(180deg, rgba(255,255,255,.03) 1px, transparent 1px);
-      background-size: 84px 84px;
-      opacity: .42;
-    }
-    .hero::after {
-      content: "";
-      position: absolute;
-      inset: auto 0 0 0;
-      height: 190px;
-      background: linear-gradient(0deg, var(--paper), rgba(244,247,248,0));
-      pointer-events: none;
-    }
-    .hero-grid {
-      position: relative;
-      z-index: 1;
-      min-height: 660px;
-      display: grid;
-      grid-template-columns: minmax(0, 1fr) 380px;
-      align-items: center;
-      gap: 46px;
-      padding: 76px 0 118px;
-    }
-    .eyebrow {
-      display: inline-flex;
-      align-items: center;
-      min-height: 32px;
-      padding: 0 12px;
-      border: 1px solid rgba(255,255,255,.28);
-      border-radius: 6px;
-      color: #cceee1;
-      font-size: 13px;
-      font-weight: 900;
-      text-transform: uppercase;
-      letter-spacing: .08em;
-      background: rgba(255,255,255,.06);
-    }
-    h1 {
-      max-width: 860px;
-      margin: 22px 0 22px;
-      font-size: clamp(46px, 6.2vw, 78px);
-      line-height: 1;
-      letter-spacing: 0;
-      overflow-wrap: break-word;
-    }
-    .hero-lead {
-      max-width: 780px;
-      margin: 0;
-      color: #dce8ef;
-      font-size: 20px;
-      line-height: 1.68;
-    }
-    .actions {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 12px;
-      margin-top: 32px;
-    }
-    .btn {
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      min-height: 48px;
-      padding: 0 22px;
-      border-radius: 6px;
-      text-decoration: none;
-      font-weight: 900;
-      border: 1px solid transparent;
-      white-space: nowrap;
-    }
-    .btn-primary {
-      background: var(--green);
-      color: #fff;
-      box-shadow: 0 12px 36px rgba(31,138,99,.28);
-    }
-    .btn-secondary {
-      color: #fff;
-      border-color: rgba(255,255,255,.38);
-      background: rgba(255,255,255,.06);
-    }
-    .btn-dark { background: var(--navy); color: #fff; }
-    .hero-panel {
-      border: 1px solid rgba(255,255,255,.16);
-      border-radius: 8px;
-      background: rgba(7,17,31,.62);
-      backdrop-filter: blur(14px);
-      box-shadow: 0 28px 90px rgba(0,0,0,.28);
-      padding: 22px;
-    }
-    .hero-panel h2 {
-      margin: 0 0 14px;
-      font-size: 20px;
-      color: #fff;
-    }
-    .signal-list {
-      display: grid;
-      gap: 12px;
-      margin: 0;
-      padding: 0;
-      list-style: none;
-    }
-    .signal-list li {
-      padding: 14px;
-      border: 1px solid rgba(255,255,255,.12);
-      border-radius: 6px;
-      background: rgba(255,255,255,.06);
-      color: #d9e8ee;
-    }
-    .signal-list strong { display: block; color: #fff; margin-bottom: 4px; }
-    .section { padding: 92px 0; }
-    .section-head {
-      max-width: 780px;
-      margin-bottom: 34px;
-    }
-    .kicker {
-      color: var(--green);
-      font-weight: 900;
-      text-transform: uppercase;
-      font-size: 13px;
-      letter-spacing: .08em;
-    }
-    .section h2 {
-      margin: 8px 0 14px;
-      color: var(--navy);
-      font-size: clamp(34px, 4vw, 54px);
-      line-height: 1.08;
-    }
-    .section-head p, .plain-copy {
-      color: #53677a;
-      font-size: 18px;
-      margin: 0;
-    }
-    .business-grid {
-      display: grid;
-      grid-template-columns: repeat(3, minmax(0, 1fr));
-      gap: 20px;
-    }
-    .business-card {
-      min-height: 492px;
-      border: 1px solid rgba(7,17,31,.1);
-      border-radius: 8px;
-      background: #fff;
-      overflow: hidden;
-      box-shadow: var(--shadow);
-      text-decoration: none;
-      display: flex;
-      flex-direction: column;
-      position: relative;
-    }
-    .business-card::after {
-      content: "View details";
-      position: absolute;
-      right: 22px;
-      bottom: 22px;
-      color: var(--green);
-      font-size: 13px;
-      font-weight: 900;
-    }
-    .business-card:hover { transform: translateY(-2px); transition: transform .18s ease; border-color: rgba(31,138,99,.36); }
-    .card-image {
-      height: 235px;
-      background:
-        linear-gradient(180deg, rgba(7,17,31,.08), rgba(7,17,31,.36)),
-        var(--img) center / cover no-repeat;
-    }
-    .card-body { padding: 26px 26px 56px; display: flex; flex-direction: column; flex: 1; }
-    .card-index {
-      color: var(--green);
-      font-weight: 900;
-      font-size: 13px;
-      letter-spacing: .08em;
-      text-transform: uppercase;
-    }
-    .card-body h3 {
-      margin: 9px 0 3px;
-      color: var(--navy);
-      font-size: 30px;
-      line-height: 1.1;
-    }
-    .card-body h4 {
-      margin: 0 0 14px;
-      color: #294963;
-      font-size: 17px;
-    }
-    .card-body p {
-      margin: 0 0 18px;
-      color: #526678;
-      font-size: 16px;
-    }
-    .keywords {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 8px;
-      margin-top: auto;
-    }
-    .keywords span {
-      padding: 6px 9px;
-      border-radius: 6px;
-      background: #eef4f6;
-      color: #183752;
-      font-size: 12px;
-      font-weight: 800;
-    }
-    .split {
-      background: #fff;
-      border-top: 1px solid rgba(7,17,31,.08);
-      border-bottom: 1px solid rgba(7,17,31,.08);
-    }
-    .two-col {
-      display: grid;
-      grid-template-columns: .95fr 1.05fr;
-      gap: 42px;
-      align-items: center;
-    }
-    .image-stack {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 14px;
-    }
-    .image-stack .wide { grid-column: span 2; height: 210px; }
-    .image-tile {
-      min-height: 180px;
-      border-radius: 8px;
-      background: var(--img) center / cover no-repeat;
-      border: 1px solid rgba(7,17,31,.08);
-      box-shadow: var(--shadow);
-    }
-    .check-grid {
-      display: grid;
-      grid-template-columns: repeat(2, minmax(0, 1fr));
-      gap: 12px;
-      margin-top: 24px;
-    }
-    .check-item {
-      padding: 16px;
-      border: 1px solid rgba(7,17,31,.1);
-      border-radius: 8px;
-      background: #fff;
-      color: #16324b;
-      font-weight: 800;
-    }
-    .serve-route {
-      position: relative;
-      margin-top: 8px;
-      padding-top: 30px;
-    }
-    .silk-road {
-      position: absolute;
-      z-index: 3;
-      left: 0;
-      right: 0;
-      top: 26px;
-      width: 100%;
-      height: 126px;
-      pointer-events: none;
-      overflow: visible;
-    }
-    .silk-road .road-shadow {
-      fill: none;
-      stroke: rgba(0,0,0,.22);
-      stroke-width: 13;
-      stroke-linecap: round;
-      opacity: .45;
-    }
-    .silk-road .road-main {
-      fill: none;
-      stroke: url(#silkRoadGradient);
-      stroke-width: 5;
-      stroke-linecap: round;
-    }
-    .silk-road .road-thread {
-      fill: none;
-      stroke: rgba(255,255,255,.72);
-      stroke-width: 1.4;
-      stroke-linecap: round;
-      stroke-dasharray: 8 12;
-    }
-    .silk-road .route-node {
-      fill: #f5c663;
-      stroke: #07111f;
-      stroke-width: 5;
-    }
-    .silk-road .route-ring {
-      fill: none;
-      stroke: rgba(245,198,99,.38);
-      stroke-width: 2;
-    }
-    .serve-grid {
-      position: relative;
-      z-index: 1;
-      display: grid;
-      grid-template-columns: repeat(5, minmax(0, 1fr));
-      gap: 14px;
-    }
-    .serve-card {
-      position: relative;
-      min-height: 172px;
-      padding: 74px 18px 18px;
-      border-radius: 8px;
-      background:
-        linear-gradient(180deg, rgba(255,255,255,.98), rgba(247,250,250,.96)),
-        #fff;
-      color: var(--navy);
-      border: 1px solid rgba(7,17,31,.1);
-      display: flex;
-      align-items: flex-end;
-      font-weight: 900;
-      overflow: hidden;
-      box-shadow: 0 18px 42px rgba(6,17,31,.08);
-    }
-    .serve-card::before {
-      content: "";
-      position: absolute;
-      left: 18px;
-      top: 28px;
-      width: 36px;
-      height: 36px;
-      border-radius: 50%;
-      background:
-        radial-gradient(circle at 50% 50%, #fff 0 6px, transparent 7px),
-        linear-gradient(135deg, var(--green), var(--gold));
-      border: 1px solid rgba(7,17,31,.12);
-      box-shadow: 0 8px 24px rgba(7,17,31,.12);
-      opacity: 1;
-    }
-    .serve-card::after {
-      content: "";
-      position: absolute;
-      right: 14px;
-      top: 16px;
-      width: 74px;
-      height: 42px;
-      border-top: 1px solid rgba(199,155,59,.34);
-      border-right: 1px solid rgba(31,138,99,.24);
-      border-radius: 0 22px 0 0;
-    }
-    .serve-card span {
-      position: relative;
-      z-index: 2;
-    }
-    .about-grid {
-      display: grid;
-      grid-template-columns: 1fr 1fr 1fr;
-      gap: 16px;
-      margin-top: 30px;
-    }
-    .about-card {
-      padding: 24px;
-      background: #fff;
-      border: 1px solid rgba(7,17,31,.1);
-      border-radius: 8px;
-      box-shadow: var(--shadow);
-    }
-    .about-card strong {
-      display: block;
-      color: var(--navy);
-      font-size: 18px;
-      margin-bottom: 8px;
-    }
-    .about-card p { margin: 0; color: #53677a; }
-    .cta {
-      background:
-        linear-gradient(90deg, rgba(6,23,37,.96), rgba(11,39,66,.88)),
-        url("assets/fuar-organizasyon.jpg") center / cover no-repeat;
-      color: #fff;
-      padding: 92px 0;
-    }
-    .cta-box {
-      max-width: 820px;
-    }
-    .cta h2 {
-      margin: 0 0 16px;
-      font-size: clamp(36px, 5vw, 62px);
-      line-height: 1.06;
-    }
-    .cta p {
-      color: #d9e8ee;
-      font-size: 19px;
-      margin: 0;
-    }
-    .contact-grid {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 22px;
-      margin-top: 28px;
-    }
-    .contact-card {
-      padding: 24px;
-      border: 1px solid rgba(7,17,31,.1);
-      border-radius: 8px;
-      background: #fff;
-    }
-    .contact-card strong {
-      display: block;
-      color: var(--navy);
-      margin-bottom: 7px;
-    }
-    footer {
-      background: var(--deep);
-      color: #d9e8ee;
-      padding: 34px 0;
-    }
-    .footer-grid {
-      display: grid;
-      grid-template-columns: 1.2fr .8fr;
-      gap: 26px;
-      align-items: start;
-    }
-    footer a { color: #fff; font-weight: 800; text-decoration: none; }
-    .whatsapp {
-      position: fixed;
-      right: 18px;
-      bottom: 18px;
-      z-index: 50;
-      width: 58px;
-      height: 58px;
-      border-radius: 50%;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      background: #21c765;
-      color: #052414;
-      font-weight: 900;
-      text-decoration: none;
-      box-shadow: 0 18px 42px rgba(0,0,0,.24);
-    }
-    @media (max-width: 980px) {
-      .topbar .shell { align-items: flex-start; flex-direction: column; padding: 10px 0; }
-      .nav { min-height: auto; padding: 12px 0; align-items: flex-start; }
-      .nav-links { display: none; }
-      .brand { min-width: 0; }
-      .hero-grid, .two-col, .contact-grid, .footer-grid { grid-template-columns: 1fr; }
-      .hero { min-height: auto; }
-      .hero-grid { min-height: auto; padding: 72px 0 108px; }
-      .hero-copy { min-width: 0; }
-      h1 { max-width: 100%; font-size: clamp(42px, 11vw, 62px); line-height: 1.04; }
-      .hero-lead { max-width: 100%; }
-      .hero-panel { max-width: 520px; }
-      .business-grid, .about-grid { grid-template-columns: 1fr; }
-      .serve-route { padding-top: 10px; }
-      .silk-road { display: none; }
-      .serve-route::before {
-        content: "";
-        position: absolute;
-        z-index: 2;
-        left: 24px;
-        top: 10px;
-        bottom: 0;
-        width: 4px;
-        border-radius: 999px;
-        background: linear-gradient(180deg, #2f7960, #c79b3b, #16324b);
-      }
-      .serve-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
-      .serve-card { min-height: 160px; padding: 54px 18px 18px; }
-      .serve-card::after {
-        content: "";
-        position: absolute;
-        z-index: 3;
-        left: 16px;
-        top: 24px;
-        width: 20px;
-        height: 20px;
-        border-radius: 50%;
-        background: #f5c663;
-        border: 4px solid #07111f;
-        box-shadow: 0 0 0 6px rgba(245,198,99,.2);
-      }
-    }
-    @media (max-width: 640px) {
-      .shell { width: min(100% - 24px, 1180px); }
-      .topbar .shell { font-size: 13px; line-height: 1.45; }
-      .topbar span[data-i18n="topNotice"] { display: none; }
-      .brand-mark { width: 66px; height: 52px; }
-      .brand strong { font-size: 18px; }
-      h1 { max-width: min(100%, 340px); font-size: clamp(38px, 10.5vw, 46px); }
-      .hero-lead { max-width: min(100%, 340px); font-size: 18px; overflow-wrap: anywhere; }
-      .hero-panel { display: none; }
-      .section { padding: 66px 0; }
-      .section h2 { font-size: clamp(32px, 9.5vw, 42px); line-height: 1.12; overflow-wrap: break-word; }
-      .business-card { min-height: auto; }
-      .card-image { height: 210px; }
-      .check-grid, .serve-grid { grid-template-columns: 1fr; }
-      .serve-card { padding-left: 58px; }
-      .image-stack { grid-template-columns: 1fr; }
-      .image-stack .wide { grid-column: auto; }
-      .btn { width: 100%; }
-      .language-select { max-width: 120px; }
-    }
-  </style>
+  <link rel="stylesheet" href="rubber-platform.css">
 </head>
 <body>
   <div class="topbar">
     <div class="shell">
-      <span data-i18n="topNotice">NJ GROUP official industrial platform: Production | Trade | Services</span>
-      <span><a href="mailto:info@njgrup.com">info@njgrup.com</a> &nbsp; <a href="https://wa.me/905372054333" target="_blank" rel="noopener">WhatsApp</a></span>
+      <span>NJGROUP — Lastik Kalitesinde Rejenere Kauçuk ve Döngüsel Kauçuk Teknolojileri Platformu</span>
+      <span><a href="mailto:info@njgrup.com" data-track="email_click">info@njgrup.com</a> &nbsp; <a href="https://wa.me/905372054333" target="_blank" rel="noopener" data-track="whatsapp_click">WhatsApp</a></span>
     </div>
   </div>
-  <header>
+  <header class="site-header">
     <div class="shell nav">
-      <a class="brand" href="#home" aria-label="NJ GROUP home">
-        <span class="brand-mark"><img src="assets/nj-group-official-logo.jpg" alt="NJ GROUP logo"></span>
-        <span><strong>NJ GROUP</strong><small data-i18n="brandLine">YEŞİL DÖNÜŞÜM TEKNOLOJİ SANAYİ VE DIŞ TİCARET LİMİTED ŞİRKETİ</small></span>
+      <a class="brand" href="index.html" aria-label="NJGROUP Ana Sayfa">
+        <span class="brand-mark"><img src="assets/nj-group-official-logo.jpg" alt="NJGROUP logo"></span>
+        <span><strong>NJGROUP</strong><small>Circular Rubber Technology</small></span>
       </a>
-      <nav class="nav-links" aria-label="Main navigation">
-        <a href="#home" data-i18n="navHome">Home</a>
-        <a href="#production" data-i18n="navProduction">Production</a>
-        <a href="#trade" data-i18n="navTrade">Trade</a>
-        <a href="#services" data-i18n="navServices">Services</a>
-        <a href="#about" data-i18n="navAbout">About</a>
-        <a href="#contact" data-i18n="navContact">Contact</a>
+      <nav class="nav-links" aria-label="Ana navigasyon">
+        <a href="index.html">Ana Sayfa</a>
+        <span class="nav-item"><span>Teknoloji</span><span class="dropdown"><a href="co2-devulcanization-technology.html">CO2 Devulkanizasyon Teknolojisi</a><a href="eu-standard-workflow.html">AB Standartlarına Uygun Üretim Yaklaşımı</a></span></span>
+        <span class="nav-item"><span>Ürünler</span><span class="dropdown"><a href="tire-grade-reclaimed-rubber.html">Lastik Kalitesinde Rejenere Kauçuk</a><a href="eko-donusum.html">Kauçuk Tozu</a><a href="eko-donusum.html">Kauçuk Granül</a></span></span>
+        <span class="nav-item"><span>Tesis Çözümleri</span><span class="dropdown"><a href="rubber-factory-solution.html">Anahtar Teslim Rejenere Kauçuk Tesisi</a><a href="eu-standard-workflow.html#equipment">Ekipman ve Proses Danışmanlığı</a></span></span>
+        <span class="nav-item"><span>Sürdürülebilirlik</span><span class="dropdown"><a href="government-esg.html">Kamu ve ESG İş Birliği</a><a href="government-esg.html#circular">Döngüsel Ekonomi</a></span></span>
+        <a href="#about">Hakkımızda</a>
+        <a href="#contact">İletişim</a>
+        <select class="language-select" aria-label="Dil seçimi"><option>TR</option><option>EN</option><option>中文</option><option>FR</option><option>DE</option></select>
       </nav>
-      <select class="language-select" id="languageSelect" aria-label="Language">
-        <option value="tr">TR</option>
-        <option value="en">EN</option>
-        <option value="zh">中文</option>
-        <option value="fr">FR</option>
-        <option value="de">DE</option>
-      </select>
     </div>
   </header>
 
-  <main id="home">
+  <main>
     <section class="hero">
       <div class="shell hero-grid">
         <div>
-          <span class="eyebrow" data-i18n="heroEyebrow">Integrated Industrial Platform</span>
-          <h1 data-i18n="heroTitle">Production. Trade. Market Entry.</h1>
-          <p class="hero-lead" data-i18n="heroSubtitle">NJ GROUP connects Chinese supply chains, Türkiye-based operations and European market opportunities through one integrated industrial platform.</p>
+          <span class="eyebrow">Tire-Grade Reclaimed Rubber Platform</span>
+          <h1>Lastik Kalitesinde Rejenere Kauçuk Üretimi</h1>
+          <p class="lead">NJGROUP, atık lastiklerden elde edilen kauçuk tozunu ileri karbondioksit destekli devulkanizasyon teknolojisiyle yüksek kaliteli rejenere kauçuğa dönüştürmeyi hedefleyen döngüsel kauçuk teknolojileri platformudur.</p>
+          <div class="brand-line">Bugünün atık lastiğini, yarının lastik sanayi hammaddesine dönüştürüyoruz.</div>
           <div class="actions">
-            <a class="btn btn-primary" href="#business" data-i18n="heroPrimary">Explore Business Lines</a>
-            <a class="btn btn-secondary" href="#contact" data-i18n="heroSecondary">Contact NJ GROUP</a>
+            <a class="btn btn-primary" href="co2-devulcanization-technology.html" data-track="technical_meeting_request">Teknik Süreci İncele</a>
+            <a class="btn btn-secondary" href="tire-grade-reclaimed-rubber.html#sample" data-track="sample_request">Numune ve İş Birliği Talep Et</a>
+            <a class="btn btn-secondary" href="tire-grade-reclaimed-rubber.html">Tire-Grade Reclaimed Rubber</a>
           </div>
         </div>
-        <aside class="hero-panel" aria-label="NJ GROUP focus">
-          <h2 data-i18n="panelTitle">Three connected capabilities</h2>
-          <ul class="signal-list">
-            <li><strong data-i18n="panelProduction">Production</strong><span data-i18n="panelProductionText">Reclaimed rubber manufacturing and sustainable industrial raw materials.</span></li>
-            <li><strong data-i18n="panelTrade">Trade</strong><span data-i18n="panelTradeText">Industrial products, machinery, equipment and distribution operations.</span></li>
-            <li><strong data-i18n="panelServices">Services</strong><span data-i18n="panelServicesText">Türkiye market entry, local execution and long-term B2B support.</span></li>
+        <aside class="hero-panel">
+          <h2>NJGROUP odak noktası</h2>
+          <ul>
+            <li><strong>Sıradan geri dönüşüm değil</strong><span>Hedef, düşük katma değerli kauçuk tozu yerine yüksek kaliteli rejenere kauçuk geliştirmektir.</span></li>
+            <li><strong>Lastik sanayi kalite hedefi</strong><span>Tire-grade reclaimed rubber production target ve teknik kalite kontrol yaklaşımı.</span></li>
+            <li><strong>AB pazarı odaklı yaklaşım</strong><span>AB pazarına uygun kalite yaklaşımı, yerel mevzuat ve izlenebilir üretim modeli.</span></li>
           </ul>
         </aside>
       </div>
     </section>
 
-    <section class="section" id="business">
+    <section>
       <div class="shell">
         <div class="section-head">
-          <span class="kicker" data-i18n="businessKicker">Core Business Structure</span>
-          <h2 data-i18n="businessTitle">NJ GROUP core business divisions</h2>
-          <p data-i18n="businessCopy">A clearer industrial group structure built around production, trade and market entry execution.</p>
+          <span class="kicker">Teknik Konumlandırma</span>
+          <h2>Yüksek kaliteli rejenere kauçuk için kontrollü proses</h2>
+          <p>NJGROUP için temel değer; atık lastik yönetimini, lastik fabrikaları ve yüksek standartlı kauçuk ürünleri için sanayi hammaddesi geliştirme fırsatına dönüştürmektir.</p>
         </div>
-        <div class="business-grid">
-          <a class="business-card" id="production" href="eko-donusum.html">
-            <div class="card-image" style="--img:url('assets/eko-donusum.jpg')"></div>
-            <div class="card-body">
-              <span class="card-index" data-i18n="card1Index">Production</span>
-              <h3 data-i18n="card1Title">Production</h3>
-              <h4 data-i18n="card1Sub">Reclaimed Rubber Factory</h4>
-              <p data-i18n="card1Copy">We source qualified rubber powder and produce high-quality reclaimed rubber for Türkiye and European markets.</p>
-              <div class="keywords"><span>Reclaimed Rubber</span><span>Rubber Powder</span><span>Circular Economy</span><span>Europe Export</span></div>
-            </div>
-          </a>
-          <a class="business-card" id="trade" href="gida-makinalari.html">
-            <div class="card-image" style="--img:url('assets/endustriyel-makine.jpg')"></div>
-            <div class="card-body">
-              <span class="card-index" data-i18n="card2Index">Trade</span>
-              <h3 data-i18n="card2Title">Trade</h3>
-              <h4 data-i18n="card2Sub">Industrial Products & Equipment</h4>
-              <p data-i18n="card2Copy">We import, export and distribute food machinery, industrial equipment, robots, outdoor products, auto parts and electronics.</p>
-              <div class="keywords"><span>Industrial Trade</span><span>Food Machinery</span><span>Robots</span><span>Distribution</span></div>
-            </div>
-          </a>
-          <a class="business-card" id="services" href="#contact">
-            <div class="card-image" style="--img:url('assets/fuar-organizasyon.jpg')"></div>
-            <div class="card-body">
-              <span class="card-index" data-i18n="card3Index">Services</span>
-              <h3 data-i18n="card3Title">Services</h3>
-              <h4 data-i18n="card3Sub">Türkiye Market Entry Services</h4>
-              <p data-i18n="card3Copy">We help Chinese companies build brand centers, sales channels, after-sales networks, marketing operations and exhibition presence in Türkiye.</p>
-              <div class="keywords"><span>Market Entry</span><span>Brand Center</span><span>B2B Matching</span><span>After-sales</span></div>
-            </div>
-          </a>
+        <div class="grid-3">
+          <article class="card"><h3>Yüksek kaliteli rejenere kauçuk</h3><p>Kontrollü devulkanizasyon, rafinasyon ve kalite testleri ile lastik ve kauçuk üreticileri için daha tutarlı hammadde alternatifi geliştirme hedefi.</p><div class="tag-row"><span class="tag">rejenere kauçuk</span><span class="tag">tire-grade target</span></div></article>
+          <article class="card"><h3>CO2 destekli teknoloji yaklaşımı</h3><p>Kauçuğun çapraz bağ yapısını hedefleyen, proses parametreleri gizli tutulan ve yüksek katma değerli geri kazanıma odaklanan mühendislik modeli.</p><div class="tag-row"><span class="tag">devulkanizasyon</span><span class="tag">CO2 assisted</span></div></article>
+          <article class="card"><h3>AB standartlarına yönelik kontrol</h3><p>Belgelendirme iddiası yerine; izlenebilirlik, laboratuvar kalite kontrolü, çevresel uyum ve EU-standard oriented quality control yaklaşımı.</p><div class="tag-row"><span class="tag">quality control</span><span class="tag">EU-standard oriented</span></div></article>
         </div>
       </div>
     </section>
 
-    <section class="section split" id="why">
-      <div class="shell two-col">
+    <section class="dark-band">
+      <div class="shell">
+        <div class="section-head">
+          <span class="kicker">Teknik Proses</span>
+          <h2>Atık lastikten lastik sanayisine uygun rejenere kauçuğa</h2>
+          <p>Bu akış temel prensibi gösterir; sıcaklık, basınç, reçete, katalizör oranı ve proses parametreleri ticari sır olarak paylaşılmaz.</p>
+        </div>
+        <div class="process">
+          <div class="step"><small>01</small>Atık Lastik</div>
+          <div class="step"><small>02</small>Ayırma ve Ön İşleme</div>
+          <div class="step"><small>03</small>Kauçuk Tozu</div>
+          <div class="step"><small>04</small>CO2 Destekli Devulkanizasyon</div>
+          <div class="step"><small>05</small>Rafine ve Homojenizasyon</div>
+          <div class="step"><small>06</small>Kalite Testleri</div>
+          <div class="step"><small>07</small>Sanayiye Uygun Rejenere Kauçuk</div>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="shell">
+        <div class="section-head">
+          <span class="kicker">Ürün Seviyesi</span>
+          <h2>Kauçuk tozu, rejenere kauçuk ve lastik kalitesinde rejenere kauçuk farkı</h2>
+        </div>
+        <div class="comparison">
+          <table>
+            <thead><tr><th>Seviye</th><th>Teknik Tanım</th><th>Katma Değer</th><th>Hedef Uygulama</th></tr></thead>
+            <tbody>
+              <tr><th>Kauçuk Tozu</th><td>Fiziksel kırma ürünü; kauçuk çoğunlukla toz seviyesinde kalır.</td><td>Düşük katma değer.</td><td>Sınırlı uygulama alanı.</td></tr>
+              <tr><th>Rejenere Kauçuk</th><td>Devulkanizasyon süreci sonrası kauçuk formülasyonlarına tekrar katılabilir.</td><td>Daha yüksek katma değer.</td><td>Kauçuk ürünleri ve endüstriyel parçalar.</td></tr>
+              <tr><th>Lastik Kalitesinde Rejenere Kauçuk</th><td>Kontrollü proses, gelişmiş kalite testleri ve reçete optimizasyonu.</td><td>En yüksek hedef seviye.</td><td>Lastik fabrikaları ve yüksek standartlı kauçuk ürünleri için hedef kalite.</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+
+    <section class="dark-band" id="about">
+      <div class="shell">
+        <div class="section-head">
+          <span class="kicker">Neden NJGROUP</span>
+          <h2>Teknoloji, üretim ve pazar bağlantısını aynı platformda değerlendiriyoruz</h2>
+        </div>
+        <div class="grid-3">
+          <article class="card"><h3>Lastik ve kauçuk sanayisi odaklılık</h3><p>Hedef müşteri kitlesi; lastik fabrikaları, kauçuk parça üreticileri, kauçuk hamur hazırlama tesisleri ve rejenere kauçuk satın alan endüstriyel yapılardır.</p></article>
+          <article class="card"><h3>NJGROUP mühendislik ağı</h3><p>Proje geliştirme, tedarik zinciri, ekipman seçimi, kalite sistemi ve pazar bağlantısı birlikte ele alınır.</p></article>
+          <article class="card"><h3>Döngüsel ekonomi değeri</h3><p>Atık lastiklerin yüksek katma değerli sanayi hammaddesine dönüşmesi; karbon ayak izi azaltımına, yerel üretime ve yeşil sanayi dönüşümüne katkı sağlar.</p></article>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="shell">
+        <div class="section-head">
+          <span class="kicker">Hedef İş Birlikleri</span>
+          <h2>Kimlerle çalışıyoruz?</h2>
+        </div>
+        <div class="grid-3">
+          <article class="card"><h3>Sanayi Alıcıları</h3><p>Lastik fabrikaları, kauçuk ürünleri üreticileri, otomotiv kauçuk parça üreticileri ve kauçuk zemin kaplama üreticileri.</p></article>
+          <article class="card"><h3>Tedarik ve Teknoloji</h3><p>Kauçuk tozu tedarikçileri, ekipman üreticileri, proje geliştirmek isteyen yatırımcılar ve mühendislik ortakları.</p></article>
+          <article class="card"><h3>Kamu ve ESG</h3><p>Belediyeler, çevre kurumları, organize sanayi bölgeleri, ESG fonları ve yeşil sanayi dönüşümü programları.</p></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="contact-band" id="contact">
+      <div class="shell grid-2">
         <div>
-          <span class="kicker" data-i18n="whyKicker">Industrial Trust</span>
-          <h2 data-i18n="whyTitle">Why NJ GROUP</h2>
-          <p class="plain-copy" data-i18n="whyCopy">NJ GROUP is positioned as a practical operating partner between Chinese manufacturers, Türkiye-based channels and European industrial demand.</p>
-          <div class="check-grid">
-            <div class="check-item" data-i18n="why1">China supply chain access</div>
-            <div class="check-item" data-i18n="why2">Türkiye local operation capability</div>
-            <div class="check-item" data-i18n="why3">Europe-oriented market vision</div>
-            <div class="check-item" data-i18n="why4">Production + trade + services integration</div>
-            <div class="check-item" data-i18n="why5">B2B execution and long-term partnership model</div>
+          <span class="kicker">İletişim</span>
+          <h2>Rejenere kauçuk, teknoloji veya tesis projenizi değerlendirelim</h2>
+          <p>Numune, teknik görüşme, kauçuk tozu tedariki, tesis yatırımı veya kamu/ESG iş birliği için NJGROUP ile iletişime geçebilirsiniz.</p>
+          <div class="actions">
+            <a class="btn btn-primary" href="https://wa.me/905372054333" target="_blank" rel="noopener" data-track="whatsapp_click">WhatsApp ile İletişime Geç</a>
+            <a class="btn btn-secondary" href="mailto:info@njgrup.com" data-track="email_click">info@njgrup.com</a>
           </div>
         </div>
-        <div class="image-stack" aria-label="NJ GROUP operating areas">
-          <div class="image-tile wide" style="--img:url('assets/nj-waterjet-production-line.jpg')"></div>
-          <div class="image-tile" style="--img:url('assets/food-double-chamber-vacuum-packaging.jpg')"></div>
-          <div class="image-tile" style="--img:url('assets/dijital-pazarlama.jpg')"></div>
-        </div>
-      </div>
-    </section>
-
-    <section class="section" id="serve">
-      <div class="shell">
-        <div class="section-head">
-          <span class="kicker" data-i18n="serveKicker">Who We Serve</span>
-          <h2 data-i18n="serveTitle">Built for manufacturers, distributors, buyers and industrial partners</h2>
-        </div>
-        <div class="serve-route" id="serve-route" aria-label="Silk Road business connection">
-          <svg class="silk-road" viewBox="0 0 1200 126" preserveAspectRatio="none" aria-hidden="true">
-            <defs>
-              <linearGradient id="silkRoadGradient" x1="0" y1="0" x2="1" y2="0">
-                <stop offset="0%" stop-color="#2f7960"/>
-                <stop offset="48%" stop-color="#c79b3b"/>
-                <stop offset="100%" stop-color="#4e8eb8"/>
-              </linearGradient>
-            </defs>
-            <path class="road-shadow" d="M 86 62 C 210 18, 360 24, 500 58 S 760 116, 908 70 S 1090 36, 1160 72"/>
-            <path class="road-main" d="M 86 62 C 210 18, 360 24, 500 58 S 760 116, 908 70 S 1090 36, 1160 72"/>
-            <path class="road-thread" d="M 86 62 C 210 18, 360 24, 500 58 S 760 116, 908 70 S 1090 36, 1160 72"/>
-            <circle class="route-ring" cx="86" cy="62" r="21"/><circle class="route-node" cx="86" cy="62" r="9"/>
-            <circle class="route-ring" cx="320" cy="36" r="21"/><circle class="route-node" cx="320" cy="36" r="9"/>
-            <circle class="route-ring" cx="570" cy="78" r="21"/><circle class="route-node" cx="570" cy="78" r="9"/>
-            <circle class="route-ring" cx="860" cy="82" r="21"/><circle class="route-node" cx="860" cy="82" r="9"/>
-            <circle class="route-ring" cx="1110" cy="54" r="21"/><circle class="route-node" cx="1110" cy="54" r="9"/>
-          </svg>
-          <div class="serve-grid">
-            <div class="serve-card"><span data-i18n="serve1">Chinese manufacturers entering Türkiye</span></div>
-            <div class="serve-card"><span data-i18n="serve2">Turkish distributors seeking Chinese products</span></div>
-            <div class="serve-card"><span data-i18n="serve3">European buyers looking for sustainable materials</span></div>
-            <div class="serve-card"><span data-i18n="serve4">Industrial companies seeking local partners</span></div>
-            <div class="serve-card"><span data-i18n="serve5">Brands needing sales, after-sales and marketing operation in Türkiye</span></div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section class="section split" id="about">
-      <div class="shell">
-        <div class="section-head">
-          <span class="kicker" data-i18n="aboutKicker">About NJ GROUP</span>
-          <h2 data-i18n="aboutTitle">An Istanbul-based industrial platform with China, Türkiye and Europe in one model</h2>
-          <p data-i18n="aboutCopy">NJ GROUP combines production planning, supply chain sourcing, trade execution, local channel development and market operations for long-term industrial cooperation.</p>
-        </div>
-        <div class="about-grid">
-          <div class="about-card"><strong data-i18n="about1Title">Production Focus</strong><p data-i18n="about1Copy">Reclaimed rubber manufacturing based on qualified rubber powder and sustainable material value.</p></div>
-          <div class="about-card"><strong data-i18n="about2Title">Trade Execution</strong><p data-i18n="about2Copy">Product sourcing, import, export, agency, distribution and project cooperation across industrial categories.</p></div>
-          <div class="about-card"><strong data-i18n="about3Title">Local Services</strong><p data-i18n="about3Copy">Market entry, sales channels, exhibitions, translation, reception, after-sales and operational support in Türkiye.</p></div>
-        </div>
-      </div>
-    </section>
-
-    <section class="cta" id="contact">
-      <div class="shell cta-box">
-        <h2 data-i18n="ctaTitle">Start Your Türkiye Market Project with NJ GROUP</h2>
-        <p data-i18n="ctaCopy">Whether you are looking for reclaimed rubber supply, industrial product distribution or Türkiye market entry support, NJ GROUP can help you build a practical local operation model.</p>
-        <div class="actions">
-          <a class="btn btn-primary" href="https://wa.me/905372054333" target="_blank" rel="noopener" data-i18n="ctaButton">Contact via WhatsApp</a>
-          <a class="btn btn-secondary" href="mailto:info@njgrup.com">info@njgrup.com</a>
-        </div>
-      </div>
-    </section>
-
-    <section class="section">
-      <div class="shell">
-        <div class="section-head">
-          <span class="kicker" data-i18n="contactKicker">Contact</span>
-          <h2 data-i18n="contactTitle">Speak with NJ GROUP</h2>
-        </div>
-        <div class="contact-grid">
-          <div class="contact-card">
-            <strong data-i18n="companyLabel">Company</strong>
-            NJ GROUP YEŞİL DÖNÜŞÜM TEKNOLOJİ SANAYİ VE DIŞ TİCARET LİMİTED ŞİRKETİ
-          </div>
-          <div class="contact-card">
-            <strong data-i18n="contactLabel">Direct Contact</strong>
-            <a href="mailto:info@njgrup.com">info@njgrup.com</a><br>
-            <a href="https://wa.me/905372054333" target="_blank" rel="noopener">WhatsApp: +90 537 205 43 33</a>
-          </div>
+        <div class="card">
+          <h3>NJGROUP YEŞİL DÖNÜŞÜM TEKNOLOJİ SANAYİ VE DIŞ TİCARET LİMİTED ŞİRKETİ</h3>
+          <p>Türkiye merkezli döngüsel kauçuk teknolojileri ve endüstriyel proje geliştirme platformu.</p>
+          <div class="tag-row"><span class="tag">reclaimed rubber Turkey</span><span class="tag">rubber recycling plant</span><span class="tag">circular rubber economy</span></div>
         </div>
       </div>
     </section>
   </main>
 
-  <a class="whatsapp" href="https://wa.me/905372054333" target="_blank" rel="noopener" aria-label="WhatsApp">WA</a>
+  <div class="floating-cta">
+    <a href="https://wa.me/905372054333" target="_blank" rel="noopener" data-track="whatsapp_click">WhatsApp</a>
+    <a href="tire-grade-reclaimed-rubber.html#sample" data-track="sample_request">Numune Talep Et</a>
+    <a href="tire-grade-reclaimed-rubber.html#quote" data-track="quote_request">Teklif Al</a>
+  </div>
 
   <footer>
-    <div class="shell footer-grid">
-      <div>
-        <strong>NJ GROUP</strong><br>
-        <span data-i18n="footerLine">Production, trade and Türkiye market entry services for industrial partners.</span>
-      </div>
-      <div>
-        <a href="#production" data-i18n="navProduction">Production</a><br>
-        <a href="#trade" data-i18n="navTrade">Trade</a><br>
-        <a href="#services" data-i18n="navServices">Services</a><br>
-        © 2018 NJ GROUP
-      </div>
+    <div class="shell">
+      <span>© 2018 NJGROUP. Tire-Grade Reclaimed Rubber & Circular Rubber Technology Platform.</span>
+      <span><a href="co2-devulcanization-technology.html">Teknoloji</a> · <a href="tire-grade-reclaimed-rubber.html">Ürünler</a> · <a href="rubber-factory-solution.html">Tesis Çözümleri</a></span>
     </div>
   </footer>
-
-  <script>
-    const translations = {
-      en: {},
-      tr: {
-        topNotice: "NJ GROUP resmi endüstriyel platformu: Production | Trade | Services",
-        brandLine: "YEŞİL DÖNÜŞÜM TEKNOLOJİ SANAYİ VE DIŞ TİCARET LİMİTED ŞİRKETİ",
-        navHome: "Home", navProduction: "Production", navTrade: "Trade", navServices: "Services", navAbout: "About", navContact: "Contact",
-        heroEyebrow: "Entegre Endüstriyel Platform",
-        heroTitle: "Production. Trade. Market Entry.",
-        heroSubtitle: "NJ GROUP; Çin tedarik zincirlerini, Türkiye merkezli operasyonları ve Avrupa pazar fırsatlarını tek entegre endüstriyel platformda birleştirir.",
-        heroPrimary: "İş Kollarını İncele", heroSecondary: "NJ GROUP ile İletişime Geç",
-        panelTitle: "Birbirine bağlı üç kabiliyet", panelProduction: "Production", panelProductionText: "Rejenere kauçuk üretimi ve sürdürülebilir endüstriyel hammaddeler.", panelTrade: "Trade", panelTradeText: "Endüstriyel ürünler, makineler, ekipman ve dağıtım operasyonları.", panelServices: "Services", panelServicesText: "Türkiye pazar girişi, yerel uygulama ve uzun vadeli B2B destek.",
-        businessKicker: "Ana İş Yapısı", businessTitle: "NJ GROUP ana iş kolları", businessCopy: "Üretim, ticaret ve pazar girişi uygulaması etrafında daha net bir endüstriyel grup yapısı.",
-        card1Index: "Production", card1Title: "Production", card1Sub: "Rejenere Kauçuk Fabrikası", card1Copy: "Standartlara uygun kauçuk tozu tedarik eder, Türkiye ve Avrupa pazarları için yüksek kaliteli rejenere kauçuk üretiriz.",
-        card2Index: "Trade", card2Title: "Trade", card2Sub: "Endüstriyel Ürünler ve Ekipman", card2Copy: "Gıda makineleri, endüstriyel ekipman, robotlar, outdoor ürünleri, otomotiv parçaları ve elektronik ürünlerde ithalat, ihracat ve dağıtım yaparız.",
-        card3Index: "Services", card3Title: "Services", card3Sub: "Türkiye Pazar Girişi Hizmetleri", card3Copy: "Çinli şirketlerin Türkiye'de marka merkezi, satış kanalı, satış sonrası ağ, pazarlama operasyonu ve fuar varlığı kurmasına destek oluruz.",
-        whyKicker: "Endüstriyel Güven", whyTitle: "Why NJ GROUP", whyCopy: "NJ GROUP, Çinli üreticiler, Türkiye merkezli kanallar ve Avrupa endüstriyel talebi arasında pratik bir operasyon ortağıdır.",
-        why1: "Çin tedarik zincirine erişim", why2: "Türkiye yerel operasyon kabiliyeti", why3: "Avrupa odaklı pazar vizyonu", why4: "Production + trade + services entegrasyonu", why5: "B2B uygulama ve uzun vadeli ortaklık modeli",
-        serveKicker: "Who We Serve", serveTitle: "Üreticiler, distribütörler, alıcılar ve endüstriyel ortaklar için",
-        serve1: "Türkiye'ye giren Çinli üreticiler", serve2: "Çin ürünleri arayan Türk distribütörler", serve3: "Sürdürülebilir malzeme arayan Avrupalı alıcılar", serve4: "Yerel ortak arayan endüstriyel şirketler", serve5: "Türkiye'de satış, satış sonrası ve pazarlama operasyonu arayan markalar",
-        aboutKicker: "NJ GROUP Hakkında", aboutTitle: "İstanbul merkezli, Çin, Türkiye ve Avrupa'yı tek modelde birleştiren endüstriyel platform", aboutCopy: "NJ GROUP; uzun vadeli endüstriyel iş birliği için üretim planlama, tedarik zinciri, dış ticaret, yerel kanal geliştirme ve pazar operasyonlarını birleştirir.",
-        about1Title: "Üretim Odağı", about1Copy: "Nitelikli kauçuk tozu ve sürdürülebilir malzeme değeri üzerine kurulu rejenere kauçuk üretimi.", about2Title: "Ticaret Uygulaması", about2Copy: "Endüstriyel kategorilerde ürün tedariki, ithalat, ihracat, temsilcilik, dağıtım ve proje iş birliği.", about3Title: "Yerel Hizmetler", about3Copy: "Türkiye'de pazar girişi, satış kanalı, fuar, tercüme, karşılama, satış sonrası ve operasyon desteği.",
-        ctaTitle: "Türkiye pazar projenize NJ GROUP ile başlayın", ctaCopy: "Rejenere kauçuk tedariki, endüstriyel ürün dağıtımı veya Türkiye pazar girişi desteği arıyorsanız, NJ GROUP pratik bir yerel operasyon modeli kurmanıza yardımcı olabilir.", ctaButton: "WhatsApp ile İletişim",
-        contactKicker: "İletişim", contactTitle: "NJ GROUP ile görüşün", companyLabel: "Şirket", contactLabel: "Doğrudan İletişim", footerLine: "Endüstriyel ortaklar için üretim, ticaret ve Türkiye pazar girişi hizmetleri."
-      },
-      zh: {
-        topNotice: "NJ GROUP 官方工业平台：生产 | 贸易 | 服务",
-        navHome: "首页", navProduction: "生产", navTrade: "贸易", navServices: "服务", navAbout: "关于", navContact: "联系",
-        heroEyebrow: "一体化工业平台",
-        heroTitle: "Production. Trade. Market Entry.",
-        heroSubtitle: "NJ GROUP 通过一个一体化工业平台，连接中国供应链、土耳其本地运营和欧洲市场机会。",
-        heroPrimary: "查看业务板块", heroSecondary: "联系 NJ GROUP",
-        panelTitle: "三项互相连接的能力", panelProduction: "Production 生产", panelProductionText: "再生橡胶生产与可持续工业原材料。", panelTrade: "Trade 贸易", panelTradeText: "工业产品、机械设备、项目合作与分销运营。", panelServices: "Services 服务", panelServicesText: "土耳其市场进入、本地执行和长期 B2B 支持。",
-        businessKicker: "核心业务结构", businessTitle: "NJ GROUP 三大业务板块", businessCopy: "围绕生产、贸易和市场落地执行，形成更清晰的工业集团结构。",
-        card1Index: "Production", card1Title: "Production 生产", card1Sub: "再生橡胶工厂", card1Copy: "我们收购符合标准的胶粉，通过生产加工制造高品质再生橡胶，供应土耳其本土市场，并出口到欧洲。",
-        card2Index: "Trade", card2Title: "Trade 贸易", card2Sub: "工业产品与机械设备", card2Copy: "我们开展食品机械、工业设备、机器人、户外用品、汽车配件和电子产品的进口、出口、分销和项目合作。",
-        card3Index: "Services", card3Title: "Services 服务", card3Sub: "中国企业出海土耳其落地服务", card3Copy: "我们帮助中国企业在土耳其建设品牌中心、销售渠道、售后网络、市场推广运营和展会展示体系。",
-        whyKicker: "工业信任能力", whyTitle: "Why NJ GROUP", whyCopy: "NJ GROUP 是连接中国制造商、土耳其本地渠道和欧洲工业需求的务实型运营伙伴。",
-        why1: "中国供应链资源", why2: "土耳其本地运营能力", why3: "面向欧洲的市场视野", why4: "生产 + 贸易 + 服务一体化", why5: "B2B 执行与长期合作模式",
-        serveKicker: "服务对象", serveTitle: "面向制造商、经销商、采购商和工业合作伙伴",
-        serve1: "进入土耳其市场的中国制造商", serve2: "寻找中国产品的土耳其经销商", serve3: "寻找可持续材料的欧洲买家", serve4: "寻找本地合作伙伴的工业企业", serve5: "需要土耳其销售、售后和市场运营的品牌",
-        aboutKicker: "关于 NJ GROUP", aboutTitle: "以伊斯坦布尔为中心，连接中国、土耳其和欧洲的工业平台", aboutCopy: "NJ GROUP 将生产规划、供应链采购、贸易执行、本地渠道建设和市场运营整合为长期工业合作模式。",
-        about1Title: "生产方向", about1Copy: "基于合格胶粉和可持续材料价值的再生橡胶制造。", about2Title: "贸易执行", about2Copy: "工业品类的产品采购、进出口、代理、分销和项目合作。", about3Title: "本地服务", about3Copy: "土耳其市场进入、销售渠道、展会、翻译、接待、售后和运营支持。",
-        ctaTitle: "与 NJ GROUP 一起启动您的土耳其市场项目", ctaCopy: "无论您需要再生橡胶供应、工业产品分销，还是土耳其市场进入支持，NJ GROUP 都可以帮助您建立务实的本地运营模式。", ctaButton: "通过 WhatsApp 联系",
-        contactKicker: "联系", contactTitle: "联系 NJ GROUP", companyLabel: "公司", contactLabel: "直接联系", footerLine: "为工业合作伙伴提供生产、贸易和土耳其市场进入服务。"
-      },
-      fr: {
-        topNotice: "Plateforme industrielle officielle NJ GROUP : Production | Trade | Services",
-        navHome: "Accueil", navProduction: "Production", navTrade: "Trade", navServices: "Services", navAbout: "À propos", navContact: "Contact",
-        heroEyebrow: "Plateforme industrielle intégrée",
-        heroTitle: "Production. Trade. Market Entry.",
-        heroSubtitle: "NJ GROUP relie les chaînes d'approvisionnement chinoises, les opérations basées en Türkiye et les opportunités du marché européen dans une plateforme industrielle intégrée.",
-        heroPrimary: "Explorer les activités", heroSecondary: "Contacter NJ GROUP",
-        panelTitle: "Trois capacités connectées", panelProduction: "Production", panelProductionText: "Caoutchouc régénéré et matières industrielles durables.", panelTrade: "Trade", panelTradeText: "Produits industriels, machines, équipements et distribution.", panelServices: "Services", panelServicesText: "Entrée sur le marché turc, exécution locale et soutien B2B.",
-        businessKicker: "Structure d'activité", businessTitle: "Trois divisions clés de NJ GROUP", businessCopy: "Une structure industrielle plus claire autour de la production, du commerce et de l'entrée de marché.",
-        card1Title: "Production", card1Sub: "Usine de caoutchouc régénéré", card1Copy: "Nous achetons de la poudre de caoutchouc qualifiée et produisons du caoutchouc régénéré de haute qualité pour les marchés turc et européen.",
-        card2Title: "Trade", card2Sub: "Produits et équipements industriels", card2Copy: "Nous importons, exportons et distribuons des machines alimentaires, équipements industriels, robots, produits outdoor, pièces automobiles et électroniques.",
-        card3Title: "Services", card3Sub: "Services d'entrée sur le marché turc", card3Copy: "Nous aidons les entreprises chinoises à créer des centres de marque, réseaux de vente, service après-vente, marketing et présence en salon en Türkiye.",
-        whyKicker: "Confiance industrielle", whyTitle: "Why NJ GROUP", whyCopy: "NJ GROUP agit comme partenaire opérationnel entre fabricants chinois, canaux turcs et demande industrielle européenne.",
-        why1: "Accès à la chaîne d'approvisionnement chinoise", why2: "Capacité opérationnelle locale en Türkiye", why3: "Vision orientée vers l'Europe", why4: "Intégration production + trade + services", why5: "Exécution B2B et partenariat long terme",
-        serveKicker: "Who We Serve", serveTitle: "Pour fabricants, distributeurs, acheteurs et partenaires industriels",
-        serve1: "Fabricants chinois entrant en Türkiye", serve2: "Distributeurs turcs cherchant des produits chinois", serve3: "Acheteurs européens recherchant des matériaux durables", serve4: "Entreprises industrielles cherchant des partenaires locaux", serve5: "Marques ayant besoin de vente, après-vente et marketing en Türkiye",
-        aboutKicker: "À propos de NJ GROUP", aboutTitle: "Une plateforme industrielle basée à Istanbul reliant Chine, Türkiye et Europe", aboutCopy: "NJ GROUP combine production, sourcing, commerce, canaux locaux et opérations de marché pour une coopération industrielle durable.",
-        about1Title: "Production", about1Copy: "Fabrication de caoutchouc régénéré basée sur une poudre qualifiée et une valeur matière durable.", about2Title: "Exécution commerciale", about2Copy: "Sourcing, import, export, agence, distribution et projets dans les catégories industrielles.", about3Title: "Services locaux", about3Copy: "Entrée de marché, ventes, salons, traduction, accueil, après-vente et soutien opérationnel en Türkiye.",
-        ctaTitle: "Démarrez votre projet en Türkiye avec NJ GROUP", ctaCopy: "Pour l'approvisionnement en caoutchouc régénéré, la distribution de produits industriels ou l'entrée sur le marché turc, NJ GROUP peut construire un modèle opérationnel local.", ctaButton: "Contacter via WhatsApp",
-        contactKicker: "Contact", contactTitle: "Parler avec NJ GROUP", companyLabel: "Société", contactLabel: "Contact direct", footerLine: "Production, commerce et services d'entrée sur le marché turc pour partenaires industriels."
-      },
-      de: {
-        topNotice: "Offizielle NJ GROUP Industrieplattform: Production | Trade | Services",
-        navHome: "Home", navProduction: "Production", navTrade: "Trade", navServices: "Services", navAbout: "Über uns", navContact: "Kontakt",
-        heroEyebrow: "Integrierte Industrieplattform",
-        heroTitle: "Production. Trade. Market Entry.",
-        heroSubtitle: "NJ GROUP verbindet chinesische Lieferketten, operative Strukturen in Türkiye und europäische Marktchancen in einer integrierten Industrieplattform.",
-        heroPrimary: "Geschäftsbereiche ansehen", heroSecondary: "NJ GROUP kontaktieren",
-        panelTitle: "Drei verbundene Fähigkeiten", panelProduction: "Production", panelProductionText: "Reclaimed Rubber und nachhaltige industrielle Rohstoffe.", panelTrade: "Trade", panelTradeText: "Industrieprodukte, Maschinen, Ausrüstung und Distribution.", panelServices: "Services", panelServicesText: "Markteintritt in Türkiye, lokale Umsetzung und B2B-Unterstützung.",
-        businessKicker: "Geschäftsstruktur", businessTitle: "Drei Kernbereiche von NJ GROUP", businessCopy: "Eine klare industrielle Gruppenstruktur rund um Produktion, Handel und Markteintritt.",
-        card1Title: "Production", card1Sub: "Fabrik für Reclaimed Rubber", card1Copy: "Wir beziehen qualifiziertes Gummipulver und produzieren hochwertiges Reclaimed Rubber für Türkiye und europäische Märkte.",
-        card2Title: "Trade", card2Sub: "Industrieprodukte und Ausrüstung", card2Copy: "Wir importieren, exportieren und vertreiben Lebensmittelmaschinen, Industrieausrüstung, Roboter, Outdoor-Produkte, Autoteile und Elektronik.",
-        card3Title: "Services", card3Sub: "Markteintrittsdienste für Türkiye", card3Copy: "Wir helfen chinesischen Unternehmen beim Aufbau von Brand Centern, Vertrieb, After-Sales, Marketing und Messepräsenz in Türkiye.",
-        whyKicker: "Industrielles Vertrauen", whyTitle: "Why NJ GROUP", whyCopy: "NJ GROUP ist ein praktischer Operationspartner zwischen chinesischen Herstellern, Kanälen in Türkiye und europäischer Industrienachfrage.",
-        why1: "Zugang zur chinesischen Lieferkette", why2: "Lokale Operationsfähigkeit in Türkiye", why3: "Europaorientierte Marktvision", why4: "Integration von Production + Trade + Services", why5: "B2B-Umsetzung und langfristiges Partnerschaftsmodell",
-        serveKicker: "Who We Serve", serveTitle: "Für Hersteller, Distributoren, Käufer und Industriepartner",
-        serve1: "Chinesische Hersteller mit Eintritt in Türkiye", serve2: "Türkische Distributoren für chinesische Produkte", serve3: "Europäische Käufer nachhaltiger Materialien", serve4: "Industrieunternehmen mit Bedarf an lokalen Partnern", serve5: "Marken mit Bedarf an Vertrieb, After-Sales und Marketing in Türkiye",
-        aboutKicker: "Über NJ GROUP", aboutTitle: "Eine Industrieplattform in Istanbul für China, Türkiye und Europa", aboutCopy: "NJ GROUP verbindet Produktionsplanung, Beschaffung, Handel, lokale Kanäle und Marktoperationen für langfristige Industriekooperation.",
-        about1Title: "Produktionsfokus", about1Copy: "Herstellung von Reclaimed Rubber auf Basis qualifizierten Gummipulvers und nachhaltiger Materialwerte.", about2Title: "Handelsumsetzung", about2Copy: "Sourcing, Import, Export, Vertretung, Distribution und Projektkooperation in Industriekategorien.", about3Title: "Lokale Services", about3Copy: "Markteintritt, Vertrieb, Messen, Übersetzung, Empfang, After-Sales und operative Unterstützung in Türkiye.",
-        ctaTitle: "Starten Sie Ihr Türkiye-Projekt mit NJ GROUP", ctaCopy: "Ob Reclaimed Rubber, Industrieproduktdistribution oder Markteintritt in Türkiye, NJ GROUP hilft beim Aufbau eines praktischen lokalen Operationsmodells.", ctaButton: "Kontakt per WhatsApp",
-        contactKicker: "Kontakt", contactTitle: "Mit NJ GROUP sprechen", companyLabel: "Unternehmen", contactLabel: "Direkter Kontakt", footerLine: "Produktion, Handel und Markteintrittsdienste in Türkiye für Industriepartner."
-      }
-    };
-    const baseText = {};
-    document.querySelectorAll("[data-i18n]").forEach((el) => { baseText[el.dataset.i18n] = el.textContent; });
-    const select = document.getElementById("languageSelect");
-    function setLanguage(lang) {
-      const dict = { ...baseText, ...(translations[lang] || {}) };
-      document.documentElement.lang = lang;
-      document.querySelectorAll("[data-i18n]").forEach((el) => {
-        const key = el.dataset.i18n;
-        if (dict[key] !== undefined) el.textContent = dict[key];
-      });
-      localStorage.setItem("njgrup-language", lang);
-      if (select.value !== lang) select.value = lang;
-    }
-    select.addEventListener("change", (event) => setLanguage(event.target.value));
-    setLanguage(localStorage.getItem("njgrup-language") || "en");
-  </script>
+  <script src="tracking.js" defer></script>
   <!-- Cloudflare Web Analytics --><script defer src="https://static.cloudflareinsights.com/beacon.min.js" data-cf-beacon='{"token":"48d5c39378e14316b6745a5be6f213bb"}'></script><!-- End Cloudflare Web Analytics -->
 </body>
 </html>

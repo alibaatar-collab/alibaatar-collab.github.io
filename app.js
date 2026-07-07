@@ -12,7 +12,7 @@ const translations = {
     topExpoAction: "View calendar",
     heroTitle: "Connecting China, Türkiye & Europe",
     heroCopy:
-      "NJ GROUP helps industrial companies enter Türkiye, connect with Europe, integrate Chinese supply chains and build real market channels.",
+      "NJGROUP helps industrial companies enter Türkiye, connect with Europe, integrate Chinese supply chains and build real market channels.",
     heroCta: "Start a Market Entry Project",
     heroSecondary: "Explore Services",
     heroPanelTitle: "Industrial Trade • Market Expansion • Green Transformation",
@@ -20,7 +20,7 @@ const translations = {
     aboutKicker: "Official Positioning",
     aboutTitle: "Not a product catalogue. An industrial ecosystem platform.",
     aboutCopy:
-      "NJ GROUP is designed to help clients build commercial connections between Chinese manufacturing, Türkiye-based local execution and European market access.",
+      "NJGROUP is designed to help clients build commercial connections between Chinese manufacturing, Türkiye-based local execution and European market access.",
     routeChinaTitle: "China",
     routeTurkeyTitle: "Türkiye",
     routeEuropeTitle: "Europe",
@@ -30,7 +30,7 @@ const translations = {
     expoKicker: "Client Traffic Gateway",
     expoTitle: "Türkiye exhibitions as the entry point of the Eurasia industrial loop",
     expoCopy:
-      "Exhibition service is not only booth support. It is NJ GROUP's industrial customer acquisition center: Chinese factories meet Türkiye channels, then connect to Europe and long-term orders.",
+      "Exhibition service is not only booth support. It is NJGROUP's industrial customer acquisition center: Chinese factories meet Türkiye channels, then connect to Europe and long-term orders.",
     loop1: "Chinese Factories",
     loop2: "Türkiye Exhibitions",
     loop3: "Distributor Conversion",
@@ -43,7 +43,7 @@ const translations = {
     expoNewsTitle: "Exhibition Intelligence Window",
     expoNewsSmall: "Auto-update-ready feed",
     expoCalendarKicker: "Future Türkiye Exhibitions",
-    expoCalendarTitle: "Priority fairs for NJ GROUP industrial growth",
+    expoCalendarTitle: "Priority fairs for NJGROUP industrial growth",
     expoCalendarCopy: "Dates are shown for planning and should be verified with official fair organizers before booking.",
     servicesKicker: "Core Business System",
     servicesTitle: "Nine integrated service platforms",
@@ -51,13 +51,13 @@ const translations = {
       "Each service is built for practical execution: sourcing, channels, compliance, logistics, marketing and long-term market growth.",
     marketsKicker: "Market Architecture",
     marketsTitle: "Three-region operating model",
-    marketsCopy: "NJ GROUP aligns Chinese supply capacity, Türkiye local landing power and European market standards.",
+    marketsCopy: "NJGROUP aligns Chinese supply capacity, Türkiye local landing power and European market standards.",
     marketChina: "China Supply Chain",
     marketTurkey: "Türkiye Market Entry",
     marketEurope: "Europe Connection",
     workflowKicker: "Execution Method",
     workflowTitle: "From opportunity to market operation",
-    workflowCopy: "NJ GROUP works as an execution partner: research, source, verify, negotiate, deliver and grow.",
+    workflowCopy: "NJGROUP works as an execution partner: research, source, verify, negotiate, deliver and grow.",
     step1Title: "Market Diagnosis",
     step1Copy: "Demand, customer type, price logic and competitive pressure.",
     step2Title: "Supply Matching",
@@ -67,9 +67,9 @@ const translations = {
     step4Title: "Channel Growth",
     step4Copy: "Distributor development, promotion, after-sales and repeat orders.",
     contactKicker: "Start Cooperation",
-    contactTitle: "Build your China-Türkiye-Europe business route with NJ GROUP.",
+    contactTitle: "Build your China-Türkiye-Europe business route with NJGROUP.",
     contactCopy:
-      "Tell us your product, target market and cooperation goal. NJ GROUP will structure the market entry, sourcing or trade execution plan.",
+      "Tell us your product, target market and cooperation goal. NJGROUP will structure the market entry, sourcing or trade execution plan.",
     formName: "Name",
     formCompany: "Company",
     formNeed: "Business need",
@@ -101,7 +101,7 @@ const translations = {
     topExpoAction: "查看展会时间",
     heroTitle: "连接中国、土耳其与欧洲",
     heroCopy:
-      "NJ GROUP 帮助工业企业进入土耳其、连接欧洲、整合中国供应链，并建立真正可落地的渠道与销售体系。",
+      "NJGROUP 帮助工业企业进入土耳其、连接欧洲、整合中国供应链，并建立真正可落地的渠道与销售体系。",
     heroCta: "启动市场进入项目",
     heroSecondary: "查看核心服务",
     heroPanelTitle: "工业贸易 • 市场扩张 • 绿色转型",
@@ -109,7 +109,7 @@ const translations = {
     aboutKicker: "官方定位",
     aboutTitle: "不是产品目录网站，而是工业生态平台。",
     aboutCopy:
-      "NJ GROUP 的核心价值不是简单卖货，而是帮助客户在中国制造、土耳其本地落地和欧洲市场之间建立真实商业连接。",
+      "NJGROUP 的核心价值不是简单卖货，而是帮助客户在中国制造、土耳其本地落地和欧洲市场之间建立真实商业连接。",
     routeChinaTitle: "中国",
     routeTurkeyTitle: "土耳其",
     routeEuropeTitle: "欧洲",
@@ -119,7 +119,7 @@ const translations = {
     expoKicker: "客户流量入口",
     expoTitle: "土耳其展会是欧亚工业商业闭环的入口",
     expoCopy:
-      "展会服务不是搭展台，而是 NJ GROUP 的工业客户流量中心：中国工厂在土耳其获得经销商、项目客户和欧洲连接。",
+      "展会服务不是搭展台，而是 NJGROUP 的工业客户流量中心：中国工厂在土耳其获得经销商、项目客户和欧洲连接。",
     loop1: "中国工厂",
     loop2: "土耳其展会",
     loop3: "经销商转化",
@@ -132,20 +132,20 @@ const translations = {
     expoNewsTitle: "展会资讯窗口",
     expoNewsSmall: "可接入自动更新数据",
     expoCalendarKicker: "土耳其未来展会时间",
-    expoCalendarTitle: "适合 NJ GROUP 工业增长的重点展会",
+    expoCalendarTitle: "适合 NJGROUP 工业增长的重点展会",
     expoCalendarCopy: "日期用于业务规划，正式参展前应以主办方官方信息为准。",
     servicesKicker: "核心服务体系",
     servicesTitle: "九大一体化服务平台",
     servicesCopy: "每个板块都服务真实执行：采购、渠道、合规、物流、营销和长期市场增长。",
     marketsKicker: "市场架构",
     marketsTitle: "三大区域协同运营模式",
-    marketsCopy: "NJ GROUP 将中国供应能力、土耳其本地落地能力和欧洲市场标准连接起来。",
+    marketsCopy: "NJGROUP 将中国供应能力、土耳其本地落地能力和欧洲市场标准连接起来。",
     marketChina: "中国供应链",
     marketTurkey: "土耳其市场进入",
     marketEurope: "欧洲市场连接",
     workflowKicker: "执行方法",
     workflowTitle: "从机会判断到市场运营",
-    workflowCopy: "NJ GROUP 作为执行型合作伙伴，完成调研、采购、验证、谈判、交付和增长。",
+    workflowCopy: "NJGROUP 作为执行型合作伙伴，完成调研、采购、验证、谈判、交付和增长。",
     step1Title: "市场诊断",
     step1Copy: "需求、客户类型、价格逻辑和竞争压力。",
     step2Title: "供应链匹配",
@@ -155,8 +155,8 @@ const translations = {
     step4Title: "渠道增长",
     step4Copy: "经销商开发、推广、售后与复购。",
     contactKicker: "开始合作",
-    contactTitle: "与 NJ GROUP 建立中国-土耳其-欧洲商业通道。",
-    contactCopy: "告诉我们你的产品、目标市场和合作目标，NJ GROUP 将为你设计市场进入、采购或贸易执行方案。",
+    contactTitle: "与 NJGROUP 建立中国-土耳其-欧洲商业通道。",
+    contactCopy: "告诉我们你的产品、目标市场和合作目标，NJGROUP 将为你设计市场进入、采购或贸易执行方案。",
     formName: "姓名",
     formCompany: "公司",
     formNeed: "业务需求",
@@ -188,7 +188,7 @@ const translations = {
     topExpoAction: "Takvimi gör",
     heroTitle: "Çin, Türkiye ve Avrupa'yı birbirine bağlıyoruz",
     heroCopy:
-      "NJ GROUP, endüstri şirketlerinin Türkiye pazarına girmesine, Avrupa ile bağlantı kurmasına ve Çin tedarik zincirlerini yönetmesine yardımcı olur.",
+      "NJGROUP, endüstri şirketlerinin Türkiye pazarına girmesine, Avrupa ile bağlantı kurmasına ve Çin tedarik zincirlerini yönetmesine yardımcı olur.",
     heroCta: "Pazara Giriş Projesi Başlat",
     heroSecondary: "Hizmetleri İncele",
     heroPanelTitle: "Endüstriyel Ticaret • Pazar Genişleme • Yeşil Dönüşüm",
@@ -196,7 +196,7 @@ const translations = {
     aboutKicker: "Konumlandırma",
     aboutTitle: "Ürün kataloğu değil. Endüstriyel ekosistem platformu.",
     aboutCopy:
-      "NJ GROUP, Çin üretimi, Türkiye yerel uygulaması ve Avrupa pazar erişimi arasında ticari bağlantılar kurar.",
+      "NJGROUP, Çin üretimi, Türkiye yerel uygulaması ve Avrupa pazar erişimi arasında ticari bağlantılar kurar.",
     routeChinaTitle: "Çin",
     routeTurkeyTitle: "Türkiye",
     routeEuropeTitle: "Avrupa",
@@ -206,7 +206,7 @@ const translations = {
     expoKicker: "Müşteri Trafik Girişi",
     expoTitle: "Türkiye fuarları Avrasya endüstri döngüsünün giriş noktasıdır",
     expoCopy:
-      "Fuar hizmeti sadece stant desteği değildir. NJ GROUP için Çin fabrikalarını Türkiye kanalları ve Avrupa fırsatlarıyla buluşturan müşteri merkezidir.",
+      "Fuar hizmeti sadece stant desteği değildir. NJGROUP için Çin fabrikalarını Türkiye kanalları ve Avrupa fırsatlarıyla buluşturan müşteri merkezidir.",
     loop1: "Çin Fabrikaları",
     loop2: "Türkiye Fuarları",
     loop3: "Distribütör Dönüşümü",
@@ -219,20 +219,20 @@ const translations = {
     expoNewsTitle: "Fuar Bilgi Penceresi",
     expoNewsSmall: "Otomatik güncellemeye hazır veri",
     expoCalendarKicker: "Gelecek Türkiye Fuarları",
-    expoCalendarTitle: "NJ GROUP endüstriyel büyüme için öncelikli fuarlar",
+    expoCalendarTitle: "NJGROUP endüstriyel büyüme için öncelikli fuarlar",
     expoCalendarCopy: "Tarihler planlama içindir; rezervasyon öncesi resmi organizatörden doğrulanmalıdır.",
     servicesKicker: "Ana Hizmet Sistemi",
     servicesTitle: "Dokuz entegre hizmet platformu",
     servicesCopy: "Tedarik, kanal, uygunluk, lojistik, pazarlama ve uzun vadeli büyüme için uygulanabilir hizmetler.",
     marketsKicker: "Pazar Mimarisi",
     marketsTitle: "Üç bölgeli operasyon modeli",
-    marketsCopy: "NJ GROUP Çin tedarik kapasitesini, Türkiye yerel gücünü ve Avrupa standartlarını birleştirir.",
+    marketsCopy: "NJGROUP Çin tedarik kapasitesini, Türkiye yerel gücünü ve Avrupa standartlarını birleştirir.",
     marketChina: "Çin Tedarik Zinciri",
     marketTurkey: "Türkiye Pazara Giriş",
     marketEurope: "Avrupa Bağlantısı",
     workflowKicker: "Uygulama Metodu",
     workflowTitle: "Fırsattan pazar operasyonuna",
-    workflowCopy: "NJ GROUP araştırır, tedarik eder, doğrular, müzakere eder, teslim eder ve büyütür.",
+    workflowCopy: "NJGROUP araştırır, tedarik eder, doğrular, müzakere eder, teslim eder ve büyütür.",
     step1Title: "Pazar Teşhisi",
     step1Copy: "Talep, müşteri tipi, fiyat mantığı ve rekabet baskısı.",
     step2Title: "Tedarik Eşleşmesi",
@@ -242,7 +242,7 @@ const translations = {
     step4Title: "Kanal Büyümesi",
     step4Copy: "Distribütör, tanıtım, satış sonrası ve tekrar sipariş.",
     contactKicker: "İşbirliği",
-    contactTitle: "NJ GROUP ile Çin-Türkiye-Avrupa iş rotanızı kurun.",
+    contactTitle: "NJGROUP ile Çin-Türkiye-Avrupa iş rotanızı kurun.",
     contactCopy: "Ürününüzü, hedef pazarınızı ve işbirliği hedefinizi bize iletin.",
     formName: "Ad",
     formCompany: "Şirket",
@@ -275,7 +275,7 @@ const translations = {
     topExpoAction: "Kalender ansehen",
     heroTitle: "China, Türkiye und Europa verbinden",
     heroCopy:
-      "NJ GROUP unterstützt Industrieunternehmen beim Markteintritt in Türkiye, bei Europa-Verbindungen und bei der Integration chinesischer Lieferketten.",
+      "NJGROUP unterstützt Industrieunternehmen beim Markteintritt in Türkiye, bei Europa-Verbindungen und bei der Integration chinesischer Lieferketten.",
     heroCta: "Markteintritt starten",
     heroSecondary: "Leistungen ansehen",
     heroPanelTitle: "Industriehandel • Marktausbau • Grüne Transformation",
@@ -283,7 +283,7 @@ const translations = {
     aboutKicker: "Positionierung",
     aboutTitle: "Kein Produktkatalog. Eine industrielle Ökosystem-Plattform.",
     aboutCopy:
-      "NJ GROUP schafft kommerzielle Verbindungen zwischen chinesischer Produktion, lokaler Umsetzung in Türkiye und europäischem Marktzugang.",
+      "NJGROUP schafft kommerzielle Verbindungen zwischen chinesischer Produktion, lokaler Umsetzung in Türkiye und europäischem Marktzugang.",
     routeChinaTitle: "China",
     routeTurkeyTitle: "Türkiye",
     routeEuropeTitle: "Europa",
@@ -313,13 +313,13 @@ const translations = {
     servicesCopy: "Für Beschaffung, Kanäle, Compliance, Logistik, Marketing und langfristiges Wachstum.",
     marketsKicker: "Marktarchitektur",
     marketsTitle: "Drei-Regionen-Betriebsmodell",
-    marketsCopy: "NJ GROUP verbindet chinesische Lieferfähigkeit, lokale Stärke in Türkiye und europäische Standards.",
+    marketsCopy: "NJGROUP verbindet chinesische Lieferfähigkeit, lokale Stärke in Türkiye und europäische Standards.",
     marketChina: "China Lieferkette",
     marketTurkey: "Türkiye Markteintritt",
     marketEurope: "Europa Verbindung",
     workflowKicker: "Umsetzung",
     workflowTitle: "Von der Chance zum Marktbetrieb",
-    workflowCopy: "NJ GROUP recherchiert, beschafft, prüft, verhandelt, liefert und skaliert.",
+    workflowCopy: "NJGROUP recherchiert, beschafft, prüft, verhandelt, liefert und skaliert.",
     step1Title: "Marktdiagnose",
     step1Copy: "Nachfrage, Kundentypen, Preislogik und Wettbewerb.",
     step2Title: "Supply Matching",
@@ -329,7 +329,7 @@ const translations = {
     step4Title: "Kanalwachstum",
     step4Copy: "Distributoren, Promotion, After-Sales und Wiederbestellung.",
     contactKicker: "Kooperation starten",
-    contactTitle: "Bauen Sie Ihre China-Türkiye-Europa Route mit NJ GROUP.",
+    contactTitle: "Bauen Sie Ihre China-Türkiye-Europa Route mit NJGROUP.",
     contactCopy: "Nennen Sie Produkt, Zielmarkt und Ziel der Kooperation.",
     formName: "Name",
     formCompany: "Firma",
@@ -362,7 +362,7 @@ const translations = {
     topExpoAction: "Voir calendrier",
     heroTitle: "Relier la Chine, la Türkiye et l'Europe",
     heroCopy:
-      "NJ GROUP aide les entreprises industrielles à entrer en Türkiye, se connecter à l'Europe et intégrer les chaînes d'approvisionnement chinoises.",
+      "NJGROUP aide les entreprises industrielles à entrer en Türkiye, se connecter à l'Europe et intégrer les chaînes d'approvisionnement chinoises.",
     heroCta: "Lancer un projet marché",
     heroSecondary: "Voir les services",
     heroPanelTitle: "Commerce industriel • Expansion marché • Transformation verte",
@@ -370,7 +370,7 @@ const translations = {
     aboutKicker: "Positionnement",
     aboutTitle: "Pas un catalogue produit. Une plateforme d'écosystème industriel.",
     aboutCopy:
-      "NJ GROUP crée des connexions commerciales entre fabrication chinoise, exécution locale en Türkiye et accès au marché européen.",
+      "NJGROUP crée des connexions commerciales entre fabrication chinoise, exécution locale en Türkiye et accès au marché européen.",
     routeChinaTitle: "Chine",
     routeTurkeyTitle: "Türkiye",
     routeEuropeTitle: "Europe",
@@ -400,13 +400,13 @@ const translations = {
     servicesCopy: "Pour le sourcing, les canaux, la conformité, la logistique, le marketing et la croissance durable.",
     marketsKicker: "Architecture marché",
     marketsTitle: "Modèle opérationnel à trois régions",
-    marketsCopy: "NJ GROUP aligne la capacité chinoise, l'ancrage turc et les standards européens.",
+    marketsCopy: "NJGROUP aligne la capacité chinoise, l'ancrage turc et les standards européens.",
     marketChina: "Chaîne d'approvisionnement Chine",
     marketTurkey: "Entrée marché Türkiye",
     marketEurope: "Connexion Europe",
     workflowKicker: "Méthode d'exécution",
     workflowTitle: "De l'opportunité à l'opération marché",
-    workflowCopy: "NJ GROUP recherche, source, vérifie, négocie, livre et développe.",
+    workflowCopy: "NJGROUP recherche, source, vérifie, négocie, livre et développe.",
     step1Title: "Diagnostic marché",
     step1Copy: "Demande, clients, prix et concurrence.",
     step2Title: "Matching fournisseurs",
@@ -416,7 +416,7 @@ const translations = {
     step4Title: "Croissance canal",
     step4Copy: "Distributeurs, promotion, après-vente et commandes récurrentes.",
     contactKicker: "Coopération",
-    contactTitle: "Construisez votre route Chine-Türkiye-Europe avec NJ GROUP.",
+    contactTitle: "Construisez votre route Chine-Türkiye-Europe avec NJGROUP.",
     contactCopy: "Indiquez votre produit, marché cible et objectif de coopération.",
     formName: "Nom",
     formCompany: "Entreprise",
@@ -561,7 +561,7 @@ const services = [
 const marketDetails = {
   china: {
     title: "China Supply Chain",
-    text: "NJ GROUP converts Chinese manufacturing capacity into verified, export-ready and market-fit supply options.",
+    text: "NJGROUP converts Chinese manufacturing capacity into verified, export-ready and market-fit supply options.",
     items: ["Factory sourcing", "OEM / ODM", "Cost comparison", "Quality verification", "Export documentation"],
   },
   turkey: {
@@ -571,7 +571,7 @@ const marketDetails = {
   },
   europe: {
     title: "Europe Connection",
-    text: "NJ GROUP helps products move toward European standards, customers, distribution networks and compliance expectations.",
+    text: "NJGROUP helps products move toward European standards, customers, distribution networks and compliance expectations.",
     items: ["Customer development", "CE coordination", "European agents", "Project matching", "Market promotion"],
   },
 };
@@ -582,7 +582,7 @@ const exhibitionNews = [
     zh: "KOMATEK 2026 将工程机械作为重要入口行业",
     date: "2026-06-03",
     text: "Construction machinery attracts manufacturers, dealers, project buyers and service partners across Türkiye and nearby regions.",
-    zhText: "工程机械展会可以吸引制造商、经销商、项目买家和本地服务伙伴，是 NJ GROUP 重要客户入口。",
+    zhText: "工程机械展会可以吸引制造商、经销商、项目买家和本地服务伙伴，是 NJGROUP 重要客户入口。",
     fair: "KOMATEK 2026",
     sourceName: "CECE / KOMATEK",
     source: "https://www.cece.eu/news/cece-heads-to-komatek-2026-in-istanbul-turkiye/",
@@ -599,7 +599,7 @@ const exhibitionNews = [
     zh: "WIN EURASIA 2026 连接自动化、能源、焊接与物流行业",
     date: "2026-06-10",
     text: "A strategic fair for industrial equipment, automation, smart manufacturing and robotics opportunities.",
-    zhText: "适合工业设备、自动化、智能制造和机器人业务，是 NJ GROUP 工业设备板块的重要展会。",
+    zhText: "适合工业设备、自动化、智能制造和机器人业务，是 NJGROUP 工业设备板块的重要展会。",
     fair: "WIN EURASIA 2026",
     sourceName: "Istanbul Expo Center / WIN EURASIA",
     source: "https://ifm.com.tr/en/fairs/win-eurasia-2026",
@@ -625,15 +625,15 @@ const exhibitionNews = [
     zhOfficialPoint:
       "官网展示建筑材料、暖通、卫浴厨房、管道系统、门窗和智能建筑系统等主题。",
     njAction:
-      "Position NJ GROUP as a building materials channel partner for Chinese suppliers seeking Türkiye and nearby markets.",
-    zhNjAction: "将 NJ GROUP 定位为中国建材供应商进入土耳其及周边市场的渠道伙伴。",
+      "Position NJGROUP as a building materials channel partner for Chinese suppliers seeking Türkiye and nearby markets.",
+    zhNjAction: "将 NJGROUP 定位为中国建材供应商进入土耳其及周边市场的渠道伙伴。",
   },
   {
     title: "MAKTEK Eurasia promotes Türkiye as a production bridge",
     zh: "MAKTEK Eurasia 强化土耳其作为制造业桥梁的定位",
     date: "2026-09-28",
     text: "A machine tools and manufacturing technologies fair with strong relevance for industrial equipment sourcing and distribution.",
-    zhText: "面向机床、金属加工和制造技术，是 NJ GROUP 工业设备和供应链业务的重要机会。",
+    zhText: "面向机床、金属加工和制造技术，是 NJGROUP 工业设备和供应链业务的重要机会。",
     fair: "MAKTEK Eurasia 2026",
     sourceName: "MAKTEK Eurasia",
     source: "https://www.maktekfuari.com/en/press/blog/maktek-eurasia-a-production-bridge-from-europe-to-the-world",
@@ -820,7 +820,7 @@ function renderCards() {
             <time>${news.date} · ${news.sourceName}</time>
             <strong>${currentLang === "zh" ? news.zh : news.title}</strong>
             <span>${currentLang === "zh" ? news.zhText : news.text}</span>
-            <em>${currentLang === "zh" ? "查看官方资讯与 NJ GROUP 动作" : "View official insight and NJ GROUP action"}</em>
+            <em>${currentLang === "zh" ? "查看官方资讯与 NJGROUP 动作" : "View official insight and NJGROUP action"}</em>
           </span>
         </button>`
       )
@@ -856,7 +856,7 @@ function drawerItem(item) {
   return `<li><a href="${item.url}" target="_blank" rel="noopener">${item.label}</a></li>`;
 }
 
-function openDrawer({ title, text, items, kicker = "NJ GROUP" }) {
+function openDrawer({ title, text, items, kicker = "NJGROUP" }) {
   document.getElementById("drawerKicker").textContent = kicker;
   document.getElementById("drawerTitle").textContent = title;
   document.getElementById("drawerText").textContent = text;
@@ -927,7 +927,7 @@ document.addEventListener("click", (event) => {
       items: [
         currentLang === "zh" ? fair.zhSector : fair.sector,
         fair.value,
-        "NJ GROUP role: exhibitor support, B2B matching, market entry follow-up, distributor conversion.",
+        "NJGROUP role: exhibitor support, B2B matching, market entry follow-up, distributor conversion.",
         `Official source: ${fair.source}`,
       ],
     });
