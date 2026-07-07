@@ -66,8 +66,15 @@
           <div class="section-head"><span class="kicker">CTA</span><h2>Rejenere Kauçuk Numunesi veya Teknik Görüşme Talep Edin</h2><p>Numune, tedarik, reçete değerlendirmesi veya tesis projesi için aşağıdaki formu kullanabilirsiniz.</p></div>
           <div class="actions"><a class="btn btn-primary" href="https://wa.me/905372054333" target="_blank" rel="noopener" data-track="whatsapp_click">WhatsApp ile İletişime Geç</a><a class="btn btn-secondary" href="mailto:info@njgrup.com" data-track="email_click">E-posta Gönder</a></div>
         </div>
-        <form id="quote" class="card form-panel" data-track-form="rubber_sample_request">
+        <form id="quote" class="card form-panel" action="https://formsubmit.co/info@njgrup.com" method="POST" data-track-form="rubber_sample_request">
           <h3>Talep Formu</h3>
+          <input type="hidden" name="_subject" value="NJGROUP Web Talep - Rejenere Kauçuk">
+          <input type="hidden" name="_template" value="table">
+          <input type="hidden" name="_captcha" value="false">
+          <input type="text" name="_honey" style="display:none">
+          <input type="hidden" name="_next" value="https://njgrup.com/thanks.html">
+          <input type="hidden" name="source_page" value="tire-grade-reclaimed-rubber.html">
+          <input type="hidden" name="submitted_at" value="">
           <input name="company" placeholder="Firma adı" required>
           <input name="contact" placeholder="Ad Soyad / Yetkili kişi" required>
           <input name="email" type="email" placeholder="E-posta">

@@ -1,4 +1,4 @@
-(function () {
+﻿(function () {
   window.NJGROUP_TRACKING_CONFIG = window.NJGROUP_TRACKING_CONFIG || {
     googleAdsId: "",
     enabled: true
@@ -25,13 +25,9 @@
   document.addEventListener("submit", function (event) {
     const form = event.target.closest("form[data-track-form]");
     if (!form) return;
-    event.preventDefault();
     track("form_submit", { form: form.dataset.trackForm });
-    const notice = form.querySelector("[data-form-notice]");
-    if (notice) {
-      notice.textContent = "Talebiniz alındı. NJGROUP ekibi sizinle iletişime geçecektir.";
-      notice.hidden = false;
-    }
+    const submittedAt = form.querySelector("input[name='submitted_at']");
+    if (submittedAt) submittedAt.value = new Date().toISOString();
   });
 
   window.NJGROUPTrack = track;
